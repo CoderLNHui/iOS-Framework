@@ -125,6 +125,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableViewCell : UIView <NSCoding, UIGes
 @property (nonatomic) NSInteger                       indentationLevel;           // adjust content indent. default is 0
 /** 获取cell的缩进宽度Width */
 @property (nonatomic) CGFloat                         indentationWidth;           // width for each level. default is 10.0
+/** 允许更改分割线的frame */
 @property (nonatomic) UIEdgeInsets                    separatorInset NS_AVAILABLE_IOS(7_0) UI_APPEARANCE_SELECTOR __TVOS_PROHIBITED; // allows customization of the separator frame
 
 @property (nonatomic, getter=isEditing) BOOL          editing;                    // show appropriate edit controls (+/- & reorder). By default -setEditing: calls setEditing:animated: with NO for animated.

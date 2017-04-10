@@ -16,6 +16,7 @@
 		76CD08481DBE4D420088669E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CD07FD1DBE4D420088669E /* AppDelegate.m */; };
 		76CD08491DBE4D420088669E /* UIKit框架.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76CD08001DBE4D420088669E /* UIKit框架.jpg */; };
 		76CD084A1DBE4D420088669E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CD08021DBE4D420088669E /* ViewController.m */; };
+		76CD09BD1E9B6D690088669E /* UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CD09BC1E9B6D690088669E /* UITableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		76CD09AA1DBE591D0088669E /* UICollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLayout.h; sourceTree = "<group>"; };
 		76CD09AB1E9B2B600088669E /* UICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewCell.h; sourceTree = "<group>"; };
 		76CD09AD1E9B2C680088669E /* UICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewController.h; sourceTree = "<group>"; };
+		76CD09BC1E9B6D690088669E /* UITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,9 @@
 		76CD08181DBE4D420088669E /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				76CD08231DBE4D420088669E /* UITableView.h */,
+				76CD09BC1E9B6D690088669E /* UITableView.m */,
+				76CD08241DBE4D420088669E /* UITableViewCell.h */,
 				76CD09A81DBE591D0088669E /* UICollectionView.h */,
 				76CD09AB1E9B2B600088669E /* UICollectionViewCell.h */,
 				76CD09A91DBE591D0088669E /* UICollectionViewFlowLayout.h */,
@@ -270,8 +275,6 @@
 				76CD08201DBE4D420088669E /* UIProgressView.h */,
 				76CD08211DBE4D420088669E /* UISearchBar.h */,
 				76CD08221DBE4D420088669E /* UITabBar.h */,
-				76CD08231DBE4D420088669E /* UITableView.h */,
-				76CD08241DBE4D420088669E /* UITableViewCell.h */,
 				76CD08251DBE4D420088669E /* UITextView.h */,
 				76CD08261DBE4D420088669E /* UIToolbar.h */,
 				76CD08271DBE4D420088669E /* UIView.h */,
@@ -440,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76CD084A1DBE4D420088669E /* ViewController.m in Sources */,
+				76CD09BD1E9B6D690088669E /* UITableView.m in Sources */,
 				76CD079A1DBE4CB60088669E /* main.m in Sources */,
 				76CD08481DBE4D420088669E /* AppDelegate.m in Sources */,
 			);
