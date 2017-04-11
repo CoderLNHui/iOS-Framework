@@ -50,11 +50,11 @@ typedef NS_ENUM(NSInteger, UITableViewCellEditingStyle) {
 };
 
 typedef NS_ENUM(NSInteger, UITableViewCellAccessoryType) {
-    UITableViewCellAccessoryNone,                                                      // don't show any accessory view
-    UITableViewCellAccessoryDisclosureIndicator,                                       // regular chevron. doesn't track
-    UITableViewCellAccessoryDetailDisclosureButton __TVOS_PROHIBITED,                 // info button w/ chevron. tracks
-    UITableViewCellAccessoryCheckmark,                                                 // checkmark. doesn't track
-    UITableViewCellAccessoryDetailButton NS_ENUM_AVAILABLE_IOS(7_0)  __TVOS_PROHIBITED // info button. tracks
+    UITableViewCellAccessoryNone, // 无                                                     // don't show any accessory view
+    UITableViewCellAccessoryDisclosureIndicator, // 指示器                                      // regular chevron. doesn't track
+    UITableViewCellAccessoryDetailDisclosureButton __TVOS_PROHIBITED, //按钮                // info button w/ chevron. tracks
+    UITableViewCellAccessoryCheckmark,// 箭头                                                 // checkmark. doesn't track
+    UITableViewCellAccessoryDetailButton NS_ENUM_AVAILABLE_IOS(7_0)  __TVOS_PROHIBITED // info button. tracks // 感叹号的按钮(详情)
 };
 
 typedef NS_OPTIONS(NSUInteger, UITableViewCellStateMask) {

@@ -17,8 +17,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, UITableViewStyle) {
-    UITableViewStylePlain,  //普通类型        // regular table view
-    UITableViewStyleGrouped  //分组类型       // preferences style table view
+    UITableViewStylePlain,  //普通类型(单组数据悬停)        // regular table view
+    UITableViewStyleGrouped  //分组类型(多组数据不悬停)       // preferences style table view
 };// UITableViewStyle样式
 
 
@@ -218,7 +218,7 @@ UIKIT_EXTERN NSNotificationName const UITableViewSelectionDidChangeNotification;
 /** UITableView类继承自UIScrollView,遵守NSCoding协议 */
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding>
 
-/** 创建时必须制定类型(有普通(UITableViewStylePlain)和分组两种类型(UITableViewStyleGrouped)) */
+/** 创建时必须指定类型(有普通(UITableViewStylePlain)和分组两种类型(UITableViewStyleGrouped)) */
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style NS_DESIGNATED_INITIALIZER; // must specify style at creation. -initWithFrame: calls this with UITableViewStylePlain
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 
