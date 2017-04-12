@@ -329,7 +329,7 @@ UIKit 分类结构
 
 
 ## UIKit框架注解演示
-
+![ UIKit框架注解演示.gif](http://upload-images.jianshu.io/upload_images/2230763-9dbd82586460362c.gif?imageMogr2/auto-orient/strip)
 
 
 
