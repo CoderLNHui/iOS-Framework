@@ -2,7 +2,7 @@
 ## 导语
 >我们追求技术的提升，关注技术的发展历程；作为从事技术工作的伐码猿，有个想法（`仅是个人想法`），这个想法工程量之大（`遇到，用到，最新技术点，点点积累，及时补充吧`），从事技术多年也算是对所花费时间的一个总结（算是对技术这块的一个目标吧）。
 
->这篇文章的内容仅是【UIKit框架 各文件分类的一个简明介绍】，**重点 -> 重点 -> 重点**（`重要的事情说 2+1 遍`），
+>这篇文章的内容仅是【UIKit框架 各文件分类的一个简明介绍】，**重点 -> 重点 -> 重点**（`重要的事情说 2+1 遍`），  
 **我的「想法和行动」都在文章末尾**
 
 
@@ -23,7 +23,7 @@ UIKit Framework Annotation  Practical Case
 
 
 
-UIKit 类结构
+UIKit 分类结构
 
 ![ UIKit 框架](http://upload-images.jianshu.io/upload_images/2230763-0a6913fa199b11c5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -329,7 +329,7 @@ UIKit 类结构
 
 
 ## UIKit框架注解演示
-![ UIKit框架注解演示.gif](http://upload-images.jianshu.io/upload_images/2230763-9dbd82586460362c.gif?imageMogr2/auto-orient/strip)
+
 
 
 
