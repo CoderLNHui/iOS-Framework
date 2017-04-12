@@ -17,6 +17,8 @@
 		76CD08491DBE4D420088669E /* UIKit框架.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76CD08001DBE4D420088669E /* UIKit框架.jpg */; };
 		76CD084A1DBE4D420088669E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CD08021DBE4D420088669E /* ViewController.m */; };
 		76CD09BD1E9B6D690088669E /* UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CD09BC1E9B6D690088669E /* UITableView.m */; };
+		76E513591E9CFA5100EEFFFD /* UICollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E513561E9CFA5100EEFFFD /* UICollectionView.m */; };
+		76E5135A1E9CFA5100EEFFFD /* UIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E513581E9CFA5100EEFFFD /* UIScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,9 @@
 		76CD09AB1E9B2B600088669E /* UICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewCell.h; sourceTree = "<group>"; };
 		76CD09AD1E9B2C680088669E /* UICollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewController.h; sourceTree = "<group>"; };
 		76CD09BC1E9B6D690088669E /* UITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableView.m; sourceTree = "<group>"; };
+		76E513561E9CFA5100EEFFFD /* UICollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionView.m; sourceTree = "<group>"; };
+		76E513571E9CFA5100EEFFFD /* UIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollView.h; sourceTree = "<group>"; };
+		76E513581E9CFA5100EEFFFD /* UIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,9 +161,9 @@
 			children = (
 				76CD099D1DBE50160088669E /* NSObject */,
 				76CD08031DBE4D420088669E /* UIBarItem */,
-				76CD08071DBE4D420088669E /* UIControl */,
 				76CD08101DBE4D420088669E /* UIGestureRecognizer */,
 				76CD08171DBE4D420088669E /* UIKit Classes */,
+				76CD08071DBE4D420088669E /* UIControl */,
 				76CD08181DBE4D420088669E /* UIView */,
 				76CD082A1DBE4D420088669E /* UIViewController */,
 				76CD07FB1DBE4D420088669E /* Other */,
@@ -258,13 +263,16 @@
 		76CD08181DBE4D420088669E /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				76E513571E9CFA5100EEFFFD /* UIScrollView.h */,
+				76E513581E9CFA5100EEFFFD /* UIScrollView.m */,
 				76CD08231DBE4D420088669E /* UITableView.h */,
 				76CD09BC1E9B6D690088669E /* UITableView.m */,
 				76CD08241DBE4D420088669E /* UITableViewCell.h */,
 				76CD09A81DBE591D0088669E /* UICollectionView.h */,
+				76E513561E9CFA5100EEFFFD /* UICollectionView.m */,
 				76CD09AB1E9B2B600088669E /* UICollectionViewCell.h */,
-				76CD09A91DBE591D0088669E /* UICollectionViewFlowLayout.h */,
 				76CD09AA1DBE591D0088669E /* UICollectionViewLayout.h */,
+				76CD09A91DBE591D0088669E /* UICollectionViewFlowLayout.h */,
 				76CD08191DBE4D420088669E /* UIActionSheet.h */,
 				76CD081A1DBE4D420088669E /* UIActivityIndicatorView.h */,
 				76CD081B1DBE4D420088669E /* UIAlertView.h */,
@@ -442,8 +450,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E513591E9CFA5100EEFFFD /* UICollectionView.m in Sources */,
 				76CD084A1DBE4D420088669E /* ViewController.m in Sources */,
 				76CD09BD1E9B6D690088669E /* UITableView.m in Sources */,
+				76E5135A1E9CFA5100EEFFFD /* UIScrollView.m in Sources */,
 				76CD079A1DBE4CB60088669E /* main.m in Sources */,
 				76CD08481DBE4D420088669E /* AppDelegate.m in Sources */,
 			);

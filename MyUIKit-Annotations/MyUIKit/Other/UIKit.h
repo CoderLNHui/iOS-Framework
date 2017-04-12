@@ -43,8 +43,8 @@
 #if __has_include(<UIKit/UIButton.h>)
 #import <UIKit/UIButton.h>
 #import <UIKit/UICollectionView.h> // 注解完全✔️
-#import <UIKit/UICollectionViewCell.h> // 注解 - -
-#import <UIKit/UICollectionViewController.h> // 注解 - -
+#import <UIKit/UICollectionViewCell.h> // 注解未全➕
+#import <UIKit/UICollectionViewController.h> // 注解未全➕
 #import <UIKit/UICollectionViewFlowLayout.h> // 注解完全✔️
 #import <UIKit/UICollectionViewLayout.h> // 注解完全✔️
 #import <UIKit/UICollectionViewTransitionLayout.h>
@@ -118,7 +118,7 @@
 #import <UIKit/UINib.h>
 #import <UIKit/UINibDeclarations.h>
 #import <UIKit/UINibLoading.h>
-#import <UIKit/UIPageControl.h>
+#import <UIKit/UIPageControl.h> // 注解完全✔️
 #import <UIKit/UIPageViewController.h>
 #import <UIKit/UIPanGestureRecognizer.h>
 #import <UIKit/UIPasteboard.h>
@@ -144,7 +144,7 @@
 #import <UIKit/UIScreen.h>
 #import <UIKit/UIScreenEdgePanGestureRecognizer.h>
 #import <UIKit/UIScreenMode.h>
-#import <UIKit/UIScrollView.h>
+#import <UIKit/UIScrollView.h> // 注解完全✔️
 #import <UIKit/UISearchBar.h>
 #import <UIKit/UISearchContainerViewController.h>
 #import <UIKit/UISearchController.h>
