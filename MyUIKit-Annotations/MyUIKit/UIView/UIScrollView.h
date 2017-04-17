@@ -280,8 +280,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 /** 已经结束缩放时调用 */
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view atScale:(CGFloat)scale; // scale between minimum and maximum. called after any 'bounce' animations
 
-
-
 @end
 
 NS_ASSUME_NONNULL_END
