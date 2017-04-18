@@ -1,5 +1,6 @@
 
-## 导语
+## 导语 📌 
+
 >我们追求技术的提升，关注技术的发展历程；作为从事技术工作的伐码猿，有个想法（`仅是个人想法`），这个想法工程量之大（`遇到，用到，最新技术点，点点积累，及时补充吧`），从事技术多年也算是对所花费时间的一个总结（算是对技术这块的一个目标吧）。
 
 >这篇文章的内容仅是【UIKit框架 各文件分类的一个简明介绍】，**重点 -> 重点 -> 重点**（`重要的事情说 2+1 遍`），  
@@ -8,7 +9,8 @@
 
 
 ## UIKit-Framework-OpenSource
-UIKit 框架，归类整理，各分类文件注解，并对每一类中常用的功能进行案例渐进式解析；以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！
+
+UIKit 框架 & Foundation 框架，归类整理，各分类文件注解，并对每一类中常用的功能进行案例渐进式解析；以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！
 
 
 UIKit Framework Annotation  Practical Case
@@ -23,16 +25,26 @@ UIKit Framework Annotation  Practical Case
 
 
 
-UIKit 分类结构
+**UIKit 分类结构**
 
 ![ UIKit 框架](http://upload-images.jianshu.io/upload_images/2230763-0a6913fa199b11c5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
 
+**Foundation 分类结构**
+
+[这里有篇详细的介绍，请你移步这里阅读](http://www.cnblogs.com/kenshincui/p/3885689.html#!comments)
+
+
+
+
+
+
 ## Content progress
+
 //--------------------------- 「MyUIKit-Annotations」 ------------------------------//  
-//
+// 期待你的加入 ^_^.
 
 ```objc
 #import <UIKit/UIKitDefines.h>
@@ -60,7 +72,7 @@ UIKit 分类结构
 #endif
 
 
-#import <UIKit/UIBezierPath.h>
+#import <UIKit/UIBezierPath.h> // 注解完全✔️
 
 #if __has_include(<UIKit/UIButton.h>)
 #import <UIKit/UIButton.h>
@@ -256,34 +268,16 @@ UIKit 分类结构
 #import <UIKit/UINotificationFeedbackGenerator.h>
 #endif
 
-
-
-
-# UIBezierPath.h // 注解完全✔️
-
-//--------------------------- <#我是分割线#> ------------------------------//
-//
-#import <Foundation/NSObject.h>
-#import "NSURLSession.h" // 注解未全➕
-
-
-
 ```
 
 
 
-
-
-
-
-
-
-
+ 
 ***
 
 
-//--------------------------- 「MyUIKit-Case」 ------------------------------//  
-//
+//--------------------------- 「MyUIKit-Extension」 ------------------------------//  
+// 期待你的加入 ^_^.
 
 ```objc
 #import "UIResponder.h"   //  完全实现✔️
@@ -323,13 +317,235 @@ UIKit 分类结构
 
 
 
-**总之，学习一门新的框架类库的时侯，需要追根溯源，才好提纲切领，即能掌握全局，又能深入细节。  
-从系统根类出发，结合事件响应处理的机制原理，再深入到各个界面组件或自定义，就会胸有成竹而不乱阵脚了**。
+//--------------------------- 「MyFoundation-Annotations」 ------------------------------//    
+// 期待你的加入 ^_^.
+
+
+```objc
+/*	Foundation.h
+	Copyright (c) 1994-2016, Apple Inc. All rights reserved.
+*/
+
+
+#include <CoreFoundation/CoreFoundation.h>
+
+#import <Foundation/NSObjCRuntime.h>
+
+#import <Foundation/NSArray.h>
+#import <Foundation/NSAutoreleasePool.h>
+#import <Foundation/NSBundle.h>
+#import <Foundation/NSByteOrder.h>
+#import <Foundation/NSCalendar.h>
+#import <Foundation/NSCharacterSet.h>
+#import <Foundation/NSCoder.h>
+#import <Foundation/NSData.h>
+#import <Foundation/NSDate.h>
+#import <Foundation/NSDateInterval.h>
+#import <Foundation/NSDateFormatter.h>
+#import <Foundation/NSDateIntervalFormatter.h>
+#import <Foundation/NSISO8601DateFormatter.h>
+#import <Foundation/NSMassFormatter.h>
+#import <Foundation/NSLengthFormatter.h>
+#import <Foundation/NSEnergyFormatter.h>
+#import <Foundation/NSMeasurement.h>
+#import <Foundation/NSMeasurementFormatter.h>
+#import <Foundation/NSPersonNameComponents.h>
+#import <Foundation/NSPersonNameComponentsFormatter.h>
+#import <Foundation/NSDecimal.h>
+#import <Foundation/NSDecimalNumber.h>
+#import <Foundation/NSDictionary.h>
+#import <Foundation/NSEnumerator.h>
+#import <Foundation/NSError.h>
+#import <Foundation/NSException.h>
+#import <Foundation/NSFileHandle.h>
+#import <Foundation/NSFileManager.h>
+#import <Foundation/NSFormatter.h>
+#import <Foundation/NSHashTable.h>
+#import <Foundation/NSHTTPCookie.h>
+#import <Foundation/NSHTTPCookieStorage.h>
+#import <Foundation/NSIndexPath.h>
+#import <Foundation/NSIndexSet.h>
+#import <Foundation/NSInvocation.h>
+#import <Foundation/NSJSONSerialization.h>
+#import <Foundation/NSKeyValueCoding.h>
+#import <Foundation/NSKeyValueObserving.h>
+#import <Foundation/NSKeyedArchiver.h>
+#import <Foundation/NSLocale.h>
+#import <Foundation/NSLock.h>
+#import <Foundation/NSMapTable.h>
+#import <Foundation/NSMethodSignature.h>
+#import <Foundation/NSNotification.h>
+#import <Foundation/NSNotificationQueue.h>
+#import <Foundation/NSNull.h>
+#import <Foundation/NSNumberFormatter.h>
+#import <Foundation/NSObject.h>
+#import <Foundation/NSOperation.h>
+#import <Foundation/NSOrderedSet.h>
+#import <Foundation/NSOrthography.h>
+#import <Foundation/NSPathUtilities.h>
+#import <Foundation/NSPointerArray.h>
+#import <Foundation/NSPointerFunctions.h>
+#import <Foundation/NSPort.h>
+#import <Foundation/NSProcessInfo.h>
+#import <Foundation/NSPropertyList.h>
+#import <Foundation/NSProxy.h>
+#import <Foundation/NSRange.h>
+#import <Foundation/NSRegularExpression.h>
+#import <Foundation/NSRunLoop.h>
+#import <Foundation/NSScanner.h>
+#import <Foundation/NSSet.h>
+#import <Foundation/NSSortDescriptor.h>
+#import <Foundation/NSStream.h>
+#import <Foundation/NSString.h>
+#import <Foundation/NSTextCheckingResult.h>
+#import <Foundation/NSThread.h>
+#import <Foundation/NSTimeZone.h>
+#import <Foundation/NSTimer.h>
+#import <Foundation/NSUnit.h>
+#import <Foundation/NSURL.h>
+#import <Foundation/NSURLAuthenticationChallenge.h>
+#import <Foundation/NSURLCache.h>
+#import <Foundation/NSURLConnection.h>
+#import <Foundation/NSURLCredential.h>
+#import <Foundation/NSURLCredentialStorage.h>
+#import <Foundation/NSURLError.h>
+#import <Foundation/NSURLProtectionSpace.h>
+#import <Foundation/NSURLProtocol.h>
+#import <Foundation/NSURLRequest.h>
+#import <Foundation/NSURLResponse.h>
+#import <Foundation/NSUserDefaults.h>
+#import <Foundation/NSValue.h>
+#import <Foundation/NSValueTransformer.h>
+#import <Foundation/NSXMLParser.h>
+#import <Foundation/NSZone.h>
+
+#import <Foundation/FoundationErrors.h>
+
+#if (TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)) || (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+
+#import <Foundation/NSAttributedString.h>
+#import <Foundation/NSByteCountFormatter.h>
+#import <Foundation/NSCache.h>
+#import <Foundation/NSComparisonPredicate.h>
+#import <Foundation/NSCompoundPredicate.h>
+#import <Foundation/NSDateComponentsFormatter.h>
+#import <Foundation/NSExpression.h>
+#import <Foundation/NSExtensionContext.h>
+#import <Foundation/NSExtensionItem.h>
+#import <Foundation/NSExtensionRequestHandling.h>
+#import <Foundation/NSFileCoordinator.h>
+#import <Foundation/NSFilePresenter.h>
+#import <Foundation/NSFileVersion.h>
+#import <Foundation/NSFileWrapper.h>
+#import <Foundation/NSItemProvider.h>
+#import <Foundation/NSLinguisticTagger.h>
+#import <Foundation/NSMetadata.h>
+#import <Foundation/NSMetadataAttributes.h>
+#import <Foundation/NSNetServices.h>
+#import <Foundation/NSPredicate.h>
+#import <Foundation/NSProgress.h>
+#import <Foundation/NSUbiquitousKeyValueStore.h>
+#import <Foundation/NSUndoManager.h>
+#import <Foundation/NSURLSession.h> // 注解未全➕
+#import <Foundation/NSUserActivity.h>
+#import <Foundation/NSUUID.h>
+#endif
+
+#if (TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)) || TARGET_OS_WIN32
+
+#import <Foundation/NSArchiver.h>
+#import <Foundation/NSBackgroundActivityScheduler.h>
+#import <Foundation/NSCalendarDate.h>
+#import <Foundation/NSConnection.h>
+#import <Foundation/NSDistantObject.h>
+#import <Foundation/NSDistributedNotificationCenter.h>
+#import <Foundation/NSGeometry.h>
+#import <Foundation/NSPortCoder.h>
+#import <Foundation/NSPortMessage.h>
+#import <Foundation/NSPortNameServer.h>
+#import <Foundation/NSProtocolChecker.h>
+#import <Foundation/NSTask.h>
+#import <Foundation/NSXMLDTD.h>
+#import <Foundation/NSXMLDTDNode.h>
+#import <Foundation/NSXMLDocument.h>
+#import <Foundation/NSXMLElement.h>
+#import <Foundation/NSXMLNode.h>
+#import <Foundation/NSXMLNodeOptions.h>
+#import <Foundation/NSURLDownload.h>
+#import <Foundation/NSURLHandle.h>
+
+#endif
+
+#if (TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE))
+
+#import <Foundation/NSAffineTransform.h>
+#import <Foundation/NSAppleEventDescriptor.h>
+#import <Foundation/NSAppleEventManager.h>
+#import <Foundation/NSAppleScript.h>
+#import <Foundation/NSClassDescription.h>
+#import <Foundation/NSDistributedLock.h>
+#import <Foundation/NSGarbageCollector.h>
+#import <Foundation/NSHFSFileTypes.h>
+#import <Foundation/NSHost.h>
+#import <Foundation/NSObjectScripting.h>
+#import <Foundation/NSScriptClassDescription.h>
+#import <Foundation/NSScriptCoercionHandler.h>
+#import <Foundation/NSScriptCommand.h>
+#import <Foundation/NSScriptCommandDescription.h>
+#import <Foundation/NSScriptExecutionContext.h>
+#import <Foundation/NSScriptKeyValueCoding.h>
+#import <Foundation/NSScriptObjectSpecifiers.h>
+#import <Foundation/NSScriptStandardSuiteCommands.h>
+#import <Foundation/NSScriptSuiteRegistry.h>
+#import <Foundation/NSScriptWhoseTests.h>
+#import <Foundation/NSSpellServer.h>
+#import <Foundation/NSUserNotification.h>
+#import <Foundation/NSUserScriptTask.h>
+#import <Foundation/NSXPCConnection.h>
+
+#endif
+
+#import <Foundation/FoundationLegacySwiftCompatibility.h>
+
+```
+
+
+
+//--------------------------- 「MyFoundation-Extension」 ------------------------------//  
+//
+
+```objc
+
+期待你的加入 ^_^.
+
+期待你的加入 ^_^.
+
+期待你的加入 ^_^.
+
+```
+
 
 
 
 ## UIKit框架注解演示
 [ UIKit框架注解演示.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
+
+
+**总之，学习一门新的框架类库的时侯，需要追根溯源，才好提纲切领，即能掌握全局，又能深入细节。  
+从系统根类出发，结合事件响应处理的机制原理，再深入到各个界面组件或自定义，就会胸有成竹而不乱阵脚了**。
+
+
+
+**温馨提示：☕️**
+
+**有关 「UIKit框架注解 & 官方译文 | 三方框架源码注解」，所有文章将「`迁移 & 后续`」，在GitHub 对应上面的两个工程下；工程量之大，在于平时的积累，至于后续更新进度，这两个想法是个长期而持续的目标吧，如果你感觉看我写的文章对你 利大于弊 . . .；（`由于个人 「时间 & 知识」 有限，是心有余而力有限，欢迎你的 Star & Fork `）**
+
+
+
+## GitHub工程地址 📌 
+
+- [官方译文框架源码注解，当你「了解权威 & 进阶原理」的时候，网搜的众多中 ~ ~（自行脑补）。做只有思想的伐码猿，做到「实用概念，不文言」&「实现原理，简明详解」，从零开始，由浅入深。 以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！Star & Fork](https://github.com/CustomPBWaters/OfficialTranslation-SourceAnnotation)
+
 
 
 
@@ -339,22 +555,18 @@ UIKit 分类结构
 
 - 如果你想为【本文相关】分享点什么，也希望你能 Issues 我，我非常想为这篇文章增加更多实用的内容，谢谢。
 
-- [「博客原文」]()，对本文我会【不定时、持续更新、一些 学习心得与文章、实用才是硬道理】^_^.
-
--  [附上工程地址，如果「你喜欢 或 有帮助」，可否点个 Star](https://github.com/CustomPBWaters/UIKit-Framework-OpenSource)
+- [「博客原文」](https://custompbwaters.github.io/2015/06/01/源码注解+活用/iOS%20UIKit框架/)，对本文我会【不定时、持续更新、一些 学习心得与文章、实用才是硬道理】^_^.
 
 
-## 后续 & About me
+
+## About me
 
 【我也是对所花费时间的一个总结】
-
-**About me**：[@「伐码猿」](http://www.jianshu.com/u/fd745d76c816)
 
 我只是个【有思想的伐码猿🐒】加上【自己的学习总结☕️】写出来的文章。
 
 
-
-
+![↑ 《伐码吧》 --> "兄弟"   ↑](http://upload-images.jianshu.io/upload_images/2230763-3473fd6480b2bfe3.gif?imageMogr2/auto-orient/strip)
 
 
 
