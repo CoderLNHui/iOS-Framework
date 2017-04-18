@@ -1,7 +1,7 @@
 
 ## 导语 📌 
 
->我们追求技术的提升，关注技术的发展历程；作为从事技术工作的伐码猿，有个想法（`仅是个人想法`），这个想法工程量之大（`遇到，用到，最新技术点，点点积累，及时补充吧`），从事技术多年也算是对所花费时间的一个总结（算是对技术这块的一个目标吧）。
+>我们追求技术的提升，关注技术的发展历程；作为从事技术工作的伐码猿，有个想法（`仅是个人想法`），这个想法工程量之大（`遇到，用到，最新技术点，点点积累，及时补充吧`），从事技术多年也算是对所花费时间的一个总结（`算是对技术这块的一个目标吧`）。
 
 >这篇文章的内容仅是【UIKit框架 各文件分类的一个简明介绍】，  
 **重点 -> 重点 -> 重点**（`重要的事情说 2+1 遍`），    
@@ -11,7 +11,7 @@
 
 ## UIKit-Framework-OpenSource
 
-UIKit 框架 & Foundation 框架，归类整理，各分类文件注解，并对每一类中常用的功能进行案例渐进式解析；以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！
+`UIKit` 框架 & `Foundation` 框架，归类整理，各分类文件注解，并对每一类中常用的功能进行案例渐进式解析；`以简化初学者入门和老司机回顾的繁索过程`，尽快切入主题，快速使用起来。这里只等你的到来 ！
 
 
 UIKit Framework Annotation  Practical Case
@@ -45,7 +45,7 @@ UIKit Framework Annotation  Practical Case
 ## Content progress
 
 //--------------------------- 「MyUIKit-Annotations」 ------------------------------//  
-// 期待你的加入 ^_^.
+// `期待你的加入 ^_^.`
 
 ```objc
 #import <UIKit/UIKitDefines.h>
@@ -278,7 +278,7 @@ UIKit Framework Annotation  Practical Case
 
 
 //--------------------------- 「MyUIKit-Extension」 ------------------------------//  
-// 期待你的加入 ^_^.
+// `期待你的加入 ^_^.`
 
 ```objc
 #import "UIResponder.h"   //  完全实现✔️
@@ -319,7 +319,7 @@ UIKit Framework Annotation  Practical Case
 
 
 //--------------------------- 「MyFoundation-Annotations」 ------------------------------//    
-// 期待你的加入 ^_^.
+// `期待你的加入 ^_^.`
 
 
 ```objc
@@ -513,7 +513,7 @@ UIKit Framework Annotation  Practical Case
 
 
 //--------------------------- 「MyFoundation-Extension」 ------------------------------//  
-//
+// `期待你的加入 ^_^.`
 
 ```objc
 
@@ -524,12 +524,6 @@ UIKit Framework Annotation  Practical Case
 期待你的加入 ^_^.
 
 ```
-
-
-
-
-## UIKit框架注解演示
-[ UIKit框架注解演示.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
 
 
 **总之，学习一门新的框架类库的时侯，需要追根溯源，才好提纲切领，即能掌握全局，又能深入细节。  
@@ -543,9 +537,16 @@ UIKit Framework Annotation  Practical Case
 
 
 
+
+
+## UIKit框架注解演示
+[ UIKit框架注解演示.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
+
+
+ 
 ## GitHub工程地址 📌 
 
-- [官方译文框架源码注解，当你「了解权威 & 进阶原理」的时候，网搜的众多中 ~ ~（自行脑补）。做只有思想的伐码猿，做到「实用概念，不文言」&「实现原理，简明详解」，从零开始，由浅入深。 以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！Star & Fork](https://github.com/CustomPBWaters/OfficialTranslation-SourceAnnotation)
+- [官方文档译文框架源码注解，当你「了解权威 & 进阶原理」的时候，网搜的众多中 ~ ~（自行脑补）。做只有思想的伐码猿，做到「实用概念，不文言」&「实现原理，简明详解」，从零开始，由浅入深。 以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！Star & Fork](https://github.com/CustomPBWaters/OfficialTranslation-SourceAnnotation)
 
 
 
