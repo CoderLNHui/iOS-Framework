@@ -26,6 +26,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIBarItem : NSObject <NSCoding, UIAppeara
 @property(nullable, nonatomic,copy)             NSString    *title;        // default is nil
 @property(nullable, nonatomic,strong)           UIImage     *image;        // default is nil
 @property(nullable, nonatomic,strong)           UIImage     *landscapeImagePhone NS_AVAILABLE_IOS(5_0) __TVOS_PROHIBITED; // default is nil
+/** 图片的内边距(top, left, bottom, right) */
 @property(nonatomic)                  UIEdgeInsets imageInsets;  // default is UIEdgeInsetsZero
 @property(nonatomic)                  UIEdgeInsets landscapeImagePhoneInsets NS_AVAILABLE_IOS(5_0) __TVOS_PROHIBITED;  // default is UIEdgeInsetsZero. These insets apply only when the landscapeImagePhone property is set.
 @property(nonatomic)                  NSInteger    tag;          // default is 0
