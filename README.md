@@ -572,7 +572,7 @@
 我只是个【有思想的伐码猿🐒】加上【自己的学习总结☕️】写出来的文章。
 
 
-![↑ 《伐码吧》 --> "兄弟"   ↑ ](http://upload-images.jianshu.io/upload_images/2230763-6746b831e7f456f6.gif?imageMogr2/auto-orient/strip)
+![↑ 《伐码吧》 --> "兄弟"   ↑ 可否帮我达到 100的目标 ，谢谢 ](http://upload-images.jianshu.io/upload_images/2230763-6746b831e7f456f6.gif?imageMogr2/auto-orient/strip)
 
 
 
