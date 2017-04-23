@@ -552,19 +552,19 @@
 
 **UIKit&Foundation框架注解演示**
 
-[iOS Apple UIKit&Foundation框架注解演示.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
+[Apple.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
 
 
 **UIKit&Foundation（category）工具类演示**
 
-[iOS Apple UIKit&Foundation（category）工具类演示.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
+[Category.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
 
 
 
  
 ## GitHub工程地址 📌 
 
-- [官方文档译文框架源码注解，当你「了解权威 & 进阶原理」的时候，网搜的众多中 ~ ~（自行脑补）。做只有思想的伐码猿，做到「实用概念，不文言」&「实现原理，简明详解」，从零开始，由浅入深。 以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！Star & Fork](https://github.com/CustomPBWaters/OfficialTranslation-SourceAnnotation)
+- [iOS Apple 官方文档译文框架源码注解，当你「了解权威 & 进阶原理」的时候，网搜的众多中 ~ ~（自行脑补）。做只有思想的伐码猿，做到「实用概念，不文言」&「实现原理，简明详解」，从零开始，由浅入深。 以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！Star & Fork](https://github.com/CustomPBWaters/iOS-Apple-OfficialTranslation-SourceAnnotation)
  
 
 
@@ -575,7 +575,7 @@
 
 - 如果你想为【本工程相关】分享点什么，也希望你能 Issues 我，我非常想为这篇文章增加更多实用的内容，谢谢。
 
-- [「博客原文」](https://custompbwaters.github.io/2015/06/01/源码注解+活用/iOS%20UIKit框架/)，对本文我会【不定时、持续更新、一些 学习心得与文章、实用才是硬道理】^_^.
+- [「博客原文」](http://custompbwaters.github.io/官方译文+活用/iOS·官方译文源码注解.html)，对本文我会【不定时、持续更新、一些 学习心得与文章、实用才是硬道理】^_^.
 
 
 
@@ -589,12 +589,14 @@
 
 ![↑ 《伐码吧》 --> "兄弟"   ↑ 可否帮我达到 100的目标 ，谢谢 ](http://upload-images.jianshu.io/upload_images/2230763-6746b831e7f456f6.gif?imageMogr2/auto-orient/strip)
 
-`↑ 《伐码吧》 --> "兄弟"   ↑ 可否帮我达到 100的目标 ，谢谢`
+ 
 
 
 
-
-
+| `  ☕️ 分享是你我熟悉的味道 ☕️ 未完待续 ！✔️` |
+| :-: |
+| :💥❤️💥: |
+| `To be continued ☕️ Plain boiled water ☕️ To be continued` |
 
 
 
