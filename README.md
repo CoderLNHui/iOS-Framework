@@ -20,7 +20,7 @@
 
 
 
-| 我 GitHub 工程已创建好，只等你的到来 |
+| 我 GitHub 工程已创建好，只等你的到来，开始有意义的`▶️👀 👬 👄` |
 |:-:|
 
 | 不管谁的博客上面写的(`也包括自己`)，阅读的你要敢于去验证，停止无意义的`⏹copy 👬 paste`。 |
@@ -30,17 +30,8 @@
 | 在「时间 & 知识 」有限内，总结的文章难免有「未全、不足 」的地方，还望各位好友指出，以提高文章质量 |
 |:-:|
 
-
-
-
-
-
-**不管谁的博客上面写的(`也包括自己`)，阅读的你要敢于去验证，停止无意义的`⏹copy 👬 paste`。**
-
-**在「时间 & 知识 」有限内，总结的文章难免有「未全、不足 」的地方，还望各位好友指出，以提高文章质量**。
-
-
-
+ 
+ 
 
 **UIKit 分类结构**
 
@@ -553,7 +544,7 @@
 
 
 温馨提示：☕️    
-所有文章将「迁移 & 后续」对应两个工程下，这两个想法是个长期而持续的目标吧，如果你感觉看我写的文章对你 利大于弊 . . .；(`由于个人 「时间 & 知识」 有限，是心有余而力有限，欢迎你的 Star & Fork`)。
+简书-白开水ln，所有文章将「`迁移 & 后续`」对应两个工程下，这两个想法是个长期而持续的目标吧，如果你感觉看我写的文章对你 利大于弊 . . .；(`由于个人 「时间 & 知识」 有限，是心有余而力有限，欢迎你的 Star & Fork`)。
 
 
 
@@ -561,12 +552,12 @@
 
 **UIKit框架注解演示**
 
-[iOS Apple UIKit框架注解演示.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
+[iOS Apple UIKit&Foundation框架注解演示.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
 
 
-**UIKit框架注解演示**
+**UIKit（Kit）工具类演示**
 
-[iOS Apple UIKit(kit)工具类演示.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
+[iOS Apple UIKit&Foundation（category）工具类演示.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
 
 
 
@@ -597,6 +588,7 @@
 
 
 ![↑ 《伐码吧》 --> "兄弟"   ↑ 可否帮我达到 100的目标 ，谢谢 ](http://upload-images.jianshu.io/upload_images/2230763-6746b831e7f456f6.gif?imageMogr2/auto-orient/strip)
+
 ↑ 《伐码吧》 --> "兄弟"   ↑ 可否帮我达到 100的目标 ，谢谢
 
 
