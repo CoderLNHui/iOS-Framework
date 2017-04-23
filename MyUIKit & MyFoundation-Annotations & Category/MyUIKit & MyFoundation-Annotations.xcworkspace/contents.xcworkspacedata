@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:MyUIKit-Annotations/MyUIKit-Annotations.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MyFoundation-Annotations/MyFoundation-Annotations.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MyUIKit-Category/MyUIKit-Category.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MyFoundation-Category/MyFoundation-Category.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MyUIKit-Extension/MyUIKit-Extension.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MyFoundation-Extension/MyFoundation-Extension.xcodeproj">
+   </FileRef>
+</Workspace>

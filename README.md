@@ -45,7 +45,7 @@
 
 ## Content progress
 
-//--------------------------- 「MyUIKit-Annotations」 ------------------------------//  
+//--------------------------- 「MyUIKit-Annotations & Category」 ------------------------------//  
 // `期待你的加入 ^_^.`
 
 ```objc
@@ -278,48 +278,7 @@
 ***
 
 
-//--------------------------- 「MyUIKit-Extension」 ------------------------------//  
-// `期待你的加入 ^_^.`
-
-```objc
-#import "UIResponder.h"   //  完全实现✔️
-#import "UIEvent.h"  //  完全实现✔️
-#import "UITouch.h"  //  完全实现✔️
-
-#import "UIView.h"  //  完全实现✔️
-#import "UIScrollView.h" // 完全实现✔️（重点）
-#import "UITableView"  //  完全实现✔️（重点）
-
-#import "UITableViewCell.h"  //  完全实现✔️
-#import "UITableViewHeaderFooterView.h"  //  完全实现✔️
-#import "UIViewController.h"  // 完全实现✔️
-
-#import "UIBezierPath.h"  // 完全实现✔️
-#import "UIGeometry.h"  // 完全实现✔️
-#import "UIGraphics.h"  // 完全实现✔️
-#import "UIColor.h"  // 完全实现✔️
-#import "UIFont.h"  // 完全实现✔️
-
-#import "UIAcceleration.h"  // 完全实现✔️
-#import "UIAccelerometer.h"  // 完全实现✔️
-#import "UIAccessibilityElement.h"  // 完全实现✔️
-#import "UIAccessibility.h" // 完全实现✔️
-
-#import "UIBarItem.h"  // 完全实现✔️
-#import "UITabBarItem.h"  // 完全实现✔️
-#import "UIBarButtonItem.h" // 完全实现✔️
-#import "UIInterface.h"  // 完全实现✔️
-
-#import "UIDevice.h"  // 完全实现✔️
-
-
-#endif /* UIKit_h */
-```
-
-
-
-
-//--------------------------- 「MyFoundation-Annotations」 ------------------------------//    
+//--------------------------- 「MyFoundation-Annotations & Category」 ------------------------------//    
 // `期待你的加入 ^_^.`
 
 
@@ -512,6 +471,52 @@
 ```
 
 
+***
+
+//--------------------------- 「MyUIKit-Extension」 ------------------------------//  
+// `期待你的加入 ^_^.`
+
+```objc
+#import "UIResponder.h"   //  完全实现✔️
+#import "UIEvent.h"  //  完全实现✔️
+#import "UITouch.h"  //  完全实现✔️
+
+#import "UIView.h"  //  完全实现✔️
+#import "UIScrollView.h" // 完全实现✔️（重点）
+#import "UITableView"  //  完全实现✔️（重点）
+
+#import "UITableViewCell.h"  //  完全实现✔️
+#import "UITableViewHeaderFooterView.h"  //  完全实现✔️
+#import "UIViewController.h"  // 完全实现✔️
+
+#import "UIBezierPath.h"  // 完全实现✔️
+#import "UIGeometry.h"  // 完全实现✔️
+#import "UIGraphics.h"  // 完全实现✔️
+#import "UIColor.h"  // 完全实现✔️
+#import "UIFont.h"  // 完全实现✔️
+
+#import "UIAcceleration.h"  // 完全实现✔️
+#import "UIAccelerometer.h"  // 完全实现✔️
+#import "UIAccessibilityElement.h"  // 完全实现✔️
+#import "UIAccessibility.h" // 完全实现✔️
+
+#import "UIBarItem.h"  // 完全实现✔️
+#import "UITabBarItem.h"  // 完全实现✔️
+#import "UIBarButtonItem.h" // 完全实现✔️
+#import "UIInterface.h"  // 完全实现✔️
+
+#import "UIDevice.h"  // 完全实现✔️
+
+
+#endif /* UIKit_h */
+```
+
+
+
+
+
+***
+
 
 //--------------------------- 「MyFoundation-Extension」 ------------------------------//  
 // `期待你的加入 ^_^.`
@@ -539,8 +544,15 @@
 
 
 
-## UIKit框架注解演示
-[ UIKit框架注解演示.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
+**UIKit框架注解演示**
+
+[iOS Apple UIKit框架注解演示.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
+
+
+**UIKit框架注解演示**
+
+[iOS Apple UIKit(kit)工具类演示.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
+
 
 
  
@@ -555,7 +567,7 @@
 
 - 如果在阅读过程中遇到 error，希望你能 Issues 我，谢谢。
 
-- 如果你想为【本文相关】分享点什么，也希望你能 Issues 我，我非常想为这篇文章增加更多实用的内容，谢谢。
+- 如果你想为【本工程相关】分享点什么，也希望你能 Issues 我，我非常想为这篇文章增加更多实用的内容，谢谢。
 
 - [「博客原文」](https://custompbwaters.github.io/2015/06/01/源码注解+活用/iOS%20UIKit框架/)，对本文我会【不定时、持续更新、一些 学习心得与文章、实用才是硬道理】^_^.
 
@@ -568,8 +580,9 @@
 我只是个【有思想的伐码猿🐒】加上【自己的学习总结☕️】写出来的文章。
 
 
-![↑ 《伐码吧》 --> "兄弟"   ↑ 可否帮我达到 100的目标 ，谢谢 ](http://upload-images.jianshu.io/upload_images/2230763-6746b831e7f456f6.gif?imageMogr2/auto-orient/strip)
 
+![↑ 《伐码吧》 --> "兄弟"   ↑ 可否帮我达到 100的目标 ，谢谢 ](http://upload-images.jianshu.io/upload_images/2230763-6746b831e7f456f6.gif?imageMogr2/auto-orient/strip)
+↑ 《伐码吧》 --> "兄弟"   ↑ 可否帮我达到 100的目标 ，谢谢
 
 
 
