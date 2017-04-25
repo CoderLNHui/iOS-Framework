@@ -15,6 +15,7 @@
 		76C87A531EACFF400088ABF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C87A4E1EACFF400088ABF7 /* AppDelegate.m */; };
 		76C87A541EACFF400088ABF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C87A501EACFF400088ABF7 /* main.m */; };
 		76C87A551EACFF400088ABF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C87A521EACFF400088ABF7 /* ViewController.m */; };
+		76F3504D1EAF4D37004A5723 /* Foundation框架.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F3504C1EAF4D37004A5723 /* Foundation框架.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +47,15 @@
 		76C879E91EACFB120088ABF7 /* MyFoundation-AnnotationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyFoundation-AnnotationsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C879ED1EACFB120088ABF7 /* MyFoundation_AnnotationsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFoundation_AnnotationsUITests.m; sourceTree = "<group>"; };
 		76C879EF1EACFB120088ABF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76C87A4B1EACFF400088ABF7 /* NSRunLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRunLoop.h; sourceTree = "<group>"; };
 		76C87A4D1EACFF400088ABF7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		76C87A4E1EACFF400088ABF7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		76C87A4F1EACFF400088ABF7 /* Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foundation.h; sourceTree = "<group>"; };
 		76C87A501EACFF400088ABF7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76C87A511EACFF400088ABF7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		76C87A521EACFF400088ABF7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		76F3504C1EAF4D37004A5723 /* Foundation框架.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Foundation框架.png"; sourceTree = "<group>"; };
+		76F3504F1EAF5632004A5723 /* NSRunLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRunLoop.h; sourceTree = "<group>"; };
+		76F350501EAF5632004A5723 /* NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +106,7 @@
 		76C879C71EACFB120088ABF7 /* MyFoundation-Annotations */ = {
 			isa = PBXGroup;
 			children = (
-				76C87A4A1EACFF400088ABF7 /* NSRunLoop */,
+				76F3504E1EAF5632004A5723 /* NSObject */,
 				76C87A4C1EACFF400088ABF7 /* Other */,
 				76C879D11EACFB120088ABF7 /* Main.storyboard */,
 				76C879D41EACFB120088ABF7 /* Assets.xcassets */,
@@ -139,18 +142,11 @@
 			path = "MyFoundation-AnnotationsUITests";
 			sourceTree = "<group>";
 		};
-		76C87A4A1EACFF400088ABF7 /* NSRunLoop */ = {
-			isa = PBXGroup;
-			children = (
-				76C87A4B1EACFF400088ABF7 /* NSRunLoop.h */,
-			);
-			path = NSRunLoop;
-			sourceTree = "<group>";
-		};
 		76C87A4C1EACFF400088ABF7 /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				76C87A4F1EACFF400088ABF7 /* Foundation.h */,
+				76F3504C1EAF4D37004A5723 /* Foundation框架.png */,
 				76C87A4D1EACFF400088ABF7 /* AppDelegate.h */,
 				76C87A4E1EACFF400088ABF7 /* AppDelegate.m */,
 				76C87A511EACFF400088ABF7 /* ViewController.h */,
@@ -158,6 +154,15 @@
 				76C87A501EACFF400088ABF7 /* main.m */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		76F3504E1EAF5632004A5723 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				76F3504F1EAF5632004A5723 /* NSRunLoop.h */,
+				76F350501EAF5632004A5723 /* NSString.h */,
+			);
+			path = NSObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +273,7 @@
 			files = (
 				76C879D81EACFB120088ABF7 /* LaunchScreen.storyboard in Resources */,
 				76C879D51EACFB120088ABF7 /* Assets.xcassets in Resources */,
+				76F3504D1EAF4D37004A5723 /* Foundation框架.png in Resources */,
 				76C879D31EACFB120088ABF7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

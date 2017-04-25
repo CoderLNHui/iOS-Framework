@@ -3,7 +3,7 @@
 
 >我们追求技术的提升，关注技术的发展历程；作为从事技术工作的伐码猿，有个想法（`仅是个人想法`），这个想法工程量之大（`遇到，用到，最新技术点，点点积累，及时补充吧`），从事技术多年也算是对所花费时间的一个总结（`算是对技术这块的一个目标吧`）。
 
->这篇文章的内容仅是【UIKit框架 各文件分类的一个简明介绍】，  
+>这篇文章的内容仅是【`UIKit框架 各文件分类的一个简明介绍`】，  
 **重点 -> 重点 -> 重点**（`重要的事情说 2+1 遍`），    
 **我的「想法和行动」都在文章末尾**
 
@@ -17,6 +17,9 @@
 ![「UIKit Framework Annotation  Practical Case」](http://upload-images.jianshu.io/upload_images/2230763-0fd6bbb32d5a58aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![「Foundation Framework Annotation  Practical Case」](http://upload-images.jianshu.io/upload_images/2230763-ce14862fab7de4fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![「 Framework Efficiency of Tools」](http://upload-images.jianshu.io/upload_images/2230763-1a2f550f85ad69c3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
@@ -42,8 +45,7 @@
 
 **Foundation 分类结构**
 
-[这里有篇详细的介绍，请你移步这里阅读](http://www.cnblogs.com/kenshincui/p/3885689.html#!comments)
-
+![ Foundation 框架](http://upload-images.jianshu.io/upload_images/2230763-04f51e5df6ea5645.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
@@ -538,8 +540,8 @@
 ```
 
 
-**总之，学习一门新的框架类库的时侯，需要追根溯源，才好提纲切领，即能掌握全局，又能深入细节。  
-从系统根类出发，结合事件响应处理的机制原理，再深入到各个界面组件或自定义，就会胸有成竹而不乱阵脚了**。
+总之，学习一门新的框架类库的时侯，需要追根溯源，才好提纲切领，即能掌握全局，又能深入细节。  
+从系统根类出发，结合事件响应处理的机制原理，再深入到各个界面组件或自定义，就会胸有成竹而不乱阵脚了。
 
 
 
@@ -552,12 +554,12 @@
 
 **UIKit&Foundation框架注解演示**
 
-[Apple.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
+[Apple.gif http://www.jianshu.com/p/3ba46721ae96](http://www.jianshu.com/p/3ba46721ae96)
 
 
 **UIKit&Foundation（category）工具类演示**
 
-[Category.gif http://www.jianshu.com/p/e5b995ecf44d](http://www.jianshu.com/p/e5b995ecf44d)
+[Category.gif http://www.jianshu.com/p/3ba46721ae96](http://www.jianshu.com/p/3ba46721ae96)
 
 
 
@@ -587,13 +589,13 @@
 
 
 
-![↑ 《伐码吧》 --> "兄弟"   ↑ 可否帮我达到 100的目标 ，谢谢 ](http://upload-images.jianshu.io/upload_images/2230763-6746b831e7f456f6.gif?imageMogr2/auto-orient/strip)
+![↑ 《伐码吧》 --> "兄弟"   ↑ ](http://upload-images.jianshu.io/upload_images/2230763-6746b831e7f456f6.gif?imageMogr2/auto-orient/strip)
 
  
 
 
 
-| `  ☕️ 分享是你我熟悉的味道 ☕️ 未完待续 ！✔️` |
+| `  ☕️ 分享是你我熟悉的味道 ☕️ 未完待续 ！` |
 | :-: |
 | :💥❤️💥: |
 | `To be continued ☕️ Plain boiled water ☕️ To be continued` |

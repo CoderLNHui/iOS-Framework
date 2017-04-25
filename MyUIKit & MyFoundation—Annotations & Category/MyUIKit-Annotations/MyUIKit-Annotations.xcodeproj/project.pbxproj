@@ -109,6 +109,7 @@
 		76C87A411EACFBA30088ABF7 /* UITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewController.h; sourceTree = "<group>"; };
 		76C87A421EACFBA30088ABF7 /* UIVideoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIVideoEditorController.h; sourceTree = "<group>"; };
 		76C87A431EACFBA30088ABF7 /* UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewController.h; sourceTree = "<group>"; };
+		76F350511EAF6D2D004A5723 /* UIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImage.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +206,7 @@
 		76C879FB1EACFBA30088ABF7 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				76F350511EAF6D2D004A5723 /* UIImage.h */,
 				76C879FC1EACFBA30088ABF7 /* LNBizerPath.h */,
 				76C879FD1EACFBA30088ABF7 /* NSURLSession.h */,
 				76C879FE1EACFBA30088ABF7 /* UIKitDefines.h */,
