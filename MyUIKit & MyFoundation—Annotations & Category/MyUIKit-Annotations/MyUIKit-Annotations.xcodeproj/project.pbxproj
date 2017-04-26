@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7672ADF81EB0906D0058D238 /* WKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebView.h; sourceTree = "<group>"; };
 		76C879861EACFAD70088ABF7 /* MyUIKit-Annotations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyUIKit-Annotations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C8798A1EACFAD70088ABF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76C879931EACFAD70088ABF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +138,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7672ADF71EB090140058D238 /* Other frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7672ADF81EB0906D0058D238 /* WKWebView.h */,
+			);
+			path = "Other frameworks";
+			sourceTree = "<group>";
+		};
 		76C8797D1EACFAD70088ABF7 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +177,7 @@
 				76C87A221EACFBA30088ABF7 /* UIView */,
 				76C87A3C1EACFBA30088ABF7 /* UIViewController */,
 				76C879FF1EACFBA30088ABF7 /* Other */,
+				7672ADF71EB090140058D238 /* Other frameworks */,
 				76C879921EACFAD70088ABF7 /* Main.storyboard */,
 				76C879951EACFAD70088ABF7 /* Assets.xcassets */,
 				76C879971EACFAD70088ABF7 /* LaunchScreen.storyboard */,
