@@ -11,7 +11,7 @@
 
 ## UIKit&Foundation-Framework-OpenSource
 
-`MyUIKit & MyFoundation`框架 — `Annotations & Category`注解工具类，归类整理，各分类文件注解，并对每一类中常用的功能进行案例渐进式解析；`以简化初学者入门和老司机回顾的繁索过程`，尽快切入主题，快速使用起来。这里只等你的到来 ！
+
 
 
 ![「UIKit Framework Annotation  Practical Case」](http://upload-images.jianshu.io/upload_images/2230763-0fd6bbb32d5a58aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
