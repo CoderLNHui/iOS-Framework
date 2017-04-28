@@ -85,7 +85,7 @@
 #import <UIKit/UIBezierPath.h> // 注解完全✔️
 
 #if __has_include(<UIKit/UIButton.h>)
-#import <UIKit/UIButton.h>
+#import <UIKit/UIButton.h> // 注解未全➕
 #import <UIKit/UICollectionView.h> // 注解完全✔️
 #import <UIKit/UICollectionViewCell.h> // 注解未全➕
 #import <UIKit/UICollectionViewController.h> // 注解未全➕
@@ -94,7 +94,7 @@
 #import <UIKit/UICollectionViewTransitionLayout.h>
 #endif
 
-#import <UIKit/UIColor.h>
+#import <UIKit/UIColor.h> // 注解未全➕
 
 #if __has_include(<UIKit/UIContentSizeCategoryAdjusting.h>)
 #import <UIKit/UIContentSizeCategoryAdjusting.h>
@@ -123,7 +123,7 @@
 #endif
 
 #import <UIKit/UIGraphics.h>
-#import <UIKit/UIImage.h>
+#import <UIKit/UIImage.h> // 注解未全➕
 
 #if __has_include(<UIKit/UIGraphicsRenderer.h>)
 #import <UIKit/UIGraphicsRenderer.h>
@@ -300,7 +300,7 @@
 
 #import <Foundation/NSObjCRuntime.h>
 
-#import <Foundation/NSArray.h>
+#import <Foundation/NSArray.h> // 注解未全➕
 #import <Foundation/NSAutoreleasePool.h>
 #import <Foundation/NSBundle.h>
 #import <Foundation/NSByteOrder.h>
@@ -343,8 +343,8 @@
 #import <Foundation/NSLock.h>
 #import <Foundation/NSMapTable.h>
 #import <Foundation/NSMethodSignature.h>
-#import <Foundation/NSNotification.h>
-#import <Foundation/NSNotificationQueue.h>
+#import <Foundation/NSNotification.h> // 注解完全✔️
+#import <Foundation/NSNotificationQueue.h> // 注解完全✔️
 #import <Foundation/NSNull.h>
 #import <Foundation/NSNumberFormatter.h>
 #import <Foundation/NSObject.h>

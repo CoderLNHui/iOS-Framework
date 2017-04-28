@@ -7,12 +7,33 @@
 //  https://custompbwaters.github.io    http://www.jianshu.com/p/e5b995ecf44d
 //
 
-//--------------------------- UIScrollView概念 ------------------------------//
+//--------------------------- UIScrollView概念 & 重要属性 ------------------------------//
 //
 
 /**
  UIScrollView是一个非常重要的控件,其可以展示比设备屏幕更大区域的内容,我们可以通过手指滑动来查看内容视图的每一部分内容,也可以通过手指捏合来对内容视图进行缩放操作,UITableView、UICollectionView和UITextView等常用控件全部继承自UIScrollView,而UIWebView控件内部也是基于UIScrollView实现的,我们每天开发中都不断显式或隐式地与UIScrollView打交道
- */
+ 
+ contentSize.height : 所有内容的总高度
+ 
+ contentInset : 在内容周围额外增加的间距（内边距），始终粘着内容
+ 
+ ontentOffset : 内容距离frame矩形框，偏移了多少
+ 
+ contentOffset.x == contentSize最左边 - frame最左边 的差值
+ 
+ contentOffset.y == contentSize顶部 - frame顶部 的差值
+ 
+ frame : 是以父控件内容的左上角为坐标原点{0, 0}
+ 
+ bounds : 是以自己内容的左上角为坐标原点{0, 0}
+
+ 重点：图解属性相关
+ 链接：http://fromwiz.com/share/s/1g2OHm1Yz4U22t9uLe1FIePS0hnQMy19KA5B26lMX40GUAMJ
+ 密码：mzen
+
+
+
+
 
 
 

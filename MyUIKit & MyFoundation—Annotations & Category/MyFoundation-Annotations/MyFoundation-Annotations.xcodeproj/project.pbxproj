@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76C5DA161EB32C4100CCEB50 /* NSNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C5DA151EB32C4100CCEB50 /* NSNotification.m */; };
 		76C879D31EACFB120088ABF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C879D11EACFB120088ABF7 /* Main.storyboard */; };
 		76C879D51EACFB120088ABF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C879D41EACFB120088ABF7 /* Assets.xcassets */; };
 		76C879D81EACFB120088ABF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C879D61EACFB120088ABF7 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76C5DA141EB32C4100CCEB50 /* NSNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNotification.h; sourceTree = "<group>"; };
+		76C5DA151EB32C4100CCEB50 /* NSNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNotification.m; sourceTree = "<group>"; };
+		76C5DA171EB332AB00CCEB50 /* NSNotificationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNotificationQueue.h; sourceTree = "<group>"; };
 		76C879C51EACFB120088ABF7 /* MyFoundation-Annotations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyFoundation-Annotations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C879D21EACFB120088ABF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76C879D41EACFB120088ABF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,6 +163,9 @@
 		76F3504E1EAF5632004A5723 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				76C5DA141EB32C4100CCEB50 /* NSNotification.h */,
+				76C5DA151EB32C4100CCEB50 /* NSNotification.m */,
+				76C5DA171EB332AB00CCEB50 /* NSNotificationQueue.h */,
 				76F3504F1EAF5632004A5723 /* NSRunLoop.h */,
 				76F350501EAF5632004A5723 /* NSString.h */,
 			);
@@ -302,6 +309,7 @@
 				76C87A551EACFF400088ABF7 /* ViewController.m in Sources */,
 				76C87A541EACFF400088ABF7 /* main.m in Sources */,
 				76C87A531EACFF400088ABF7 /* AppDelegate.m in Sources */,
+				76C5DA161EB32C4100CCEB50 /* NSNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

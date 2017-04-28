@@ -38,16 +38,24 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 #pragma mark ------------------
 #pragma mark - 内容视图属性方法相关
 
-/** 内容视图的原点相对于scrollView的原点的偏移量(上/左 方向偏移为正数,下/右 方向偏移为负数),默认为CGPointZero */
+/**
+ 内容视图的原点相对于scrollView的原点的【内容偏移量】,默认为CGPointZero
+ (上/左 方向偏移为正数,下/右 方向偏移为负数)
+ */
 @property(nonatomic)         CGPoint                      contentOffset;                  // default CGPointZero
-/** 内容视图的大小,默认为CGSizeZero */
+/** 【内容视图的大小】,默认为CGSizeZero */
 @property(nonatomic)         CGSize                       contentSize;                    // default CGSizeZero
-/** 为内容视图周围增加可滚动区域,默认为UIEdgeInsetsZero */
+
+/**
+ 在内容周围额外增加的间距【内边距】，始终粘着内容,默认为UIEdgeInsetsZero
+ CGFloat top-, CGFloat left-, CGFloat bottom+, CGFloat right+
+ */
 @property(nonatomic)         UIEdgeInsets                 contentInset;                   // default UIEdgeInsetsZero. add additional scroll area around content
 
+/** 代理【id 任何对象】 */
 @property(nullable,nonatomic,weak) id<UIScrollViewDelegate>        delegate;                       // default nil. weak reference
 
-/** 设置内容视图的原点相对于scrollView的原点的偏移量 */
+/** 设置内容视图的原点相对于scrollView的原点的【内容偏移量】，带动画效果 */
 - (void)setContentOffset:(CGPoint)contentOffset animated:(BOOL)animated;  // animate at constant velocity to new offset
 
 

@@ -54,10 +54,16 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIButton : UIControl <NSCoding>
 - (void)setBackgroundImage:(nullable UIImage *)image forState:(UIControlState)state UI_APPEARANCE_SELECTOR; // default is nil
 - (void)setAttributedTitle:(nullable NSAttributedString *)title forState:(UIControlState)state NS_AVAILABLE_IOS(6_0); // default is nil. title is assumed to be single line
 
+/** 获取Btn某种状态下的 标题文字 */
 - (nullable NSString *)titleForState:(UIControlState)state;          // these getters only take a single state value
+
+/** 获取Btn某种状态下的 标题颜色 */
 - (nullable UIColor *)titleColorForState:(UIControlState)state;
+/** 获取Btn某种状态下的 阴影标题 */
 - (nullable UIColor *)titleShadowColorForState:(UIControlState)state;
+/** 获取Btn某种状态下的 图片 */
 - (nullable UIImage *)imageForState:(UIControlState)state;
+/** 获取Btn某种状态下的 背景图片 */
 - (nullable UIImage *)backgroundImageForState:(UIControlState)state;
 - (nullable NSAttributedString *)attributedTitleForState:(UIControlState)state NS_AVAILABLE_IOS(6_0);
 

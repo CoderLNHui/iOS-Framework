@@ -40,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		7672ADF81EB0906D0058D238 /* WKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebView.h; sourceTree = "<group>"; };
+		76C5DA131EB2EDE200CCEB50 /* NSArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray.h; sourceTree = "<group>"; };
 		76C879861EACFAD70088ABF7 /* MyUIKit-Annotations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyUIKit-Annotations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C8798A1EACFAD70088ABF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76C879931EACFAD70088ABF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -216,6 +217,7 @@
 		76C879FB1EACFBA30088ABF7 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				76C5DA131EB2EDE200CCEB50 /* NSArray.h */,
 				76F350511EAF6D2D004A5723 /* UIImage.h */,
 				76C879FC1EACFBA30088ABF7 /* LNBizerPath.h */,
 				76C879FD1EACFBA30088ABF7 /* NSURLSession.h */,
