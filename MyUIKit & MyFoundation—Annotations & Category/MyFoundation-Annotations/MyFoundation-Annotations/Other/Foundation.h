@@ -1,13 +1,11 @@
 //
 //  Foundation.h
-//  Foundation
+//  Annotations（https://github.com/CustomPBWaters）
 //
 //  Created by 白开水ln on 16/-/-.
-//  Copyright (c) 1994-2016 Apple Inc. All rights reserved.
-//  https://custompbwaters.github.io    http://www.jianshu.com/p/e5b995ecf44d
-
-//  https://github.com/CustomPBWaters/OfficialTranslation-SourceAnnotation
+//  Copyright (c) 1994-2016（https://custompbwaters.github.io）All rights reserved.
 //
+// http://www.jianshu.com/p/e5b995ecf44d
 
 
 /**
@@ -80,7 +78,7 @@
 #import <Foundation/NSProxy.h>
 #import <Foundation/NSRange.h>
 #import <Foundation/NSRegularExpression.h>
-#import <Foundation/NSRunLoop.h> // 注解未全➕
+#import <Foundation/NSRunLoop.h>
 #import <Foundation/NSScanner.h>
 #import <Foundation/NSSet.h>
 #import <Foundation/NSSortDescriptor.h>
@@ -135,7 +133,7 @@
 #import <Foundation/NSProgress.h>
 #import <Foundation/NSUbiquitousKeyValueStore.h>
 #import <Foundation/NSUndoManager.h>
-#import <Foundation/NSURLSession.h> // 注解未全➕
+#import <Foundation/NSURLSession.h> 
 #import <Foundation/NSUserActivity.h>
 #import <Foundation/NSUUID.h>
 #endif

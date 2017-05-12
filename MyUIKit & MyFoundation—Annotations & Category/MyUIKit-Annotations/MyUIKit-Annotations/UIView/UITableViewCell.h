@@ -99,7 +99,9 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableViewCell : UIView <NSCoding, UIGes
 
 /** 设置选中样式(StyleNone选中不变灰色) */
 @property (nonatomic) UITableViewCellSelectionStyle   selectionStyle;             // default is UITableViewCellSelectionStyleBlue.
+/** 选中 */
 @property (nonatomic, getter=isSelected) BOOL         selected;                   // set selected state (title, image, background). default is NO. animated is NO
+/** 高亮 */
 @property (nonatomic, getter=isHighlighted) BOOL      highlighted;                // set highlighted state (title, image, background). default is NO. animated is NO
 
 /** 当cell处于高亮状态时，uitableview内部会自动调用该方法，重写该方法可以在cell处于高亮时做一些额外操作 */

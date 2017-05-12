@@ -47,7 +47,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 @property(nonatomic)         CGSize                       contentSize;                    // default CGSizeZero
 
 /**
- 在内容周围额外增加的间距【内边距】，始终粘着内容,默认为UIEdgeInsetsZero
+ 在内容周围额外增加的间距【tableView内边距】，始终粘着内容,默认为UIEdgeInsetsZero
  CGFloat top-, CGFloat left-, CGFloat bottom+, CGFloat right+
  */
 @property(nonatomic)         UIEdgeInsets                 contentInset;                   // default UIEdgeInsetsZero. add additional scroll area around content
@@ -104,12 +104,12 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 #pragma mark ------------------
 #pragma mark - 指示器属性方法相关
 
-/** 是否在滑动时指示器可见(水平),默认为YES */
+/** 是否在滑动时指示器可见【水平】,默认为YES */
 @property(nonatomic)         BOOL                         showsHorizontalScrollIndicator; // default YES. show indicator while we are tracking. fades out after tracking
-/** 是否在滑动时指示器可见(竖直),默认为YES */
+/** 是否在滑动时指示器可见【竖直】,默认为YES */
 @property(nonatomic)         BOOL                         showsVerticalScrollIndicator;   // default YES. show indicator while we are tracking. fades out after tracking
 
-/** 为指示器周围增加可滚动区域,默认为UIEdgeInsetsZero */
+/** 为指示器周围增加可滚动区域【滚动条内边距】,默认为UIEdgeInsetsZero */
 @property(nonatomic)         UIEdgeInsets                 scrollIndicatorInsets;          // default is UIEdgeInsetsZero. adjust indicators inside of insets
 
 /**

@@ -207,13 +207,17 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView
 - (void)registerClass:(nullable Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier;
 - (void)registerNib:(nullable UINib *)nib forCellWithReuseIdentifier:(NSString *)identifier;
 
+
 /** 注册要使用的补充视图(HeaderView 和 FooterView)对应的类型 */
 - (void)registerClass:(nullable Class)viewClass forSupplementaryViewOfKind:(NSString *)elementKind withReuseIdentifier:(NSString *)identifier;
 - (void)registerNib:(nullable UINib *)nib forSupplementaryViewOfKind:(NSString *)kind withReuseIdentifier:(NSString *)identifier;
 
-/** 复用队列 */
+/**
+ 复用队列
+ */
 - (__kindof UICollectionViewCell *)dequeueReusableCellWithReuseIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath;
 - (__kindof UICollectionReusableView *)dequeueReusableSupplementaryViewOfKind:(NSString *)elementKind withReuseIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath;
+
 
 // These properties control whether items can be selected, and if so, whether multiple items can be simultaneously selected.
 /** 允许选择 */
@@ -232,9 +236,13 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView
 /** 全局刷新 */
 - (void)reloadData; // discard the dataSource and delegate data and requery as necessary
 
-/** 布局动画 */
+/**
+ 这两个方法是
+ 布局动画
+ */
 - (void)setCollectionViewLayout:(UICollectionViewLayout *)layout animated:(BOOL)animated; // transition from one layout to another
 - (void)setCollectionViewLayout:(UICollectionViewLayout *)layout animated:(BOOL)animated completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(7_0);
+
 
 - (UICollectionViewTransitionLayout *)startInteractiveTransitionToCollectionViewLayout:(UICollectionViewLayout *)layout completion:(nullable UICollectionViewLayoutInteractiveTransitionCompletion)completion NS_AVAILABLE_IOS(7_0);
 - (void)finishInteractiveTransition NS_AVAILABLE_IOS(7_0);
@@ -273,7 +281,9 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView
 - (void)scrollToItemAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UICollectionViewScrollPosition)scrollPosition animated:(BOOL)animated;
 
 // These methods allow dynamic modification of the current set of items in the collection view
-/** 这些方法允许动态修改当前的Item 和 Section */
+
+#pragma mark ------------------
+#pragma mark - 这些方法允许动态修改当前的Item 和 Section
 
 // 插入Section
 - (void)insertSections:(NSIndexSet *)sections;
@@ -293,7 +303,10 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView
 // 移动Item
 - (void)moveItemAtIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)newIndexPath;
 
-/** 同样可以进行批量操作 */
+
+#pragma mark ------------------
+#pragma mark - 同样可以进行批量操作
+
 - (void)performBatchUpdates:(void (^ __nullable)(void))updates completion:(void (^ __nullable)(BOOL finished))completion; // allows multiple insert/delete/reload/move calls to be animated simultaneously. Nestable.
 
 // Support for reordering

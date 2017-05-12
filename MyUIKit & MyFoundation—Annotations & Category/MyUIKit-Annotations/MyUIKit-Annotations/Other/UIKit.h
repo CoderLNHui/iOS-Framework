@@ -1,13 +1,12 @@
 //
 //  UIKit.h
-//  UIKit
+//  Annotations（https://github.com/CustomPBWaters）
 //
 //  Created by 白开水ln on 16/-/-.
-//  Copyright (c) 2005-2016 Apple Inc. All rights reserved.
-//  https://custompbwaters.github.io    http://www.jianshu.com/p/e5b995ecf44d
-
-//  https://github.com/CustomPBWaters/OfficialTranslation-SourceAnnotation
+//  Copyright (c) 2005-2016年（https://custompbwaters.github.io）All rights reserved.
 //
+// http://www.jianshu.com/p/e5b995ecf44d
+
 
 
 /**
@@ -40,15 +39,15 @@
 #endif
 
 
-#import <UIKit/UIBezierPath.h> // 注解完全✔️
+#import <UIKit/UIBezierPath.h>
 
 #if __has_include(<UIKit/UIButton.h>)
 #import <UIKit/UIButton.h>
-#import <UIKit/UICollectionView.h> // 注解完全✔️
-#import <UIKit/UICollectionViewCell.h> // 注解未全➕
-#import <UIKit/UICollectionViewController.h> // 注解未全➕
-#import <UIKit/UICollectionViewFlowLayout.h> // 注解完全✔️
-#import <UIKit/UICollectionViewLayout.h> // 注解完全✔️
+#import <UIKit/UICollectionView.h>
+#import <UIKit/UICollectionViewCell.h>
+#import <UIKit/UICollectionViewController.h>
+#import <UIKit/UICollectionViewFlowLayout.h>
+#import <UIKit/UICollectionViewLayout.h>
 #import <UIKit/UICollectionViewTransitionLayout.h>
 #endif
 
@@ -120,7 +119,7 @@
 #import <UIKit/UINib.h>
 #import <UIKit/UINibDeclarations.h>
 #import <UIKit/UINibLoading.h>
-#import <UIKit/UIPageControl.h> // 注解完全✔️
+#import <UIKit/UIPageControl.h>
 #import <UIKit/UIPageViewController.h>
 #import <UIKit/UIPanGestureRecognizer.h>
 #import <UIKit/UIPasteboard.h>
@@ -146,7 +145,7 @@
 #import <UIKit/UIScreen.h>
 #import <UIKit/UIScreenEdgePanGestureRecognizer.h>
 #import <UIKit/UIScreenMode.h>
-#import <UIKit/UIScrollView.h> // 注解完全✔️
+#import <UIKit/UIScrollView.h>
 #import <UIKit/UISearchBar.h>
 #import <UIKit/UISearchContainerViewController.h>
 #import <UIKit/UISearchController.h>
@@ -164,10 +163,10 @@
 #import <UIKit/UITabBar.h>
 #import <UIKit/UITabBarController.h>
 #import <UIKit/UITabBarItem.h>
-#import <UIKit/UITableView.h> // 注解完全✔️
+#import <UIKit/UITableView.h>
 #import <UIKit/UITableViewHeaderFooterView.h>
-#import <UIKit/UITableViewCell.h> // 注解完全✔️
-#import <UIKit/UITableViewController.h> // 注解完全✔️
+#import <UIKit/UITableViewCell.h>
+#import <UIKit/UITableViewController.h>
 #import <UIKit/UITapGestureRecognizer.h>
 #import <UIKit/UITextChecker.h>
 #import <UIKit/UITextField.h>

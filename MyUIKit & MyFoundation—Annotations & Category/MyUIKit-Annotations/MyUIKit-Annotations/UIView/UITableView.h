@@ -375,7 +375,12 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding>
 
 /** 设置tableView头视图 */
 @property (nonatomic, strong, nullable) UIView *tableHeaderView;                           // accessory view for above row content. default is nil. not to be confused with section header
-/** 设置tableView尾视图 */
+
+/**
+ 设置tableView尾视图
+ 
+ self.tableView.tableFooterView = [[UIView alloc] init]; // 隐藏多余分割线
+ */
 @property (nonatomic, strong, nullable) UIView *tableFooterView;                           // accessory view below content. default is nil. not to be confused with section footer
 
 

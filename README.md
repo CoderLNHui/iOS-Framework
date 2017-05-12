@@ -76,7 +76,7 @@
 #import <UIKit/UIAlertView.h>
 #import <UIKit/UIAppearance.h>
 #import <UIKit/UIApplication.h>
-#import <UIKit/UIBarButtonItem.h>
+#import <UIKit/UIBarButtonItem.h> 🔗工具类持续➕
 #import <UIKit/UIBarButtonItemGroup.h>
 #import <UIKit/UIBarItem.h>
 #endif
@@ -123,7 +123,7 @@
 #endif
 
 #import <UIKit/UIGraphics.h>
-#import <UIKit/UIImage.h> // 注解未全➕
+#import <UIKit/UIImage.h> // 注解未全➕  🔗工具类持续➕
 
 #if __has_include(<UIKit/UIGraphicsRenderer.h>)
 #import <UIKit/UIGraphicsRenderer.h>
@@ -135,7 +135,7 @@
 #import <UIKit/UIImageAsset.h>
 #import <UIKit/NSDataAsset.h>
 #import <UIKit/UIImagePickerController.h>
-#import <UIKit/UIImageView.h>
+#import <UIKit/UIImageView.h> // 注解未全➕ 🔗工具类持续➕
 #import <UIKit/UIInputView.h>
 #import <UIKit/UIInputViewController.h>
 #import <UIKit/UIInterface.h>
@@ -212,7 +212,7 @@
 #import <UIKit/UITableViewController.h> // 注解完全✔️
 #import <UIKit/UITapGestureRecognizer.h>
 #import <UIKit/UITextChecker.h>
-#import <UIKit/UITextField.h>
+#import <UIKit/UITextField.h> // 注解未全➕ 🔗工具类持续➕
 #import <UIKit/UITextInput.h>
 #import <UIKit/UITextInputTraits.h>
 #import <UIKit/UITextView.h>
@@ -308,7 +308,7 @@
 #import <Foundation/NSCharacterSet.h>
 #import <Foundation/NSCoder.h>
 #import <Foundation/NSData.h>
-#import <Foundation/NSDate.h>
+#import <Foundation/NSDate.h> // 注解未全➕  🔗工具类持续➕
 #import <Foundation/NSDateInterval.h>
 #import <Foundation/NSDateFormatter.h>
 #import <Foundation/NSDateIntervalFormatter.h>
@@ -322,7 +322,7 @@
 #import <Foundation/NSPersonNameComponentsFormatter.h>
 #import <Foundation/NSDecimal.h>
 #import <Foundation/NSDecimalNumber.h>
-#import <Foundation/NSDictionary.h>
+#import <Foundation/NSDictionary.h> // 注解未全➕  🔗工具类持续➕
 #import <Foundation/NSEnumerator.h>
 #import <Foundation/NSError.h>
 #import <Foundation/NSException.h>
@@ -347,7 +347,7 @@
 #import <Foundation/NSNotificationQueue.h> // 注解完全✔️
 #import <Foundation/NSNull.h>
 #import <Foundation/NSNumberFormatter.h>
-#import <Foundation/NSObject.h>
+#import <Foundation/NSObject.h> // 注解未全➕  🔗工具类持续➕
 #import <Foundation/NSOperation.h>
 #import <Foundation/NSOrderedSet.h>
 #import <Foundation/NSOrthography.h>
@@ -365,7 +365,7 @@
 #import <Foundation/NSSet.h>
 #import <Foundation/NSSortDescriptor.h>
 #import <Foundation/NSStream.h>
-#import <Foundation/NSString.h>
+#import <Foundation/NSString.h> // 注解未全➕  🔗工具类持续➕
 #import <Foundation/NSTextCheckingResult.h>
 #import <Foundation/NSThread.h>
 #import <Foundation/NSTimeZone.h>
@@ -500,7 +500,7 @@
 #import "UIBezierPath.h"  // 完全实现✔️
 #import "UIGeometry.h"  // 完全实现✔️
 #import "UIGraphics.h"  // 完全实现✔️
-#import "UIColor.h"  // 完全实现✔️
+#import "UIColor.h"  // 完全实现✔️ 🔗工具类持续➕
 #import "UIFont.h"  // 完全实现✔️
 
 #import "UIAcceleration.h"  // 完全实现✔️
@@ -526,18 +526,17 @@
 ***
 
 
-//--------------------------- 「MyFoundation-Extension」 ------------------------------//  
+//--------------------------- 「MyOther」 ------------------------------//  
 // `期待你的加入 ^_^.`
 
 ```objc
-
-期待你的加入 ^_^.
-
-期待你的加入 ^_^.
-
-期待你的加入 ^_^.
+Foundation+Log.m // 【用于控制字典和数组打印输出格式为中文(直接拖入项目中就可以了,不要做任何处理) 】
+Single.h // 【快速创建一个单例 MRC模式 & ARC模式】
 
 ```
+
+
+
 
 
 总之，学习一门新的框架类库的时侯，需要追根溯源，才好提纲切领，即能掌握全局，又能深入细节。  
@@ -566,7 +565,7 @@
  
 ## GitHub工程地址 📌 
 
-- [iOS Apple 官方文档译文框架源码注解，当你「了解权威 & 进阶原理」的时候，网搜的众多中 ~ ~（自行脑补）。做只有思想的伐码猿，做到「实用概念，不文言」&「实现原理，简明详解」，从零开始，由浅入深。 以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！Star & Fork](https://github.com/CustomPBWaters/iOS-Apple-OfficialTranslation-SourceAnnotation)
+- [iOS Apple 官方文档译文框架源码注解，当你「了解权威 & 进阶原理」的时候，网搜的众多中 ~ ~（自行脑补）。做只有思想的伐码猿，从零开始，由浅入深。 以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！Star & Fork](https://github.com/CustomPBWaters/iOS-Apple-OfficialTranslation-SourceAnnotation)
  
 
 
