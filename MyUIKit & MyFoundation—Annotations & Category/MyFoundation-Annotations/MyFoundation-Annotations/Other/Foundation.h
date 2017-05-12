@@ -2,7 +2,7 @@
 //  Foundation.h
 //  Annotations（https://github.com/CustomPBWaters）
 //
-//  Created by 白开水ln on 16/-/-.
+//  Created by 简书:白开水ln on 16/-/-.
 //  Copyright (c) 1994-2016（https://custompbwaters.github.io）All rights reserved.
 //
 // http://www.jianshu.com/p/e5b995ecf44d
