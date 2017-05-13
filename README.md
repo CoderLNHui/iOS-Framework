@@ -226,7 +226,7 @@
 #import <UIKit/UIWindow.h>
 #endif
 
-#import <UIKit/NSAttributedString.h>
+#import <UIKit/NSAttributedString.h> // 注解完全✔️
 
 #if __has_include(<UIKit/NSLayoutConstraint.h>)
 #import <UIKit/NSLayoutConstraint.h>
@@ -365,7 +365,7 @@
 #import <Foundation/NSSet.h>
 #import <Foundation/NSSortDescriptor.h>
 #import <Foundation/NSStream.h>
-#import <Foundation/NSString.h> // 注解未全➕  🔗工具类持续➕
+#import <Foundation/NSString.h> // 注解完全✔️  🔗工具类持续➕
 #import <Foundation/NSTextCheckingResult.h>
 #import <Foundation/NSThread.h>
 #import <Foundation/NSTimeZone.h>

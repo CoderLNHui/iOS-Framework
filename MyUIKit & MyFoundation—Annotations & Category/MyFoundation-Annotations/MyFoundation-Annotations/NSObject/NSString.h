@@ -1,11 +1,10 @@
 //
 //  NSString.h
-//  Foundation
+//  Annotations（https://github.com/CustomPBWaters）
 //
-//  Created by 白开水ln on 16/-/-.
-//  Copyright (c) 1994-2016 Apple Inc. All rights reserved.
-//  https://custompbwaters.github.io    http://www.jianshu.com/p/e5b995ecf44d
-
+//  Created by 简书:白开水ln on 16/-/-.
+//  Copyright (c) 1994-2016年（https://custompbwaters.github.io）All rights reserved.
+//
 
 
 typedef unsigned short unichar;
@@ -22,16 +21,26 @@ NS_ASSUME_NONNULL_BEGIN
 /* These options apply to the various search/find and comparison methods (except where noted).
  */
 typedef NS_OPTIONS(NSUInteger, NSStringCompareOptions) {
-    NSCaseInsensitiveSearch = 1,
-    NSLiteralSearch = 2,		/* Exact character-by-character equivalence */
-    NSBackwardsSearch = 4,		/* Search from end of source string */
-    NSAnchoredSearch = 8,		/* Search is limited to start (or end, if NSBackwardsSearch) of source string */
-    NSNumericSearch = 64,		/* Added in 10.2; Numbers within strings are compared using numeric value, that is, Foo2.txt < Foo7.txt < Foo25.txt; only applies to compare methods, not find */
-    NSDiacriticInsensitiveSearch NS_ENUM_AVAILABLE(10_5, 2_0) = 128, /* If specified, ignores diacritics (o-umlaut == o) */
-    NSWidthInsensitiveSearch NS_ENUM_AVAILABLE(10_5, 2_0) = 256, /* If specified, ignores width differences ('a' == UFF41) */
-    NSForcedOrderingSearch NS_ENUM_AVAILABLE(10_5, 2_0) = 512, /* If specified, comparisons are forced to return either NSOrderedAscending or NSOrderedDescending if the strings are equivalent but not strictly equal, for stability when sorting (e.g. "aaa" > "AAA" with NSCaseInsensitiveSearch specified) */
-    NSRegularExpressionSearch NS_ENUM_AVAILABLE(10_7, 3_2) = 1024    /* Applies to rangeOfString:..., stringByReplacingOccurrencesOfString:..., and replaceOccurrencesOfString:... methods only; the search string is treated as an ICU-compatible regular expression; if set, no other options can apply except NSCaseInsensitiveSearch and NSAnchoredSearch */
+    NSCaseInsensitiveSearch = 1,// 不区分大小写比较
+    NSLiteralSearch = 2, // 区分大小写比较		/* Exact character-by-character equivalence */
+    NSBackwardsSearch = 4,// 从字符串末尾开始搜索		/* Search from end of source string */
+    NSAnchoredSearch = 8,// 搜索限制范围的字符串		/* Search is limited to start (or end, if NSBackwardsSearch) of source string */
+    NSNumericSearch = 64,// 按照字符串里的数字为依据，算出顺序		/* Added in 10.2; Numbers within strings are compared using numeric value, that is, Foo2.txt < Foo7.txt < Foo25.txt; only applies to compare methods, not find */
+    NSDiacriticInsensitiveSearch NS_ENUM_AVAILABLE(10_5, 2_0) = 128, // 忽略 "-" 符号的比较 /* If specified, ignores diacritics (o-umlaut == o) */
+    NSWidthInsensitiveSearch NS_ENUM_AVAILABLE(10_5, 2_0) = 256,// 忽略字符串的长度，比较出结果 /* If specified, ignores width differences ('a' == UFF41) */
+    NSForcedOrderingSearch NS_ENUM_AVAILABLE(10_5, 2_0) = 512,// 忽略不区分大小写比较的选项 /* If specified, comparisons are forced to return either NSOrderedAscending or NSOrderedDescending if the strings are equivalent but not strictly equal, for stability when sorting (e.g. "aaa" > "AAA" with NSCaseInsensitiveSearch specified) */
+    NSRegularExpressionSearch NS_ENUM_AVAILABLE(10_7, 3_2) = 1024  // 只能应用于 rangeOfString:..., stringByReplacingOccurrencesOfString:...和 replaceOccurrencesOfString:...方法
+    /* Applies to rangeOfString:..., stringByReplacingOccurrencesOfString:..., and replaceOccurrencesOfString:... methods only; the search string is treated as an ICU-compatible regular expression; if set, no other options can apply except NSCaseInsensitiveSearch and NSAnchoredSearch */
 };
+/**
+ 比较结果:
+ 
+ NSComparisonResult	说明
+ NSOrderedAscending	升序 (左小右大)
+ NSOrderedSame	相同 (内容相同)
+ NSOrderedDescending	降序 (左大右小)
+ */
+
 
 /* Note that in addition to the values explicitly listed below, NSStringEncoding supports encodings provided by CFString.
  See CFStringEncodingExt.h for a list of these encodings.
@@ -73,13 +82,18 @@ NS_ENUM(NSStringEncoding) {
     };
     
     
-    @interface NSString : NSObject <NSCopying, NSMutableCopying, NSSecureCoding>
+@interface NSString : NSObject <NSCopying, NSMutableCopying, NSSecureCoding>
 
-#pragma mark *** String funnel methods ***
+#pragma mark ------------------
+#pragma mark - *** String funnel methods字符串属性 ***
 
 /* NSString primitives. A minimal subclass of NSString just needs to implement these two, along with an init method appropriate for that subclass. We also recommend overriding getCharacters:range: for performance.
  */
+
+// 长度
 @property (readonly) NSUInteger length;
+
+// 字符串对应下标字符
 - (unichar)characterAtIndex:(NSUInteger)index;
 
 /* The initializers available to subclasses. See further below for additional init methods.
@@ -89,59 +103,95 @@ NS_ENUM(NSStringEncoding) {
 
 @end
     
-    @interface NSString (NSStringExtensionMethods)
+@interface NSString (NSStringExtensionMethods)
 
-#pragma mark *** Substrings ***
+#pragma mark ------------------
+#pragma mark - *** Substrings字符串截取 ***
 
 /* To avoid breaking up character sequences such as Emoji, you can do:
  [str substringFromIndex:[str rangeOfComposedCharacterSequenceAtIndex:index].location]
  [str substringToIndex:NSMaxRange([str rangeOfComposedCharacterSequenceAtIndex:index])]
  [str substringWithRange:[str rangeOfComposedCharacterSequencesForRange:range]
  */
+
+// 截取指定位置之后的字符串
 - (NSString *)substringFromIndex:(NSUInteger)from;
+
+//从0下标开始截取到指定位置的字符串
 - (NSString *)substringToIndex:(NSUInteger)to;
+
+//截取指定范围的字符串
 - (NSString *)substringWithRange:(NSRange)range;                // Use with rangeOfComposedCharacterSequencesForRange: to avoid breaking up character sequences
 
+//截取字符串指定范围的字符
 - (void)getCharacters:(unichar *)buffer range:(NSRange)range;   // Use with rangeOfComposedCharacterSequencesForRange: to avoid breaking up character sequences
 
 
-#pragma mark *** String comparison and equality ***
+#pragma mark ------------------
+#pragma mark - *** String comparison and equality字符串比较 ***
 
 /* In the compare: methods, the range argument specifies the subrange, rather than the whole, of the receiver to use in the comparison. The range is not applied to the search string.  For example, [@"AB" compare:@"ABC" options:0 range:NSMakeRange(0,1)] compares "A" to "ABC", not "A" to "A", and will return NSOrderedAscending. It is an error to specify a range that is outside of the receiver's bounds, and an exception may be raised.
  */
+
+//1.比较
 - (NSComparisonResult)compare:(NSString *)string;
+
+//2.比较(指定字符串,条件)
 - (NSComparisonResult)compare:(NSString *)string options:(NSStringCompareOptions)mask;
-- (NSComparisonResult)compare:(NSString *)string options:(NSStringCompareOptions)mask range:(NSRange)rangeOfReceiverToCompare;
-- (NSComparisonResult)compare:(NSString *)string options:(NSStringCompareOptions)mask range:(NSRange)rangeOfReceiverToCompare locale:(nullable id)locale; // locale arg used to be a dictionary pre-Leopard. We now accept NSLocale. Assumes the current locale if non-nil and non-NSLocale. nil continues to mean canonical compare, which doesn't depend on user's locale choice.
+
+//3.比较(指定字符串,条件,范围)
+- (NSComparisonResult)compare:(NSString *)string options:(NSStringCompareOptions)mask range:(NSRange)compareRange;
+
+//4.比较(指定字符串,条件,范围,本地化)
+- (NSComparisonResult)compare:(NSString *)string options:(NSStringCompareOptions)mask range:(NSRange)compareRange locale:(nullable id)locale;
+
+//5.比较(不区分大小写)
 - (NSComparisonResult)caseInsensitiveCompare:(NSString *)string;
+
+//6.本地化比较
 - (NSComparisonResult)localizedCompare:(NSString *)string;
+
+//7.本地化比较(不区分大小写)
 - (NSComparisonResult)localizedCaseInsensitiveCompare:(NSString *)string;
 
-/* localizedStandardCompare:, added in 10.6, should be used whenever file names or other strings are presented in lists and tables where Finder-like sorting is appropriate.  The exact behavior of this method may be tweaked in future releases, and will be different under different localizations, so clients should not depend on the exact sorting order of the strings.
- */
-- (NSComparisonResult)localizedStandardCompare:(NSString *)string NS_AVAILABLE(10_6, 4_0);
+//8.本地化比较(标准)
+- (NSComparisonResult)localizedStandardCompare:(NSString *)string;
 
+//9.判断两个字符串是否内容一致
 - (BOOL)isEqualToString:(NSString *)aString;
 
 
-#pragma mark *** String searching ***
+#pragma mark ------------------
+#pragma mark - *** String searching字符串搜索 ***
 
 /* These perform locale unaware prefix or suffix match. If you need locale awareness, use rangeOfString:options:range:locale:, passing NSAnchoredSearch (or'ed with NSBackwardsSearch for suffix, and NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch if needed) for options, NSMakeRange(0, [receiver length]) for range, and [NSLocale currentLocale] for locale.
  */
+// 【搜索基本】
+//1.是否包含前缀(以str开头)
 - (BOOL)hasPrefix:(NSString *)str;
+
+//2.是否包含后缀(以str结尾)
 - (BOOL)hasSuffix:(NSString *)str;
 
+//3.获取公共前缀
 - (NSString *)commonPrefixWithString:(NSString *)str options:(NSStringCompareOptions)mask;
 
 /* Simple convenience methods for string searching. containsString: returns YES if the target string is contained within the receiver. Same as calling rangeOfString:options: with no options, thus doing a case-sensitive, locale-unaware search. localizedCaseInsensitiveContainsString: is the case-insensitive variant which also takes the current locale into effect. Starting in 10.11 and iOS9, the new localizedStandardRangeOfString: or localizedStandardContainsString: APIs are even better convenience methods for user level searching.   More sophisticated needs can be achieved by calling rangeOfString:options:range:locale: directly.
  */
-/** 是否包含字符串 */
+
+//4.是否包含字符串
 - (BOOL)containsString:(NSString *)str NS_AVAILABLE(10_10, 8_0);
+
+//5.本地化是否包含字符串(不区分大小写)
 - (BOOL)localizedCaseInsensitiveContainsString:(NSString *)str NS_AVAILABLE(10_10, 8_0);
 
 /* The following two are the most appropriate methods for doing user-level string searches, similar to how searches are done generally in the system.  The search is locale-aware, case and diacritic insensitive. As with other APIs, "standard" in the name implies "system default behavior," so the exact list of search options applied may change over time.  If you need more control over the search options, please use the rangeOfString:options:range:locale: method. You can pass [NSLocale currentLocale] for searches in user's locale.
  */
+
+//6.本地化是否包含字符串(标准)
 - (BOOL)localizedStandardContainsString:(NSString *)str NS_AVAILABLE(10_11, 9_0);
+
+//7.本地化搜索字符串范围(标准)
 - (NSRange)localizedStandardRangeOfString:(NSString *)str NS_AVAILABLE(10_11, 9_0);
 
 /* These methods perform string search, looking for the searchString within the receiver string.  These return length==0 if the target string is not found. So, to check for containment: ([str rangeOfString:@"target"].length > 0).  Note that the length of the range returned by these methods might be different than the length of the target string, due composed characters and such.
@@ -150,27 +200,53 @@ NS_ENUM(NSStringEncoding) {
  
  The range argument specifies the subrange, rather than the whole, of the receiver to use in the search.  It is an error to specify a range that is outside of the receiver's bounds, and an exception may be raised.
  */
+
+// 【搜索字符串】
+//8.搜索(指定字符串)
 - (NSRange)rangeOfString:(NSString *)searchString;
+
+//9.搜索(指定字符串,条件)
 - (NSRange)rangeOfString:(NSString *)searchString options:(NSStringCompareOptions)mask;
+
+//10.搜索(指定字符串,条件,范围)
 - (NSRange)rangeOfString:(NSString *)searchString options:(NSStringCompareOptions)mask range:(NSRange)rangeOfReceiverToSearch;
+
+//11.搜索(指定字符串,条件,范围,本地化)
 - (NSRange)rangeOfString:(NSString *)searchString options:(NSStringCompareOptions)mask range:(NSRange)rangeOfReceiverToSearch locale:(nullable NSLocale *)locale NS_AVAILABLE(10_5, 2_0);
 
 /* These return the range of the first character from the set in the string, not the range of a sequence of characters.
  
  The range argument specifies the subrange, rather than the whole, of the receiver to use in the search.  It is an error to specify a range that is outside of the receiver's bounds, and an exception may be raised.
  */
+
+// 【搜索字符集合】
+
+//12.搜索(指定字符集合)
 - (NSRange)rangeOfCharacterFromSet:(NSCharacterSet *)searchSet;
+
+//13.搜索(指定字符集合,条件)
 - (NSRange)rangeOfCharacterFromSet:(NSCharacterSet *)searchSet options:(NSStringCompareOptions)mask;
+
+//14.搜索(指定字符集合,条件,范围)
 - (NSRange)rangeOfCharacterFromSet:(NSCharacterSet *)searchSet options:(NSStringCompareOptions)mask range:(NSRange)rangeOfReceiverToSearch;
 
+//15.用字符串的字符编码指定索引查找位置
 - (NSRange)rangeOfComposedCharacterSequenceAtIndex:(NSUInteger)index;
+
+//16.用字符串的字符编码指定区域段查找位置
 - (NSRange)rangeOfComposedCharacterSequencesForRange:(NSRange)range NS_AVAILABLE(10_5, 2_0);
 
+
+#pragma mark ------------------
+#pragma mark - 字符串拼接
+// 普通拼接
 - (NSString *)stringByAppendingString:(NSString *)aString;
+// 格式化拼接
 - (NSString *)stringByAppendingFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 
 
-#pragma mark *** Extracting numeric values ***
+#pragma mark ------------------
+#pragma mark - *** Extracting numeric values字符串基本类型转换 ***
 
 /* The following convenience methods all skip initial space characters (whitespaceSet) and ignore trailing characters. They are not locale-aware. NSScanner or NSNumberFormatter can be used for more powerful and locale-aware parsing of numbers.
  */
@@ -180,71 +256,139 @@ NS_ENUM(NSStringEncoding) {
 @property (readonly) NSInteger integerValue NS_AVAILABLE(10_5, 2_0);
 @property (readonly) long long longLongValue NS_AVAILABLE(10_5, 2_0);
 @property (readonly) BOOL boolValue NS_AVAILABLE(10_5, 2_0);  // Skips initial space characters (whitespaceSet), or optional -/+ sign followed by zeroes. Returns YES on encountering one of "Y", "y", "T", "t", or a digit 1-9. It ignores any trailing characters.
+/**
+ //////////字符串基本类型转换//////////
+ NSString *numStr = @"87234.2345";
+ 
+ NSLog(@"double型:        %f", numStr.doubleValue);
+ NSLog(@"float型:         %f", numStr.floatValue);
+ NSLog(@"int型:           %d", numStr.intValue);
+ NSLog(@"NSInteger型:     %ld", numStr.integerValue);
+ NSLog(@"long long型:     %lld", numStr.longLongValue);
+ NSLog(@"BOOL型:          %d", numStr.boolValue);
+ //输出:   double型:        87234.234500
+ //输出:   float型:         87234.234375
+ //输出:   int型:           87234
+ //输出:   NSInteger型:     87234
+ //输出:   long long型:     87234
+ //输出:   BOOL型:          1
+ */
 
 
-#pragma mark *** Case changing ***
+
+#pragma mark ------------------
+#pragma mark - *** Case changing字符串大小写转换 ***
 
 /* The following three return the canonical (non-localized) mappings. They are suitable for programming operations that require stable results not depending on the user's locale preference.  For locale-aware case mapping for strings presented to users, use the "localized" methods below.
  */
+
+// 大写
 @property (readonly, copy) NSString *uppercaseString;
+// 小写
 @property (readonly, copy) NSString *lowercaseString;
+// 首字母大写
 @property (readonly, copy) NSString *capitalizedString;
 
 /* The following three return the locale-aware case mappings. They are suitable for strings presented to the user.
  */
+
 @property (readonly, copy) NSString *localizedUppercaseString NS_AVAILABLE(10_11, 9_0);
+
 @property (readonly, copy) NSString *localizedLowercaseString NS_AVAILABLE(10_11, 9_0);
+
 @property (readonly, copy) NSString *localizedCapitalizedString NS_AVAILABLE(10_11, 9_0);
+
 
 /* The following methods perform localized case mappings based on the locale specified. Passing nil indicates the canonical mapping.  For the user preference locale setting, specify +[NSLocale currentLocale].
  */
+//本地化(大写)
 - (NSString *)uppercaseStringWithLocale:(nullable NSLocale *)locale NS_AVAILABLE(10_8, 6_0);
+//本地化(小写)
 - (NSString *)lowercaseStringWithLocale:(nullable NSLocale *)locale NS_AVAILABLE(10_8, 6_0);
+//本地化(首字母大写)
 - (NSString *)capitalizedStringWithLocale:(nullable NSLocale *)locale NS_AVAILABLE(10_8, 6_0);
 
 
-#pragma mark *** Finding lines, sentences, words, etc ***
+#pragma mark ------------------
+#pragma mark - *** Finding lines, sentences, words, etc字符串分行,分段 ***
 
+//【分行】
+//1.指定范围,分行取字符串
 - (void)getLineStart:(nullable NSUInteger *)startPtr end:(nullable NSUInteger *)lineEndPtr contentsEnd:(nullable NSUInteger *)contentsEndPtr forRange:(NSRange)range;
+//2.获取指定范围该行的范围
 - (NSRange)lineRangeForRange:(NSRange)range;
 
+
+//【分行】
+//3.指定范围,分段取字符串
 - (void)getParagraphStart:(nullable NSUInteger *)startPtr end:(nullable NSUInteger *)parEndPtr contentsEnd:(nullable NSUInteger *)contentsEndPtr forRange:(NSRange)range;
+//4.获取指定范围该段落的范围
 - (NSRange)paragraphRangeForRange:(NSRange)range;
+/**
+ //////////字符串分行,分段//////////
+ NSString *string = @"123 456\nABC,DEF\nabc.def";
+ //获取该行的范围(指定范围)
+ NSRange range1 = [string lineRangeForRange:NSMakeRange(0, 10)];
+ NSLog(@"%ld 行长度:     %ld", range1.location, range1.length);
+ //输出:       0 行长度:     16
+ 
+ //获取该段落范围(指定范围)
+ NSRange range2 = [string paragraphRangeForRange:NSMakeRange(0, 3)];
+ NSLog(@"%ld 段落长度:   %ld", range2.location, range2.length);
+ //输出:       0 段落长度:   8
+ */
+
 
 typedef NS_OPTIONS(NSUInteger, NSStringEnumerationOptions) {
     // Pass in one of the "By" options:
-    NSStringEnumerationByLines = 0,                       // Equivalent to lineRangeForRange:
-    NSStringEnumerationByParagraphs = 1,                  // Equivalent to paragraphRangeForRange:
-    NSStringEnumerationByComposedCharacterSequences = 2,  // Equivalent to rangeOfComposedCharacterSequencesForRange:
-    NSStringEnumerationByWords = 3,
-    NSStringEnumerationBySentences = 4,
+    NSStringEnumerationByLines = 0,// 按行                       // Equivalent to lineRangeForRange:
+    NSStringEnumerationByParagraphs = 1, // 按段落                 // Equivalent to paragraphRangeForRange:
+    NSStringEnumerationByComposedCharacterSequences = 2,// 按字符顺序  // Equivalent to rangeOfComposedCharacterSequencesForRange:
+    NSStringEnumerationByWords = 3,// 按单词,字
+    NSStringEnumerationBySentences = 4,// 按句子
     // ...and combine any of the desired additional options:
-    NSStringEnumerationReverse = 1UL << 8,
-    NSStringEnumerationSubstringNotRequired = 1UL << 9,
-    NSStringEnumerationLocalized = 1UL << 10              // User's default locale
+    NSStringEnumerationReverse = 1UL << 8,// 反向遍历
+    NSStringEnumerationSubstringNotRequired = 1UL << 9,// 不需要子字符串
+    NSStringEnumerationLocalized = 1UL << 10 // 	本地化             // User's default locale
 };
 
 /* In the enumerate methods, the blocks will be invoked inside an autorelease pool, so any values assigned inside the block should be retained.
  */
+
+//1.列举(按行)
 - (void)enumerateSubstringsInRange:(NSRange)range options:(NSStringEnumerationOptions)opts usingBlock:(void (^)(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop))block NS_AVAILABLE(10_6, 4_0);
+
+//2.列举(范围,条件)
 - (void)enumerateLinesUsingBlock:(void (^)(NSString *line, BOOL *stop))block NS_AVAILABLE(10_6, 4_0);
 
 
-#pragma mark *** Character encoding and converting to/from c-string representations ***
+
+#pragma mark ------------------
+#pragma mark - 字符串编码和转换
+//*** Character encoding and converting to/from c-string representations ***
 
 @property (nullable, readonly) const char *UTF8String NS_RETURNS_INNER_POINTER;	// Convenience to return null-terminated UTF8 representation
 
+// 最快编码值(枚举)
 @property (readonly) NSStringEncoding fastestEncoding;    	// Result in O(1) time; a rough estimate
+// 最小编码值(枚举)
 @property (readonly) NSStringEncoding smallestEncoding;   	// Result in O(n) time; the encoding in which the string is most compact
 
+//1.选择编码,是否允许有损编码
 - (nullable NSData *)dataUsingEncoding:(NSStringEncoding)encoding allowLossyConversion:(BOOL)lossy;   // External representation
+//2.选择编码
 - (nullable NSData *)dataUsingEncoding:(NSStringEncoding)encoding;                                    // External representation
 
+//3.判断是否可以无损编码
 - (BOOL)canBeConvertedToEncoding:(NSStringEncoding)encoding;
 
 /* Methods to convert NSString to a NULL-terminated cString using the specified encoding. Note, these are the "new" cString methods, and are not deprecated like the older cString methods which do not take encoding arguments.
  */
+
+//4.C字符编码转换
 - (nullable const char *)cStringUsingEncoding:(NSStringEncoding)encoding NS_RETURNS_INNER_POINTER;	// "Autoreleased"; NULL return if encoding conversion not possible; for performance reasons, lifetime of this should not be considered longer than the lifetime of the receiving string (if the receiver string is freed, this might go invalid then, before the end of the autorelease scope)
+
+//5.判读C字符转化是否可以成功
 - (BOOL)getCString:(char *)buffer maxLength:(NSUInteger)maxBufferCount encoding:(NSStringEncoding)encoding;	// NO return if conversion not possible due to encoding errors or too small of a buffer. The buffer should include room for maxBufferCount bytes; this number should accomodate the expected size of the return value plus the NULL termination character, which this method adds. (So note that the maxLength passed to this method is one more than the one you would have passed to the deprecated getCString:maxLength:.)
 
 /* Use this to convert string section at a time into a fixed-size buffer, without any allocations.  Does not NULL-terminate.
@@ -258,21 +402,29 @@ typedef NS_OPTIONS(NSUInteger, NSStringEnumerationOptions) {
  YES return indicates some characters were converted. Conversion might usually stop when the buffer fills,
  but it might also stop when the conversion isn't possible due to the chosen encoding.
  */
+
+//6.指定缓存区转换
 - (BOOL)getBytes:(nullable void *)buffer maxLength:(NSUInteger)maxBufferCount usedLength:(nullable NSUInteger *)usedBufferCount encoding:(NSStringEncoding)encoding options:(NSStringEncodingConversionOptions)options range:(NSRange)range remainingRange:(nullable NSRangePointer)leftover;
 
 /* These return the maximum and exact number of bytes needed to store the receiver in the specified encoding in non-external representation. The first one is O(1), while the second one is O(n). These do not include space for a terminating null.
  */
+//7.对字符串进行编码时所需的最大字节数
 - (NSUInteger)maximumLengthOfBytesUsingEncoding:(NSStringEncoding)enc;	// Result in O(1) time; the estimate may be way over what's needed. Returns 0 on error (overflow)
+//8.对字符串进行编码时所需的字节数
 - (NSUInteger)lengthOfBytesUsingEncoding:(NSStringEncoding)enc;		// Result in O(n) time; the result is exact. Returns 0 on error (cannot convert to specified encoding, or overflow)
 
 #if FOUNDATION_SWIFT_SDK_EPOCH_AT_LEAST(8)
+//9.可用字符串编码
 @property (class, readonly) const NSStringEncoding *availableStringEncodings;
 #endif
+
+//10.本地化编码名称
 + (NSString *)localizedNameOfStringEncoding:(NSStringEncoding)encoding;
 
 /* User-dependent encoding whose value is derived from user's default language and potentially other factors. The use of this encoding might sometimes be needed when interpreting user documents with unknown encodings, in the absence of other hints.  This encoding should be used rarely, if at all. Note that some potential values here might result in unexpected encoding conversions of even fairly straightforward NSString content --- for instance, punctuation characters with a bidirectional encoding.
  */
 #if FOUNDATION_SWIFT_SDK_EPOCH_AT_LEAST(8)
+//11.默认C字符串编码
 @property (class, readonly) NSStringEncoding defaultCStringEncoding;	// Should be rarely used
 #endif
 
@@ -284,32 +436,41 @@ typedef NS_OPTIONS(NSUInteger, NSStringEnumerationOptions) {
 @property (readonly, copy) NSString *decomposedStringWithCompatibilityMapping;
 @property (readonly, copy) NSString *precomposedStringWithCompatibilityMapping;
 
+//分割(指定字符串)
 - (NSArray<NSString *> *)componentsSeparatedByString:(NSString *)separator;
+//分割(指定字符集合)
 - (NSArray<NSString *> *)componentsSeparatedByCharactersInSet:(NSCharacterSet *)separator NS_AVAILABLE(10_5, 2_0);
 
+//修剪
 - (NSString *)stringByTrimmingCharactersInSet:(NSCharacterSet *)set;
+//填充
 - (NSString *)stringByPaddingToLength:(NSUInteger)newLength withString:(NSString *)padString startingAtIndex:(NSUInteger)padIndex;
 
 /* Returns a string with the character folding options applied. theOptions is a mask of compare flags with *InsensitiveSearch suffix.
  */
+//折叠
 - (NSString *)stringByFoldingWithOptions:(NSStringCompareOptions)options locale:(nullable NSLocale *)locale NS_AVAILABLE(10_5, 2_0);
 
 /* Replace all occurrences of the target string in the specified range with replacement. Specified compare options are used for matching target. If NSRegularExpressionSearch is specified, the replacement is treated as a template, as in the corresponding NSRegularExpression methods, and no other options can apply except NSCaseInsensitiveSearch and NSAnchoredSearch.
  */
+//替换
 - (NSString *)stringByReplacingOccurrencesOfString:(NSString *)target withString:(NSString *)replacement options:(NSStringCompareOptions)options range:(NSRange)searchRange NS_AVAILABLE(10_5, 2_0);
 
 /* Replace all occurrences of the target string with replacement. Invokes the above method with 0 options and range of the whole string.
  */
+//替换(指定字符串,条件,范围)
 - (NSString *)stringByReplacingOccurrencesOfString:(NSString *)target withString:(NSString *)replacement NS_AVAILABLE(10_5, 2_0);
 
 /* Replace characters in range with the specified string, returning new string.
  */
+//替换(指定范围)
 - (NSString *)stringByReplacingCharactersInRange:(NSRange)range withString:(NSString *)replacement NS_AVAILABLE(10_5, 2_0);
 
 typedef NSString *NSStringTransform NS_EXTENSIBLE_STRING_ENUM;
 
 /* Perform string transliteration.  The transformation represented by transform is applied to the receiver. reverse indicates that the inverse transform should be used instead, if it exists. Attempting to use an invalid transform identifier or reverse an irreversible transform will return nil; otherwise the transformed string value is returned (even if no characters are actually transformed). You can pass one of the predefined transforms below (NSStringTransformLatinToKatakana, etc), or any valid ICU transform ID as defined in the ICU User Guide. Arbitrary ICU transform rules are not supported.
  */
+//字符串翻译
 - (nullable NSString *)stringByApplyingTransform:(NSStringTransform)transform reverse:(BOOL)reverse NS_AVAILABLE(10_11, 9_0);	// Returns nil if reverse not applicable or transform is invalid
 
 FOUNDATION_EXPORT NSStringTransform const NSStringTransformLatinToKatakana         NS_AVAILABLE(10_11, 9_0);
@@ -328,11 +489,33 @@ FOUNDATION_EXPORT NSStringTransform const NSStringTransformToXMLHex             
 FOUNDATION_EXPORT NSStringTransform const NSStringTransformToUnicodeName           NS_AVAILABLE(10_11, 9_0);
 FOUNDATION_EXPORT NSStringTransform const NSStringTransformStripCombiningMarks     NS_AVAILABLE(10_11, 9_0);
 FOUNDATION_EXPORT NSStringTransform const NSStringTransformStripDiacritics         NS_AVAILABLE(10_11, 9_0);
+/**
+ 字符串翻译
 
+ 翻译选择	说明
+ NSStringTransformLatinToKatakana	拉丁->片假名
+ NSStringTransformLatinToHiragana	拉丁->平假名
+ NSStringTransformLatinToHangul	拉丁->韩语
+ NSStringTransformLatinToArabic	拉丁->阿拉伯语
+ NSStringTransformLatinToHebrew	拉丁->希伯来语
+ NSStringTransformLatinToThai	拉丁->泰国
+ NSStringTransformLatinToCyrillic	拉丁->西里尔字母
+ NSStringTransformLatinToGreek	拉丁->希腊
+ NSStringTransformToLatin	拉丁
+ NSStringTransformMandarinToLatin	普通话->拉丁
+ NSStringTransformHiraganaToKatakana	平假名->片假名
+ NSStringTransformFullwidthToHalfwidth	全角->半角
+ NSStringTransformToXMLHex	XML16进制
+ NSStringTransformToUnicodeName	Unicode名
+ NSStringTransformStripCombiningMarks	结合地带商标
+ NSStringTransformStripDiacritics	带音符
+ */
 
 /* Write to specified url or path using the specified encoding.  The optional error return is to indicate file system or encoding errors.
  */
+//写入到指定路径,编码的文件中
 - (BOOL)writeToURL:(NSURL *)url atomically:(BOOL)useAuxiliaryFile encoding:(NSStringEncoding)enc error:(NSError **)error;
+//写入到指定URL,编码的文件中
 - (BOOL)writeToFile:(NSString *)path atomically:(BOOL)useAuxiliaryFile encoding:(NSStringEncoding)enc error:(NSError **)error;
 
 @property (readonly, copy) NSString *description;
@@ -424,9 +607,12 @@ FOUNDATION_EXPORT NSStringEncodingDetectionOptionsKey const NSStringEncodingDete
     @interface NSMutableString : NSString
 
 #pragma mark *** Mutable string ***
+#pragma mark - NSMutableString是动态的字符串，可以动态的添加，修改，删除等
+
 
 /* NSMutableString primitive (funnel) method. See below for the other mutation methods.
  */
+// 1.指定范围替换
 - (void)replaceCharactersInRange:(NSRange)range withString:(NSString *)aString;
 
 @end
@@ -435,14 +621,22 @@ FOUNDATION_EXPORT NSStringEncodingDetectionOptionsKey const NSStringEncodingDete
 
 /* Additional mutation methods.  For subclassers these are all available implemented in terms of the primitive replaceCharactersInRange:range: method.
  */
+
+//插入
 - (void)insertString:(NSString *)aString atIndex:(NSUInteger)loc;
+//删除
 - (void)deleteCharactersInRange:(NSRange)range;
+//拼接
 - (void)appendString:(NSString *)aString;
+//格式化拼接
 - (void)appendFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
+//设置新字符串
 - (void)setString:(NSString *)aString;
 
 /* This method replaces all occurrences of the target string with the replacement string, in the specified range of the receiver string, and returns the number of replacements. NSBackwardsSearch means the search is done from the end of the range (the results could be different); NSAnchoredSearch means only anchored (but potentially multiple) instances will be replaced. NSLiteralSearch and NSCaseInsensitiveSearch also apply. NSNumericSearch is ignored. Use NSMakeRange(0, [receiver length]) to process whole string. If NSRegularExpressionSearch is specified, the replacement is treated as a template, as in the corresponding NSRegularExpression methods, and no other options can apply except NSCaseInsensitiveSearch and NSAnchoredSearch.
  */
+
+//2.指定字符串,条件,范围替换
 - (NSUInteger)replaceOccurrencesOfString:(NSString *)target withString:(NSString *)replacement options:(NSStringCompareOptions)options range:(NSRange)searchRange;
 
 /* Perform string transliteration.  The transformation represented by transform is applied to the given range of string in place. Only the specified range will be modified, but the transform may look at portions of the string outside that range for context. If supplied, resultingRange is modified to reflect the new range corresponding to the original range. reverse indicates that the inverse transform should be used instead, if it exists. Attempting to use an invalid transform identifier or reverse an irreversible transform will return NO; otherwise YES is returned, even if no characters are actually transformed. You can pass one of the predefined transforms listed above (NSStringTransformLatinToKatakana, etc), or any valid ICU transform ID as defined in the ICU User Guide. Arbitrary ICU transform rules are not supported.
@@ -451,9 +645,16 @@ FOUNDATION_EXPORT NSStringEncodingDetectionOptionsKey const NSStringEncodingDete
 
 /* In addition to these two, NSMutableString responds properly to all NSString creation methods.
  */
+//字符串分配容量
 - (NSMutableString *)initWithCapacity:(NSUInteger)capacity;
 + (NSMutableString *)stringWithCapacity:(NSUInteger)capacity;
-
+/**
+ //1.初始化容量为Capacity大小的字符串  (需要手动释放内存)
+ NSMutableString *mutableStr1 = [[NSMutableString alloc] initWithCapacity:20];
+ 
+ //2.初始化容量为Capacity大小的字符串  (不需要手动释放内存)
+ NSMutableString *mutableStr2 = [NSMutableString stringWithCapacity:20];
+ */
 @end
     
     

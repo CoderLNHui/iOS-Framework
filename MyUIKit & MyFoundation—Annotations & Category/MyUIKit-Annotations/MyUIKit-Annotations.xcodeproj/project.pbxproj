@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76BF64401EC6E2100098EC9C /* NSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF643F1EC6E2100098EC9C /* NSAttributedString.m */; };
 		76C8798B1EACFAD70088ABF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C8798A1EACFAD70088ABF7 /* main.m */; };
 		76C879941EACFAD70088ABF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C879921EACFAD70088ABF7 /* Main.storyboard */; };
 		76C879961EACFAD70088ABF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C879951EACFAD70088ABF7 /* Assets.xcassets */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		7672ADF81EB0906D0058D238 /* WKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebView.h; sourceTree = "<group>"; };
+		76BF643E1EC6E2100098EC9C /* NSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedString.h; sourceTree = "<group>"; };
+		76BF643F1EC6E2100098EC9C /* NSAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAttributedString.m; sourceTree = "<group>"; };
 		76C5DA131EB2EDE200CCEB50 /* NSArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray.h; sourceTree = "<group>"; };
 		76C879861EACFAD70088ABF7 /* MyUIKit-Annotations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyUIKit-Annotations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C8798A1EACFAD70088ABF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 		76C879FB1EACFBA30088ABF7 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				76BF643E1EC6E2100098EC9C /* NSAttributedString.h */,
+				76BF643F1EC6E2100098EC9C /* NSAttributedString.m */,
 				76C5DA131EB2EDE200CCEB50 /* NSArray.h */,
 				76F350511EAF6D2D004A5723 /* UIImage.h */,
 				76C879FC1EACFBA30088ABF7 /* LNBizerPath.h */,
@@ -520,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76BF64401EC6E2100098EC9C /* NSAttributedString.m in Sources */,
 				76C87A461EACFBA30088ABF7 /* ViewController.m in Sources */,
 				76C87A491EACFBA30088ABF7 /* UITableView.m in Sources */,
 				76C87A441EACFBA30088ABF7 /* AppDelegate.m in Sources */,

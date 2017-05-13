@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76BF643A1EC6D97D0098EC9C /* NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BF64391EC6D97D0098EC9C /* NSString.m */; };
 		76C5DA161EB32C4100CCEB50 /* NSNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C5DA151EB32C4100CCEB50 /* NSNotification.m */; };
 		76C879D31EACFB120088ABF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C879D11EACFB120088ABF7 /* Main.storyboard */; };
 		76C879D51EACFB120088ABF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C879D41EACFB120088ABF7 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76BF64391EC6D97D0098EC9C /* NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString.m; sourceTree = "<group>"; };
 		76C5DA141EB32C4100CCEB50 /* NSNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNotification.h; sourceTree = "<group>"; };
 		76C5DA151EB32C4100CCEB50 /* NSNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNotification.m; sourceTree = "<group>"; };
 		76C5DA171EB332AB00CCEB50 /* NSNotificationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNotificationQueue.h; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				76C5DA171EB332AB00CCEB50 /* NSNotificationQueue.h */,
 				76F3504F1EAF5632004A5723 /* NSRunLoop.h */,
 				76F350501EAF5632004A5723 /* NSString.h */,
+				76BF64391EC6D97D0098EC9C /* NSString.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76BF643A1EC6D97D0098EC9C /* NSString.m in Sources */,
 				76C87A551EACFF400088ABF7 /* ViewController.m in Sources */,
 				76C87A541EACFF400088ABF7 /* main.m in Sources */,
 				76C87A531EACFF400088ABF7 /* AppDelegate.m in Sources */,
