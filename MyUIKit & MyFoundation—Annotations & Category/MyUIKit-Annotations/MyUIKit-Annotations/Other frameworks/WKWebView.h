@@ -1,17 +1,9 @@
-//
-//  WKWebView.h
-//  Annotations（https://github.com/CustomPBWaters）
-//
-//  Created by 白开水ln on 16/-/-.
-//  Copyright (c) 2005-2016（https://custompbwaters.github.io）All rights reserved.
-//
-//  https://github.com/CustomPBWaters/OfficialTranslation-SourceAnnotation
-//
-
-
 /*
- * Copyright (C) 2014 Apple Inc. All rights reserved.
+ * WKWebView.h
+ * Annotations（https://github.com/CustomPBWaters）
  *
+ * Created by 白开水ln on 16/-/-.
+ * Copyright (c) 2014（https://custompbwaters.github.io）All rights reserved.
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
  * are met:
