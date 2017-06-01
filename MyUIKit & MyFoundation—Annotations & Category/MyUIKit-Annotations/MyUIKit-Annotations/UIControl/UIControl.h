@@ -10,35 +10,42 @@
 #import <UIKit/UIView.h>
 #import <UIKit/UIKitDefines.h>
 
+
+#pragma mark ------------------
+#pragma mark - 屏幕点击事件
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_OPTIONS(NSUInteger, UIControlEvents) {
     UIControlEventTouchDown                                         = 1 <<  0,      // on all touch downs
-    UIControlEventTouchDownRepeat                                   = 1 <<  1,      // on multiple touchdowns (tap count > 1)
-    UIControlEventTouchDragInside                                   = 1 <<  2,
-    UIControlEventTouchDragOutside                                  = 1 <<  3,
-    UIControlEventTouchDragEnter                                    = 1 <<  4,
-    UIControlEventTouchDragExit                                     = 1 <<  5,
-    UIControlEventTouchUpInside                                     = 1 <<  6,
-    UIControlEventTouchUpOutside                                    = 1 <<  7,
-    UIControlEventTouchCancel                                       = 1 <<  8,
+    UIControlEventTouchDownRepeat【连续点击】                                   = 1 <<  1,      // on multiple touchdowns (tap count > 1)
+    UIControlEventTouchDragInside【】                                   = 1 <<  2,
+    UIControlEventTouchDragOutside【】                                  = 1 <<  3,
+    UIControlEventTouchDragEnter【】                                    = 1 <<  4,
+    UIControlEventTouchDragExit【】                                     = 1 <<  5,
+    UIControlEventTouchUpInside【】                                     = 1 <<  6,
+    UIControlEventTouchUpOutside【】                                    = 1 <<  7,
+    UIControlEventTouchCancel【】                                       = 1 <<  8,
     
-    UIControlEventValueChanged                                      = 1 << 12,     // sliders, etc.
-    UIControlEventPrimaryActionTriggered NS_ENUM_AVAILABLE_IOS(9_0) = 1 << 13,     // semantic action: for buttons, etc.
+    /** 可以用在开关的监听、值改变 */
+    UIControlEventValueChanged【值改变】                                      = 1 << 12,     // sliders, etc.
+    UIControlEventPrimaryActionTriggered NS_ENUM_AVAILABLE_IOS(9_0) = 1 << 13,【】     // semantic action: for buttons, etc.
     
-    UIControlEventEditingDidBegin                                   = 1 << 16,     // UITextField
-    UIControlEventEditingChanged                                    = 1 << 17,
-    UIControlEventEditingDidEnd                                     = 1 << 18,
-    UIControlEventEditingDidEndOnExit                               = 1 << 19,     // 'return key' ending editing
+    /** 监听文本框的事件 */
+    UIControlEventEditingDidBegin【】                                   = 1 << 16,     // UITextField
+    UIControlEventEditingChanged【】                                    = 1 << 17,
+    UIControlEventEditingDidEnd【】                                     = 1 << 18,
+    UIControlEventEditingDidEndOnExit【】                               = 1 << 19,     // 'return key' ending editing
     
-    UIControlEventAllTouchEvents                                    = 0x00000FFF,  // for touch events
-    UIControlEventAllEditingEvents                                  = 0x000F0000,  // for UITextField
-    UIControlEventApplicationReserved                               = 0x0F000000,  // range available for application use
-    UIControlEventSystemReserved                                    = 0xF0000000,  // range reserved for internal framework use
-    UIControlEventAllEvents                                         = 0xFFFFFFFF
+    /** 垂直对齐方式 */
+    UIControlEventAllTouchEvents【】                                    = 0x00000FFF,  // for touch events
+    UIControlEventAllEditingEvents【】                                  = 0x000F0000,  // for UITextField
+    UIControlEventApplicationReserved【】                               = 0x0F000000,  // range available for application use
+    UIControlEventSystemReserved【】                                    = 0xF0000000,  // range reserved for internal framework use
+    UIControlEventAllEvents【】                                         = 0xFFFFFFFF
 };
 
 typedef NS_ENUM(NSInteger, UIControlContentVerticalAlignment) {
+    /** 水平对齐方式 */
     UIControlContentVerticalAlignmentCenter  = 0,
     UIControlContentVerticalAlignmentTop     = 1,
     UIControlContentVerticalAlignmentBottom  = 2,
@@ -69,7 +76,8 @@ typedef NS_OPTIONS(NSUInteger, UIControlState) {
 
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UIControl : UIView
 
-
+#pragma mark ------------------
+#pragma mark - 状态
 @property(nonatomic,getter=isEnabled) BOOL enabled;                                  // default is YES. if NO, ignores touch events and subclasses may draw differently
 @property(nonatomic,getter=isSelected) BOOL selected;                                // default is NO may be used by some subclasses or by application
 @property(nonatomic,getter=isHighlighted) BOOL highlighted;                          // default is NO. this gets set/cleared automatically when touch enters/exits during tracking and cleared on up
@@ -88,9 +96,11 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIControl : UIView
 // add target/action for particular event. you can call this multiple times and you can specify multiple target/actions for a particular event.
 // passing in nil as the target goes up the responder chain. The action may optionally include the sender and the event in that order
 // the action cannot be NULL. Note that the target is not retained.
+/** 【监听控件的点击】 */
 - (void)addTarget:(nullable id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
 
 // remove the target/action for a set of events. pass in NULL for the action to remove all actions for that target
+/** 【移除监听】 */
 - (void)removeTarget:(nullable id)target action:(nullable SEL)action forControlEvents:(UIControlEvents)controlEvents;
 
 // get info about target & actions. this makes it possible to enumerate all target/actions by checking for each event kind

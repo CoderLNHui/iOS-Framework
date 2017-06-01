@@ -1,10 +1,9 @@
 //
 //  UIScrollView.m
-//  UIKit
+//  Annotations（https://github.com/CustomPBWaters）
 //
 //  Created by 白开水ln on 16/-/-.
-//  Copyright (c) 2007-2016 Apple Inc. All rights reserved.
-//  https://custompbwaters.github.io    http://www.jianshu.com/p/e5b995ecf44d
+//  Copyright (c) 2007-2016（https://custompbwaters.github.io）All rights reserved.
 //
 
 //--------------------------- UIScrollView概念 & 重要属性 ------------------------------//

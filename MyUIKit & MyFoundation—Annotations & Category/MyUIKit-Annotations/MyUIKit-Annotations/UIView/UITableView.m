@@ -1,10 +1,9 @@
 //
-//  UITableView.h
-//  UIKit
+//  UITableView.m
+//  Annotations（https://github.com/CustomPBWaters）
 //
 //  Created by 白开水ln on 16/-/-.
-//  Copyright (c) 2005-2016 Apple Inc. All rights reserved.
-//  https://custompbwaters.github.io    http://www.jianshu.com/p/e5b995ecf44d
+//  Copyright (c) 2005-2016（https://custompbwaters.github.io）All rights reserved.
 //
 
 //--------------------------- 分割线顶头 ------------------------------//
