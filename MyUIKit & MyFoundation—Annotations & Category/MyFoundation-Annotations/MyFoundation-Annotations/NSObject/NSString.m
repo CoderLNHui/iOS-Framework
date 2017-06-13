@@ -120,6 +120,9 @@
  NSString *result4 = [string stringByReplacingOccurrencesOfString:@" " withString:@"替换"];
  NSLog(@"%@", result4);
  //输出:   3EWRs替换a;af
+ //【字符串替换0】
+ str = [str stringByReplacingOccurrencesOfString:@".0" withString:@""];
+ [button setTitle:str forState:UIControlStateNormal];
  
  
  //替换(指定字符串,条件,范围)

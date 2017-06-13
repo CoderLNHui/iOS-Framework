@@ -38,24 +38,28 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIButton : UIControl <NSCoding>
 + (instancetype)buttonWithType:(UIButtonType)buttonType;
 
 /**
- 按钮【内容内边距】
+ 【按钮内容内边距】
  */
 @property(nonatomic)          UIEdgeInsets contentEdgeInsets UI_APPEARANCE_SELECTOR; // default is UIEdgeInsetsZero. On tvOS 10 or later, default is nonzero except for custom buttons.
 /**
- 按钮【内部label控件 内边距】
+ 【按钮内部label控件 内边距】
  */
 @property(nonatomic)          UIEdgeInsets titleEdgeInsets;                // default is UIEdgeInsetsZero
 /**
- 按钮【  】
+ 【按钮  】
  */
 @property(nonatomic)          BOOL         reversesTitleShadowWhenHighlighted; // default is NO. if YES, shadow reverses to shift between engrave and emboss appearance
 /**
- 按钮【内部image控件 内边距】
+ 【按钮内部image控件 内边距】
  */
 @property(nonatomic)          UIEdgeInsets imageEdgeInsets;                // default is UIEdgeInsetsZero
 
 @property(nonatomic)          BOOL         adjustsImageWhenHighlighted;    // default is YES. if YES, image is drawn darker when highlighted(pressed)
 @property(nonatomic)          BOOL         adjustsImageWhenDisabled;       // default is YES. if YES, image is drawn lighter when disabled
+
+/**
+ 【按钮点击处变亮】
+ */
 @property(nonatomic)          BOOL         showsTouchWhenHighlighted __TVOS_PROHIBITED;      // default is NO. if YES, show a simple feedback (currently a glow) while highlighted
 @property(null_resettable, nonatomic,strong)   UIColor     *tintColor NS_AVAILABLE_IOS(5_0); // The tintColor is inherited through the superview hierarchy. See UIView for more information.
 
