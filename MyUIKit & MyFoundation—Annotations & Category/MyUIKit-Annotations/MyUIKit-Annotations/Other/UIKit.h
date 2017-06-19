@@ -1,11 +1,11 @@
 //
 //  UIKit.h
-//  Annotations（https://github.com/CustomPBWaters）
+//  ☕️（https://github.com/CustomPBWaters）
 //
-//  Created by 简书:白开水ln on 16/-/-.
-//  Copyright (c) 2005-2016年（https://custompbwaters.github.io）All rights reserved.
+//  Created by 【Plain Boiled Water ln】 on 15/-/-.
+//  Copyright © 2015年（https://custompbwaters.github.io）All rights reserved.
 //
-// http://www.jianshu.com/p/e5b995ecf44d
+// http://www.jianshu.com/u/fd745d76c816
 
 
 

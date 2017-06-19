@@ -17,6 +17,6 @@
       location = "group:MyUIKit-Extension/MyUIKit-Extension.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:MyFoundation-Extension/MyFoundation-Extension.xcodeproj">
+      location = "group:ProjectFile/ProjectFile.xcodeproj">
    </FileRef>
 </Workspace>

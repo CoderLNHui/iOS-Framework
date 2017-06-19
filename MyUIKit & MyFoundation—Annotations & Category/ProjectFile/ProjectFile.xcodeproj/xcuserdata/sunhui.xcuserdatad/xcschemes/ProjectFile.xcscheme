@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7605A4651EACF73800444CCE"
-               BuildableName = "MyFoundation-Extension.app"
-               BlueprintName = "MyFoundation-Extension"
-               ReferencedContainer = "container:MyFoundation-Extension.xcodeproj">
+               BlueprintIdentifier = "76E5AF101EF244B30054B134"
+               BuildableName = "ProjectFile.app"
+               BlueprintName = "ProjectFile"
+               ReferencedContainer = "container:ProjectFile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7605A47E1EACF73800444CCE"
-               BuildableName = "MyFoundation-ExtensionTests.xctest"
-               BlueprintName = "MyFoundation-ExtensionTests"
-               ReferencedContainer = "container:MyFoundation-Extension.xcodeproj">
+               BlueprintIdentifier = "76E5AF291EF244B30054B134"
+               BuildableName = "ProjectFileTests.xctest"
+               BlueprintName = "ProjectFileTests"
+               ReferencedContainer = "container:ProjectFile.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7605A4891EACF73800444CCE"
-               BuildableName = "MyFoundation-ExtensionUITests.xctest"
-               BlueprintName = "MyFoundation-ExtensionUITests"
-               ReferencedContainer = "container:MyFoundation-Extension.xcodeproj">
+               BlueprintIdentifier = "76E5AF341EF244B30054B134"
+               BuildableName = "ProjectFileUITests.xctest"
+               BlueprintName = "ProjectFileUITests"
+               ReferencedContainer = "container:ProjectFile.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7605A4651EACF73800444CCE"
-            BuildableName = "MyFoundation-Extension.app"
-            BlueprintName = "MyFoundation-Extension"
-            ReferencedContainer = "container:MyFoundation-Extension.xcodeproj">
+            BlueprintIdentifier = "76E5AF101EF244B30054B134"
+            BuildableName = "ProjectFile.app"
+            BlueprintName = "ProjectFile"
+            ReferencedContainer = "container:ProjectFile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7605A4651EACF73800444CCE"
-            BuildableName = "MyFoundation-Extension.app"
-            BlueprintName = "MyFoundation-Extension"
-            ReferencedContainer = "container:MyFoundation-Extension.xcodeproj">
+            BlueprintIdentifier = "76E5AF101EF244B30054B134"
+            BuildableName = "ProjectFile.app"
+            BlueprintName = "ProjectFile"
+            ReferencedContainer = "container:ProjectFile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7605A4651EACF73800444CCE"
-            BuildableName = "MyFoundation-Extension.app"
-            BlueprintName = "MyFoundation-Extension"
-            ReferencedContainer = "container:MyFoundation-Extension.xcodeproj">
+            BlueprintIdentifier = "76E5AF101EF244B30054B134"
+            BuildableName = "ProjectFile.app"
+            BlueprintName = "ProjectFile"
+            ReferencedContainer = "container:ProjectFile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

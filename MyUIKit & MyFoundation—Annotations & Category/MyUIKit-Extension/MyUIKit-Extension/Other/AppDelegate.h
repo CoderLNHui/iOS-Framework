@@ -1,14 +1,18 @@
 //
 //  AppDelegate.h
-//  MyUIKit
+//  ☕️（https://github.com/CustomPBWaters）
 //
-//  Created by Jackdx on 17/1/5.
-//  Copyright © 2017年 Jack. All rights reserved.
+//  Created by 【Plain Boiled Water ln】 on 15/-/-.
+//  Copyright © 2015年（https://custompbwaters.github.io）All rights reserved.
 //
+// http://www.jianshu.com/u/fd745d76c816
 
-#import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+#import <UIKit/UIKit.h>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 
 @end
