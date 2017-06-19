@@ -605,7 +605,7 @@ Single.h // 【快速创建一个单例 MRC模式 & ARC模式】
  
 ## GitHub工程地址 📌 
 
-- [iOS Apple 官方文档译文框架源码注解，当你「了解权威 & 进阶原理」的时候，网搜的众多中 ~ ~（自行脑补）。做只有思想的伐码猿，从零开始，由浅入深。 以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！Star & Fork](https://github.com/CustomPBWaters/iOS-Apple-OfficialTranslation-SourceAnnotation)
+- [iOS Apple 官方文档译文框架源码注解，当你「了解权威 & 进阶原理」的时候，网搜的众多中 ~ ~（自行脑补）。从零开始，由浅入深。 以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！Star & Fork](https://github.com/CustomPBWaters/iOS-Apple-OfficialTranslation-SourceAnnotation)
  
 
 
