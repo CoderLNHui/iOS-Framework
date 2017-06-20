@@ -593,7 +593,7 @@ Single.h // 【快速创建一个单例 MRC模式 & ARC模式】
 
 
 
-**UIKit&Foundation框架注解演示**
+#### 注解 & 工具类演示
 
 [Apple.gif http://www.jianshu.com/p/3ba46721ae96](http://www.jianshu.com/p/3ba46721ae96)
 
@@ -605,9 +605,9 @@ Single.h // 【快速创建一个单例 MRC模式 & ARC模式】
 
 
  
-## GitHub工程地址 📌 
+#### 劳驾你点一下 👇 工程地址 ❓ 
 
-- [iOS Apple 官方文档译文框架源码注解，当你「了解权威 & 进阶原理」的时候，网搜的众多中 ~ ~（自行脑补）。从零开始，由浅入深。 以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！Star & Fork](https://github.com/CustomPBWaters/iOS-Apple-OfficialTranslation-SourceAnnotation)
+- [Apple 官方文档译文框架源码注解，当你「了解权威 & 进阶原理」的时候，网搜的众多中 ~ ~（自行脑补）。](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation)
  
 
 
