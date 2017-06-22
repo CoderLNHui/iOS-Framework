@@ -11,14 +11,8 @@
 #### Elegant programming
 
 
+![1.jpg](http://upload-images.jianshu.io/upload_images/2230763-dd8d095f084e3ca0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
-![「UIKit Framework Annotation  Practical Case」](http://upload-images.jianshu.io/upload_images/2230763-0fd6bbb32d5a58aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-![「Foundation Framework Annotation  Practical Case」](http://upload-images.jianshu.io/upload_images/2230763-ce14862fab7de4fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
-![「 Framework Efficiency of Tools」](http://upload-images.jianshu.io/upload_images/2230763-1a2f550f85ad69c3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
@@ -33,20 +27,6 @@
 |:-:|
 
  
- 
-
-**UIKit 分类结构**
-
-![ UIKit 框架](http://upload-images.jianshu.io/upload_images/2230763-0a6913fa199b11c5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
-
-
-**Foundation 分类结构**
-
-![ Foundation 框架](http://upload-images.jianshu.io/upload_images/2230763-04f51e5df6ea5645.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
 
 
 
@@ -529,8 +509,7 @@
 
 
 ```objc
-//-------- 【 OtherFrameworks 】 ---------------//  
-//
+
 #import "runtime.h" // 注解完全✔️
 
 #import "WKWebView.h" // 注解未全➕
@@ -539,27 +518,15 @@
 
 
 
-```
-
-
-
-```objc
-
-//--------------- 【 ProjectFile 】 --------------//
-//
 
 Header.h // 常用持续➕
 
 PrefixHeader.pch // 常用持续➕
 
-
-
 ```
 
 
 ***
-
-
 
 
 
@@ -606,7 +573,7 @@ Single.h // 【快速创建一个单例 MRC模式 & ARC模式】
  
 #### 劳驾你点一下 👇 工程地址 ❓ 
 
-- [Apple 官方文档译文框架源码注解，当你「了解权威 & 进阶原理」的时候，网搜的众多中 ~ ~（自行脑补）。](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation) 【Star 同步👀】
+- [Apple官方文档译文 & 框架源码注解](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation) 【Star 同步👀】
  
 
 
