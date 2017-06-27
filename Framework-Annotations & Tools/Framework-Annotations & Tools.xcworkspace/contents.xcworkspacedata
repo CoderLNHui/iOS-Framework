@@ -112,38 +112,6 @@
          </FileRef>
       </Group>
       <Group
-         location = "group:UIKit Classes"
-         name = "UIKit Classes">
-         <Group
-            location = "group:NSObject"
-            name = "NSObject">
-         </Group>
-         <Group
-            location = "group:Other"
-            name = "Other">
-         </Group>
-         <Group
-            location = "group:Private Categories"
-            name = "Private Categories">
-         </Group>
-         <Group
-            location = "group:Private Classes"
-            name = "Private Classes">
-         </Group>
-         <Group
-            location = "group:Protocol"
-            name = "Protocol">
-         </Group>
-         <Group
-            location = "group:UIView"
-            name = "UIView">
-         </Group>
-         <Group
-            location = "group:UIViewController"
-            name = "UIViewController">
-         </Group>
-      </Group>
-      <Group
          location = "group:UIView"
          name = "UIView">
          <FileRef
