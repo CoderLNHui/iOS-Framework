@@ -8,6 +8,9 @@
          location = "group:NSObject"
          name = "NSObject">
          <FileRef
+            location = "group:UIApplication.h">
+         </FileRef>
+         <FileRef
             location = "group:UILocalNotification.h">
          </FileRef>
          <FileRef
@@ -217,450 +220,6 @@
          <FileRef
             location = "group:UIViewController.h">
          </FileRef>
-      </Group>
-   </Group>
-   <Group
-      location = "group:MyUIKit-Extension"
-      name = "MyUIKit-Extension">
-      <Group
-         location = "group:Private Categories"
-         name = "Private Categories">
-         <FileRef
-            location = "group:UIColor+UIPrivate.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIControl+UIPrivate.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIFont+UIPrivate.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIGestureRecognizer+UIPrivate.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImage+UIPrivate.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImage+UIPrivate.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIScrollView+UIPrivate.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITableViewCell+UIPrivate.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITouch+UIPrivate.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIView+UIPrivate.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewController+UIPrivate.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIWindow+UIPrivate.h">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:Private Classes"
-         name = "Private Classes">
-         <FileRef
-            location = "group:UIAction.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIAction.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIAppearanceInstance.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIAppearanceInstance.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIAppearanceProperty.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIAppearanceProperty.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIAppearanceProxy.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIAppearanceProxy.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIColorRep.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIColorRep.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIControlAction.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIControlAction.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIImageRep.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImageRep.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIInputController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIInputController.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIRoundedRectButton.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIRoundedRectButton.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIScroller.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIScroller.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIScrollViewAnimation.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIScrollViewAnimation.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIScrollViewAnimationDeceleration.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIScrollViewAnimationDeceleration.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIScrollViewAnimationScroll.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIScrollViewAnimationScroll.m">
-         </FileRef>
-         <FileRef
-            location = "group:UITableViewCellSeparator.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITableViewCellSeparator.m">
-         </FileRef>
-         <FileRef
-            location = "group:UITableViewSection.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITableViewSection.m">
-         </FileRef>
-         <FileRef
-            location = "group:UITableViewSectionLabel.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITableViewSectionLabel.m">
-         </FileRef>
-         <FileRef
-            location = "group:UITouchEvent.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITouchEvent.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewAnimationGroup.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewAnimationGroup.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewLayoutManager.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewLayoutManager.m">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:UIKit Classes"
-         name = "UIKit Classes">
-         <Group
-            location = "group:NSObject"
-            name = "NSObject">
-            <FileRef
-               location = "group:UIAcceleration.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIAcceleration.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIAccelerometer.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIAccelerometer.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIAccessibility.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIAccessibility.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIAccessibilityElement.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIAccessibilityElement.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIApplication.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIApplication.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIBarButtonItem.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIBarButtonItem.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIBarItem.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIBarItem.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIBezierPath.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIBezierPath.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIColor.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIColor.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIDevice.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIDevice.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIEvent.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIEvent.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIFont.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIFont.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIGestureRecognizer.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIGestureRecognizer.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIGestureRecognizerSubclass.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIImage.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIImage.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIInterface.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIInterface.m">
-            </FileRef>
-            <FileRef
-               location = "group:UINavigationItem.h">
-            </FileRef>
-            <FileRef
-               location = "group:UINavigationItem.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIPanGestureRecognizer.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIPanGestureRecognizer.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIResponder.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIResponder.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIScreen.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIScreen.m">
-            </FileRef>
-            <FileRef
-               location = "group:UISearchDisplayController.h">
-            </FileRef>
-            <FileRef
-               location = "group:UISearchDisplayController.m">
-            </FileRef>
-            <FileRef
-               location = "group:UITabBarItem.h">
-            </FileRef>
-            <FileRef
-               location = "group:UITabBarItem.m">
-            </FileRef>
-            <FileRef
-               location = "group:UITextInput.h">
-            </FileRef>
-            <FileRef
-               location = "group:UITextInput.m">
-            </FileRef>
-            <FileRef
-               location = "group:UITouch.h">
-            </FileRef>
-            <FileRef
-               location = "group:UITouch.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:Other"
-            name = "Other">
-            <FileRef
-               location = "group:UIGeometry.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIGeometry.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIGraphics.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIGraphics.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIStringDrawing.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIStringDrawing.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:Protocol"
-            name = "Protocol">
-            <FileRef
-               location = "group:UIAppearance.h">
-            </FileRef>
-            <FileRef
-               location = "group:UITextInputTraits.h">
-            </FileRef>
-         </Group>
-         <FileRef
-            location = "group:UIKit.h">
-         </FileRef>
-         <Group
-            location = "group:UIView"
-            name = "UIView">
-            <FileRef
-               location = "group:UIButton.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIButton.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIControl.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIControl.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIImageView.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIImageView.m">
-            </FileRef>
-            <FileRef
-               location = "group:UILabel.h">
-            </FileRef>
-            <FileRef
-               location = "group:UILabel.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIScrollView.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIScrollView.m">
-            </FileRef>
-            <FileRef
-               location = "group:UITableView.h">
-            </FileRef>
-            <FileRef
-               location = "group:UITableView.m">
-            </FileRef>
-            <FileRef
-               location = "group:UITableViewCell.h">
-            </FileRef>
-            <FileRef
-               location = "group:UITableViewCell.m">
-            </FileRef>
-            <FileRef
-               location = "group:UITableViewHeaderFooterView.h">
-            </FileRef>
-            <FileRef
-               location = "group:UITableViewHeaderFooterView.m">
-            </FileRef>
-            <FileRef
-               location = "group:UITextField.h">
-            </FileRef>
-            <FileRef
-               location = "group:UITextField.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIToolbar.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIToolbar.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIView.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIView.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIWindow.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIWindow.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:UIViewController"
-            name = "UIViewController">
-            <FileRef
-               location = "group:UINavigationController.h">
-            </FileRef>
-            <FileRef
-               location = "group:UINavigationController.m">
-            </FileRef>
-            <FileRef
-               location = "group:UISplitViewController.h">
-            </FileRef>
-            <FileRef
-               location = "group:UISplitViewController.m">
-            </FileRef>
-            <FileRef
-               location = "group:UIViewController.h">
-            </FileRef>
-            <FileRef
-               location = "group:UIViewController.m">
-            </FileRef>
-         </Group>
       </Group>
    </Group>
    <Group
@@ -1563,6 +1122,9 @@
          location = "group:NSObject"
          name = "NSObject">
          <FileRef
+            location = "group:NSDictionary.h">
+         </FileRef>
+         <FileRef
             location = "group:NSNotification.h">
          </FileRef>
          <FileRef
@@ -2203,6 +1765,450 @@
          <FileRef
             location = "group:Single.h">
          </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:MyUIKit-Extension"
+      name = "MyUIKit-Extension">
+      <Group
+         location = "group:Private Categories"
+         name = "Private Categories">
+         <FileRef
+            location = "group:UIColor+UIPrivate.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIControl+UIPrivate.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIFont+UIPrivate.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIGestureRecognizer+UIPrivate.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIImage+UIPrivate.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIImage+UIPrivate.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIScrollView+UIPrivate.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITableViewCell+UIPrivate.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITouch+UIPrivate.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIView+UIPrivate.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewController+UIPrivate.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIWindow+UIPrivate.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Private Classes"
+         name = "Private Classes">
+         <FileRef
+            location = "group:UIAction.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIAction.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIAppearanceInstance.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIAppearanceInstance.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIAppearanceProperty.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIAppearanceProperty.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIAppearanceProxy.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIAppearanceProxy.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIColorRep.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIColorRep.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIControlAction.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIControlAction.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIImageRep.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIImageRep.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIInputController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIInputController.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIRoundedRectButton.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIRoundedRectButton.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIScroller.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIScroller.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIScrollViewAnimation.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIScrollViewAnimation.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIScrollViewAnimationDeceleration.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIScrollViewAnimationDeceleration.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIScrollViewAnimationScroll.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIScrollViewAnimationScroll.m">
+         </FileRef>
+         <FileRef
+            location = "group:UITableViewCellSeparator.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITableViewCellSeparator.m">
+         </FileRef>
+         <FileRef
+            location = "group:UITableViewSection.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITableViewSection.m">
+         </FileRef>
+         <FileRef
+            location = "group:UITableViewSectionLabel.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITableViewSectionLabel.m">
+         </FileRef>
+         <FileRef
+            location = "group:UITouchEvent.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITouchEvent.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewAnimationGroup.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewAnimationGroup.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewLayoutManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewLayoutManager.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:UIKit Classes"
+         name = "UIKit Classes">
+         <Group
+            location = "group:NSObject"
+            name = "NSObject">
+            <FileRef
+               location = "group:UIAcceleration.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIAcceleration.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIAccelerometer.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIAccelerometer.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIAccessibility.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIAccessibility.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIAccessibilityElement.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIAccessibilityElement.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIApplication.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIApplication.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIBarButtonItem.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIBarButtonItem.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIBarItem.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIBarItem.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIBezierPath.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIBezierPath.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIColor.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIColor.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIDevice.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIDevice.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIEvent.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIEvent.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIFont.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIFont.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIGestureRecognizer.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIGestureRecognizer.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIGestureRecognizerSubclass.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIImage.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIImage.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIInterface.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIInterface.m">
+            </FileRef>
+            <FileRef
+               location = "group:UINavigationItem.h">
+            </FileRef>
+            <FileRef
+               location = "group:UINavigationItem.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIPanGestureRecognizer.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIPanGestureRecognizer.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIResponder.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIResponder.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIScreen.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIScreen.m">
+            </FileRef>
+            <FileRef
+               location = "group:UISearchDisplayController.h">
+            </FileRef>
+            <FileRef
+               location = "group:UISearchDisplayController.m">
+            </FileRef>
+            <FileRef
+               location = "group:UITabBarItem.h">
+            </FileRef>
+            <FileRef
+               location = "group:UITabBarItem.m">
+            </FileRef>
+            <FileRef
+               location = "group:UITextInput.h">
+            </FileRef>
+            <FileRef
+               location = "group:UITextInput.m">
+            </FileRef>
+            <FileRef
+               location = "group:UITouch.h">
+            </FileRef>
+            <FileRef
+               location = "group:UITouch.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Other"
+            name = "Other">
+            <FileRef
+               location = "group:UIGeometry.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIGeometry.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIGraphics.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIGraphics.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIStringDrawing.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIStringDrawing.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Protocol"
+            name = "Protocol">
+            <FileRef
+               location = "group:UIAppearance.h">
+            </FileRef>
+            <FileRef
+               location = "group:UITextInputTraits.h">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:UIKit.h">
+         </FileRef>
+         <Group
+            location = "group:UIView"
+            name = "UIView">
+            <FileRef
+               location = "group:UIButton.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIButton.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIControl.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIControl.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIImageView.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIImageView.m">
+            </FileRef>
+            <FileRef
+               location = "group:UILabel.h">
+            </FileRef>
+            <FileRef
+               location = "group:UILabel.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIScrollView.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIScrollView.m">
+            </FileRef>
+            <FileRef
+               location = "group:UITableView.h">
+            </FileRef>
+            <FileRef
+               location = "group:UITableView.m">
+            </FileRef>
+            <FileRef
+               location = "group:UITableViewCell.h">
+            </FileRef>
+            <FileRef
+               location = "group:UITableViewCell.m">
+            </FileRef>
+            <FileRef
+               location = "group:UITableViewHeaderFooterView.h">
+            </FileRef>
+            <FileRef
+               location = "group:UITableViewHeaderFooterView.m">
+            </FileRef>
+            <FileRef
+               location = "group:UITextField.h">
+            </FileRef>
+            <FileRef
+               location = "group:UITextField.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIToolbar.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIToolbar.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIView.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIView.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIWindow.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIWindow.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:UIViewController"
+            name = "UIViewController">
+            <FileRef
+               location = "group:UINavigationController.h">
+            </FileRef>
+            <FileRef
+               location = "group:UINavigationController.m">
+            </FileRef>
+            <FileRef
+               location = "group:UISplitViewController.h">
+            </FileRef>
+            <FileRef
+               location = "group:UISplitViewController.m">
+            </FileRef>
+            <FileRef
+               location = "group:UIViewController.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIViewController.m">
+            </FileRef>
+         </Group>
       </Group>
    </Group>
    <Group

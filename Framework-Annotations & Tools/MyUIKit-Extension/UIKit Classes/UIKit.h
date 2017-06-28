@@ -4,14 +4,12 @@
 //  Created by 【Plain Boiled Water ln】 on 15/-/-.
 //  Copyright © 2015年（https://custompbwaters.github.io）All rights reserved.
 //
-// http://www.jianshu.com/u/fd745d76c816
 
 /*
  该 **MyUIKit-Extension** ,
  原作者 http://www.jianshu.com/subscriptions#/subscriptions/5281730/user
  
  阅读此项目时，私有类及私有分类不必太关注，这些类只是.m里面为了实现某些功能定义的私有方法
- 
  */
 
 #ifndef UIKit_h

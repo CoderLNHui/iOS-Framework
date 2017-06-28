@@ -3,8 +3,16 @@
 //  JKCategories
 //
 //  Created by Jakey on 16/5/29.
-//  Copyright © 2016年 https://github.com/shaojiankui/JKCategories. All rights reserved.
+//  Copyright © 2016年  All rights reserved.
 //  转载大牛Demo
+
+/*
+ 该 **JKCategories** ,
+ 原作者 https://github.com/shaojiankui/JKCategories.
+ 
+ 阅读总会能有点收获 ！向优秀的开源者致敬 ！向优秀的分享者致敬 ！
+ 
+ */
 
 #ifndef JKUIKit_h
 #define JKUIKit_h
