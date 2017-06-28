@@ -9,8 +9,11 @@
  该 **MyUIKit-Extension** ,
  原作者 http://www.jianshu.com/subscriptions#/subscriptions/5281730/user
  
- 阅读此项目时，私有类及私有分类不必太关注，这些类只是.m里面为了实现某些功能定义的私有方法
+ 阅读总会能有点收获 ！向优秀的开源者致敬 ！向优秀的分享者致敬 ！
  */
+
+
+// 阅读此项目时，私有类及私有分类不必太关注，这些类只是.m里面为了实现某些功能定义的私有方法
 
 #ifndef UIKit_h
 #define UIKit_h
