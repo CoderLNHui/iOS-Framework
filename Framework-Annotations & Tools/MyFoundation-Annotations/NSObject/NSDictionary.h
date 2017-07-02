@@ -1,10 +1,14 @@
-//
-//  NSDictionary.h
-//  白开水ln（https://custompbwaters.github.io）
-//
-//  Created by 【Plain Boiled Water ln】 on Learning point.
-//  Copyright (c) 1994-2016（https://github.com/CustomPBWaters）Elegant programming.
-//
+/*
+ * NSDictionary.h
+ * 白开水ln（https://github.com/CustomPBWaters）
+ *
+ * (c) 1994-2016
+ * Created by 【Plain Boiled Water ln】 on Elegant programming.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * @PBWLN_LICENSE_HEADER_END@
+ */
+
 
 #import <Foundation/NSObject.h>
 #import <Foundation/NSEnumerator.h>

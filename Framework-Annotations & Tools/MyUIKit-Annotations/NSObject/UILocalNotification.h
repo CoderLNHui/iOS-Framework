@@ -1,10 +1,13 @@
-//
-//  UILocalNotification.h
-//  白开水ln（https://github.com/CustomPBWaters）
-//
-//  Created by 【Plain Boiled Water ln】 on Learning point.
-//  Copyright (c) 2007-2016（https://custompbwaters.github.io）Elegant programming.
-//
+/*
+ * UILocalNotification.h
+ * 白开水ln（https://github.com/CustomPBWaters）
+ *
+ * (c) 2007-2016
+ * Created by 【Plain Boiled Water ln】 on Elegant programming.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * @PBWLN_LICENSE_HEADER_END@
+ */
 
 
 #import <Foundation/Foundation.h>

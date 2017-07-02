@@ -1,10 +1,13 @@
-//
-//  NSString.h
-//  Annotations（https://github.com/CustomPBWaters）
-//
-//  Created by 简书:白开水ln on 16/-/-.
-//  Copyright (c) 1994-2016年（https://custompbwaters.github.io）All rights reserved.
-//
+/*
+ * NSString.h
+ * 白开水ln（https://github.com/CustomPBWaters）
+ *
+ * (c) 1994-2016
+ * Created by 【Plain Boiled Water ln】 on Elegant programming.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * @PBWLN_LICENSE_HEADER_END@
+ */
 
 
 typedef unsigned short unichar;

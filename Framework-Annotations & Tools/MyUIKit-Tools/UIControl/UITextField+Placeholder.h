@@ -1,10 +1,12 @@
-//
-//  UITextField+Placeholder.h
-//  Category（https://github.com/CustomPBWaters）
-//
-//  Created by 白开水ln on 16/-/-.
-//  Copyright © 2016年（https://custompbwaters.github.io）All rights reserved.
-//
+/*
+ * UITextField+Placeholder.h
+ * 白开水ln（https://github.com/CustomPBWaters）
+ *
+ * Created by 【Plain Boiled Water ln】 on Elegant programming16.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * @PBWLN_LICENSE_HEADER_END@
+ */
 
 #import <UIKit/UIKit.h>
 
@@ -23,7 +25,7 @@
  *【方式四：runtime交换方法(修改UITextField的占位文字，且设置文字和文字颜色是无序的)】
  * @param placeholder       占位文字
  */
-- (void)setLN_Placeholder:(NSString *)placeholder;
+- (void)ln_setPlaceholder:(NSString *)placeholder;
 
 
 @end

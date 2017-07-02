@@ -1,10 +1,5 @@
 //  UIKit.h
-//  ☕️（https://github.com/CustomPBWaters）
-//
-//  Created by 【Plain Boiled Water ln】 on 15/-/-.
-//  Copyright © 2015年（https://custompbwaters.github.io）All rights reserved.
-//
-
+ 
 /*
  该 **MyUIKit-Extension** ,
  原作者 http://www.jianshu.com/subscriptions#/subscriptions/5281730/user

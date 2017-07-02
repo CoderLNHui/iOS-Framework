@@ -1,11 +1,13 @@
-//
-//  UIVideoEditorController.h
-//  Annotations（https://github.com/CustomPBWaters）
-//
-//  Created by 白开水ln on 16/-/-.
-//  Copyright (c) 2009-2015（https://custompbwaters.github.io）All rights reserved.
-//
-
+/*
+ * UIVideoEditorController.h
+ * 白开水ln（https://github.com/CustomPBWaters）
+ *
+ * (c) 2009-2015
+ * Created by 【Plain Boiled Water ln】 on Elegant programming.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * @PBWLN_LICENSE_HEADER_END@
+ */
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UINavigationController.h>

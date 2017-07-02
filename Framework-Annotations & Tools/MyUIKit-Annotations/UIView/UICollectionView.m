@@ -1,7 +1,10 @@
-//
-//  UICollectionView.m
-//  Annotations（https://github.com/CustomPBWaters）
-//
-//  Created by 白开水ln on 16/-/-.
-//  Copyright (c) 2011-2016（https://custompbwaters.github.io）All rights reserved.
-//
+/*
+ * UICollectionView.m
+ * 白开水ln（https://github.com/CustomPBWaters）
+ *
+ * (c) 2011-2016
+ * Created by 【Plain Boiled Water ln】 on Elegant programming.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * @PBWLN_LICENSE_HEADER_END@
+ */

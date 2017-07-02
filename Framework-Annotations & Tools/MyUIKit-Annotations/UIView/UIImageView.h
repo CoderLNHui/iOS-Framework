@@ -1,11 +1,15 @@
-//
-//  UIImageView.h
-//  UIKit
-//
-//  Created by 白开水ln on 16/-/-.
-//  Copyright (c) 2006-2016 Apple Inc. All rights reserved.
-//  https://custompbwaters.github.io    http://www.jianshu.com/p/e5b995ecf44d
-//
+/*
+ * UIImageView.h
+ * 白开水ln（https://github.com/CustomPBWaters）
+ *
+ * (c) 2006-2016
+ * Created by 【Plain Boiled Water ln】 on Elegant programming.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * @PBWLN_LICENSE_HEADER_END@
+ */
+
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIView.h>
 #import <UIKit/UIKitDefines.h>

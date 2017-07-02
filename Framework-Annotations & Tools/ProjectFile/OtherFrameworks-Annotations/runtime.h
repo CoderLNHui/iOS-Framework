@@ -1,9 +1,9 @@
 /*
  * runtime.h
- * Annotations（https://github.com/CustomPBWaters）
- * Created by 白开水ln on 16/-/-.
+ * 白开水ln（https://github.com/CustomPBWaters）
  *
- * Copyright (c) 1999-2007 （https://custompbwaters.github.io）.  All Rights Reserved.
+ * Created by 【Plain Boiled Water ln】 on Elegant programming16.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
  *
  * @APPLE_LICENSE_HEADER_START@
  *

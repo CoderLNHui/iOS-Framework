@@ -1,11 +1,15 @@
-//
-//  Foundation.h
-//  ☕️（https://github.com/CustomPBWaters）
-//
-//  Created by 【Plain Boiled Water ln】 on 15/-/-.
-//  Copyright © 2015年（https://custompbwaters.github.io）All rights reserved.
-//
-// http://www.jianshu.com/u/fd745d76c816
+/*
+ * Foundation.h
+ * 简书:白开水ln（https://github.com/CustomPBWaters）
+ *
+ * (c) 1994-2016
+ * Created by 【Plain Boiled Water ln】 on Elegant programming.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * http://www.jianshu.com/u/fd745d76c816
+ *
+ * @PBWLN_LICENSE_HEADER_END@
+ */
 
 
 /**

@@ -1,10 +1,13 @@
-//
-//  UITextField+Placeholder.m
-//  Category（https://github.com/CustomPBWaters）
-//
-//  Created by 白开水ln on 16/-/-.
-//  Copyright © 2016年（https://custompbwaters.github.io）All rights reserved.
-//
+/*
+ * UITextField+Placeholder.m
+ * 白开水ln（https://github.com/CustomPBWaters）
+ *
+ * Created by 【Plain Boiled Water ln】 on Elegant programming16.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * @PBWLN_LICENSE_HEADER_END@
+ */
+
 
 #import "UITextField+Placeholder.h"
 #import <objc/message.h>
@@ -35,8 +38,8 @@
 
 
 // 设置占位文字 和 文字颜色
-- (void)setLN_Placeholder:(NSString *)placeholder {
-    [self setLN_Placeholder:placeholder];
+- (void)ln_setPlaceholder:(NSString *)placeholder {
+    [self ln_setPlaceholder:placeholder];
     
     self.placeholderColor = self.placeholderColor;
 }
@@ -47,9 +50,9 @@
 {
     // setPlaceholder
     Method setPlaceholderMethod = class_getInstanceMethod(self, @selector(setPlaceholder:));
-    Method setLN_PlaceholderMethod = class_getInstanceMethod(self, @selector(setLN_Placeholder:));
+    Method ln_setPlaceholderMethod = class_getInstanceMethod(self, @selector(ln_setPlaceholder:));
     
-    method_exchangeImplementations(setPlaceholderMethod, setLN_PlaceholderMethod);
+    method_exchangeImplementations(setPlaceholderMethod, ln_setPlaceholderMethod);
 }
 
 

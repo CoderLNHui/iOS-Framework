@@ -30,14 +30,19 @@
     //    testLabel.attributedText = AttributedStr;
     
     
-    
+    [testLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(testClick)]];
     
     
     //【封装工具类】【利用链式编程去实现富文本属性的赋值】
     NSMutableAttributedString * testAS = [NSMutableAttributedString makeAttributeString:@"直接创建" Attribute:^(NSMutableDictionary *attributes) {
         attributes.Font(24).Color([UIColor yellowColor]);
-        [testLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(testClick)]];
+       
+        
+        
     }];
+    
+    
+    
     [testAS makeAttributeStringAdd:@"拼接新的文字" Attribute:^(NSMutableDictionary *attributes) {
         attributes.Font(12).Color([UIColor redColor]);
     }];

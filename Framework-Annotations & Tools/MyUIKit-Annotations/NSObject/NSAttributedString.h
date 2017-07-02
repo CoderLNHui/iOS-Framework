@@ -1,12 +1,13 @@
-/*	NSAttributedString.h
-    UIKit
+/*
+ * NSAttributedString.h
+ * 白开水ln（https://github.com/CustomPBWaters）
+ *
+ * (c) 2011-2015
+ * Created by 【Plain Boiled Water ln】 on Elegant programming.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * @PBWLN_LICENSE_HEADER_END@
  */
-//  Annotations（https://github.com/CustomPBWaters）
-//
-//  Created by 简书:白开水ln on 16/-/-.
-//  Copyright (c) 2011-2015（https://custompbwaters.github.io）All rights reserved.
-//
-
 
 #import <Foundation/NSAttributedString.h>
 #import <UIKit/UIKitDefines.h>
