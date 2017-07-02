@@ -42,13 +42,16 @@
 | :-: | :-: | :-: | :-: |
 | UIKit.h - Annotations & Tools  |  -- | --  | --  |
 | 【NSObject】  |  -- | --  | --  |
-| UIImage.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/UIImage.h) | 【Tools】  | [【博客注解】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/NSObject/UIImage%2BImage.h)  |
+| UIImage.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/UIImage.h) | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/NSObject/UIImage%2BImage.h)  | [【博客注解】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/NSObject/UIImage%2BImage.h)  |
 | UIColor.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/UIColor.h) | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/NSObject/UIColor%2BColor.h)  | 【博客注解】  |
-| UIBezierPath.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/UIBezierPath.h) | 【Tools】  | [【博客注解】](https://custompbwaters.github.io/官方译文+活用/UIBezierPath译文+活用.html)  |
+| UIBezierPath.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/UIBezierPath.h) | [【Tools】]()  | [【博客注解】](https://custompbwaters.github.io/官方译文+活用/UIBezierPath译文+活用.html)  |
 | NSURLSession.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/NSURLSession.h) | 【Tools】  | [【博客注解】](https://custompbwaters.github.io/官方译文+活用/NSURLSession译文+活用.html)  |
 | NSArray.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/NSArray.h) | 【Tools】  | 【博客注解】  |
 | NSAttributedString.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/NSAttributedString.h) | 【Tools】  | 【博客注解】  |
 | UILocalNotification.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/UILocalNotification.h) | 【Tools】  | 【博客注解】  |
+| NSDate.h  |  [【系统文件】]() | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/NSObject/NSDate%2BDate.h)  | 【博客注解】  |
+| UIDevice.h  |  [【系统文件】]() | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/NSObject/UIDevice%2BDevice.h)  | 【博客注解】  |
+| UINavigationItem.h  |  [【系统文件】]() | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/NSObject/UINavigationItem%2BItem.h)  | 【博客注解】  |
 | 【UIView】  |  -- | --  | --  |
 | UIWindow.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIWindow.h) | 【Tools】  | 【博客注解】  |
 | UIView.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIView.h) | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIView/UIView%2BFrame.h)  | [【博客注解】](https://custompbwaters.github.io/官方译文+活用/UIView%20API%20官方译文.html)  |
@@ -62,22 +65,21 @@
 | UIProgressView.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIProgressView.h) | 【Tools】  | 【博客注解】  |
 | UIPickerView.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIPickerView.h) | 【Tools】  | 【博客注解】  |
 | UINavigationBar.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UINavigationBar.h) |【Tools】  | 【博客注解】  |
-| UILabel.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UILabel.h) | 【Tools】  | 【博客注解】  |
+| UILabel.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UILabel.h) | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIView/UILabel%2BLabel.h)  | 【博客注解】  |
 | UIImageView.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIImageView.h)  | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIView/UIImageView%2BImageView.h)  | 【博客注解】  |
 | UICollectionViewLayout.h  |   [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UICollectionViewLayout.h) | 【Tools】  | 【博客注解】  |
 | UICollectionViewFlowLayout.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UICollectionViewFlowLayout.h) | 【Tools】  | 【博客注解】  |
 | UICollectionViewCell.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UICollectionViewCell.h) | 【Tools】  | 【博客注解】  |
 | UICollectionView.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UICollectionView.h)  | 【Tools】  | [【博客注解】](https://custompbwaters.github.io/iOS%20UI/UICollectionView综合视图.html)  |
-| UIButton.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIButton.h) | 【Tools】  | [【博客注解】]()  |
 | UIAlertView.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIAlertView.h) | 【Tools】  | 【博客注解】  |
 | UIActivityIndicatorView.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIActivityIndicatorView.h) | 【Tools】  | 【博客注解】  |
 | UIActionSheet.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIActionSheet.h) | 【Tools】  | 【博客注解】  |
 | 【UIViewController】  |  -- | --  | --  |
-| UIViewController.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UIViewController.h)  | 【Tools】  | 【博客注解】  |
+| UIViewController.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UIViewController.h)  | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIViewController/UIViewController%2BController.h)  | 【博客注解】  |
 | UIVideoEditorController.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UIVideoEditorController.h) | 【Tools】  | 【博客注解】  |
 | UITableViewController.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UITableViewController.h) | 【Tools】  | 【博客注解】  |
 | UITabBarController.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UITabBarController.h)  | 【Tools】  | 【博客注解】  |
-| UINavigationController.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UINavigationController.h) | 【Tools】  | 【博客注解】  |
+| UINavigationController.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UINavigationController.h) | 【[【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIViewController/UINavigationController%2BController.h)  | 【博客注解】  |
 | UIImagePickerController.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UIImagePickerController.h) | 【Tools】  | [【博客注解】]()  |
 | UICollectionViewController.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UICollectionViewController.h) | 【Tools】  | [【博客注解】]()  |
 | 【UIGestureRecognizer】  |  -- | --  | --  |
@@ -88,7 +90,7 @@
 | UIPanGestureRecognizer.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIGestureRecognizer/UIPanGestureRecognizer.h) | 【Tools】  | 【博客注解】  |
 | UILongPressGestureRecognizer.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIGestureRecognizer/UILongPressGestureRecognizer.h)  |【Tools】  | 【博客注解】  |
 | 【UIControl】  |  -- | --  | --  |
-| UIButton.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIControl/UIButton.h)  | [【Tools】]()  | 【博客注解】  |
+| UIButton.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIButton.h) | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIView/UIButton%2BButton.h)  | [【博客注解】]()  |
 | UIControl.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIControl/UIControl.h) | 【Tools】  | 【博客注解】  |
 | UIDatePicker.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIControl/UIDatePicker.h) | 【Tools】  | 【博客注解】  |
 | UIPageControl.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIControl/UIPageControl.h) | 【Tools】  | 【博客注解】  |
@@ -103,20 +105,24 @@
 | Foundation.h - Annotations & Tools  |  -- | --  | --  |
 | 【NSObject】  |  -- | --  | --  |
 | NSString.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyFoundation-Annotations/NSObject/NSString.h) | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyFoundation-Tools/NSObject/NSString%2BString.h)  | [【博客注解】]()  |
+| NSMutableAttributedString.h  |  [【系统文件】]() | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyFoundation-Tools/NSObject/NSMutableAttributedString%2BAttributedString.h)  | [【博客注解】]()  |
+| NSTimer.h  |  [【系统文件】]() | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyFoundation-Tools/NSObject/NSTimer%2BTimer.h)  | 【博客注解】  |
 | NSNotificationQueue.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyFoundation-Annotations/NSObject/NSNotificationQueue.h) | [【Tools】]()  | [【博客注解】](https://custompbwaters.github.io/iOS%20UI/iOS模式详解—NSNotification通知.html)  |
 | NSRunLoop.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyFoundation-Annotations/NSObject/NSRunLoop.h) | [【Tools】]()  | [【博客注解】]()  |
-| NSDictionary.h  |  [【系统文件】]() | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyFoundation-Tools/NSObject/NSDictionary%2BProperty.h)   | [【博客注解】]()  |
+| NSDictionary.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyFoundation-Annotations/NSObject/NSDictionary.h) | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyFoundation-Tools/NSObject/NSDictionary%2BProperty.h)   | [【博客注解】]()  |
 | OtherFramework.h - Annotations & Tools  |  -- | --  | --  |
-| runtime.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/ProjectFile/Other%20frameworks/runtime.h) | [【Tools】]()  | [【博客注解】](https://custompbwaters.github.io/iOS%20NET/runtime实用详解「面试、工作」.html)  |
+| runtime.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/ProjectFile/Other%20frameworks/runtime.h) | [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyFoundation-Tools/NSObject/NSObject%2BRuntime.h)  | [【博客注解】](https://custompbwaters.github.io/iOS%20NET/runtime实用详解「面试、工作」.html)  |
 | WKWebView.h  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/ProjectFile/Other%20frameworks/WKWebView.h) | [【Tools】]()  | [【博客注解】]()  |
+| 【UIKit-JKCategories】  |  [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIKit-JKCategories/JKFoundation.h) | --  | --  |
+| 【MyUIKit-Extension】  |  [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Extension/UIKit%20Classes/UIKit.h) | --  | --  |
+| UserNotificationiOS10  |  [【系统文件】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/ProjectFile/OtherFrameworks-Annotations/UserNotificationiOS10-Annotations) | 【Tools】  | 【博客注解】  |
+| iOS11  |  [【系统文件】]() | [【Tools】]()  | [【博客注解】]()  |
 | 【ProjectFile】  |  -- | --  | --  |
 | Header.h  |  [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile/Header.h) | --  | --  |
 | PrefixHeader.pch  |  [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile/PrefixHeader.pch) | --  | --  |
-| 【UIKit-JKCategories】  |  [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIKit-JKCategories/JKFoundation.h) | --  | --  |
-| 【MyUIKit-Extension】  |  [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Extension/UIKit%20Classes/UIKit.h) | --  | --  |
 | 11  |  22 | 33  | 44  |
 | 未完待续 ！  |  未完待续 ！ | 未完待续 ！  | 未完待续 ！  |
-
+| 欢迎补充 ！  |  欢迎补充 ！ | 欢迎补充 ！  | 欢迎补充 ！  |
 
 
 
@@ -148,10 +154,10 @@
 
 
 
-#### 注解 & 工具类演示
+#### Demo示例
 
-[Apple.gif http://www.jianshu.com/p/3ba46721ae96](http://www.jianshu.com/p/3ba46721ae96)
- 
+- [File & Article 阅读对应点击](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation)
+
 
 
  
