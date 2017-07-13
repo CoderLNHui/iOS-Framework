@@ -118,16 +118,19 @@
          location = "group:UIView"
          name = "UIView">
          <FileRef
-            location = "group:UIActionSheet.h">
+            location = "group:UIScrollView.h">
          </FileRef>
          <FileRef
-            location = "group:UIActivityIndicatorView.h">
+            location = "group:UIScrollView.m">
          </FileRef>
          <FileRef
-            location = "group:UIAlertView.h">
+            location = "group:UITableView.h">
          </FileRef>
          <FileRef
-            location = "group:UIButton.h">
+            location = "group:UITableView.m">
+         </FileRef>
+         <FileRef
+            location = "group:UITableViewCell.h">
          </FileRef>
          <FileRef
             location = "group:UICollectionView.h">
@@ -145,6 +148,18 @@
             location = "group:UICollectionViewLayout.h">
          </FileRef>
          <FileRef
+            location = "group:UIActionSheet.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIActivityIndicatorView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIAlertView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIButton.h">
+         </FileRef>
+         <FileRef
             location = "group:UIImageView.h">
          </FileRef>
          <FileRef
@@ -160,25 +175,10 @@
             location = "group:UIProgressView.h">
          </FileRef>
          <FileRef
-            location = "group:UIScrollView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIScrollView.m">
-         </FileRef>
-         <FileRef
             location = "group:UISearchBar.h">
          </FileRef>
          <FileRef
             location = "group:UITabBar.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITableView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITableView.m">
-         </FileRef>
-         <FileRef
-            location = "group:UITableViewCell.h">
          </FileRef>
          <FileRef
             location = "group:UITextView.h">
@@ -2297,6 +2297,12 @@
             location = "group:UserNotificationiOS10-Annotations"
             name = "UserNotificationiOS10-Annotations">
             <FileRef
+               location = "group:UserNotifications.h">
+            </FileRef>
+            <FileRef
+               location = "group:UserNotifications.m">
+            </FileRef>
+            <FileRef
                location = "group:NSString+UserNotifications.h">
             </FileRef>
             <FileRef
@@ -2337,9 +2343,6 @@
             </FileRef>
             <FileRef
                location = "group:UNUserNotificationCenter.h">
-            </FileRef>
-            <FileRef
-               location = "group:UserNotifications.h">
             </FileRef>
          </Group>
          <FileRef

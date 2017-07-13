@@ -7,6 +7,7 @@
  * Created by 【Plain Boiled Water ln】 on Elegant programming.
  * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
  *
+ * Copyright ©【@码员白开水ln http://www.jianshu.com/u/fd745d76c816】Reprint please indicate the source
  * @PBWLN_LICENSE_HEADER_END@
  */
 
@@ -25,3 +26,10 @@
 #import <UserNotifications/UNUserNotificationCenter.h>
 
 #import <UserNotifications/UNNotificationServiceExtension.h>
+
+
+/*
+ * @PBWLN_LICENSE_HEADER
+ * Copyright © [@码员白开水ln http://www.jianshu.com/u/fd745d76c816] Reprint please indicate the source
+ * @PBWLN_LICENSE_END@
+ */

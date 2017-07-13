@@ -11,6 +11,10 @@
  */
  
 
+/**
+ UNNotification 通知实体，在UNUserNotificationCenter的代理回调事件中，告知App接收到一条通知，包含一个发起通知的请求UNNotificationRequest
+ */
+
 #import <Foundation/Foundation.h>
 
 @class UNNotificationRequest;
@@ -30,4 +34,9 @@ __IOS_AVAILABLE(10.0) __TVOS_AVAILABLE(10.0) __WATCHOS_AVAILABLE(3.0)
 
 @end
 
+/*
+ * @PBWLN_LICENSE_HEADER
+ * Copyright © [@码员白开水ln http://www.jianshu.com/u/fd745d76c816] Reprint please indicate the source
+ * @PBWLN_LICENSE_END@
+ */
 NS_ASSUME_NONNULL_END

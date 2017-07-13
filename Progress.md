@@ -1,9 +1,6 @@
 
 #### Elegant programming
  
-| 不管谁的博客上面写的(`也包括自己`)，阅读的你要敢于去验证，停止无意义的`⏹copy 👬 paste`。 |
-|:-:|
-
  
 
 ## Content progress
@@ -31,25 +28,25 @@
 #import <UIKit/UIAlertView.h>
 #import <UIKit/UIAppearance.h>
 #import <UIKit/UIApplication.h>
-#import <UIKit/UIBarButtonItem.h> 📌工具类持续➕
+#import <UIKit/UIBarButtonItem.h>  
 #import <UIKit/UIBarButtonItemGroup.h>
 #import <UIKit/UIBarItem.h>
 #endif
 
 
-#import <UIKit/UIBezierPath.h> // 注解完全✔️
+#import <UIKit/UIBezierPath.h>  
 
 #if __has_include(<UIKit/UIButton.h>)
-#import <UIKit/UIButton.h> // 注解未全➕
-#import <UIKit/UICollectionView.h> // 注解完全✔️
-#import <UIKit/UICollectionViewCell.h> // 注解未全➕
-#import <UIKit/UICollectionViewController.h> // 注解未全➕
-#import <UIKit/UICollectionViewFlowLayout.h> // 注解完全✔️
-#import <UIKit/UICollectionViewLayout.h> // 注解完全✔️
+#import <UIKit/UIButton.h>  
+#import <UIKit/UICollectionView.h>   
+#import <UIKit/UICollectionViewCell.h>  
+#import <UIKit/UICollectionViewController.h>  
+#import <UIKit/UICollectionViewFlowLayout.h>   
+#import <UIKit/UICollectionViewLayout.h>   
 #import <UIKit/UICollectionViewTransitionLayout.h>
 #endif
 
-#import <UIKit/UIColor.h> // 注解未全➕
+#import <UIKit/UIColor.h>  
 
 #if __has_include(<UIKit/UIContentSizeCategoryAdjusting.h>)
 #import <UIKit/UIContentSizeCategoryAdjusting.h>
@@ -78,7 +75,7 @@
 #endif
 
 #import <UIKit/UIGraphics.h>
-#import <UIKit/UIImage.h> // 注解未全➕  📌工具类持续➕
+#import <UIKit/UIImage.h>       
 
 #if __has_include(<UIKit/UIGraphicsRenderer.h>)
 #import <UIKit/UIGraphicsRenderer.h>
@@ -90,7 +87,7 @@
 #import <UIKit/UIImageAsset.h>
 #import <UIKit/NSDataAsset.h>
 #import <UIKit/UIImagePickerController.h>
-#import <UIKit/UIImageView.h> // 注解未全➕ 📌工具类持续➕
+#import <UIKit/UIImageView.h>      
 #import <UIKit/UIInputView.h>
 #import <UIKit/UIInputViewController.h>
 #import <UIKit/UIInterface.h>
@@ -117,7 +114,7 @@
 #import <UIKit/UINib.h>
 #import <UIKit/UINibDeclarations.h>
 #import <UIKit/UINibLoading.h>
-#import <UIKit/UIPageControl.h> // 注解完全✔️
+#import <UIKit/UIPageControl.h>   
 #import <UIKit/UIPageViewController.h>
 #import <UIKit/UIPanGestureRecognizer.h>
 #import <UIKit/UIPasteboard.h>
@@ -143,7 +140,7 @@
 #import <UIKit/UIScreen.h>
 #import <UIKit/UIScreenEdgePanGestureRecognizer.h>
 #import <UIKit/UIScreenMode.h>
-#import <UIKit/UIScrollView.h> // 注解完全✔️
+#import <UIKit/UIScrollView.h>   
 #import <UIKit/UISearchBar.h>
 #import <UIKit/UISearchContainerViewController.h>
 #import <UIKit/UISearchController.h>
@@ -161,13 +158,13 @@
 #import <UIKit/UITabBar.h>
 #import <UIKit/UITabBarController.h>
 #import <UIKit/UITabBarItem.h>
-#import <UIKit/UITableView.h> // 注解完全✔️
+#import <UIKit/UITableView.h>   
 #import <UIKit/UITableViewHeaderFooterView.h>
-#import <UIKit/UITableViewCell.h> // 注解完全✔️
-#import <UIKit/UITableViewController.h> // 注解完全✔️
+#import <UIKit/UITableViewCell.h>   
+#import <UIKit/UITableViewController.h>   
 #import <UIKit/UITapGestureRecognizer.h>
 #import <UIKit/UITextChecker.h>
-#import <UIKit/UITextField.h> // 注解未全➕ 📌工具类持续➕
+#import <UIKit/UITextField.h>      
 #import <UIKit/UITextInput.h>
 #import <UIKit/UITextInputTraits.h>
 #import <UIKit/UITextView.h>
@@ -175,13 +172,13 @@
 #import <UIKit/UITouch.h>
 #import <UIKit/UITraitCollection.h>
 #import <UIKit/UIVideoEditorController.h>
-#import <UIKit/UIView.h> // 注解未全➕  📌工具类持续➕ 
+#import <UIKit/UIView.h>        
 #import <UIKit/UIViewController.h>
 #import <UIKit/UIWebView.h>
 #import <UIKit/UIWindow.h>
 #endif
 
-#import <UIKit/NSAttributedString.h> // 注解完全✔️
+#import <UIKit/NSAttributedString.h>   
 
 #if __has_include(<UIKit/NSLayoutConstraint.h>)
 #import <UIKit/NSLayoutConstraint.h>
@@ -255,7 +252,7 @@
 
 #import <Foundation/NSObjCRuntime.h>
 
-#import <Foundation/NSArray.h> // 注解未全➕
+#import <Foundation/NSArray.h>  
 #import <Foundation/NSAutoreleasePool.h>
 #import <Foundation/NSBundle.h>
 #import <Foundation/NSByteOrder.h>
@@ -263,7 +260,7 @@
 #import <Foundation/NSCharacterSet.h>
 #import <Foundation/NSCoder.h>
 #import <Foundation/NSData.h>
-#import <Foundation/NSDate.h> // 注解未全➕  📌工具类持续➕
+#import <Foundation/NSDate.h>       
 #import <Foundation/NSDateInterval.h>
 #import <Foundation/NSDateFormatter.h>
 #import <Foundation/NSDateIntervalFormatter.h>
@@ -277,7 +274,7 @@
 #import <Foundation/NSPersonNameComponentsFormatter.h>
 #import <Foundation/NSDecimal.h>
 #import <Foundation/NSDecimalNumber.h>
-#import <Foundation/NSDictionary.h> // 注解未全➕  📌工具类持续➕
+#import <Foundation/NSDictionary.h>       
 #import <Foundation/NSEnumerator.h>
 #import <Foundation/NSError.h>
 #import <Foundation/NSException.h>
@@ -298,11 +295,11 @@
 #import <Foundation/NSLock.h>
 #import <Foundation/NSMapTable.h>
 #import <Foundation/NSMethodSignature.h>
-#import <Foundation/NSNotification.h> // 注解完全✔️
-#import <Foundation/NSNotificationQueue.h> // 注解完全✔️
+#import <Foundation/NSNotification.h>   
+#import <Foundation/NSNotificationQueue.h>   
 #import <Foundation/NSNull.h>
 #import <Foundation/NSNumberFormatter.h>
-#import <Foundation/NSObject.h> // 注解未全➕  📌工具类持续➕
+#import <Foundation/NSObject.h>       
 #import <Foundation/NSOperation.h>
 #import <Foundation/NSOrderedSet.h>
 #import <Foundation/NSOrthography.h>
@@ -320,7 +317,7 @@
 #import <Foundation/NSSet.h>
 #import <Foundation/NSSortDescriptor.h>
 #import <Foundation/NSStream.h>
-#import <Foundation/NSString.h> // 注解完全✔️  📌工具类持续➕
+#import <Foundation/NSString.h>        
 #import <Foundation/NSTextCheckingResult.h>
 #import <Foundation/NSThread.h>
 #import <Foundation/NSTimeZone.h>
@@ -370,7 +367,7 @@
 #import <Foundation/NSProgress.h>
 #import <Foundation/NSUbiquitousKeyValueStore.h>
 #import <Foundation/NSUndoManager.h>
-#import <Foundation/NSURLSession.h> // 注解未全➕
+#import <Foundation/NSURLSession.h>  
 #import <Foundation/NSUserActivity.h>
 #import <Foundation/NSUUID.h>
 #endif
@@ -455,7 +452,7 @@
 #import "UIBezierPath.h"  // 完全实现✔️
 #import "UIGeometry.h"  // 完全实现✔️
 #import "UIGraphics.h"  // 完全实现✔️
-#import "UIColor.h"  // 完全实现✔️ 📌工具类持续➕
+#import "UIColor.h"  // 完全实现✔️    
 #import "UIFont.h"  // 完全实现✔️
 
 #import "UIAcceleration.h"  // 完全实现✔️
@@ -476,43 +473,7 @@
 
 ***
 
-
-//--------------------------- 【Other】———————————————//  
-// `期待你的加入 ^_^.`
-
-
-
-
-```objc
-
-#import "runtime.h" // 注解完全✔️
-
-#import "WKWebView.h" // 注解未全➕
-
-
-
-Foundation+Log.m // 【用于控制字典和数组打印输出格式为中文(直接拖入项目中就可以了,不要做任何处理) 】
-
-Single.h // 【快速创建一个单例 MRC模式 & ARC模式】
-
-
-
-
-Header.h // 常用持续➕
-
-PrefixHeader.pch // 常用持续➕
-
-```
  
- 
-***
-| `  ☕️ 分享是你我熟悉的味道 ☕️ 未完待续 ！` |
-| :-: |
-| :💥❤️💥: |
-| `To be continued ☕️ Plain boiled water ☕️ To be continued` |
-
-
-
 
 
 

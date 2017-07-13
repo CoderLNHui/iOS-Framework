@@ -1,9 +1,9 @@
 /*
  * PrefixHeader.pch
- * 白开水ln（https://github.com/CustomPBWaters）
+ * 🔍白开水ln（https://github.com/CustomPBWaters）
  *
- * Created by 【Plain Boiled Water ln】 on Elegant programming.
- * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ * Created by 【🔍Plain Boiled Water ln】 on Elegant programming16.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced reprinted.
  *
  * @PBWLN_LICENSE_HEADER_END@
  */
@@ -18,4 +18,185 @@
 
 
 
+
+
+//--------------------------- 【屏幕适配】 ------------------------------//
+//
+
+#define kScreenW [UIScreen mainScreen].bounds.size.width
+#define kScreenH [UIScreen mainScreen].bounds.size.height
+#define iphone6P (kScreenH == 736)
+#define iphone6 (kScreenH == 667)
+#define iphone5 (kScreenH == 568)
+#define iphone4 (kScreenH == 480)
+
+//
+//--------------------------- 【屏幕适配】 ------------------------------//
+
+
+
+
+
+
+
+
+
+//--------------------------- 【颜色】 ------------------------------//
+//
+
+#define LNRGB(r,g,b)    LNRGBA(r,g,b,1.0)
+#define LNRGBA(r,g,b,a) [UIColor colorWithRed:(r) / 256.0 green:(g) / 256.0 blue:(b) / 256.0 alpha:a]
+#define LNRandomColor   [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+#define LNUnifiedBgColor RGB(206, 206, 206)
+#define LNClearColor [UIColor clearColor]
+
+
+
+
+
+//
+//--------------------------- 【颜色】 ------------------------------//
+
+
+
+
+
+
+
+
+//--------------------------- 【三方库】 ------------------------------//
+//
+
+#import <AFNetworking/AFNetworking.h>
+#import <MJExtension/MJExtension.h>
+#import <UIImageView+WebCache.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <MJRefresh/MJRefresh.h>
+
+#define MAS_SHORTHAND // 定义这个常量，就可以不用在开发过程中使用"mas_"前缀。
+#define MAS_SHORTHAND_GLOBALS // 定义这个常量，Masonry帮我们自动把基础数据类型的数据，自动装箱为对象类型。
+#import <Masonry/Masonry.h>
+
+//
+//--------------------------- 【三方库】 ------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------- 【常用宏】 ------------------------------//
+//
+
+/** 数据请求返回写成Plist【#filename -> "filename"】、【@#filename -> @"filename"】 */
+#define AFNWriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/sunhui/Desktop/%@.plist",@#filename] atomically:YES];
+
+// 获取Caches缓存文件夹路径
+#define CachesPath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
+
+
+
+//
+//--------------------------- 【常用宏】 ------------------------------//
+
+
+
+
+
+
+
+
+
+//--------------------------- 【类别】 ------------------------------//
+//
+
+#import "UIImage+Image.h"
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+Item.h"
+#import "UIImageView+ImageView.h"
+#import "UITextField+TextField.h"
+#import "Const.h"  // 常量
+#import "LNFileCache.h" // 处理文件缓存
+
+//
+//--------------------------- 【类别】 ------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------- 【自定义Log打印日志】 ------------------------------//
+//
+
+#ifdef  DEBUG // 测试
+#define LNLog(...) NSLog(__VA_ARGS__)
+#define LNFunc  LNLog(@"%s",__func__)
+#define LNFuncline LNLog(@"%s, line = %d, %@",__FUNCTION__,__LINE__,[NSThread currentThread]);
+
+#else   // 发布
+#define LNLog(...)
+#define LNFunc
+#define LNFuncline
+#endif
+
+
+
+
+//
+//--------------------------- 【自定义Log】 ------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #endif /* PrefixHeader_pch */
+/*
+ * @PBWLN_LICENSE_HEADER
+ * Copyright © [@码员白开水ln http://www.jianshu.com/u/fd745d76c816] Reprint please indicate the source
+ * @PBWLN_LICENSE_END@
+ */

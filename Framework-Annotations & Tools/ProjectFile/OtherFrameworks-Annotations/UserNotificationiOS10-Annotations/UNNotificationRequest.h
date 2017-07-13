@@ -9,7 +9,10 @@
  *
  * @PBWLN_LICENSE_HEADER_END@
  */
- 
+
+/**
+ UNNotificationRequest包含通知内容UNNotificationContent和触发器UNNotificationTrigger
+ */
 
 #import <Foundation/Foundation.h>
 

@@ -11,6 +11,10 @@
  */
 
 
+/**
+ UNNotificationResponse，用户在触发了按钮或者文本提交的UNNotificationAction的时候，会形成一个response，通过通知中心的代理方法回调给App进行处理或者是交给扩展处理。
+ */
+
 #import <Foundation/Foundation.h>
 
 @class UNNotification;
