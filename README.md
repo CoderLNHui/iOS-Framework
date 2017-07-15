@@ -126,7 +126,7 @@
 
 ## iOS & Swift【Macro】方便你我高效开发`(不建议多用)`
 
-[开发常用宏,随技术更新](https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile)
+#### [开发常用宏,随技术更新](https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile)
 
 
 
@@ -136,11 +136,6 @@
 
 
 ***
- 
-`学习一门新的框架类库的时侯，需要追根溯源，才好提纲切领，即能掌握全局，又能深入细节。  
-从系统根类出发，结合事件响应处理的机制原理，再深入到各个界面组件或自定义，就会胸有成竹而不乱阵脚了。`
- 
-
 
 
 
