@@ -4,10 +4,9 @@
  * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2015
- * Created by 【Plain Boiled Water ln】 on Elegant programming.
- * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ * Created by 【🔍Plain Boiled Water ln】 on Elegant programming.
+ * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
- * Copyright ©【@码员白开水ln http://www.jianshu.com/u/fd745d76c816】Reprint please indicate the source
  * @PBWLN_LICENSE_HEADER_END@
  */
 

@@ -1,30 +1,26 @@
 
 
-## 引导 📌 
+## bootstrap  
 
 
->Excellent design ideas are timeless, Give us a lot of reference and enlightenment to coding in the future, I enjoy sharing ©️白开水ln©️ .
+>阅读源码 || 系统文件，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！   向优秀的分享者致敬！
 
 
-
-阅读源码 || 系统文件，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！   向优秀的分享者致敬！
-
+## Elegant programming
 
 
-#### Elegant programming
-
-
-![1.jpg](http://upload-images.jianshu.io/upload_images/2230763-dd8d095f084e3ca0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![1](http://upload-images.jianshu.io/upload_images/2230763-dd8d095f084e3ca0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
  
 
 ## Content progress
 
 
-`非官方 & 非大牛 & 非符合 ——> 只是一帮有思想的伐码猿 ——> 不准确 & 新思想 & 槽槽点 ——> (参考)欢迎你的槽点 || 补充 ！【招募】`
+`非官方 & 非大牛 & 非符合 ——> 只是一帮有思想的伐码猿 ——> 不准确 & 新思想 & 槽槽点 ——> (参考)欢迎你的槽点 || 补充 ！【招募】。`
 
 
-`不管谁的博客上面写的(`也包括自己`)，阅读的你要敢于去验证，停止无意义的`⏹copy 👬 paste`。`
+`不管谁的博客上面写的(也包括自己)，阅读的你要敢于去验证，停止无意义的 ⏹copy 👬 paste【共勉】。`
+
 
 ***
 
@@ -124,14 +120,11 @@
 
 ***
 
-## iOS & Swift【Macro】方便你我高效开发`(不建议多用)`
-
-#### [开发常用宏,随技术更新](https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile)
-
-
-
  
-
+| `iOS & Swift【Macro】方便你我高效开发`(不建议多用)` | 
+| :- | :- |
+| [开发常用宏,随技术更新](https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile)  |  
+ 
 
 
 
@@ -139,13 +132,12 @@
 
 
 
-#### 附: Xcode & 模拟器 & 终端快捷键`（持续补充）`
+#### 附: Xcode & 模拟器 & 终端快捷键`（续更）`
 
 
 | `类别` | `快捷键` |
 | :- | :- |
-| Copyright © PBWln  | BUT: Unauthorized shall not be reproduced |
-| lnXcode✔️ | Elegant programming |
+| LNXcode✔️ |  |
 | Cmd + Shirt + N | 新建工程 |
 | Cmd + N | 新建 |
 | Cmd + R | 运行 |
@@ -187,12 +179,12 @@
 | option + 拖动 | 复制选中的控件 |
 | Cmd + option + = | 更新选中控件的约束 |
 | option + 回车 | 场景:Xib中，Label控件换行显示 |
-| ln模拟器✔️ | Elegant programming |
+| LN模拟器✔️ |  |
 | Cmd + Shift + H | 按一次，取消晃动 / 按一次，回到首页 |
 | Cmd + ←/→ | 旋转 |
 | Cmd + k | 弹出键盘 |
 | Cmd + T | Slow Animations 慢放运行 |
-| ln终端 ✔️ | Elegant programming |
+| LN终端 ✔️ |  |
 | 11 | 22 |
 
 
@@ -203,7 +195,7 @@
 
 | `未完` | `待续` | 
 | :-: | :-: |   
-| 每周末 | 更新 |   
+| 每周末(`争取`) | 更新 |   
 | 欢迎留言补充 ！ | 助你我便捷高效开发 ！ |
 
 
@@ -215,9 +207,9 @@
 
 
  
-###### 劳驾你点一下 👇 工程地址 ❓ 
+###### 劳驾你点一下 👇❓ 
 
-- [Apple译文 & GitHub源码](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation) 【Star 同步👀】
+- [Apple译文 & GitHub源码](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea) 【Star 同步👀】
  
 
 
@@ -228,6 +220,9 @@
 
 
 - 点击右上角的 star 和 watch 按钮，可以收藏本仓库，并在文档、issue、Demo更新时收到邮件通知。
+
+
+- 提示：知识变成自己的才叫知识，而你 copy 下来的只是信息，愿你抽时验证 (共勉)^_^. 
 
 
 

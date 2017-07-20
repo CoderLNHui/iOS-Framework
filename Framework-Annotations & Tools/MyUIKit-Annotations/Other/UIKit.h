@@ -1,9 +1,9 @@
 /*
  * UIKit.h
- * 简书:白开水ln（https://github.com/CustomPBWaters）
+ * 🔍白开水ln（https://github.com/CustomPBWaters）
  *
- * Created by 【Plain Boiled Water ln】 on Elegant programming.
- * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ * Created by 【🔍Plain Boiled Water ln】 on Elegant programming.
+ * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced.
  *
  * http://www.jianshu.com/u/fd745d76c816
  *
