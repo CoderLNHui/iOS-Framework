@@ -125,7 +125,7 @@
  
 | `便捷你我高效开发，多用易编译时长，情况而定` |   
 | :-: | 
-| [开发常用宏，不要小气把你 Freestyle 留下](https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile)  |  
+| [开发常用宏，不要小气把你的 Freestyle 留下](https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile)  |  
  
 
 ***
@@ -228,5 +228,6 @@
 
 ## About me
 
-【[Plain boiled water ln - Code Member](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/收录%20%26%20投稿须知.md)】
+【[Plain boiled water ln - Code Member](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/收录%20%26%20投稿须知.md)】&& 【[赞赏篇](http://plainboiledwaterln.cn/PerceptionWork/appreciates.html)】
+
  
