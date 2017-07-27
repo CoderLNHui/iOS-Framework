@@ -1,9 +1,8 @@
 /*
  * UIScrollView.h
- * 白开水ln（https://github.com/CustomPBWaters）
+ * 🔍CodeFamily_伐码累||白开水ln（https://github.com/CustomPBWaters）
  *
- * (c) 2007-2016
- * Created by 【🔍Plain Boiled Water ln】 on Elegant programming.
+ * Created by 【🔍plain boiled water ln】 on Elegant programming16.
  * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
  * @PBWLN_LICENSE_HEADER_END@
@@ -43,7 +42,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 /**
  内容视图的原点相对于scrollView的原点的【内容偏移量】,默认为CGPointZero
- (上/左 方向偏移为正数,下/右 方向偏移为负数)
+ (上/左(向外) 方向偏移为正数, 下/右(向里) 方向偏移为负数)
  */
 @property(nonatomic)         CGPoint                      contentOffset;                  // default CGPointZero
 /** 【内容视图的大小】,默认为CGSizeZero */

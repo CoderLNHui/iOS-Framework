@@ -2352,6 +2352,9 @@
             location = "group:runtime.h">
          </FileRef>
          <FileRef
+            location = "group:runtime.m">
+         </FileRef>
+         <FileRef
             location = "group:UNNotificationContent.h">
          </FileRef>
          <FileRef

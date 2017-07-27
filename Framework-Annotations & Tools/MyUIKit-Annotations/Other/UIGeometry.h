@@ -1,10 +1,10 @@
 /*
  * UIGeometry.h
  * UIKit.h
- * 🔍白开水ln（https://github.com/CustomPBWaters）
+ * 🔍CodeFamily_伐码累||白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2005-2016
- * Created by 【🔍Plain Boiled Water ln】 on Elegant programming.
+ * Created by 【🔍plain boiled water ln】 on Elegant programming.
  * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced.
  *
  * http://www.jianshu.com/u/fd745d76c816

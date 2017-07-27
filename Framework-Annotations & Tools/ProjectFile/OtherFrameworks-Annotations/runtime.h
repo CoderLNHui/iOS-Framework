@@ -1,8 +1,8 @@
 /*
  * runtime.h
- * 白开水ln（https://github.com/CustomPBWaters）
+ * 🔍CodeFamily_伐码累||白开水ln（https://github.com/CustomPBWaters）
  *
- * Created by 【Plain Boiled Water ln】 on Elegant programming16.
+ * Created by 【🔍Plain Boiled Water ln】 on Elegant programming16.
  * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced.
  *
  * @APPLE_LICENSE_HEADER_START@
@@ -25,7 +25,7 @@
  * @APPLE_LICENSE_HEADER_END@
  */
 
-
+/** iOS 底层-Class注解 */
 
 #ifndef _OBJC_RUNTIME_H
 #define _OBJC_RUNTIME_H
@@ -43,6 +43,8 @@
 
 
 /* Types */
+#pragma mark ------------------
+#pragma mark - 【类型】✔️
 
 #if !OBJC_TYPES_DEFINED
 
@@ -59,18 +61,18 @@ typedef struct objc_category *Category;
 typedef struct objc_property *objc_property_t;
 
 struct objc_class {
-    Class isa  OBJC_ISA_AVAILABILITY;
+    Class isa  OBJC_ISA_AVAILABILITY;//每个Class都有一个isa指针
     
 #if !__OBJC2__
-    Class super_class                                        OBJC2_UNAVAILABLE;
-    const char *name                                         OBJC2_UNAVAILABLE;
-    long version                                             OBJC2_UNAVAILABLE;
-    long info                                                OBJC2_UNAVAILABLE;
-    long instance_size                                       OBJC2_UNAVAILABLE;
-    struct objc_ivar_list *ivars                             OBJC2_UNAVAILABLE;
-    struct objc_method_list **methodLists                    OBJC2_UNAVAILABLE;
-    struct objc_cache *cache                                 OBJC2_UNAVAILABLE;
-    struct objc_protocol_list *protocols                     OBJC2_UNAVAILABLE;
+    Class super_class                                        OBJC2_UNAVAILABLE;//父类
+    const char *name                                         OBJC2_UNAVAILABLE;//类名
+    long version                                             OBJC2_UNAVAILABLE;//类版本
+    long info                                                OBJC2_UNAVAILABLE;//!*!供运行期使用的一些位标识。如：CLS_CLASS (0x1L)表示该类为普通class; CLS_META(0x2L)表示该类为metaclass等(runtime.h中有详细列出)
+    long instance_size                                       OBJC2_UNAVAILABLE;//实例大小
+    struct objc_ivar_list *ivars                             OBJC2_UNAVAILABLE;//存储每个实例变量的内存地址
+    struct objc_method_list **methodLists                    OBJC2_UNAVAILABLE;//!*!根据info的信息确定是类还是实例，运行什么函数方法等
+    struct objc_cache *cache                                 OBJC2_UNAVAILABLE;//缓存
+    struct objc_protocol_list *protocols                     OBJC2_UNAVAILABLE;//协议
 #endif
     
 } OBJC2_UNAVAILABLE;
@@ -97,7 +99,13 @@ typedef struct {
 } objc_property_attribute_t;
 
 
+
+
+
+
 /* Functions */
+#pragma mark ------------------
+#pragma mark - 【功能】✔️
 
 /* Working with Instances */
 
@@ -165,7 +173,7 @@ OBJC_AVAILABLE(10.10, 8.0, 9.0, 1.0);
  *
  * @return The name of the class of which \e obj is an instance.
  */
-OBJC_EXPORT const char *object_getClassName(id obj)
+OBJC_EXPORT const char *object_getClassName(id obj)//【获取类名】
 OBJC_AVAILABLE(10.0, 2.0, 9.0, 1.0);
 
 /**
@@ -199,7 +207,7 @@ OBJC_ARC_UNAVAILABLE;
  * @note \c object_getIvar is faster than \c object_getInstanceVariable if the Ivar
  *  for the instance variable is already known.
  */
-OBJC_EXPORT id object_getIvar(id obj, Ivar ivar)
+OBJC_EXPORT id object_getIvar(id obj, Ivar ivar)//【获取类变量】
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
 /**
@@ -435,7 +443,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *
  * @warning You should not use this function.
  */
-OBJC_EXPORT Class class_setSuperclass(Class cls, Class newSuper)
+OBJC_EXPORT Class class_setSuperclass(Class cls, Class newSuper)//【设置父类】
 __OSX_DEPRECATED(10.5, 10.5, "not recommended")
 __IOS_DEPRECATED(2.0, 2.0, "not recommended")
 __TVOS_DEPRECATED(9.0, 9.0, "not recommended")
@@ -517,7 +525,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *
  *  If the class declares no instance variables, or cls is Nil, NULL is returned and *outCount is 0.
  */
-OBJC_EXPORT Ivar *class_copyIvarList(Class cls, unsigned int *outCount)
+OBJC_EXPORT Ivar *class_copyIvarList(Class cls, unsigned int *outCount)//【获得某个类的所有成员变量（outCount 会返回成员变量的总数）】
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
 /**
@@ -532,7 +540,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *
  * @note This function searches superclasses for implementations, whereas \c class_copyMethodList does not.
  */
-OBJC_EXPORT Method class_getInstanceMethod(Class cls, SEL name)
+OBJC_EXPORT Method class_getInstanceMethod(Class cls, SEL name)//【获得某个类的实例对象方法】
 OBJC_AVAILABLE(10.0, 2.0, 9.0, 1.0);
 
 /**
@@ -548,7 +556,7 @@ OBJC_AVAILABLE(10.0, 2.0, 9.0, 1.0);
  * @note Note that this function searches superclasses for implementations,
  *  whereas \c class_copyMethodList does not.
  */
-OBJC_EXPORT Method class_getClassMethod(Class cls, SEL name)
+OBJC_EXPORT Method class_getClassMethod(Class cls, SEL name)//【获得某个类的类方法】
 OBJC_AVAILABLE(10.0, 2.0, 9.0, 1.0);
 
 /**
@@ -566,7 +574,7 @@ OBJC_AVAILABLE(10.0, 2.0, 9.0, 1.0);
  *  an actual method implementation. For example, if instances of the class do not respond to
  *  the selector, the function pointer returned will be part of the runtime's message forwarding machinery.
  */
-OBJC_EXPORT IMP class_getMethodImplementation(Class cls, SEL name)
+OBJC_EXPORT IMP class_getMethodImplementation(Class cls, SEL name)//【获取类方法实现】
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
 /**
@@ -614,7 +622,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  * @note To get the implementations of methods that may be implemented by superclasses,
  *  use \c class_getInstanceMethod or \c class_getClassMethod.
  */
-OBJC_EXPORT Method *class_copyMethodList(Class cls, unsigned int *outCount)
+OBJC_EXPORT Method *class_copyMethodList(Class cls, unsigned int *outCount)//【获取类里面所有方法】// 本质:创建谁的对象
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
 /**
@@ -672,7 +680,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *
  *  If \e cls declares no properties, or \e cls is \c Nil, returns \c NULL and \c *outCount is \c 0.
  */
-OBJC_EXPORT objc_property_t *class_copyPropertyList(Class cls, unsigned int *outCount)
+OBJC_EXPORT objc_property_t *class_copyPropertyList(Class cls, unsigned int *outCount)//【获取类里面属性】
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
 /**
@@ -710,7 +718,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *  but will not replace an existing implementation in this class.
  *  To change an existing implementation, use method_setImplementation.
  */
-OBJC_EXPORT BOOL class_addMethod(Class cls, SEL name, IMP imp,
+OBJC_EXPORT BOOL class_addMethod(Class cls, SEL name, IMP imp,//【增加类方法】
                                  const char *types)
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
@@ -733,7 +741,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *    The type encoding specified by \e types is ignored.
  */
 OBJC_EXPORT IMP class_replaceMethod(Class cls, SEL name, IMP imp,
-                                    const char *types)
+                                    const char *types) //【修改方法】
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
 /**
@@ -749,7 +757,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *       variable depends on the ivar's type and the machine architecture.
  *       For variables of any pointer type, pass log2(sizeof(pointer_type)).
  */
-OBJC_EXPORT BOOL class_addIvar(Class cls, const char *name, size_t size,
+OBJC_EXPORT BOOL class_addIvar(Class cls, const char *name, size_t size,//【增加实例变量】
                                uint8_t alignment, const char *types)
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
@@ -762,7 +770,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  * @return \c YES if the method was added successfully, otherwise \c NO
  *  (for example, the class already conforms to that protocol).
  */
-OBJC_EXPORT BOOL class_addProtocol(Class cls, Protocol *protocol)
+OBJC_EXPORT BOOL class_addProtocol(Class cls, Protocol *protocol)//【增加协议】
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
 /**
@@ -787,7 +795,7 @@ OBJC_AVAILABLE(10.7, 4.3, 9.0, 1.0);
  * @param attributes An array of property attributes.
  * @param attributeCount The number of attributes in \e attributes.
  */
-OBJC_EXPORT void class_replaceProperty(Class cls, const char *name, const objc_property_attribute_t *attributes, unsigned int attributeCount)
+OBJC_EXPORT void class_replaceProperty(Class cls, const char *name, const objc_property_attribute_t *attributes, unsigned int attributeCount)//【修改属性】
 OBJC_AVAILABLE(10.7, 4.3, 9.0, 1.0);
 
 /**
@@ -867,7 +875,7 @@ OBJC_ARC_UNAVAILABLE;
  *
  * @note CF and other clients do call this under GC.
  */
-OBJC_EXPORT void *objc_destructInstance(id obj)
+OBJC_EXPORT void *objc_destructInstance(id obj)//【摧毁实例对象】
 OBJC_AVAILABLE(10.6, 3.0, 9.0, 1.0)
 OBJC_ARC_UNAVAILABLE;
 
@@ -1045,7 +1053,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *  method_setImplementation(m2, imp1);
  *  \endcode
  */
-OBJC_EXPORT void method_exchangeImplementations(Method m1, Method m2)
+OBJC_EXPORT void method_exchangeImplementations(Method m1, Method m2)//【交换两个方法的实现】
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
 
@@ -1058,7 +1066,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *
  * @return A C string containing the instance variable's name.
  */
-OBJC_EXPORT const char *ivar_getName(Ivar v)
+OBJC_EXPORT const char *ivar_getName(Ivar v)//【获得成员变量的名字】
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
 /**
@@ -1146,7 +1154,7 @@ OBJC_AVAILABLE(10.7, 4.3, 9.0, 1.0);
  *
  * @note This function acquires the runtime lock.
  */
-OBJC_EXPORT Protocol *objc_getProtocol(const char *name)
+OBJC_EXPORT Protocol *objc_getProtocol(const char *name)//【获取协议】
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
 /**
@@ -1573,7 +1581,7 @@ typedef OBJC_ENUM(uintptr_t, objc_AssociationPolicy) {
  * @see objc_setAssociatedObject
  * @see objc_removeAssociatedObjects
  */
-OBJC_EXPORT void objc_setAssociatedObject(id object, const void *key, id value, objc_AssociationPolicy policy)
+OBJC_EXPORT void objc_setAssociatedObject(id object, const void *key, id value, objc_AssociationPolicy policy)//【将某个值跟某个对象关联起来，将某个值存储到某个对象中】
 OBJC_AVAILABLE(10.6, 3.1, 9.0, 1.0);
 
 /**
@@ -1586,7 +1594,7 @@ OBJC_AVAILABLE(10.6, 3.1, 9.0, 1.0);
  *
  * @see objc_setAssociatedObject
  */
-OBJC_EXPORT id objc_getAssociatedObject(id object, const void *key)
+OBJC_EXPORT id objc_getAssociatedObject(id object, const void *key)//【利用参数key 将对象object中存储的对应值取出来】
 OBJC_AVAILABLE(10.6, 3.1, 9.0, 1.0);
 
 /**

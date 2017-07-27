@@ -1,9 +1,9 @@
 /*
- * NSAttributedString.h
- * 白开水ln（https://github.com/CustomPBWaters）
+ * NSAttributedString.m
+ * 🔍PBwaterln||白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2011-2015
- * Created by 【🔍Plain Boiled Water ln】 on Elegant programming.
+ * Created by 【🔍CodeFamily_伐码累】 on Elegant programming.
  * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
  * @PBWLN_LICENSE_HEADER_END@
