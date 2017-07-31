@@ -1,6 +1,6 @@
 /*
  * UIScrollView.h
- * 🔍CodeFamily_伐码累||白开水ln（https://github.com/CustomPBWaters）
+ * 🔍白开水ln（https://github.com/CustomPBWaters）
  *
  * Created by 【🔍plain boiled water ln】 on Elegant programming16.
  * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.

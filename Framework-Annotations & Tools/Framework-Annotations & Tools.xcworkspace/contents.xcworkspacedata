@@ -2291,6 +2291,52 @@
       </Group>
    </Group>
    <Group
+      location = "group:OtherFrameworks-Tools"
+      name = "OtherFrameworks-Tools">
+      <Group
+         location = "group:CALayer&#x52a8;&#x753b;"
+         name = "CALayer&#x52a8;&#x753b;">
+         <FileRef
+            location = "group:CALayer+Layer.h">
+         </FileRef>
+         <FileRef
+            location = "group:CALayer+Layer.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:&#x5bcc;&#x6587;&#x672c;&#x94fe;&#x5f0f;&#x5c01;&#x88c5;"
+         name = "&#x5bcc;&#x6587;&#x672c;&#x94fe;&#x5f0f;&#x5c01;&#x88c5;">
+         <FileRef
+            location = "group:LNTestViewController.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSMutableAttributedString+AttributedString.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSMutableAttributedString+AttributedString.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSMutableDictionary+Dictionary.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSMutableDictionary+Dictionary.m">
+         </FileRef>
+         <FileRef
+            location = "group:&#x5bcc;&#x6587;&#x672c;&#x5c01;&#x88c5;.png">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:&#x751f;&#x6210;&#x4e8c;&#x7ef4;&#x7801;"
+         name = "&#x751f;&#x6210;&#x4e8c;&#x7ef4;&#x7801;">
+         <FileRef
+            location = "group:CIImage+Extension.h">
+         </FileRef>
+         <FileRef
+            location = "group:CIImage+Extension.m">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
       location = "group:ProjectFile"
       name = "ProjectFile">
       <Group
@@ -2360,30 +2406,6 @@
          <FileRef
             location = "group:WKWebView.h">
          </FileRef>
-         <Group
-            location = "group:&#x751f;&#x6210;&#x4e8c;&#x7ef4;&#x7801;"
-            name = "&#x751f;&#x6210;&#x4e8c;&#x7ef4;&#x7801;">
-            <FileRef
-               location = "group:CIImage+Extension.h">
-            </FileRef>
-            <FileRef
-               location = "group:CIImage+Extension.m">
-            </FileRef>
-         </Group>
-      </Group>
-      <Group
-         location = "group:OtherFrameworks-Tools"
-         name = "OtherFrameworks-Tools">
-         <Group
-            location = "group:CALayer&#x52a8;&#x753b;"
-            name = "CALayer&#x52a8;&#x753b;">
-            <FileRef
-               location = "group:/Users/sunhui/Documents/GitHub/iOS UIKit&#x6846;&#x67b6;/Framework-Annotations &amp; Tools/ProjectFile/OtherFrameworks-Tools/CALayer&#x52a8;&#x753b;/CALayer+Layer.h">
-            </FileRef>
-            <FileRef
-               location = "group:/Users/sunhui/Documents/GitHub/iOS UIKit&#x6846;&#x67b6;/Framework-Annotations &amp; Tools/ProjectFile/OtherFrameworks-Tools/CALayer&#x52a8;&#x753b;/CALayer+Layer.m">
-            </FileRef>
-         </Group>
          <Group
             location = "group:&#x751f;&#x6210;&#x4e8c;&#x7ef4;&#x7801;"
             name = "&#x751f;&#x6210;&#x4e8c;&#x7ef4;&#x7801;">

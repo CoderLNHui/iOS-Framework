@@ -6,7 +6,7 @@
 >阅读源码 || 系统文件，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！   向优秀的分享者致敬！
 
 
-## CodeFamily_伐码累
+## Coder
 
 
 ![1](http://upload-images.jianshu.io/upload_images/2230763-dd8d095f084e3ca0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -137,7 +137,7 @@
 
 | `类别` | `快捷键` |
 | :- | :- |
-| LNXcode✔️ |  |
+| Xcode✔️ |  |
 | Cmd + Shirt + N | 新建工程 |
 | Cmd + N | 新建 |
 | Cmd + R | 运行 |
@@ -179,7 +179,7 @@
 | option + 拖动 | 复制选中的控件 |
 | Cmd + option + = | 更新选中控件的约束 |
 | option + 回车 | 场景:Xib中，Label控件换行显示 |
-| LN模拟器✔️ |  |
+| 模拟器✔️ |  |
 | Cmd + Shift + H | 按一次，取消晃动 / 按一次，回到首页 |
 | Cmd + ←/→ | 旋转 |
 | Cmd + k | 弹出键盘 |
@@ -221,13 +221,10 @@
 
 - 点击右上角的 star 和 watch 按钮，可以收藏本仓库，并在文档、issue、Demo更新时收到邮件通知。
 
-
-- 提示：知识变成自己的才叫知识，而你 copy 下来的只是信息，愿你我抽时验证 (共勉)^_^. 
-
-
+ 
 
 ## About me
 
-【[CodeFamily_伐码累](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/收录%20%26%20投稿须知.md)】&& 【[赞赏篇](http://plainboiledwaterln.cn/PerceptionWork/appreciates.html)】
+【[吾饮白开水，冷暖自知](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/收录%20%26%20投稿须知.md)】&& 【[赞赏篇](http://plainboiledwaterln.cn/PerceptionWork/appreciates.html)】
 
  

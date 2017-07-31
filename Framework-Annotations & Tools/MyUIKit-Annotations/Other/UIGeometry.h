@@ -1,7 +1,7 @@
 /*
  * UIGeometry.h
  * UIKit.h
- * 🔍CodeFamily_伐码累||白开水ln（https://github.com/CustomPBWaters）
+ * 🔍白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2005-2016
  * Created by 【🔍plain boiled water ln】 on Elegant programming.
