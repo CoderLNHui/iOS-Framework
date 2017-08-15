@@ -43,7 +43,9 @@ typedef CF_ENUM(SInt32, CFRunLoopRunResult) {
     kCFRunLoopRunTimedOut = 3,
     kCFRunLoopRunHandledSource = 4
 };
-  
+
+
+# START_COPYRIGHT_JIANSHU_BAIKAISHUILN_END
 /* Run Loop Observer Activities */
 typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
     kCFRunLoopEntry = (1UL << 0),   //即将进入Runloop
@@ -191,5 +193,5 @@ CF_EXPORT void CFRunLoopTimerSetTolerance(CFRunLoopTimerRef timer, CFTimeInterva
 CF_EXTERN_C_END
 CF_IMPLICIT_BRIDGING_DISABLED
 
-#endif /* ! __COREFOUNDATION_CFRUNLOOP__ */
+#endif /* ! __COREFOUNDATION_START_COPYRIGHT_JIANSHU_BAIKAISHUILN_END__ */
 

@@ -20,7 +20,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 FOUNDATION_EXPORT NSRunLoopMode const NSDefaultRunLoopMode;// (默认):同一时间只能执行一个任务
-FOUNDATION_EXPORT NSRunLoopMode const NSRunLoopCommonModes NS_AVAILABLE(10_5, 2_0); // (公用):可以分配一定的时间处理定时器
+FOUNDATION_EXPORT NSRunLoopMode const NSRunLoop3odes NS_AVAILABLE(10_5, 2_0); // (公用):可以分配一定的时间处理定时器
 
 @interface NSRunLoop : NSObject {
 @private
@@ -84,22 +84,27 @@ FOUNDATION_EXPORT NSRunLoopMode const NSRunLoopCommonModes NS_AVAILABLE(10_5, 2_
 
 
 
-#pragma mark ------------------
+#pragma mark --jianshu:白开水ln--
 #pragma mark - 【NSRunLoopConveniences】
 @interface NSRunLoop (NSRunLoopConveniences)
-
+// iOS开发过程中对于开发者而言更多的使用的是NSRunloop,它默认提供了三个常用的run方法：
 /**
  开始运行
+ run方法对应上面CFRunloopRef中的CFRunLoopRun并不会退出，除非调用CFRunLoopStop();通常如果想要永远不会退出RunLoop才会使用此方法，否则可以使用runUntilDate。
  */
 - (void)run;
 /**
  到某个时间点运行
+ 则对应CFRunLoopRunInMode(mode,limiteDate,true)方法,只执行一次，执行完就退出；通常用于手动控制RunLoop（例如在while循环中）。
  */
 - (void)runUntilDate:(NSDate *)limitDate;
 /**
  在某个期限前运行
+ 方法其实是CFRunLoopRunInMode(kCFRunLoopDefaultMode,limiteDate,false)，执行完并不会退出，继续下一次RunLoop直到timeout。
  */
 - (BOOL)runMode:(NSRunLoopMode)mode beforeDate:(NSDate *)limitDate;
+
+# START_COPYRIGHT_JIANSHU_BAIKAISHUILN_END
 
 #if (TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE))
 - (void)configureAsServer NS_DEPRECATED(10_0, 10_5, 2_0, 2_0);
@@ -148,4 +153,26 @@ FOUNDATION_EXPORT NSRunLoopMode const NSRunLoopCommonModes NS_AVAILABLE(10_5, 2_
 
 @end
 
-NS_ASSUME_NONNULL_JIANSHU-LIUNAN_END
+NS_ASSUME_NONNULL_START_COPYRIGHT_JIANSHU_BAIKAISHUILN_END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
