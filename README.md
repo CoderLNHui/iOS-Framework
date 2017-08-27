@@ -5,7 +5,7 @@
 
 >阅读系统文件，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！向优秀的分享者致敬！
 > 
->`不管谁的博客上面写的 (也包括自己)，阅读的你要敢于去验证，停止做无意义的 things ; (共勉)@白开水ln。`
+>不管谁的博客上面写的 (也包括自己)，阅读的你要敢于去验证，停止做无意义的 things ; (共勉)@白开水ln。
 
  
  
@@ -15,8 +15,8 @@
 
 | `.hFile` | `.hAnnotations` |` .hTools ` |` .hBlogArticle` |
 | :- | :-: | :-: | :-: |
-| 🐒WechatPublic：『Codeidea』- 【UIKit.h】  | [ UIKit.h ]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIKit.h/UIKit.h ) | -- | -- |
-| 🐒WechatPublic：『Codeidea』- 【NSObject】  |  -- | --  | --  |
+| 🐒微众：『Codeidea』- 【UIKit.h】  | [ UIKit.h ]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIKit.h/UIKit.h ) | -- | -- |
+| 🐒微众：『Codeidea』- 【NSObject】  |  -- | --  | --  |
 | NSArray.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/NSArray.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | NSAttributedString.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/NSAttributedString.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | NSDataAsset.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/NSDataAsset.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
@@ -109,7 +109,7 @@
 | UIViewControllerTransitioning.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/UIViewControllerTransitioning.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UIViewPropertyAnimator.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/UIViewPropertyAnimator.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UIVisualEffectView.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/UIVisualEffectView.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
-| 🐒WechatPublic：『Codeidea』- 【UIViewController】 |  -- | --  | --  |
+| 🐒微众：『Codeidea』- 【UIViewController】 |  -- | --  | --  |
 | UIActivityViewController.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UIActivityViewController.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UICloudSharingController.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UICloudSharingController.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UICollectionViewController.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UICollectionViewController.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
@@ -128,7 +128,7 @@
 | UITableViewController.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UITableViewController.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UIVideoEditorController.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UIVideoEditorController.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UIViewController.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIViewController/UIViewController.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIViewController/UIViewController%2BController.h )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
-| 🐒WechatPublic：『Codeidea』- 【UIView】  |  -- | --  | --  |
+| 🐒微众：『Codeidea』- 【UIView】  |  -- | --  | --  |
 | UIActionSheet.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIActionSheet.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UIActivityIndicatorView.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIActivityIndicatorView.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UIAlertView.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIAlertView.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
@@ -157,7 +157,7 @@
 | UIView.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIView.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIView/UIView%2BFrame.h )  | [【BlogArticle】]( https://githubidea.github.io/AppleTranslation/UIViewApple.html ) |
 | UIWebView.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIWebView.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://githubidea.github.io/AppleTranslation/UIWebViewApple.html ) |
 | UIWindow.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIView/UIWindow.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
-| 🐒WechatPublic：『Codeidea』- 【UIControl】  |  -- | --  | --  |
+| 🐒微众：『Codeidea』- 【UIControl】  |  -- | --  | --  |
 | UIButton.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIControl/UIButton.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UIControl.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIControl/UIControl.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIView/UIControl%2BControl.h )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UIDataDetectors.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIControl/UIDataDetectors.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
@@ -169,11 +169,11 @@
 | UIStepper.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIControl/UIStepper.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UISwitch.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIControl/UISwitch.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UITextField.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIControl/UITextField.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIControl/UITextField%2BPlaceholder.h )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
-| 🐒WechatPublic：『Codeidea』- 【UIBarItem】  |  -- | --  | --  |
+| 🐒微众：『Codeidea』- 【UIBarItem】  |  -- | --  | --  |
 | UIBarButtonItem.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIBarItem/UIBarButtonItem.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Tools/UIBarItem/UIBarButtonItem%2BItem.h )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UIBarItem.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIBarItem/UIBarItem.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UITabBarItem.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIBarItem/UITabBarItem.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
-| 🐒WechatPublic：『Codeidea』- 【UIGestureRecognizer】  |  -- | --  | --  |
+| 🐒微众：『Codeidea』- 【UIGestureRecognizer】  |  -- | --  | --  |
 | UIGestureRecognizer.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIGestureRecognizer/UIGestureRecognizer.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UILongPressGestureRecognizer.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIGestureRecognizer/UILongPressGestureRecognizer.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UIPanGestureRecognizer.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIGestureRecognizer/UIPanGestureRecognizer.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
@@ -182,11 +182,11 @@
 | UIScreenEdgePanGestureRecognizer.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIGestureRecognizer/UIScreenEdgePanGestureRecognizer.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UISwipeGestureRecognizer.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIGestureRecognizer/UISwipeGestureRecognizer.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UITapGestureRecognizer.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIGestureRecognizer/UITapGestureRecognizer.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
-| 🐒WechatPublic：『Codeidea』- 【OtherFrameworks】  |  -- | --  | --  |
+| 🐒微众：『Codeidea』- 【OtherFrameworks】  |  -- | --  | --  |
 | UserNotificationiOS10.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/OtherFrameworks-Annotations/UserNotificationiOS10-Annotations ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | WKWebView.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/OtherFrameworks-Annotations/WKWebView.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | runtime.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/OtherFrameworks-Annotations/Runtime ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
-| 🐒WechatPublic：『Codeidea』- 【ProjectFile】  |  -- | --  | --  |
+| 🐒微众：『Codeidea』- 【ProjectFile】  |  -- | --  | --  |
 | Header.h  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile/Header.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | UIImage.h  |  [【File】]( File ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
 | PrefixHeader.pch  |  [【File】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile/PrefixHeader.pch ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | [【BlogArticle】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools ) |
@@ -196,7 +196,7 @@
 
 
 
-#### 附: Xcode & 模拟器 & 终端快捷键`（续更）`
+>附: Xcode & 模拟器 & 终端快捷键（续更）
 
 
 | `类别` | `快捷键` |
@@ -251,24 +251,15 @@
 | 【终端】 |  |
 | 11 | 22 |
 
-
-
-
-
-| `未完` | `待续` | 
-| :-: | :-: |   
-| 每周末(`争取`) | 更新 |   
-
+ 
+>未完、每周末(`争取`)、更新 ~
 
  
 
  
-###### 劳驾你点一下 👇❓ 
-
-- [Apple译文 & GitHub源码](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea) 【Star 同步👀】
+###### 劳驾你点一下❓ [Apple译文 & GitHub源码](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea)
  
-
-
+ 
 
 ## Reading
 
