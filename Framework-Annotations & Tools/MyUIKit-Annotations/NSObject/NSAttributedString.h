@@ -1,12 +1,14 @@
 /*
  * NSAttributedString.h
- * 🔍PBwaterln||白开水ln（https://github.com/CustomPBWaters）
+ * UIKit
+ * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2011-2015
- * Created by 【🔍CodeFamily_伐码累】 on Elegant programming.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
- * @PBWLN_LICENSE_HEADER_END@
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
 #import <Foundation/NSAttributedString.h>
@@ -217,36 +219,10 @@ typedef NS_ENUM(NSInteger, NSTextWritingDirection) {
 @interface NSMutableAttributedString (NSDeprecatedKitAdditions)
 - (BOOL)readFromFileURL:(NSURL *)url options:(NSDictionary *)opts documentAttributes:(NSDictionary* __nullable * __nullable)dict error:(NSError **)error NS_DEPRECATED_IOS(7_0, 9_0, "Use -readFromURL:options:documentAttributes:error: instead") __TVOS_PROHIBITED;
 @end
+
+START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
 NS_ASSUME_NONNULL_END
 
-
-//--------------------------- 【NSMutableParagraphStyle类使用范例】 ------------------------------//
-//
-
-1.
-NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-paragraphStyle.lineSpacing = 10;// 字体的行间距
-paragraphStyle.firstLineHeadIndent = 20.0f;//首行缩进
-paragraphStyle.alignment = NSTextAlignmentJustified;//（两端对齐的）文本对齐方式：（左，中，右，两端对齐，自然）
-paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;//结尾部分的内容以……方式省略 ( "...wxyz" ,"abcd..." ,"ab...yz")
-paragraphStyle.headIndent = 20;//整体缩进(首行除外)
-paragraphStyle.tailIndent = 20;//尾部缩进
-paragraphStyle.minimumLineHeight = 10;//最低行高
-paragraphStyle.maximumLineHeight = 20;//最大行高
-paragraphStyle.paragraphSpacing = 15;//段与段之间的间距
-paragraphStyle.paragraphSpacingBefore = 22.0f;//段首行空白空间/* Distance between the bottom of the previous paragraph (or the end of its paragraphSpacing, if any) and the top of this paragraph. */paragraphStyle.baseWritingDirection = NSWritingDirectionLeftToRight;//从左到右的书写方向（一共➡️⬇️⬅️三种）
-paragraphStyle.lineHeightMultiple = 15;/* Natural line height is multiplied by this factor (if positive) before being constrained by minimum and maximum line height. */
-paragraphStyle.hyphenationFactor = 1;//连字属性 在iOS，唯一支持的值分别为0和1
-
-
-
-2.
-NSShadowAttributeName对应的是NSShadow对象,单一使用不会有任何效果,需要配合着NSVerticalGlyphFormAttributeName(文字排版方向)、NSObliquenessAttributeName(文字倾斜)、NSExpansionAttributeName(文字扁平化)配合使用,NSShadow相关属性设置如下所示.
-
-NSShadow *shadow = [[NSShadow alloc]init];
-shadow.shadowBlurRadius = 5;//模糊度
-shadow.shadowColor = [UIColor whiteColor];//阴影颜色
-shadow.shadowOffset = CGSizeMake(1, 5);//阴影的大小
 
 
 

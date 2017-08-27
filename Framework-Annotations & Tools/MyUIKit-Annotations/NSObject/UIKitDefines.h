@@ -1,12 +1,14 @@
 /*
  * UIKitDefines.h
+ * UIKit
  * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2007-2016
- * Created by 【🔍Plain Boiled Water ln】 on Elegant programming.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
- * @PBWLN_LICENSE_HEADER_END@
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
 
@@ -36,3 +38,4 @@
 #define UIKIT_REMOVE_ZERO_FROM_SWIFT (!defined(SWIFT_CLASS_EXTRA) || (defined(SWIFT_SDK_OVERLAY_UIKIT_EPOCH) && SWIFT_SDK_OVERLAY_UIKIT_EPOCH >= 1))
 #define UIKIT_STRING_ENUMS ((defined(SWIFT_SDK_OVERLAY_UIKIT_EPOCH) && SWIFT_SDK_OVERLAY_UIKIT_EPOCH >= 2))
 
+START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END

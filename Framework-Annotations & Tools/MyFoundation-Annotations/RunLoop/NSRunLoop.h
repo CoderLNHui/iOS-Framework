@@ -1,15 +1,16 @@
 /*
  * NSRunLoop.h
- * 🔍白开水ln（https://github.com/CustomPBWaters）
+ * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 1994-2016
  *
- * Created by 【🔍Plainboiledwaterln】 on Elegant programming16.
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * @白开水LN_LICENSE_HEADER_如人饮水,冷暖自知_END@
+ * http://www.jianshu.com/u/fd745d76c816
+ *
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
-
 
 #import <Foundation/NSObject.h>
 #import <Foundation/NSDate.h>
@@ -153,7 +154,7 @@ FOUNDATION_EXPORT NSRunLoopMode const NSRunLoop3odes NS_AVAILABLE(10_5, 2_0); //
 
 @end
 
-NS_ASSUME_NONNULL_START_COPYRIGHT_JIANSHU_BAIKAISHUILN_END
+#_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
 
 
 

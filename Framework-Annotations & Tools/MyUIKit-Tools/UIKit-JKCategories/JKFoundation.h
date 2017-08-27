@@ -7,6 +7,7 @@
 //  转载大牛Demo
 
 /*
+ 说明:
  该 **JKCategories** ,
  原作者 https://github.com/shaojiankui/JKCategories.
  

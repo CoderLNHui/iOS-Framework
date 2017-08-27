@@ -1,12 +1,16 @@
 /*
  * UIWindow.h
+ * UIKit
  * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2005-2016
- * Created by 【🔍Plain Boiled Water ln】 on Elegant programming.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
- * @PBWLN_LICENSE_HEADER_END@
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
+ * http://www.jianshu.com/u/fd745d76c816
+ *
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
 #import <Foundation/Foundation.h>
@@ -78,4 +82,4 @@ UIKIT_EXTERN NSString *const UIKeyboardCenterBeginUserInfoKey   NS_DEPRECATED_IO
 UIKIT_EXTERN NSString *const UIKeyboardCenterEndUserInfoKey     NS_DEPRECATED_IOS(2_0, 3_2) __TVOS_PROHIBITED;
 UIKIT_EXTERN NSString *const UIKeyboardBoundsUserInfoKey        NS_DEPRECATED_IOS(2_0, 3_2) __TVOS_PROHIBITED;
 
-NS_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END

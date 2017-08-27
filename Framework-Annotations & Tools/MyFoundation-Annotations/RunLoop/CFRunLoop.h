@@ -1,15 +1,16 @@
 /*
  * CFRunLoop.h
- * 🔍白开水ln（https://github.com/CustomPBWaters）
+ * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 1998-2016
  *
- * Created by 【🔍Plainboiledwaterln】 on Elegant programming16.
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * @白开水LN_LICENSE_HEADER_如人饮水,冷暖自知_END@
+ * http://www.jianshu.com/u/fd745d76c816
+ *
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
-
 
 #if !defined(__COREFOUNDATION_CFRUNLOOP__)
 #define __COREFOUNDATION_CFRUNLOOP__ 1
@@ -193,5 +194,5 @@ CF_EXPORT void CFRunLoopTimerSetTolerance(CFRunLoopTimerRef timer, CFTimeInterva
 CF_EXTERN_C_END
 CF_IMPLICIT_BRIDGING_DISABLED
 
-#endif /* ! __COREFOUNDATION_START_COPYRIGHT_JIANSHU_BAIKAISHUILN_END__ */
+#endif _START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END */
 

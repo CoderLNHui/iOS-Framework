@@ -106,15 +106,12 @@
 | 【ProjectFile】  |  -- | --  | --  |
 | Header.h  |  [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile/Header.h) | --  | --  |
 | PrefixHeader.pch  |  [【Tools】](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile/PrefixHeader.pch) | --  | --  |
+| Framework类结构图解  |  [个模块]() | --  | -- |
 | 11  |  22 | 33  | 44  |
 | 未完待续 ！  |  未完待续 ！ | 未完待续 ！  | 未完待续 ！  |
 | 欢迎补充 ！  |  欢迎补充 ！ | 欢迎补充 ！  | 欢迎补充 ！  |
 
 
-
-
-
-附: [iOS & Swift 开发常用宏，不要小气把你的 Freestyle 留下](https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile) 
  
 
 ***
@@ -140,7 +137,7 @@
 | Cmd + option + 0 | 右侧工具窗口开启和关闭 |
 | Cmd + option + (1 - 6) | 右侧工具窗口的选择 |
 | Cmd + option + 回车 | 打开控制器对应的文件（Storyboard） |
-| Cmd + 回车 | 关闭控制器对应的文件,只显示主窗口 |
+| Cmd + 回车 | 关闭控制器对应的文件,只显示主窗口(微众：Codeidea) |
 | Cmd ＋ ↑／↓ ／←／→ | 光标移动到文字的最上／下／左／右 |
 | Cmd + ctrl + ←/→ | 按浏览的先后顺序切换文件 |
 | Cmd + ctrl + ↑／↓ | .h 和 .m 切换 |

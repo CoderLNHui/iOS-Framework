@@ -1,12 +1,16 @@
 /*
  * UIApplication.h
- * 🔍PBwaterln||白开水ln（https://github.com/CustomPBWaters）
+ * UIKit
+ * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2005-2016
- * Created by 【🔍CodeFamily_伐码累】 on Elegant programming.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
- * @PBWLN_LICENSE_HEADER_END@
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
+ * http://www.jianshu.com/u/fd745d76c816
+ *
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
 #import <Foundation/Foundation.h>
@@ -554,5 +558,6 @@ UIKIT_EXTERN UIApplicationExtensionPointIdentifier const UIApplicationKeyboardEx
 // Option for openURL:options:CompletionHandler: only open URL if it is a valid universal link with an application configured to open it
 // If there is no application configured, or the user disabled using it to open the link, completion handler called with NO
 UIKIT_EXTERN NSString *const UIApplicationOpenURLOptionUniversalLinksOnly NS_AVAILABLE_IOS(10_0);
+START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
 
 NS_ASSUME_NONNULL_END

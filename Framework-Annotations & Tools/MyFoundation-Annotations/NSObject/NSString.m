@@ -3,10 +3,13 @@
  * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 1994-2016
- * Created by 【🔍Plain Boiled Water ln】 on Elegant programming.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
- * @PBWLN_LICENSE_HEADER_END@
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
+ * http://www.jianshu.com/u/fd745d76c816
+ *
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
 //--------------------------- <#我是分割线#> ------------------------------//
@@ -433,10 +436,6 @@
  NSLog(@"%ld 段落长度:   %ld", range2.location, range2.length);
  //输出:       0 段落长度:   8
  */
-
-
-
-
 
 
 

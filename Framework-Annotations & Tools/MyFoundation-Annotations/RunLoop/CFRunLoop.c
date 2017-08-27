@@ -1,11 +1,11 @@
 /*
  * CFRunLoop.c
- * 🔍白开水ln（https://github.com/CustomPBWaters）
+ * 白开水ln（https://github.com/CustomPBWaters）
  *
  * Copyright (c) 2015 Apple Inc. All rights reserved.
  * https://github.com/opensource-apple/CF/blob/master/CFRunLoop.c
  *
- * Created by 【🔍Plainboiledwaterln】 on Elegant programming16.
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
  * @白开水LN_LICENSE_HEADER_如人饮水,冷暖自知_END@
@@ -4031,3 +4031,4 @@ void CFRunLoopTimerSetTolerance(CFRunLoopTimerRef rlt, CFTimeInterval tolerance)
 #endif
 }
 
+#_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END

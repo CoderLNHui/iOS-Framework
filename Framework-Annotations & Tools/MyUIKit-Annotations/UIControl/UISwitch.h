@@ -1,5 +1,6 @@
 /*
  * UISwitch.h
+ * UIKit
  * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2008-2015
@@ -36,4 +37,5 @@ NS_CLASS_AVAILABLE_IOS(2_0) __TVOS_PROHIBITED @interface UISwitch : UIControl <N
 
 @end
 
+START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
 NS_ASSUME_NONNULL_END

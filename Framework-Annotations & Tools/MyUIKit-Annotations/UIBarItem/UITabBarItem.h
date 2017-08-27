@@ -1,12 +1,14 @@
 /*
  * UITabBarItem.h
+ * UIKit
  * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2008-2016
- * Created by 【🔍Plain Boiled Water ln】 on Elegant programming.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
- * @PBWLN_LICENSE_HEADER_END@
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
 #import <Foundation/Foundation.h>
@@ -72,4 +74,5 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITabBarItem : UIBarItem
 
 @end
 
+START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
 NS_ASSUME_NONNULL_END

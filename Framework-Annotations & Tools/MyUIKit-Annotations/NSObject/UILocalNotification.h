@@ -1,12 +1,14 @@
 /*
  * UILocalNotification.h
- * 🔍PBwaterln||白开水ln（https://github.com/CustomPBWaters）
+ * UIKit
+ * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2007-2016
- * Created by 【🔍CodeFamily_伐码累】 on Elegant programming.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
- * @PBWLN_LICENSE_HEADER_END@
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
 
@@ -88,5 +90,6 @@ NS_CLASS_DEPRECATED_IOS(4_0, 10_0, "Use UserNotifications Framework's UNNotifica
 
 
 UIKIT_EXTERN NSString *const UILocalNotificationDefaultSoundName NS_DEPRECATED_IOS(4_0, 10_0, "Use UserNotifications Framework's +[UNNotificationSound defaultSound]") __TVOS_PROHIBITED;
+START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
 
 NS_ASSUME_NONNULL_END

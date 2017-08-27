@@ -1,13 +1,15 @@
 /*
  * Foundation.h
- * 🔍白开水ln（https://github.com/CustomPBWaters）
+ * 白开水ln（https://github.com/CustomPBWaters）
  *
- * Created by 【🔍Plain Boiled Water ln】 on Elegant programming.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced.
+ * (c) 1994-2016
+ *
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
  * http://www.jianshu.com/u/fd745d76c816
  *
- * @PBWLN_LICENSE_HEADER_END@
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
 

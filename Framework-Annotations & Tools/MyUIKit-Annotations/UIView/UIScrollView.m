@@ -1,12 +1,16 @@
 /*
  * UIScrollView.m
+ * UIKit
  * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2007-2016
- * Created by 【🔍Plain Boiled Water ln】 on Elegant programming.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
- * @PBWLN_LICENSE_HEADER_END@
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
+ * http://www.jianshu.com/u/fd745d76c816
+ *
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
 //--------------------------- UIScrollView概念 & 重要属性 ------------------------------//

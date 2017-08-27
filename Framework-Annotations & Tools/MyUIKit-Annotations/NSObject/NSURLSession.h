@@ -1,12 +1,14 @@
 /*
  * NSURLSession.h
+ * UIKit
  * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2013-2016
- * Created by 【🔍CodeFamily_伐码累】 on Elegant programming.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
- * @PBWLN_LICENSE_HEADER_END@
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
 
@@ -1029,6 +1031,7 @@ API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0))
 -(instancetype)init;
 
 @end
+START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
 
 NS_ASSUME_NONNULL_END
 
