@@ -14,6 +14,11 @@
 
 @implementation UIColor (Color)
 
+/*
+ *【从十六进制字符串获取颜色】
+ *
+ * color:支持@“#123456”、 @“0X123456”、 @“123456”三种格式
+ */
 + (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha
 {
     //删除字符串中的空格
@@ -60,7 +65,9 @@
     return [UIColor colorWithRed:((float)r / 255.0f) green:((float)g / 255.0f) blue:((float)b / 255.0f) alpha:alpha];
 }
 
-// 默认alpha值为1
+/*
+ *【从十六进制字符串获取颜色,默认alpha位1】
+ */
 + (UIColor *)colorWithHexString:(NSString *)color
 {
     return [self colorWithHexString:color alpha:1.0f];
@@ -76,6 +83,11 @@
 //
 
 @implementation UIColor (HexColors)
+
+
+/**
+【用十六进制颜色生成UIColor】
+ */
 
 +(UIColor *)colorWithHexString:(NSString *)hexString {
     
@@ -190,8 +202,17 @@
 
 
 
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
+
+
 @implementation UIColor (Gradient)
 
+/**
+ 【生成一个渐变色】
+ */
 + (UIColor*)gradientFromColor:(UIColor*)c1 toColor:(UIColor*)c2 withHeight:(CGFloat)height
 {
     CGSize size = CGSizeMake(1, height);

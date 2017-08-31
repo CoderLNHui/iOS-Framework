@@ -10,30 +10,16 @@
  * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
-/*
- 颜色:3种颜色通道 R G B
- 颜色表达方式:24位,32位
- 每一个颜色通道是8位,范围(0~256)
- R:213 G:213 B:213
- 
- #ffffff   -> f=15
- R:FF => 10进制 15 * 16^0 + 15 * 16^1 = 255
- G:FF 255
- B:FF 255
- 
- #:美工16进制表示形式
- 0x:OC16进制表达式
- */
-
 
 #import <UIKit/UIKit.h>
 
 @interface UIColor (Color)
 
 /*
- *【默认alpha位1】
+ *【从十六进制字符串获取颜色,默认alpha位1】
  */
 + (UIColor *)colorWithHexString:(NSString *)color;
+// labelView.textColor = [UIColor colorWithHexString:@"eb3535"];
 
 
 /*
@@ -78,9 +64,11 @@ NS_ASSUME_NONNULL_END
 
 
 @interface UIColor (HexColors)
-/** 用十六进制颜色生成UIColor */
+/**
+ 【用十六进制颜色生成UIColor】
+ */
 +(UIColor *)colorWithHexString:(NSString *)hexString;
-+ (UIColor *)colorWithHexString:(NSString *)hexString andAlpha:(CGFloat )alpha;
++(UIColor *)colorWithHexString:(NSString *)hexString andAlpha:(CGFloat )alpha;
 +(NSString *)hexValuesFromUIColor:(UIColor *)color;
 
 @end
@@ -127,6 +115,21 @@ NS_ASSUME_NONNULL_END
 #START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
 
 
+
+/*
+ 颜色:3种颜色通道 R G B
+ 颜色表达方式:24位,32位
+ 每一个颜色通道是8位,范围(0~256)
+ R:213 G:213 B:213
+ 
+ #ffffff   -> f=15
+ R:FF => 10进制 15 * 16^0 + 15 * 16^1 = 255
+ G:FF 255
+ B:FF 255
+ 
+ #:美工16进制表示形式
+ 0x:OC16进制表达式
+ */
 
 
 
