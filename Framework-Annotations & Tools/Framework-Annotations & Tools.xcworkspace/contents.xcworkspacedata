@@ -1860,6 +1860,19 @@
       location = "group:OtherFrameworks-Annotations"
       name = "OtherFrameworks-Annotations">
       <Group
+         location = "group:CoreLocation"
+         name = "CoreLocation">
+         <FileRef
+            location = "group:CLGeocoder.h">
+         </FileRef>
+         <FileRef
+            location = "group:CLLocationManagerDelegate.m">
+         </FileRef>
+         <FileRef
+            location = "group:CLLocation.h">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:Runtime"
          name = "Runtime">
          <FileRef

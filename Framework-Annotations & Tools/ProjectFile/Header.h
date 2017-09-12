@@ -1,5 +1,5 @@
 /*
- * Header.h
+ * Header.h【高效开发常用宏-适时慎用】
  * 白开水ln（https://github.com/CustomPBWaters）
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
@@ -16,7 +16,7 @@
 //#endif /* PchHeader_h */
 
 
-//--------------------------- 【Header.h】 ------------------------------//
+//--------------------------- 『WechatPublic-Codeidea』【待分模块】 ------------------------------//
 //
 
 
@@ -92,7 +92,7 @@ static NSString * const Arial_MT = @"ArialMT";//Arial粗体
 
 
 
-//--------------------------- <#我是分割线#> ------------------------------//
+//--------------------------- 『WechatPublic-Codeidea』【待分模块】 ------------------------------//
 //
 //NSLog
 #ifdef DEBUG
@@ -211,12 +211,47 @@ blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 #define KSTART_TIME CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
 #define KEND_TIME   NSLog(@"Time: %f", CFAbsoluteTimeGetCurrent() - start)
 
-/*
- * @PBWLN_LICENSE_HEADER
- * Copyright © [@码员白开水ln http://www.jianshu.com/u/fd745d76c816] Reprint please indicate the source
- * @PBWLN_LICENSE_END@
- */
 
+
+
+//--------------------------- 『WechatPublic-Codeidea』【单例快速创建宏】 ------------------------------//
+//
+
+/** 【单例快速创建宏】 */
+
+// .h 声明
+#define single_interface(class)  + (class *)shared##class;
+
+// .m 实现
+// \ 代表下一行也属于宏
+// ## 是分隔符
+#define single_implementation(class) \
+static class *_instance; \
+\
++ (class *)shared##class \
+{ \
+    if (_instance == nil) { \
+        _instance = [[self alloc] init]; \
+    } \
+    return _instance; \
+} \
+\
++ (id)allocWithZone:(NSZone *)zone \
+{ \
+    static dispatch_once_t onceToken; \
+    dispatch_once(&onceToken, ^{ \
+        _instance = [super allocWithZone:zone]; \
+    }); \
+    return _instance; \
+}
+
+
+
+
+
+/*
+ * NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+ */
 
 
 
