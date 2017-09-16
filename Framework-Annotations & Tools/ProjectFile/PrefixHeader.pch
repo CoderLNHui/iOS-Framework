@@ -23,7 +23,7 @@
 
 
 //--------------------------- 【屏幕适配】 ------------------------------//
-//
+// ↓
 
 #define kScreenW [UIScreen mainScreen].bounds.size.width
 #define kScreenH [UIScreen mainScreen].bounds.size.height
@@ -32,7 +32,7 @@
 #define iphone5 (kScreenH == 568)
 #define iphone4 (kScreenH == 480)
 
-//
+// ↑
 //--------------------------- 【屏幕适配】 ------------------------------//
 
 
@@ -44,7 +44,7 @@
 
 
 //--------------------------- 【颜色】 ------------------------------//
-//
+// ↓
 
 #define LNRGB(r,g,b)    LNRGBA(r,g,b,1.0)
 #define LNRGBA(r,g,b,a) [UIColor colorWithRed:(r) / 256.0 green:(g) / 256.0 blue:(b) / 256.0 alpha:a]
@@ -56,7 +56,7 @@
 
 
 
-//
+// ↑
 //--------------------------- 【颜色】 ------------------------------//
 
 
@@ -67,7 +67,7 @@
 
 
 //--------------------------- 【三方库】 ------------------------------//
-//
+// ↓
 
 #import <AFNetworking/AFNetworking.h>
 #import <MJExtension/MJExtension.h>
@@ -79,7 +79,7 @@
 #define MAS_SHORTHAND_GLOBALS // 定义这个常量，Masonry帮我们自动把基础数据类型的数据，自动装箱为对象类型。
 #import <Masonry/Masonry.h>
 
-//
+// ↑
 //--------------------------- 【三方库】 ------------------------------//
 
 
@@ -97,18 +97,18 @@
 
 
 //--------------------------- 【常用宏】 ------------------------------//
-//
+// ↓
 
 /** 数据请求返回写成Plist【#filename -> "filename"】、【@#filename -> @"filename"】 */
 #define AFNWriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/sunhui/Desktop/%@.plist",@#filename] atomically:YES];
 
-// 获取Caches缓存文件夹路径
+// 获取Caches缓存沙盒文件夹路径
 #define CachesPath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 
 
 
 
-//
+// ↑
 //--------------------------- 【常用宏】 ------------------------------//
 
 
@@ -120,7 +120,7 @@
 
 
 //--------------------------- 【类别】 ------------------------------//
-//
+// ↓
 
 #import "UIImage+Image.h"
 #import "UIView+Frame.h"
@@ -130,7 +130,7 @@
 #import "Const.h"  // 常量
 #import "LNFileCache.h" // 处理文件缓存
 
-//
+// ↑
 //--------------------------- 【类别】 ------------------------------//
 
 
@@ -144,7 +144,7 @@
 
 
 //--------------------------- 【自定义Log打印日志】 ------------------------------//
-//
+// ↓
 
 #ifdef  DEBUG // 测试
 #define LNLog(...) NSLog(__VA_ARGS__)
@@ -160,7 +160,7 @@
 
 
 
-//
+// ↑
 //--------------------------- 【自定义Log】 ------------------------------//
 
 
@@ -198,7 +198,6 @@
 
 #endif /* PrefixHeader_pch */
 /*
- * @PBWLN_LICENSE_HEADER
- * Copyright © [@码员白开水ln http://www.jianshu.com/u/fd745d76c816] Reprint please indicate the source
- * @PBWLN_LICENSE_END@
+ * NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+ * 说明：转载请注明出处，GitHub(https://github.com/CustomPBWaters) 和 简书(http://www.jianshu.com/u/fd745d76c816)，谢谢。
  */

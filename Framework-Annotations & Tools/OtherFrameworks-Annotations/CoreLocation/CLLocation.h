@@ -108,6 +108,7 @@ extern const CLLocationAccuracy kCLLocationAccuracyNearestTenMeters;// 精确度
 extern const CLLocationAccuracy kCLLocationAccuracyHundredMeters;// 精确度100米以内;
 extern const CLLocationAccuracy kCLLocationAccuracyKilometer;// 精确度1000米以内;
 extern const CLLocationAccuracy kCLLocationAccuracyThreeKilometers;// 精确度3000米以内;
+/** 【NOTE】：定位精度越高，耗电越多且定位时间越长，可根据实际情况而定。 */
 
 
 
