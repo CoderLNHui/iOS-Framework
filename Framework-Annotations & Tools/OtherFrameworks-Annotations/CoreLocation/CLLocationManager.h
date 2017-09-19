@@ -320,7 +320,7 @@ NS_CLASS_AVAILABLE(10_6, 2_0)
 @property(readonly, nonatomic, copy, nullable) CLHeading *heading __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0) __TVOS_PROHIBITED __WATCHOS_PROHIBITED;
 
 /*
- *  maximumRegionMonitoringDistance
+ *  maximumRegionMonitoringDistance【通过一个信标来监控：设置最大监控距离】
  *
  *  Discussion:
  *       the maximum region size, in terms of a distance from a central point, that the framework can support.
@@ -489,7 +489,7 @@ NS_CLASS_AVAILABLE(10_6, 2_0)
 - (void)dismissHeadingCalibrationDisplay __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0) __TVOS_PROHIBITED __WATCHOS_PROHIBITED;
 
 /*
- *  startMonitoringSignificantLocationChanges
+ *  startMonitoringSignificantLocationChanges【位置发生重大变化时更新】
  *
  *  Discussion:
  *      Start monitoring significant location changes.  The behavior of this service is not affected by the desiredAccuracy
@@ -500,7 +500,7 @@ NS_CLASS_AVAILABLE(10_6, 2_0)
 - (void)startMonitoringSignificantLocationChanges __OSX_AVAILABLE_STARTING(__MAC_10_7,__IPHONE_4_0) __TVOS_PROHIBITED __WATCHOS_PROHIBITED;
 
 /*
- *  stopMonitoringSignificantLocationChanges
+ *  stopMonitoringSignificantLocationChanges【位置发生重大变化时更新】
  *
  *  Discussion:
  *      Stop monitoring significant location changes.
@@ -566,7 +566,7 @@ NS_CLASS_AVAILABLE(10_6, 2_0)
 - (void)requestStateForRegion:(CLRegion *)region __OSX_AVAILABLE_STARTING(__MAC_10_10,__IPHONE_7_0) __TVOS_PROHIBITED __WATCHOS_PROHIBITED;
 
 /*
- *  startRangingBeaconsInRegion:
+ *  startRangingBeaconsInRegion:【设置信标】
  *
  *  Discussion:
  *      Start calculating ranges for beacons in the specified region.
