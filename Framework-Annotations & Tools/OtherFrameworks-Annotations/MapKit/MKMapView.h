@@ -288,6 +288,10 @@ __WATCHOS_PROHIBITED
 
 #if TARGET_OS_IPHONE
 // mapView:annotationView:calloutAccessoryControlTapped: is called when the user taps on left & right callout accessory UIControls.
+/**
+ 【点击了大头针副展示图调用】
+
+ */
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control __TVOS_PROHIBITED;
 #endif
 

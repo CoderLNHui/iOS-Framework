@@ -250,14 +250,8 @@
 | 11 | 22 |
 
  
->未完、每月末(`争取`)、更新 ~
+>未完、每月末(`争取`)、更新 ~ ; 劳驾你点一下❓ [Apple译文 & GitHub源码](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea)
 
- 
-
- 
-###### 劳驾你点一下❓ [Apple译文 & GitHub源码](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea)
-
-###### 不管谁的博客上面写的 (也包括自己)，阅读的你要敢于去验证，停止做无意义的 things ; (共勉)@白开水ln。
  
  
 
