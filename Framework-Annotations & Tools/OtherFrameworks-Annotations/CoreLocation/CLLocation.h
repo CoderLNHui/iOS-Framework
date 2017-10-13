@@ -1,6 +1,6 @@
 /*
- * CLLocation.h
- * CoreLocation
+ * File:  CLLocation.h
+ * Framework:  CoreLocation
  * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2008-2010
@@ -324,4 +324,5 @@ NS_CLASS_AVAILABLE(10_6, 2_0)
 
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+#NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+

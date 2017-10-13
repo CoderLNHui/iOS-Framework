@@ -1,6 +1,6 @@
 /*
- * CLLocationManagerDelegate.m
- * CoreLocation
+ * File:  CLLocationManagerDelegate.m
+ * Framework:  CoreLocation
  * 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2008-2010
@@ -217,5 +217,5 @@ didFinishDeferredUpdatesWithError:(nullable NSError *)error __OSX_AVAILABLE_STAR
 
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+#NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
 
