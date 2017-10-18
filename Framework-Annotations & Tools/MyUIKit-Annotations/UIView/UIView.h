@@ -1,17 +1,18 @@
 /*
- * UIView.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  UIView.h
+ * Framework:  UIKit
+ * Author:  白开水ln（https://github.com/CustomPBWaters）
  *
- * (c) 2005-2016
+ * (c) 2005-2017
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * http://www.jianshu.com/u/fd745d76c816
+ * JaneBook:  http://www.jianshu.com/u/fd745d76c816
  *
  * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
+
 
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
@@ -27,60 +28,60 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, UIViewAnimationCurve) {
-    UIViewAnimationCurveEaseInOut,         // slow at beginning and end
-    UIViewAnimationCurveEaseIn,            // slow at beginning
-    UIViewAnimationCurveEaseOut,           // slow at end
-    UIViewAnimationCurveLinear,
+    UIViewAnimationCurveEaseInOut,// 缓慢的开始和结束         // slow at beginning and end
+    UIViewAnimationCurveEaseIn, // 在缓慢的开始           // slow at beginning
+    UIViewAnimationCurveEaseOut,// 在缓慢的结束           // slow at end
+    UIViewAnimationCurveLinear,// 动画曲线线性的
 };
 
 typedef NS_ENUM(NSInteger, UIViewContentMode) {
-    UIViewContentModeScaleToFill,
-    UIViewContentModeScaleAspectFit,      // contents scaled to fit with fixed aspect. remainder is transparent
-    UIViewContentModeScaleAspectFill,     // contents scaled to fill with fixed aspect. some portion of content may be clipped.
-    UIViewContentModeRedraw,              // redraw on bounds change (calls -setNeedsDisplay)
-    UIViewContentModeCenter,              // contents remain same size. positioned adjusted.
-    UIViewContentModeTop,
-    UIViewContentModeBottom,
-    UIViewContentModeLeft,
-    UIViewContentModeRight,
-    UIViewContentModeTopLeft,
-    UIViewContentModeTopRight,
-    UIViewContentModeBottomLeft,
-    UIViewContentModeBottomRight,
+    UIViewContentModeScaleToFill, //按比例填充
+    UIViewContentModeScaleAspectFit, //按比例去适应固定图形,余下透明     // contents scaled to fit with fixed aspect. remainder is transparent
+    UIViewContentModeScaleAspectFill,//按比例去填充固定图形,一部分会被切掉     // contents scaled to fill with fixed aspect. some portion of content may be clipped.
+    UIViewContentModeRedraw, // 重画在界线改变(通过调用setNeedsDisplay方法)            // redraw on bounds change (calls -setNeedsDisplay)
+    UIViewContentModeCenter, // 内容保持不变,位置适应            //
+    UIViewContentModeTop,//上
+    UIViewContentModeBottom,//下
+    UIViewContentModeLeft,//左
+    UIViewContentModeRight,//右
+    UIViewContentModeTopLeft,//上左
+    UIViewContentModeTopRight,//上右
+    UIViewContentModeBottomLeft,//下左
+    UIViewContentModeBottomRight,//下右
 };
 
 typedef NS_ENUM(NSInteger, UIViewAnimationTransition) {
-    UIViewAnimationTransitionNone,
-    UIViewAnimationTransitionFlipFromLeft,
-    UIViewAnimationTransitionFlipFromRight,
-    UIViewAnimationTransitionCurlUp,
-    UIViewAnimationTransitionCurlDown,
+    UIViewAnimationTransitionNone,//动画轨迹无
+    UIViewAnimationTransitionFlipFromLeft,//从左边弹出
+    UIViewAnimationTransitionFlipFromRight,//从右边弹出
+    UIViewAnimationTransitionCurlUp,//从上面卷起
+    UIViewAnimationTransitionCurlDown,//从下面卷起
 };
 
 typedef NS_OPTIONS(NSUInteger, UIViewAutoresizing) {
-    UIViewAutoresizingNone                 = 0,
-    UIViewAutoresizingFlexibleLeftMargin   = 1 << 0,
-    UIViewAutoresizingFlexibleWidth        = 1 << 1,
-    UIViewAutoresizingFlexibleRightMargin  = 1 << 2,
-    UIViewAutoresizingFlexibleTopMargin    = 1 << 3,
-    UIViewAutoresizingFlexibleHeight       = 1 << 4,
-    UIViewAutoresizingFlexibleBottomMargin = 1 << 5
+    UIViewAutoresizingNone                 = 0,//自适应无
+    UIViewAutoresizingFlexibleLeftMargin   = 1 << 0,//弯曲左边距离
+    UIViewAutoresizingFlexibleWidth        = 1 << 1,//弯曲宽度
+    UIViewAutoresizingFlexibleRightMargin  = 1 << 2,//弯曲右边距离
+    UIViewAutoresizingFlexibleTopMargin    = 1 << 3,//弯曲上边宽度
+    UIViewAutoresizingFlexibleHeight       = 1 << 4,//弯曲高度
+    UIViewAutoresizingFlexibleBottomMargin = 1 << 5//弯曲底部距离
 };
 
 typedef NS_OPTIONS(NSUInteger, UIViewAnimationOptions) {
-    UIViewAnimationOptionLayoutSubviews            = 1 <<  0,
-    UIViewAnimationOptionAllowUserInteraction      = 1 <<  1, // turn on user interaction while animating
-    UIViewAnimationOptionBeginFromCurrentState     = 1 <<  2, // start all views from current value, not initial value
-    UIViewAnimationOptionRepeat                    = 1 <<  3, // repeat animation indefinitely
-    UIViewAnimationOptionAutoreverse               = 1 <<  4, // if repeat, run animation back and forth
-    UIViewAnimationOptionOverrideInheritedDuration = 1 <<  5, // ignore nested duration
-    UIViewAnimationOptionOverrideInheritedCurve    = 1 <<  6, // ignore nested curve
-    UIViewAnimationOptionAllowAnimatedContent      = 1 <<  7, // animate contents (applies to transitions only)
-    UIViewAnimationOptionShowHideTransitionViews   = 1 <<  8, // flip to/from hidden state instead of adding/removing
-    UIViewAnimationOptionOverrideInheritedOptions  = 1 <<  9, // do not inherit any options or animation type
+    UIViewAnimationOptionLayoutSubviews            = 1 <<  0,//布局子view
+    UIViewAnimationOptionAllowUserInteraction      = 1 <<  1,//打开用户交互当动画时候 // turn on user interaction while animating
+    UIViewAnimationOptionBeginFromCurrentState     = 1 <<  2,//开始所有的view从现在值,不是实例化的值 // start all views from current value, not initial value
+    UIViewAnimationOptionRepeat                    = 1 <<  3,//无限地重复动画 // repeat animation indefinitely
+    UIViewAnimationOptionAutoreverse               = 1 <<  4,//如果重复,运行动画后面和向前 // if repeat, run animation back and forth
+    UIViewAnimationOptionOverrideInheritedDuration = 1 <<  5,//不管内装的持续 // ignore nested duration
+    UIViewAnimationOptionOverrideInheritedCurve    = 1 <<  6,//不管内装的曲线 // ignore nested curve
+    UIViewAnimationOptionAllowAnimatedContent      = 1 <<  7,//允许动画内容(仅仅在应用转换时) // animate contents (applies to transitions only)
+    UIViewAnimationOptionShowHideTransitionViews   = 1 <<  8,//跳出或者隐藏状态而不是添加和移除 // flip to/from hidden state instead of adding/removing
+    UIViewAnimationOptionOverrideInheritedOptions  = 1 <<  9,//不在继承任何可选项和动画类型 // do not inherit any options or animation type
     
-    UIViewAnimationOptionCurveEaseInOut            = 0 << 16, // default
-    UIViewAnimationOptionCurveEaseIn               = 1 << 16,
+    UIViewAnimationOptionCurveEaseInOut            = 0 << 16,// default  默认 淡入淡出 // default
+    UIViewAnimationOptionCurveEaseIn               = 1 << 16,//  淡入
     UIViewAnimationOptionCurveEaseOut              = 2 << 16,
     UIViewAnimationOptionCurveLinear               = 3 << 16,
     
@@ -92,6 +93,11 @@ typedef NS_OPTIONS(NSUInteger, UIViewAnimationOptions) {
     UIViewAnimationOptionTransitionCrossDissolve   = 5 << 20,
     UIViewAnimationOptionTransitionFlipFromTop     = 6 << 20,
     UIViewAnimationOptionTransitionFlipFromBottom  = 7 << 20,
+    
+    UIViewAnimationOptionPreferredFramesPerSecondDefault     = 0 << 24,
+    UIViewAnimationOptionPreferredFramesPerSecond60          = 3 << 24,
+    UIViewAnimationOptionPreferredFramesPerSecond30          = 7 << 24,
+    
 } NS_ENUM_AVAILABLE_IOS(4_0);
 
 typedef NS_OPTIONS(NSUInteger, UIViewKeyframeAnimationOptions) {
@@ -131,6 +137,9 @@ typedef NS_ENUM(NSInteger, UISemanticContentAttribute) {
 
 @protocol UICoordinateSpace <NSObject>
 
+/**
+ 视图之间坐标点的转换
+ */
 - (CGPoint)convertPoint:(CGPoint)point toCoordinateSpace:(id <UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
 - (CGPoint)convertPoint:(CGPoint)point fromCoordinateSpace:(id <UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
 - (CGRect)convertRect:(CGRect)rect toCoordinateSpace:(id <UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
@@ -155,6 +164,9 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 
 @property(nonatomic,getter=isUserInteractionEnabled) BOOL userInteractionEnabled;  // default is YES. if set to NO, user events (touch, keys) are ignored and removed from the event queue.
 @property(nonatomic)                                 NSInteger tag;                // default is 0
+/**
+ 图层
+ */
 @property(nonatomic,readonly,strong)                 CALayer  *layer;              // returns view's layer. Will always return a non-nil value. view is layer's delegate
 
 #if UIKIT_DEFINE_AS_PROPERTIES
@@ -183,9 +195,25 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 @property(nonatomic) CGRect            frame;
 
 // use bounds/center and not frame if non-identity transform. if bounds dimension is odd, center may be have fractional part
+/**
+ 边界，参照是上级视图的坐标系
+ */
 @property(nonatomic) CGRect            bounds;      // default bounds is zero origin, frame size. animatable
+/**
+ 中心，参照是上级视图的坐标系
+ */
 @property(nonatomic) CGPoint           center;      // center is center of frame. animatable
+/**
+ 形变
+ CGAffineTransformMakeTranslation (CGFloat tx, CGFloat ty) 平移
+ CGAffineTransformMakeRotation (CGFloat angle) 旋转
+ CGAffineTransformMakeScale (CGFloat sx, CGFloat sy) 缩放
+ CGAffineTransformIdentity 原始位置
+ */
 @property(nonatomic) CGAffineTransform transform;   // default is CGAffineTransformIdentity. animatable
+/**
+ 内容缩放比例
+ */
 @property(nonatomic) CGFloat           contentScaleFactor NS_AVAILABLE_IOS(4_0);
 
 @property(nonatomic,getter=isMultipleTouchEnabled) BOOL multipleTouchEnabled __TVOS_PROHIBITED;   // default is NO
@@ -194,15 +222,30 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 - (nullable UIView *)hitTest:(CGPoint)point withEvent:(nullable UIEvent *)event;   // recursively calls -pointInside:withEvent:. point is in the receiver's coordinate system
 - (BOOL)pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event;   // default returns YES if point is in bounds
 
+
+/**
+ 视图之间坐标点的转换
+ */
 - (CGPoint)convertPoint:(CGPoint)point toView:(nullable UIView *)view;
 - (CGPoint)convertPoint:(CGPoint)point fromView:(nullable UIView *)view;
 - (CGRect)convertRect:(CGRect)rect toView:(nullable UIView *)view;
 - (CGRect)convertRect:(CGRect)rect fromView:(nullable UIView *)view;
 
+/**
+ 决定当视图的bounds发生变化时，其子视图是否会自动调整
+ */
 @property(nonatomic) BOOL               autoresizesSubviews; // default is YES. if set, subviews are adjusted according to their autoresizingMask if self.bounds changes
+
+/**
+ 决定上级视图bounds变化时，本视图该如何响应，当时用autolayout时，该属性被忽略，因为这时系统会自动设置其大小
+ */
 @property(nonatomic) UIViewAutoresizing autoresizingMask;    // simple resize. default is UIViewAutoresizingNone
 
 - (CGSize)sizeThatFits:(CGSize)size;     // return 'best' size to fit given size. does not actually resize view. Default is return existing view size
+
+/**
+ 自动调整到最合适的位置，如：根据文本内容的宽度来自动调整UILable的高度
+ */
 - (void)sizeToFit;                       // calls sizeThatFits: with current view bounds and changes bounds size.
 
 @end
@@ -213,42 +256,122 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 @property(nonatomic,readonly,copy) NSArray<__kindof UIView *> *subviews;
 @property(nullable, nonatomic,readonly) UIWindow     *window;
 
+/**
+ 从父视图上移除
+ */
 - (void)removeFromSuperview;
+/**
+ 将视图插入到subviews数组的对应下标处，插入操作会使subviews下标增加
+ */
 - (void)insertSubview:(UIView *)view atIndex:(NSInteger)index;
+/**
+ 交换对应下标视图的位置
+ */
 - (void)exchangeSubviewAtIndex:(NSInteger)index1 withSubviewAtIndex:(NSInteger)index2;
 
+
+/**
+ 将视图添加到本视图上
+ */
 - (void)addSubview:(UIView *)view;
+/**
+ 在siblingSubview后添加view 视图
+ */
 - (void)insertSubview:(UIView *)view belowSubview:(UIView *)siblingSubview;
+/**
+ 在siblingSubview前添加view 视图
+ */
 - (void)insertSubview:(UIView *)view aboveSubview:(UIView *)siblingSubview;
 
+
+/**
+ 将子视图向前移(把指定的子视图移动到顶层)
+ */
 - (void)bringSubviewToFront:(UIView *)view;
+/**
+ 将子视图向后移(把指定的子视图移动到最底部)
+ */
 - (void)sendSubviewToBack:(UIView *)view;
 
+/**
+ 已经添加了子view
+ */
 - (void)didAddSubview:(UIView *)subview;
+/**
+ 将要移除子view
+ */
 - (void)willRemoveSubview:(UIView *)subview;
 
+/**
+ 将要移动到新父view
+ */
 - (void)willMoveToSuperview:(nullable UIView *)newSuperview;
+/**
+ 已经移动到父view
+ */
 - (void)didMoveToSuperview;
+/**
+ 将会移动到新窗口
+ */
 - (void)willMoveToWindow:(nullable UIWindow *)newWindow;
+/**
+ 已经移动到新窗口
+ */
 - (void)didMoveToWindow;
 
+/**
+ 查看某视图是否是当前视图的上级视图
+ */
 - (BOOL)isDescendantOfView:(UIView *)view;  // returns YES for self.
+/**
+ 递归地探究,包括自己, Tag值
+ */
 - (nullable __kindof UIView *)viewWithTag:(NSInteger)tag; // recursive search. includes self
 
 // Allows you to perform layout before the drawing cycle happens. -layoutIfNeeded forces layout early
+#warning【待注解.m】
+/**
+ 标记需要刷新
+ */
 - (void)setNeedsLayout;
+
+#warning【待注解.m】
+/**
+ 立即强制刷新
+ */
 - (void)layoutIfNeeded;
 
+
+#warning【待注解.m】
+/**
+ 约束布局
+ */
 - (void)layoutSubviews;    // override point. called by layoutIfNeeded automatically. As of iOS 6.0, when constraints-based layout is used the base implementation applies the constraints-based layout, otherwise it does nothing.
 
-/*
- -layoutMargins returns a set of insets from the edge of the view's bounds that denote a default spacing for laying out content.
- If preservesSuperviewLayoutMargins is YES, margins cascade down the view tree, adjusting for geometry offsets, so that setting the left value of layoutMargins on a superview will affect the left value of layoutMargins for subviews positioned close to the left edge of their superview's bounds
- If your view subclass uses layoutMargins in its layout or drawing, override -layoutMarginsDidChange in order to refresh your view if the margins change.
+/* -layoutMargins returns a set of insets from the edge of the view's bounds that denote a default spacing for laying out content.
+ If preservesSuperviewLayoutMargins is YES, margins cascade down the view tree, adjusting for geometry offsets, so that setting
+ the left value of layoutMargins on a superview will affect the left value of layoutMargins for subviews positioned close to the
+ left edge of their superview's bounds
+ If your view subclass uses layoutMargins in its layout or drawing, override -layoutMarginsDidChange in order to refresh your
+ view if the margins change.
+ On iOS 11.0 and later, please support both user interface layout directions by setting the directionalLayoutMargins property
+ instead of the layoutMargins property. After setting the directionalLayoutMargins property, the values in the left and right
+ fields of the layoutMargins property will depend on the user interface layout direction.
  */
 @property (nonatomic) UIEdgeInsets layoutMargins NS_AVAILABLE_IOS(8_0);
+
+/* directionalLayoutMargins.leading is used on the left when the user interface direction is LTR and on the right for RTL.
+ Vice versa for directionalLayoutMargins.trailing.
+ */
+@property (nonatomic) NSDirectionalEdgeInsets directionalLayoutMargins API_AVAILABLE(ios(11.0),tvos(11.0));
+
 @property (nonatomic) BOOL preservesSuperviewLayoutMargins NS_AVAILABLE_IOS(8_0); // default is NO - set to enable pass-through or cascading behavior of margins from this view’s parent to its children
+@property (nonatomic) BOOL insetsLayoutMarginsFromSafeArea API_AVAILABLE(ios(11.0),tvos(11.0));  // Default: YES
+
 - (void)layoutMarginsDidChange NS_AVAILABLE_IOS(8_0);
+
+@property (nonatomic,readonly) UIEdgeInsets safeAreaInsets API_AVAILABLE(ios(11.0),tvos(11.0));
+- (void)safeAreaInsetsDidChange API_AVAILABLE(ios(11.0),tvos(11.0));
 
 /* The edges of this guide are constrained to equal the edges of the view inset by the layoutMargins
  */
@@ -256,24 +379,67 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 
 /// This content guide provides a layout area that you can use to place text and related content whose width should generally be constrained to a size that is easy for the user to read. This guide provides a centered region that you can place content within to get this behavior for this view.
 @property (nonatomic, readonly, strong) UILayoutGuide *readableContentGuide  NS_AVAILABLE_IOS(9_0);
+
+/* The top of the safeAreaLayoutGuide indicates the unobscured top edge of the view (e.g, not behind
+ the status bar or navigation bar, if present). Similarly for the other edges.
+ */
+@property(nonatomic,readonly,strong) UILayoutGuide *safeAreaLayoutGuide API_AVAILABLE(ios(11.0),tvos(11.0));
 @end
 
 @interface UIView(UIViewRendering)
 
+/**
+ 绘制可见区域
+ */
 - (void)drawRect:(CGRect)rect;
 
+/**
+ 标记需要重新绘制
+ */
 - (void)setNeedsDisplay;
+/**
+ 标记在哪需要绘制
+ */
 - (void)setNeedsDisplayInRect:(CGRect)rect;
 
+
+/**
+ 确定系统是否应该把超出本视图的bounds的部分显示出来,YES为不显示剪掉
+ UIView   clipsToBounds
+ CALayer  masksToBounds
+ */
 @property(nonatomic)                 BOOL              clipsToBounds;              // When YES, content and subviews are clipped to the bounds of the view. Default is NO.
 @property(nullable, nonatomic,copy)            UIColor          *backgroundColor UI_APPEARANCE_SELECTOR; // default is nil. Can be useful with the appearance proxy on custom UIView subclasses.
+/**
+ 透明度,默认为1,不透明
+ */
 @property(nonatomic)                 CGFloat           alpha;                      // animatable. default is 1.0
+/**
+ 是否不透明,默认是yes,不透明view必须填充他们整个边界或者结果是未定义的.这个活跃上下文在绘制区域将不会被清除和可能有不为空的像素
+ */
 @property(nonatomic,getter=isOpaque) BOOL              opaque;                     // default is YES. opaque views must fill their entire bounds or the results are undefined. the active CGContext in drawRect: will not have been cleared and may have non-zeroed pixels
+/**
+ 清除上下文在绘制的时候
+ */
 @property(nonatomic)                 BOOL              clearsContextBeforeDrawing; // default is YES. ignored for opaque views. for non-opaque views causes the active CGContext in drawRect: to be pre-filled with transparent pixels
+/**
+ 是否隐藏 默认为no,不检查父view.
+ */
 @property(nonatomic,getter=isHidden) BOOL              hidden;                     // default is NO. doesn't check superviews
+
+/**
+ 内容填充模式,默认是按比例去填充
+ */
 @property(nonatomic)                 UIViewContentMode contentMode;                // default is UIViewContentModeScaleToFill
+/**
+ 可动画,默认是单元长方形,现在弃用,请使用
+ [UIImage resizableImageWithCapInsets:]
+ */
 @property(nonatomic)                 CGRect            contentStretch NS_DEPRECATED_IOS(3_0,6_0) __TVOS_PROHIBITED; // animatable. default is unit rectangle {{0,0} {1,1}}. Now deprecated: please use -[UIImage resizableImageWithCapInsets:] to achieve the same effect.
 
+/**
+ 遮罩view
+ */
 @property(nullable, nonatomic,strong)          UIView           *maskView NS_AVAILABLE_IOS(8_0);
 
 /*
@@ -283,7 +449,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
  If your view subclass uses tintColor in its rendering, override -tintColorDidChange in order to refresh the rendering if the color changes.
  */
 /**
- 改变文字的颜色
+ 渲染颜色
  */
 @property(null_resettable, nonatomic, strong) UIColor *tintColor NS_AVAILABLE_IOS(7_0);
 
@@ -302,6 +468,9 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 
 @end
 
+
+#pragma mark ------------------
+#pragma mark -【UIViewAnimation 动画】
 @interface UIView(UIViewAnimation)
 
 + (void)beginAnimations:(nullable NSString *)animationID context:(nullable void *)context;  // additional context info passed to will start/did stop selectors. begin/commit can be nested
@@ -337,7 +506,11 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 
 @end
 
+
+#pragma mark ------------------
+#pragma mark -【动画 block】
 @interface UIView(UIViewAnimationWithBlocks)
+
 
 + (void)animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(4_0);
 
@@ -358,6 +531,9 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 
 @end
 
+
+#pragma mark ------------------
+#pragma mark -【核心架构动画】
 @interface UIView (UIViewKeyframeAnimations)
 
 + (void)animateKeyframesWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewKeyframeAnimationOptions)options animations:(void (^)(void))animations completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(7_0);
@@ -365,6 +541,9 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 
 @end
 
+
+#pragma mark ------------------
+#pragma mark -【手势识别】
 @interface UIView (UIViewGestureRecognizers)
 
 @property(nullable, nonatomic,copy) NSArray<__kindof UIGestureRecognizer *> *gestureRecognizers NS_AVAILABLE_IOS(3_2);
@@ -379,6 +558,9 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 
 @end
 
+
+#pragma mark ------------------
+#pragma mark -【动作效果】
 @interface UIView (UIViewMotionEffects)
 
 /*! Begins applying `effect` to the receiver. The effect's emitted keyPath/value pairs will be
@@ -411,6 +593,8 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
 /* A constraint is typically installed on the closest common ancestor of the views involved in the constraint.
  It is required that a constraint be installed on _a_ common ancestor of every view involved.  The numbers in a constraint are interpreted in the coordinate system of the view it is installed on.  A view is considered to be an ancestor of itself.
  */
+#pragma mark ------------------
+#pragma mark -【约束基于布局】
 @interface UIView (UIConstraintBasedLayoutInstallingConstraints)
 
 @property(nonatomic,readonly) NSArray<__kindof NSLayoutConstraint *> *constraints NS_AVAILABLE_IOS(6_0);
@@ -432,6 +616,8 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
  Please see the conceptual documentation for a discussion of these methods.
  */
 
+#pragma mark ------------------
+#pragma mark -【核心布局方法】
 @interface UIView (UIConstraintBasedLayoutCoreMethods)
 - (void)updateConstraintsIfNeeded NS_AVAILABLE_IOS(6_0); // Updates the constraints from the bottom up for the view hierarchy rooted at the receiver. UIWindow's implementation creates a layout engine if necessary first.
 - (void)updateConstraints NS_AVAILABLE_IOS(6_0) NS_REQUIRES_SUPER; // Override this to adjust your special constraints during a constraints update pass
@@ -439,8 +625,11 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
 - (void)setNeedsUpdateConstraints NS_AVAILABLE_IOS(6_0);
 @end
 
-// Compatibility and Adoption
 
+
+// Compatibility and Adoption
+#pragma mark ------------------
+#pragma mark -【布局兼容性】
 @interface UIView (UIConstraintBasedCompatibility)
 
 /* By default, the autoresizing mask on a view gives rise to constraints that fully determine
@@ -461,8 +650,11 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
 
 @end
 
-// Separation of Concerns
 
+
+#pragma mark ------------------
+#pragma mark -【布局图层】
+// Separation of Concerns
 @interface UIView (UIConstraintBasedLayoutLayering)
 
 /* Constraints do not actually relate the frames of the views, rather they relate the "alignment rects" of views.  This is the same as the frame unless overridden by a subclass of UIView.  Alignment rects are the same as the "layout rects" shown in Interface Builder 3.  Typically the alignment rect of a view is what the end user would think of as the bounding rect around a control, omitting ornamentation like shadows and engraving lines.  The edges of the alignment rect are what is interesting to align, not the shadows and such.
@@ -542,6 +734,8 @@ UIKIT_EXTERN const CGFloat UIViewNoIntrinsicMetric NS_AVAILABLE_IOS(6_0); // -1
 UIKIT_EXTERN const CGSize UILayoutFittingCompressedSize NS_AVAILABLE_IOS(6_0);
 UIKIT_EXTERN const CGSize UILayoutFittingExpandedSize NS_AVAILABLE_IOS(6_0);
 
+#pragma mark ------------------
+#pragma mark -【约束基于布局适应尺寸】
 @interface UIView (UIConstraintBasedLayoutFittingSize)
 /* The size fitting most closely to targetSize in which the receiver's subtree can be laid out while optimally satisfying the constraints. If you want the smallest possible size, pass UILayoutFittingCompressedSize; for the largest possible size, pass UILayoutFittingExpandedSize.
  Also see the comment for UILayoutPriorityFittingSizeLevel.
@@ -550,6 +744,9 @@ UIKIT_EXTERN const CGSize UILayoutFittingExpandedSize NS_AVAILABLE_IOS(6_0);
 - (CGSize)systemLayoutSizeFittingSize:(CGSize)targetSize withHorizontalFittingPriority:(UILayoutPriority)horizontalFittingPriority verticalFittingPriority:(UILayoutPriority)verticalFittingPriority NS_AVAILABLE_IOS(8_0);
 @end
 
+
+#pragma mark ------------------
+#pragma mark -【布局指南支持】
 @interface UIView (UILayoutGuideSupport)
 
 /* UILayoutGuide objects owned by the receiver.
@@ -569,18 +766,18 @@ UIKIT_EXTERN const CGSize UILayoutFittingExpandedSize NS_AVAILABLE_IOS(6_0);
 @interface UIView (UIViewLayoutConstraintCreation)
 /* Constraint creation conveniences. See NSLayoutAnchor.h for details.
  */
-@property(readonly, strong) NSLayoutXAxisAnchor *leadingAnchor NS_AVAILABLE_IOS(9_0);
-@property(readonly, strong) NSLayoutXAxisAnchor *trailingAnchor NS_AVAILABLE_IOS(9_0);
-@property(readonly, strong) NSLayoutXAxisAnchor *leftAnchor NS_AVAILABLE_IOS(9_0);
-@property(readonly, strong) NSLayoutXAxisAnchor *rightAnchor NS_AVAILABLE_IOS(9_0);
-@property(readonly, strong) NSLayoutYAxisAnchor *topAnchor NS_AVAILABLE_IOS(9_0);
-@property(readonly, strong) NSLayoutYAxisAnchor *bottomAnchor NS_AVAILABLE_IOS(9_0);
-@property(readonly, strong) NSLayoutDimension *widthAnchor NS_AVAILABLE_IOS(9_0);
-@property(readonly, strong) NSLayoutDimension *heightAnchor NS_AVAILABLE_IOS(9_0);
-@property(readonly, strong) NSLayoutXAxisAnchor *centerXAnchor NS_AVAILABLE_IOS(9_0);
-@property(readonly, strong) NSLayoutYAxisAnchor *centerYAnchor NS_AVAILABLE_IOS(9_0);
-@property(readonly, strong) NSLayoutYAxisAnchor *firstBaselineAnchor NS_AVAILABLE_IOS(9_0);
-@property(readonly, strong) NSLayoutYAxisAnchor *lastBaselineAnchor NS_AVAILABLE_IOS(9_0);
+@property(nonatomic,readonly,strong) NSLayoutXAxisAnchor *leadingAnchor NS_AVAILABLE_IOS(9_0);
+@property(nonatomic,readonly,strong) NSLayoutXAxisAnchor *trailingAnchor NS_AVAILABLE_IOS(9_0);
+@property(nonatomic,readonly,strong) NSLayoutXAxisAnchor *leftAnchor NS_AVAILABLE_IOS(9_0);
+@property(nonatomic,readonly,strong) NSLayoutXAxisAnchor *rightAnchor NS_AVAILABLE_IOS(9_0);
+@property(nonatomic,readonly,strong) NSLayoutYAxisAnchor *topAnchor NS_AVAILABLE_IOS(9_0);
+@property(nonatomic,readonly,strong) NSLayoutYAxisAnchor *bottomAnchor NS_AVAILABLE_IOS(9_0);
+@property(nonatomic,readonly,strong) NSLayoutDimension *widthAnchor NS_AVAILABLE_IOS(9_0);
+@property(nonatomic,readonly,strong) NSLayoutDimension *heightAnchor NS_AVAILABLE_IOS(9_0);
+@property(nonatomic,readonly,strong) NSLayoutXAxisAnchor *centerXAnchor NS_AVAILABLE_IOS(9_0);
+@property(nonatomic,readonly,strong) NSLayoutYAxisAnchor *centerYAnchor NS_AVAILABLE_IOS(9_0);
+@property(nonatomic,readonly,strong) NSLayoutYAxisAnchor *firstBaselineAnchor NS_AVAILABLE_IOS(9_0);
+@property(nonatomic,readonly,strong) NSLayoutYAxisAnchor *lastBaselineAnchor NS_AVAILABLE_IOS(9_0);
 
 @end
 
@@ -588,6 +785,8 @@ UIKIT_EXTERN const CGSize UILayoutFittingExpandedSize NS_AVAILABLE_IOS(6_0);
 
 /* Everything in this section should be used in debugging only, never in shipping code.  These methods may not exist in the future - no promises.
  */
+#pragma mark ------------------
+#pragma mark -【布局debug】
 @interface UIView (UIConstraintBasedLayoutDebugging)
 
 /* This returns a list of all the constraints that are affecting the current location of the receiver.  The constraints do not necessarily involve the receiver, they may affect the frame indirectly.
@@ -611,6 +810,8 @@ UIKIT_EXTERN const CGSize UILayoutFittingExpandedSize NS_AVAILABLE_IOS(6_0);
 
 /* Everything in this section should be used in debugging only, never in shipping code.  These methods may not exist in the future - no promises.
  */
+#pragma mark ------------------
+#pragma mark -【状态复位】
 @interface UILayoutGuide (UIConstraintBasedLayoutDebugging)
 
 /* This returns a list of all the constraints that are affecting the current location of the receiver.  The constraints do not necessarily involve the receiver, they may affect the frame indirectly.
@@ -654,6 +855,11 @@ UIKIT_EXTERN const CGSize UILayoutFittingExpandedSize NS_AVAILABLE_IOS(6_0);
 - (nullable UIView *)resizableSnapshotViewFromRect:(CGRect)rect afterScreenUpdates:(BOOL)afterUpdates withCapInsets:(UIEdgeInsets)capInsets NS_AVAILABLE_IOS(7_0);  // Resizable snapshots will default to stretching the center
 // Use this method to render a snapshot of the view hierarchy into the current context. Returns NO if the snapshot is missing image data, YES if the snapshot is complete. Calling this method from layoutSubviews while the current transaction is committing will capture what is currently displayed regardless if afterUpdates is YES.
 - (BOOL)drawViewHierarchyInRect:(CGRect)rect afterScreenUpdates:(BOOL)afterUpdates NS_AVAILABLE_IOS(7_0);
+
+
+
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+#NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+
+

@@ -38,6 +38,8 @@
     return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
 }
 
+
+
 /**
  *  @brief 根据字数的不同,返回UILabel中的text文字需要占用多少Size
  */

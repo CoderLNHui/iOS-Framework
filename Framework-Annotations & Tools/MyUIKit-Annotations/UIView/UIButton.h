@@ -1,14 +1,14 @@
 /*
- * UIButton.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  UIButton.h
+ * Framework:  UIKit
+ * Author:  白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2005-2016
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * http://www.jianshu.com/u/fd745d76c816
+ * JaneBook: http://www.jianshu.com/u/fd745d76c816
  *
  * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
@@ -25,15 +25,15 @@ NS_ASSUME_NONNULL_BEGIN
 @class UIImage, UIFont, UIColor, UIImageView, UILabel;
 
 typedef NS_ENUM(NSInteger, UIButtonType) {
-    UIButtonTypeCustom = 0,                         // no button type
-    UIButtonTypeSystem NS_ENUM_AVAILABLE_IOS(7_0),  // standard system button
+    UIButtonTypeCustom = 0, // 无样式                        // no button type
+    UIButtonTypeSystem NS_ENUM_AVAILABLE_IOS(7_0),// 设置为系统样式  // standard system button
     
-    UIButtonTypeDetailDisclosure,
-    UIButtonTypeInfoLight,
-    UIButtonTypeInfoDark,
-    UIButtonTypeContactAdd,
+    UIButtonTypeDetailDisclosure,// 详细信息样式 (被动加上一个感叹号)
+    UIButtonTypeInfoLight,//同上
+    UIButtonTypeInfoDark,//同上
+    UIButtonTypeContactAdd,//显示加号
     
-    UIButtonTypeRoundedRect = UIButtonTypeSystem,   // Deprecated, use UIButtonTypeSystem instead
+    UIButtonTypeRoundedRect = UIButtonTypeSystem,  //（被弃用的）请使用UIButtonTypeSystem样式 // Deprecated, use UIButtonTypeSystem instead
 };
 
 
@@ -54,7 +54,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIButton : UIControl <NSCoding>
  */
 @property(nonatomic)          UIEdgeInsets titleEdgeInsets;                // default is UIEdgeInsetsZero
 /**
- 【按钮  】
+ 【按钮 设置高亮时是否改变阴影的BOOL值】
  */
 @property(nonatomic)          BOOL         reversesTitleShadowWhenHighlighted; // default is NO. if YES, shadow reverses to shift between engrave and emboss appearance
 /**
@@ -62,7 +62,13 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIButton : UIControl <NSCoding>
  */
 @property(nonatomic)          UIEdgeInsets imageEdgeInsets;                // default is UIEdgeInsetsZero
 
+/**
+ 【按下button时，是否产生变化】
+ */
 @property(nonatomic)          BOOL         adjustsImageWhenHighlighted;    // default is YES. if YES, image is drawn darker when highlighted(pressed)
+/**
+ 【设置button不可用时是否产生变化】
+ */
 @property(nonatomic)          BOOL         adjustsImageWhenDisabled;       // default is YES. if YES, image is drawn lighter when disabled
 
 /**
@@ -108,7 +114,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIButton : UIControl <NSCoding>
 - (void)setBackgroundImage:(nullable UIImage *)image forState:(UIControlState)state UI_APPEARANCE_SELECTOR; // default is nil
 
 /**
- 设置按钮某种状态下【  】
+ 【设置带有属性的title】
  */
 - (void)setAttributedTitle:(nullable NSAttributedString *)title forState:(UIControlState)state NS_AVAILABLE_IOS(6_0); // default is nil. title is assumed to be single line
 
@@ -192,6 +198,14 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIButton : UIControl <NSCoding>
 // on the title and image size and padding and then adjusted based on the control content alignment. there are no draw methods since the contents
 // are rendered in separate subviews (UIImageView, UILabel)
 
+/**
+ backgroundRectForBounds: 自定义按钮时，可以更改【背景图片】在按钮当中的位置
+ contentRectForBounds:    自定义按钮时，可以更改【整个内容】在按钮当中的位置
+ titleRectForContentRect: 自定义按钮时，可以更改【Label】在按钮当中的位置
+ imageRectForContentRect: 自定义按钮时，可以更改【图片】在按钮当中的位置
+ 
+ ![Snip20161017_6.png](http://upload-images.jianshu.io/upload_images/2230763-3ab7c0144722ae58.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+ */
 - (CGRect)backgroundRectForBounds:(CGRect)bounds;
 - (CGRect)contentRectForBounds:(CGRect)bounds;
 - (CGRect)titleRectForContentRect:(CGRect)contentRect;

@@ -25,6 +25,12 @@
 @end
 
 
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
+
 @interface UIButton (Badge)
 
 @property (strong, nonatomic) UILabel *badge;
@@ -62,6 +68,14 @@
 @end
 
 
+
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
 @interface UIButton (Block)
 
 typedef void (^TouchedButtonBlock)(void);
@@ -79,6 +93,14 @@ typedef void (^TouchedButtonBlock)(void);
 
 @end
 
+
+
+
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
 
 
 @interface UIButton (CountDown)
@@ -105,6 +127,17 @@ typedef void (^TouchedButtonBlock)(void);
 - (void)hideIndicator;
 
 @end
+
+
+
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
+
 
 
 @interface UIButton (Create)

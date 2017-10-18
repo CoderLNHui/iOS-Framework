@@ -25,6 +25,11 @@
     self.attributedText = attributedString;
 }
 
+
+
+
+
+
 - (void)setRowSpace:(CGFloat)rowSpace
 {
     self.numberOfLines = 0;

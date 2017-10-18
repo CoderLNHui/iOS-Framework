@@ -1,7 +1,7 @@
 /*
- * NSAttributedString.m
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  NSAttributedString.m
+ * Framework:  UIKit
+ * Author: 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2011-2015
  *
@@ -11,137 +11,92 @@
  * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
-//--------------------------- 【Code】 ------------------------------//
+//--------------------------- 【属性】 ------------------------------//
 //
-
-Code1
-
-NSString *str = @"人生若只如初见，何事悲风秋画扇。\n等闲变却故人心，却道故人心易变。\n骊山语罢清宵半，泪雨霖铃终不怨。\n何如薄幸锦衣郎，比翼连枝当日愿。";
-
-// 创建 NSMutableAttributedString
-NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:str];
-
-// 设置字体和设置字体的范围
-[attrStr addAttribute:NSFontAttributeName
-                value:[UIFont systemFontOfSize:30.0f]
-                range:NSMakeRange(0, 3)];
-// 添加文字颜色
-[attrStr addAttribute:NSForegroundColorAttributeName
-                value:[UIColor redColor]
-                range:NSMakeRange(17, 7)];
-// 添加文字背景颜色
-[attrStr addAttribute:NSBackgroundColorAttributeName
-                value:[UIColor orangeColor]
-                range:NSMakeRange(17, 7)];
-// 添加下划线
-[attrStr addAttribute:NSUnderlineStyleAttributeName
-                value:[NSNumber numberWithInteger:NSUnderlineStyleSingle]
-                range:NSMakeRange(8, 7)];
-
-UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(60, 100, 200, 0)];
-label.backgroundColor = [UIColor greenColor];
-// 自动换行
-label.numberOfLines = 0;
-// 设置label的富文本
-label.attributedText = attrStr;
-// label高度自适应
-[label sizeToFit];
-[self.view addSubview:label];
-
-
-
-
-
-
-
-Code2
-
-//创建属性字典
-NSDictionary *attrDict = @{ NSFontAttributeName: [UIFont fontWithName: @"Zapfino" size: 15],
-                            NSForegroundColorAttributeName: [UIColor blueColor] };
-//创建 NSAttributedString 并赋值
-_label.attributedText = [[NSAttributedString alloc] initWithString: originStr attributes: attrDict]
-
-
-
-//===============方式2=======================
-UIFont *fond = [UIFont systemFontOfSize:20];
-UIColor *color = [UIColor redColor];
-
-NSMutableDictionary *attributes = [NSMutableDictionary new];
-[attributes setObject:fond forKey:NSFontAttributeName];
-[attributes setObject:color forKey:NSForegroundColorAttributeName];
-return [[NSAttributedString alloc]initWithString:text attributes:attributes];
-
-
-
-
-
-
-
-
-
-
-
-//--------------------------- 【NSMutableParagraphStyle类使用范例】 ------------------------------//
-//
-
-1.
-NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-paragraphStyle.lineSpacing = 10;// 字体的行间距
-paragraphStyle.firstLineHeadIndent = 20.0f;//首行缩进
-paragraphStyle.alignment = NSTextAlignmentJustified;//（两端对齐的）文本对齐方式：（左，中，右，两端对齐，自然）
-paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;//结尾部分的内容以……方式省略 ( "...wxyz" ,"abcd..." ,"ab...yz")
-paragraphStyle.headIndent = 20;//整体缩进(首行除外)
-paragraphStyle.tailIndent = 20;//尾部缩进
-paragraphStyle.minimumLineHeight = 10;//最低行高
-paragraphStyle.maximumLineHeight = 20;//最大行高
-paragraphStyle.paragraphSpacing = 15;//段与段之间的间距
-paragraphStyle.paragraphSpacingBefore = 22.0f;//段首行空白空间/* Distance between the bottom of the previous paragraph (or the end of its paragraphSpacing, if any) and the top of this paragraph. */paragraphStyle.baseWritingDirection = NSWritingDirectionLeftToRight;//从左到右的书写方向（一共➡️⬇️⬅️三种）
-paragraphStyle.lineHeightMultiple = 15;/* Natural line height is multiplied by this factor (if positive) before being constrained by minimum and maximum line height. */
-paragraphStyle.hyphenationFactor = 1;//连字属性 在iOS，唯一支持的值分别为0和1
-
-
-
-2.
-NSShadowAttributeName对应的是NSShadow对象,单一使用不会有任何效果,需要配合着NSVerticalGlyphFormAttributeName(文字排版方向)、NSObliquenessAttributeName(文字倾斜)、NSExpansionAttributeName(文字扁平化)配合使用,NSShadow相关属性设置如下所示.
-
-NSShadow *shadow = [[NSShadow alloc]init];
-shadow.shadowBlurRadius = 5;//模糊度
-shadow.shadowColor = [UIColor whiteColor];//阴影颜色
-shadow.shadowOffset = CGSizeMake(1, 5);//阴影的大小
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+NSFontAttributeName               字号 UIFont 默认12
+NSParagraphStyleAttributeName     段落样式  NSParagraphStyle
+NSForegroundColorAttributeName    前景色   UIColor
+NSBackgroundColorAttributeName    背景色   UIColor
+NSObliquenessAttributeName        字体倾斜     NSNumber
+NSExpansionAttributeName          字体加粗     NSNumber  比例 0就是不变 1增加一倍
+NSKernAttributeName               字间距   CGFloat
+NSUnderlineStyleAttributeName     下划线     1或0
+NSUnderlineColorAttributeName     下划线颜色
+NSStrikethroughStyleAttributeName 删除线   1或0
+NSStrikethroughColorAttributeName 某种颜色
+NSStrokeColorAttributeName        空心字颜色
+NSStrokeWidthAttributeName        空心字
+NSLigatureAttributeName           连笔字  1或0  没看出效果
+NSShadowAttributeName             阴影    NSShawdow
+NSTextEffectAttributeName         设置文本特殊效果，取值为 NSString 对象，目前只有凸版印刷效果可用：
+NSAttachmentAttributeName         NSTextAttachment  设置文本附件,常用插入图片
+NSLinkAttributeName               链接  NSURL (preferred) or NSString
+NSBaselineOffsetAttributeName     基准线偏移   NSNumber
+NSWritingDirectionAttributeName   书写方向  @[@(NSWritingDirectionRightToLeft | NSWritingDirectionOverride)] 我的/的我
+NSVerticalGlyphFormAttributeName  水平或者竖直文本  1竖直 0水平 在iOS没卵用，不支持竖版
+*/
+
+
+- (void)code3
+{
+    //--------------------------- 【富文本：段落】 ------------------------------//
+    // 其他属性请自行查阅NSMutableParagraphStyle头文件WechatPublic-Codeidea
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    // 行间距
+    paragraphStyle.lineSpacing = 10.f;
+    // 段落间距
+    paragraphStyle.paragraphSpacing = 20.f;
+    // 首行缩进
+    paragraphStyle.firstLineHeadIndent = 40.f;
+    // 整体缩进
+    paragraphStyle.headIndent = 15.f;
+    // 对齐方式
+    paragraphStyle.alignment = NSTextAlignmentLeft;
+    
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:@"这是一个富文本字符串。这是一个富文本字符串。这是一个富文本字符串。这是一个富文本字符串。\n这是一个富文本字符串？这是一个富文本字符串？这是一个富文本字符串？\n这是一个富文本字符串！这是一个富文本字符串！这是一个富文本字符串！"];
+    [attrStr addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, attrStr.length)];
+    
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 400)];
+    label.center = self.view.center;
+    label.backgroundColor = [UIColor grayColor];
+    label.numberOfLines = 0;
+    // 设置label的富文本
+    label.attributedText = attrStr;
+    [self.view addSubview:label];
+}
+
+
+
+
+
+
+- (void)code4
+{
+    //--------------------------- 【富文本：图文混排】 ------------------------------//
+    // WechatPublic-Codeidea
+    NSMutableAttributedString * attrStr = [[NSMutableAttributedString alloc] initWithString:@"这是一个富文本字符串！"];
+    
+    // 创建一个文字附件对象
+    NSTextAttachment *textAttachment = [[NSTextAttachment alloc] init];
+    textAttachment.image = [UIImage imageNamed:@"1.png"];  //设置图片源
+    textAttachment.bounds = CGRectMake(0, -6, 30, 30);  //设置图片位置和大小
+    // 将文字附件转换成属性字符串
+    NSAttributedString *attachmentAttrStr = [NSAttributedString attributedStringWithAttachment:textAttachment];
+    // 将转换成属性字符串插入到目标字符串
+    [attrStr insertAttributedString:attachmentAttrStr atIndex:8];
+    
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 400)];
+    label.center = self.view.center;
+    label.backgroundColor = [UIColor grayColor];
+    label.numberOfLines = 0;
+    // 设置label的富文本
+    label.attributedText = attrStr;
+    [self.view addSubview:label];
+}
 
 
 

@@ -1,7 +1,7 @@
 /*
- * NSAttributedString.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  NSAttributedString.h
+ * Framework:  UIKit
+ * Author: 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2011-2015
  *

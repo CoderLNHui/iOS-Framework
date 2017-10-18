@@ -17,6 +17,9 @@
 @end
 
 
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
 @implementation UIButton (BackgroundColor)
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state
@@ -43,6 +46,10 @@
 
 
 
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
 
 #import <objc/runtime.h>
 NSString const *UIButton_badgeKey = @"UIButton_badgeKey";
@@ -321,6 +328,17 @@ NSString const *UIButton_badgeValueKey = @"UIButton_badgeValueKey";
 
 
 
+
+
+
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
+
 #import <objc/runtime.h>
 
 @implementation UIButton (Block)
@@ -341,6 +359,21 @@ NSString const *UIButton_badgeValueKey = @"UIButton_badgeValueKey";
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
 
 
 
@@ -372,6 +405,17 @@ NSString const *UIButton_badgeValueKey = @"UIButton_badgeValueKey";
 }
 
 @end
+
+
+
+
+
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
 
 
 
@@ -417,6 +461,22 @@ NSString const *UIButton_badgeValueKey = @"UIButton_badgeValueKey";
 
 
 
+
+
+
+
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
+
+
+
+
+
 #import <objc/runtime.h>
 
 static NSString *const IndicatorViewKey = @"indicatorView";
@@ -451,6 +511,23 @@ static NSString *const ButtonTextObjectKey = @"buttonTextObject";
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
+
+
 
 
 @implementation UIButton (Create)

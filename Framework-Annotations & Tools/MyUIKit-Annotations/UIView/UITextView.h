@@ -1,14 +1,14 @@
 /*
- * UITextView.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  UITextView.h
+ * Framework:  UIKit
+ * Author: 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2007-2016
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * http://www.jianshu.com/u/fd745d76c816
+ * JaneBook: http://www.jianshu.com/u/fd745d76c816
  *
  * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
@@ -98,4 +98,4 @@ UIKIT_EXTERN NSNotificationName const UITextViewTextDidBeginEditingNotification;
 UIKIT_EXTERN NSNotificationName const UITextViewTextDidChangeNotification;
 UIKIT_EXTERN NSNotificationName const UITextViewTextDidEndEditingNotification;
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+#NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END

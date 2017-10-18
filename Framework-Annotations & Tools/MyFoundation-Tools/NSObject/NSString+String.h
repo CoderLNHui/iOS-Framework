@@ -93,9 +93,12 @@
 - (instancetype)tmpDir;
 
 
-//--------------------------- <#我是分割线#> ------------------------------//
+
 //--------------------------- <#我是分割线#> ------------------------------//
 //
+
+
+
 @interface NSString (Hash)
 
 @property (readonly) NSString *md5String;
@@ -217,7 +220,10 @@
 
 
 
-//https://github.com/damienromito/NSString-Matcher
+//--------------------------- <#我是分割线#> ------------------------------//
+// https://github.com/damienromito/NSString-Matcher
+
+
 @interface NSString(Matcher)
 
 - (NSArray *)matchWithRegex:(NSString *)regex;
@@ -304,7 +310,12 @@
 
 
 
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
 // https://github.com/croath/NSString-Pinyin
+
+
 @interface NSString (Pinyin)
 
 - (NSString*)pinyinWithPhoneticSymbol;
