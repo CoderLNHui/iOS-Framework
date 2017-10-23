@@ -216,7 +216,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITextField : UIControl <UITextInput, NSC
 @property (nullable, readwrite, strong) UIView *inputAccessoryView;
 
 /**
- 【这个属性设置是否允许再次编辑时在内容中间插入内容】
+ 【是否显示删除按钮】
  */
 @property(nonatomic) BOOL clearsOnInsertion NS_AVAILABLE_IOS(6_0); // defaults to NO. if YES, the selection UI is hidden, and inserting text will replace the contents of the field. changing the selection will automatically set this to NO.
 
@@ -262,7 +262,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITextField : UIControl <UITextInput, NSC
 - (void)textFieldDidEndEditing:(UITextField *)textField;             // may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
 
 /**
- 【输入字符时调用的方法】
+ 【结束编辑调用的方法】
  */
 - (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason NS_AVAILABLE_IOS(10_0); // if implemented, called in place of textFieldDidEndEditing:
 
@@ -272,7 +272,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITextField : UIControl <UITextInput, NSC
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;   // return NO to not change text
 
 /**
- 【点击清除按钮时调用的函数，返回YES则可以清除，点击NO则不能清除】
+ 【点击清除按钮时调用的函数，返回YES则可以清除，NO则不能清除】
  */
 - (BOOL)textFieldShouldClear:(UITextField *)textField;               // called when clear button pressed. return NO to ignore (no notifications)
 

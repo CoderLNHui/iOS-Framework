@@ -27,7 +27,7 @@
 /**
  *  计算字符串宽度(指当该字符串放在view时的自适应宽度)
  */
-- (CGRect)stringWidthRectWithSize:(CGSize)size fontOfSize:(CGFloat)fontOfSize isBold:(BOOL)isBold{
+- (CGRect)ln_stringWidthRectWithSize:(CGSize)size fontOfSize:(CGFloat)fontOfSize isBold:(BOOL)isBold{
     NSDictionary * attributes;
     if (isBold) {
         attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:fontOfSize]};
@@ -43,7 +43,7 @@
 /**
  *  @brief 根据字数的不同,返回UILabel中的text文字需要占用多少Size
  */
-- (CGSize)textSizeWithContentSize:(CGSize)size font:(UIFont *)font {
+- (CGSize)ln_textSizeWithContentSize:(CGSize)size font:(UIFont *)font {
     return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : font} context:nil].size;
 }
 
@@ -51,7 +51,7 @@
 /**
  *  @brief  根据文本字数/文本宽度约束/文本字体 求得text的Size
  */
-- (CGFloat)textHeightWithContentWidth:(CGFloat)width font:(UIFont *)font {
+- (CGFloat)ln_textHeightWithContentWidth:(CGFloat)width font:(UIFont *)font {
     CGSize size = CGSizeMake(width, MAXFLOAT);
     return [self textSizeWithContentSize:size font:font].height;
 }
@@ -60,10 +60,46 @@
 /**
  *  @brief  根据文本字数/文本宽度约束/文本字体 求得text的Size
  */
-- (CGFloat)textWidthWithContentHeight:(CGFloat)height font:(UIFont *)font {
+- (CGFloat)ln_textWidthWithContentHeight:(CGFloat)height font:(UIFont *)font {
     CGSize size = CGSizeMake(MAXFLOAT, height);
     return [self textSizeWithContentSize:size font:font].width;
 }
+
+
+
+
+
+/**
+ *  根据一定宽度和字体计算高度
+ */
+- (CGSize)ln_stringHeightWithMaxWidth:(CGFloat)maxWidth andFont:(UIFont*)font  {
+    
+    return  [self boundingRectWithSize:CGSizeMake(maxWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font} context:nil].size;
+}
+
+
+
+
+/**
+ *  根据一定高度和字体计算宽度
+ */
+- (CGSize)ln_stringWidthWithMaxHeight:(CGFloat)maxHeight andFont:(UIFont*)font {
+    
+    return  [self boundingRectWithSize:CGSizeMake(MAXFLOAT, maxHeight) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font} context:nil].size;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

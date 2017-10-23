@@ -1,13 +1,14 @@
 /*
- * NSString.h
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  NSString.h
+ * Framework:  Foundation
+ * Author: 白开水ln（https://github.com/CustomPBWaters）
  *
- * (c) 1994-2016
+ * (c) 1994-2017
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * http://www.jianshu.com/u/fd745d76c816
+ * JaneBook: http://www.jianshu.com/u/fd745d76c816
  *
  * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
@@ -122,13 +123,13 @@ NS_ENUM(NSStringEncoding) {
 // 截取指定位置之后的字符串
 - (NSString *)substringFromIndex:(NSUInteger)from;
 
-//从0下标开始截取到指定位置的字符串
+// 从0下标开始截取到指定位置的字符串
 - (NSString *)substringToIndex:(NSUInteger)to;
 
-//截取指定范围的字符串
+// 截取指定范围的字符串
 - (NSString *)substringWithRange:(NSRange)range;                // Use with rangeOfComposedCharacterSequencesForRange: to avoid breaking up character sequences
 
-//截取字符串指定范围的字符
+// 截取字符串指定范围的字符
 - (void)getCharacters:(unichar *)buffer range:(NSRange)range;   // Use with rangeOfComposedCharacterSequencesForRange: to avoid breaking up character sequences
 
 

@@ -26,7 +26,7 @@
  *
  *  @return 返回CGRect
  */
-- (CGRect)stringWidthRectWithSize:(CGSize)size fontOfSize:(CGFloat)font isBold:(BOOL)isBold;
+- (CGRect)ln_stringWidthRectWithSize:(CGSize)size fontOfSize:(CGFloat)font isBold:(BOOL)isBold;
 
 
 /**
@@ -35,7 +35,7 @@
  *  @param font 文本字体
  *  @return 文本的实际尺寸
  */
-- (CGSize)textSizeWithContentSize:(CGSize)size font:(UIFont *)font;
+- (CGSize)ln_textSizeWithContentSize:(CGSize)size font:(UIFont *)font;
 
 /**
  *  @brief  根据文本字数/文本宽度约束/文本字体 求得text的Size
@@ -43,7 +43,7 @@
  *  @param font  文本字体
  *  @return 文本的实际高度
  */
-- (CGFloat)textHeightWithContentWidth:(CGFloat)width font:(UIFont *)font;
+- (CGFloat)ln_textHeightWithContentWidth:(CGFloat)width font:(UIFont *)font;
 
 /**
  *  @brief  根据文本字数/文本宽度约束/文本字体 求得text的Size
@@ -51,7 +51,63 @@
  *  @param font  文本字体
  *  @return 文本的实际长度
  */
-- (CGFloat)textWidthWithContentHeight:(CGFloat)height font:(UIFont *)font;
+- (CGFloat)ln_textWidthWithContentHeight:(CGFloat)height font:(UIFont *)font;
+
+
+
+
+
+
+
+/**
+ *  根据一定宽度和字体计算高度
+ *
+ *  @param maxWidth 最大宽度
+ *  @param font  字体
+ *
+ *  @return 返回计算好高度的size
+ */
+- (CGSize)ln_stringHeightWithMaxWidth:(CGFloat)maxWidth andFont:(UIFont*)font ;
+
+
+/**
+ *  根据一定高度和字体计算宽度
+ *
+ *  @param maxHeight 最大高度
+ *  @param font      字体
+ *
+ *  @return 返回计算宽度的size
+ */
+- (CGSize)ln_stringWidthWithMaxHeight:(CGFloat)maxHeight andFont:(UIFont*)font;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
