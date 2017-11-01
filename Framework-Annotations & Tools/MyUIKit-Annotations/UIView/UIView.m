@@ -35,14 +35,14 @@ UIView (UIViewKeyframeAnimations)
 //
 
 1.
-#warning【待注解.m】
+#warning【File: UIView.h】
 - (void)setNeedsLayout;
 
 
 
 
 2.
-#warning【待注解.m】
+#warning【File: UIView.h】
 - (void)layoutIfNeeded;
 
 
@@ -51,10 +51,10 @@ UIView (UIViewKeyframeAnimations)
 
 
 3.
-#warning【待注解.m】
+#warning【File: UIView.h】
 - (void)layoutSubviews;
 /**
-【layoutSubviews: 触发调用】
+【layoutSubviews: 一下情况会触发调用】
  init 初始化不会触发 layoutSubviews
  addSubview 会触发 layoutSubviews
  设置 view的Frame 会触发 layoutSubviews，当然前提是frame的值设置前后发生了变化

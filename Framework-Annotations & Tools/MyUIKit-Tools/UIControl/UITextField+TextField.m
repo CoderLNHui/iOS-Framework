@@ -1,20 +1,20 @@
 /*
- * UITextField+Placeholder.m
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  UITextField+TextField.m
+ * Author:  白开水ln（https://github.com/CustomPBWaters）
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * http://www.jianshu.com/u/fd745d76c816
+ * JaneBook:  http://www.jianshu.com/u/fd745d76c816
  *
  * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ *
+ *【Runtime 交换方法 -> textField.placeholderColor】
  */
 
+#import "UITextField+TextField.h"
 
-#import "UITextField+Placeholder.h"
-#import <objc/message.h>
-
-@implementation UITextField (Placeholder)
+@implementation UITextField (TextField)
 
 /*
  *【设置占位文字的颜色】
@@ -22,41 +22,45 @@
 - (void)setPlaceholderColor:(UIColor *)placeholderColor
 {
     
-    // 给成员属性赋值 runtime给系统的类添加成员属性
-    // 添加成员属性
+    // 设置 runtime给系统的类【添加成员属性】,保存属性
     objc_setAssociatedObject(self, @"placeholderColor", placeholderColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     // 获取占位文字label控件
     UILabel *placeholderLabel = [self valueForKey:@"placeholderLabel"];
-    
+
     // 设置占位文字颜色
     placeholderLabel.textColor = placeholderColor;
 }
 
 - (UIColor *)placeholderColor
 {
+    //【获取类成员属性】
     return objc_getAssociatedObject(self, @"placeholderColor");
 }
 
 
-// 设置占位文字 和 文字颜色
-- (void)ln_setPlaceholder:(NSString *)placeholder {
-    [self ln_setPlaceholder:placeholder];
+/*
+ *【设置占位文字 和 文字颜色】
+ */
+- (void)setLN_Placeholder:(NSString *)placeholder {
+    [self setLN_Placeholder:placeholder];
     
     self.placeholderColor = self.placeholderColor;
 }
 
 
-// runtime 交换方法
+/*
+ *【runtime 交换方法(一次)】
+ */
 + (void)load
 {
-    // setPlaceholder
+    //【class_getInstanceMethod 获取方法】
     Method setPlaceholderMethod = class_getInstanceMethod(self, @selector(setPlaceholder:));
-    Method ln_setPlaceholderMethod = class_getInstanceMethod(self, @selector(ln_setPlaceholder:));
+    Method setLN_PlaceholderMethod = class_getInstanceMethod(self, @selector(setLN_Placeholder:));
     
-    method_exchangeImplementations(setPlaceholderMethod, ln_setPlaceholderMethod);
+    //【交换方法】
+    method_exchangeImplementations(setPlaceholderMethod, setLN_PlaceholderMethod);
 }
 
 
 @end
-#START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END

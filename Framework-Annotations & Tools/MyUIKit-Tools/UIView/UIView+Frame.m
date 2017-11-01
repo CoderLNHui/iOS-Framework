@@ -17,6 +17,9 @@
 
 //--------------------------- 【UIView扩展属性】 ------------------------------//
 //
+
+
+
 - (void)setLn_width:(CGFloat)ln_width
 {
     CGRect rect = self.frame;
@@ -41,6 +44,9 @@
     return self.frame.size.height;
 }
 
+//---
+
+
 - (void)setLn_x:(CGFloat)ln_x
 {
     CGRect rect = self.frame;
@@ -55,7 +61,6 @@
     self.frame = rect;
 }
 
-
 - (CGFloat)ln_x
 {
     return self.frame.origin.x;
@@ -65,6 +70,39 @@
 {
     return self.frame.origin.y;
 }
+
+//---
+
+
+
+- (void)setLn_size:(CGSize)ln_size
+{
+    CGRect rect = self.frame;
+    rect.size = ln_size;
+    self.frame = rect;
+}
+
+
+- (void)setLn_origin:(CGPoint)ln_origin
+{
+    CGRect rect = self.frame;
+    rect.origin = ln_origin;
+    self.frame = rect;
+}
+
+
+- (CGSize)ln_size
+{
+    return self.frame.size;
+}
+
+- (CGPoint)ln_origin
+{
+    return self.frame.origin;
+}
+
+//---
+
 
 
 -(void)setLn_centerX:(CGFloat)ln_centerX {
@@ -87,6 +125,46 @@
     return self.center.y;
 }
 
+//---
+
+
+- (void)setLn_maxX:(CGFloat)ln_maxX
+{
+    self.ln_x = ln_maxX - self.ln_width;
+}
+
+- (void)setLn_maxY:(CGFloat)ln_maxY
+{
+    self.ln_y = ln_maxY - self.ln_height;
+}
+
+
+
+
+- (CGFloat)ln_maxX
+{
+    return CGRectGetMaxX(self.frame);
+}
+
+- (CGFloat)ln_minX
+{
+    return CGRectGetMaxX(self.frame);
+}
+
+
+
+- (CGFloat)ln_maxY
+{
+    return CGRectGetMaxY(self.frame);
+}
+
+- (CGFloat)ln_minY
+{
+    return CGRectGetMinY(self.frame);
+}
+
+
+
 
 /*
  *【快速加载View对应的Xib】
@@ -95,6 +173,7 @@
 {
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil].firstObject;
 }
+
 
 
 /**
@@ -111,9 +190,19 @@
 @end
 
 
-//--------------------------- <#我是分割线#> ------------------------------//
+
+
+
+
+
+
 //--------------------------- <#我是分割线#> ------------------------------//
 //
+
+
+
+
+
 
 
 @implementation UIView (Frame)
@@ -283,6 +372,25 @@
 
 
 
+
+
+
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
+
+
+
+
+
+
+
+
+
 #import <objc/runtime.h>
 
 static char kActionHandlerTapBlockKey;
@@ -341,6 +449,10 @@ static char kActionHandlerLongPressGestureKey;
 }
 
 @end
+
+
+
+
 
 
 @implementation UIView (Find)
@@ -452,6 +564,7 @@ static char kActionHandlerLongPressGestureKey;
 
 
 
+
 @implementation UIView (IBnspectable)
 
 - (void)setCornerRadius:(NSInteger)cornerRadius
@@ -526,6 +639,18 @@ static char kActionHandlerLongPressGestureKey;
 
 
 
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
+
+
+
+
+
 @implementation UIView (Nib)
 
 + (instancetype)loadViewFromNib
@@ -562,8 +687,22 @@ static char kActionHandlerLongPressGestureKey;
 
 
 
-@implementation UIView (ViewController)
 
+
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
+
+
+
+@implementation UIView (ViewController)
+/**
+ 获取view对象的所在ViewController
+ */
 + (UIViewController *)viewControllerOfView:(UIView *)viewObj {
     for (UIView *next = [viewObj superview]; next; next =
          next.superview) {

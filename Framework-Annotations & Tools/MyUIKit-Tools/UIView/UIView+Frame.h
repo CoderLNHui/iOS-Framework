@@ -23,6 +23,12 @@
 @property (nonatomic, assign) CGFloat ln_height;
 @property (nonatomic, assign) CGFloat ln_centerX;
 @property (nonatomic, assign) CGFloat ln_centerY;
+@property (nonatomic, assign) CGSize  ln_size;
+@property (nonatomic, assign) CGPoint ln_origin;
+@property (nonatomic, assign) CGFloat ln_maxX;
+@property (nonatomic, assign) CGFloat ln_maxY;
+@property (nonatomic, assign) CGFloat ln_minX;
+@property (nonatomic, assign) CGFloat ln_minY;
 
 
 /*
@@ -43,8 +49,11 @@
 
 
 //--------------------------- <#我是分割线#> ------------------------------//
-//--------------------------- <#我是分割线#> ------------------------------//
 //
+
+
+
+
 
 @interface UIView (Frame)
 
@@ -68,6 +77,18 @@
 @property (nonatomic,assign) CGFloat right; /**< 最大x值 */
 
 @end
+
+
+
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
+
+
 
 
 
@@ -116,6 +137,17 @@ typedef void (^LongPressActionBlock)(UILongPressGestureRecognizer *gestureRecogi
 
 
 
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
+
+
+
+
 #pragma mark - View的XIB可视化扩展类
 IB_DESIGNABLE
 /** View的XIB可视化扩展类> */
@@ -148,6 +180,19 @@ IB_DESIGNABLE
 
 
 
+
+
+
+
+//--------------------------- <#我是分割线#> ------------------------------//
+//
+
+
+
+
+
+
+
 @interface UIView (ViewController)
 
 /**
@@ -161,3 +206,9 @@ IB_DESIGNABLE
 
 @end
 #START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+
+
+
+
+
+

@@ -150,7 +150,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITextView : UIScrollView <UITextInput, U
 
 
 /**
- 【textView的 页边距(文本居边框上左下右的间隙)：UIEdgeInsetsZero 和 两边空白间隙】
+ 【textView的 页边距8(文本居边框上左下右的间隙)：UIEdgeInsetsZero 和 两边空白间隙5】
   textView.textContainerInset (CGFloat top 8, left 0, bottom 8, right 0;)
   textView.textContainer.lineFragmentPadding (5)
  
