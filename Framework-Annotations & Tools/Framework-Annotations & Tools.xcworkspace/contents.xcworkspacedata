@@ -411,9 +411,6 @@
          <FileRef
             location = "group:UITapGestureRecognizer.h">
          </FileRef>
-         <FileRef
-            location = "group:&#x6587;&#x4ef6;.h">
-         </FileRef>
       </Group>
       <Group
          location = "group:UIView"
@@ -583,9 +580,6 @@
          </FileRef>
          <FileRef
             location = "group:&#x6587;&#x4ef6;.h">
-         </FileRef>
-         <FileRef
-            location = "group:&#x6587;&#x4ef6;&#x7684;&#x526f;&#x672c;.h">
          </FileRef>
       </Group>
    </Group>
@@ -1477,6 +1471,12 @@
          location = "group:UIControl"
          name = "UIControl">
          <FileRef
+            location = "group:UIButton+Button.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIButton+Button.m">
+         </FileRef>
+         <FileRef
             location = "group:LNTextField.h">
          </FileRef>
          <FileRef
@@ -1492,12 +1492,6 @@
       <Group
          location = "group:UIView"
          name = "UIView">
-         <FileRef
-            location = "group:UIButton+Button.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIButton+Button.m">
-         </FileRef>
          <FileRef
             location = "group:UIControl+Control.h">
          </FileRef>

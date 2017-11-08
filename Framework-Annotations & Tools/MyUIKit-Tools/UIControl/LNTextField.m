@@ -9,7 +9,7 @@
  *
  * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  *
- *【登录注册输入框】
+ *【登录注册输入框 -> textField.placeholderColor】
  */
 
 #import "LNTextField.h"
@@ -19,14 +19,26 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
-    self.tintColor = [UIColor whiteColor];
-    
+ 
     [self addTarget:self action:@selector(textBegin) forControlEvents:UIControlEventEditingDidBegin];
     [self addTarget:self action:@selector(textEnd) forControlEvents:UIControlEventEditingDidEnd];
 
     // 默认设置文本框占位文字颜色
     self.placeholderColor = [UIColor redColor];
+}
+
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+ 
+        [self addTarget:self action:@selector(textBegin) forControlEvents:UIControlEventEditingDidBegin];
+        [self addTarget:self action:@selector(textEnd) forControlEvents:UIControlEventEditingDidEnd];
+        
+        // 默认设置文本框占位文字颜色
+        self.placeholderColor = [UIColor redColor];
+    }
+    return self;
 }
 
 

@@ -32,7 +32,9 @@
 #define LogRed(frmt, ...)           NSLog((XCODE_COLORS_ESCAPE @"fg255,0,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
 #define LogGreen(frmt, ...)         NSLog((XCODE_COLORS_ESCAPE @"fg0,255,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
 
+
 ---
+
 
 //控制台颜色插件
 #define XCODE_COLORS_ESCAPE         @"\033["
@@ -42,6 +44,7 @@
 
 
 ---
+
 
 #define titleFont(r)                kSystemVersion>=9.0?[UIFont fontWithName:FONT_TITLE size:r*1.0]:[UIFont systemFontOfSize:r*1.0]
 #define rgb(r,g,b,a)                [UIColor colorWithRed:(r*1.0)/255 green:(g*1.0)/255 blue:(b*1.0)/255 alpha:(a*1.0)]
@@ -53,7 +56,9 @@
 #define kClearColor                         [UIColor clearColor]
 #define kTimeOutLength                      30.0f
 
+
 ---
+
 
 static NSString* const          FONT_TITLE = @"PingFangSC-Regular";//常规
 static NSString* const          FONT_SUBTITLE = @"PingFangSC-Light";//细体
@@ -119,6 +124,7 @@ static NSString * const         Arial_MT = @"ArialMT";//Arial粗体
 
 ---
 
+
 // 屏幕宽度
 #define KSCREEN_WIDTH \
 ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? [UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale : [UIScreen mainScreen].bounds.size.width)
@@ -126,11 +132,14 @@ static NSString * const         Arial_MT = @"ArialMT";//Arial粗体
 // 屏幕高度
 #define KSCREEN_HEIGHT \
 ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? [UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale : [UIScreen mainScreen].bounds.size.height)
+
 // 屏幕Size
 #define KSCREEN_SIZE \
 ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? CGSizeMake([UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale) : [UIScreen mainScreen].bounds.size)
 
+
 ---
+
 
 // 获取当前语言
 #define KCURRENT_LANGUAGE   ([[NSLocale preferredLanguages] objectAtIndex:0])
@@ -146,7 +155,9 @@ static NSString * const         Arial_MT = @"ArialMT";//Arial粗体
 // 获取沙盒Cache路径
 #define KCACHE_PATH         [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 
+
 ---
+
 
 // 判断是真机还是模拟器
 #if TARGET_OS_IPHONE
@@ -161,6 +172,7 @@ static NSString * const         Arial_MT = @"ArialMT";//Arial粗体
 
 
 ---
+
 
 // 黑色和白色
 #define KWHITE_COLOR            [UIColor whiteColor]
@@ -401,6 +413,15 @@ static class *_instance; \
 
 // ↑
 //--------------------------- 【单例快速创建宏】 ------------------------------//
+
+
+
+
+
+
+
+
+
 
 
 

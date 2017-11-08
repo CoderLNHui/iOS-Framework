@@ -3,7 +3,7 @@
  * UIKit
  * 白开水ln（https://github.com/CustomPBWaters）
  *
- * (c) 2008-2015
+ * (c) 2008-2017
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
@@ -25,7 +25,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_CLASS_AVAILABLE_IOS(3_2) @interface UITapGestureRecognizer : UIGestureRecognizer
 
+/**
+ 设置点击次数, 例如连续敲击2次
+ */
 @property (nonatomic) NSUInteger  numberOfTapsRequired;       // Default is 1. The number of taps required to match
+/**
+ 需要几根手指一起敲击
+ */
 @property (nonatomic) NSUInteger  numberOfTouchesRequired __TVOS_PROHIBITED;    // Default is 1. The number of fingers required to match
 
 @end

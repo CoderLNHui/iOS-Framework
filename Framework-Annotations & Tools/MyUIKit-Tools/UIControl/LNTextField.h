@@ -9,7 +9,7 @@
  *
  * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  *
- *【登录注册输入框】
+ *【登录注册输入框 -> textField.placeholderColor】
  */
 
 #import <UIKit/UIKit.h>
