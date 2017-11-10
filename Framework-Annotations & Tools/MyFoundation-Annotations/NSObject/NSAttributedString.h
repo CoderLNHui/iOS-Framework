@@ -3,7 +3,7 @@
  * Framework:  UIKit
  * Author: 白开水ln（https://github.com/CustomPBWaters）
  *
- * (c) 2011-2015
+ * (c) 2011-2017
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
@@ -125,6 +125,34 @@ typedef NS_ENUM(NSInteger, NSWritingDirectionFormatType) {
 
 // NSTextEffectAttributeName values
 UIKIT_EXTERN NSString *const NSTextEffectLetterpressStyle NS_AVAILABLE(10_10, 7_0);
+
+
+
+
+
+
+
+
+
+/**************************************************************************
+ *                                                                        *
+ *                       WechatPublic - Codeidea                          *
+ *                                                                        *
+ *  WeChat-Codeidea    用文字记录自己的思想与经验,关于编程、职场、阅读以及摄影.     *
+ *  WeChat-Codeidea    希望在这个浮躁的社会中通过自己的一丝经历与感知 ~            *
+ *  WeChat-Codeidea    些许能带给你新思想或是习惯.                             *
+ *  JaneBook-白开水ln   Reprinted Please indicate the source.Mustbe.       *
+ *                 WELCOME YOU TO JOIN_GitHub & Codeidea                  *
+ *                                                                        *
+ **************************************************************************/
+
+
+
+
+
+
+
+
 
 
 /************************ Attribute fixing ************************/
