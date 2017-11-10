@@ -13,7 +13,7 @@
 
 | .h File | .h Tools  | 
 | :- | :-: | 
-| [UIKit-FrameWork](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIKit.h/UIKit.h)  | -- |
+| [UIKit-FrameWork](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIKit.h/UIKit.h) #  UIKit-FrameWork  | -- |
 |        [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  NSObject     |  -- |  
 |  [NSArray.h]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/NSArray.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | 
 |  [NSAttributedString.h]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/NSObject/NSAttributedString.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | 
@@ -180,6 +180,7 @@
 |  [ UIScreenEdgePanGestureRecognizer.h   ]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIGestureRecognizer/UIScreenEdgePanGestureRecognizer.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | 
 |  [UISwipeGestureRecognizer.h    ]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIGestureRecognizer/UISwipeGestureRecognizer.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | 
 |  [ UITapGestureRecognizer.h   ]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyUIKit-Annotations/UIGestureRecognizer/UITapGestureRecognizer.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  |
+| [UIFoundation-FrameWork](https://github.com/CustomPBWaters/Framework-Codeidea/tree/master/Framework-Annotations%20%26%20Tools/MyFoundation-Annotations) #  UIFoundation-FrameWork  | -- |
 |        [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  OtherFrameworks     |  -- | 
 |  [  CoreLocation Framework ](  ) | [【Tools】](  )  | 
 |  [ UserNotificationiOS10.h ]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/OtherFrameworks-Annotations/UserNotificationiOS10-Annotations ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  |
@@ -189,14 +190,14 @@
 |  [ Header.h   ]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile/Header.h ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | 
 |  [ PrefixHeader.pch   ]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/ProjectFile/ProjectFile/PrefixHeader.pch ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  |
 |  [ Framework类结构图解.h   ]( https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/Framework类结构图解 ) | [【Tools】]( https://github.com/CustomPBWaters/Framework-Annotations-Tools )  | 
-| 续更，阅读对应点击如果内容无想要 Data ！可点击右上角 Watch，续更及时邮件通知，也可点击右上角 Fork，收藏到本地仓库补充提交 ！ | 看到的你记得点击右上角 Star，你的喜欢是值得的！  |
+| 常用续更，阅读对应点击如果内容无想要 Data ！可点击右上角 Watch，续更及时邮件通知，也可点击右上角 Fork，收藏到本地仓库补充提交 ！ | 看到的你记得点击右上角 Star，你的喜欢是值得的！  |
 
 
 
 >附: Xcode & 模拟器 & 终端快捷键（续更）
 
 
-| `类别` | `快捷键` |
+| 类别 | 快捷键 |
 | :- | :- |
 |【Xcode】 |  |
 | Cmd + Shirt + N | 新建工程 |
@@ -249,7 +250,7 @@
 | 11 | 22 |
 
  
->未完、每月末(`争取`)、更新 ~ ; 劳驾你点一下❓ [Apple译文 & GitHub源码](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea)
+>未完、每月末(`争取`)、更新 ~ ; ❓ [Apple译文 & GitHub源码](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea)
 
  
  
