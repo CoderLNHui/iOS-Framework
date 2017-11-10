@@ -1548,16 +1548,28 @@
          location = "group:NSObject"
          name = "NSObject">
          <FileRef
+            location = "group:NSString.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSArray.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSArray.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary.m">
+         </FileRef>
+         <FileRef
             location = "group:NSAttributedString.h">
          </FileRef>
          <FileRef
             location = "group:NSAttributedString.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSBundle.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDictionary.h">
          </FileRef>
          <FileRef
             location = "group:NSNotification.h">
@@ -1569,10 +1581,7 @@
             location = "group:NSNotificationQueue.h">
          </FileRef>
          <FileRef
-            location = "group:NSString.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSString.m">
+            location = "group:NSBundle.h">
          </FileRef>
          <FileRef
             location = "group:NSURLSession.h">
