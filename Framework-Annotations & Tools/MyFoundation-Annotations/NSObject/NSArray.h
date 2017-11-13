@@ -54,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, readonly) ObjectType firstObject API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
 @property (nullable, nonatomic, readonly) ObjectType lastObject;
 - (NSEnumerator<ObjectType> *)objectEnumerator;
-- (NSEnumerator<ObjectType> *)reverseObjectEnumerator;
+- (NSEnumerator<ObjectType> *)reverseObjectEnumerator; /** 反向遍历 */
 @property (readonly, copy) NSData *sortedArrayHint;
 - (NSArray<ObjectType> *)sortedArrayUsingFunction:(NSInteger (NS_NOESCAPE *)(ObjectType, ObjectType, void * _Nullable))comparator context:(nullable void *)context;
 - (NSArray<ObjectType> *)sortedArrayUsingFunction:(NSInteger (NS_NOESCAPE *)(ObjectType, ObjectType, void * _Nullable))comparator context:(nullable void *)context hint:(nullable NSData *)hint;
@@ -101,7 +101,7 @@ typedef NS_OPTIONS(NSUInteger, NSBinarySearchingOptions) {
 + (instancetype)array;
 + (instancetype)arrayWithObject:(ObjectType)anObject;
 + (instancetype)arrayWithObjects:(const ObjectType _Nonnull [_Nonnull])objects count:(NSUInteger)cnt;
-+ (instancetype)arrayWithObjects:(ObjectType)firstObj, ... NS_REQUIRES_NIL_TERMINATION;
++ (instancetype)arrayWithObjects:(ObjectType)firstObj, ... NS_REQUI_NIL_TERMINATION;
 + (instancetype)arrayWithArray:(NSArray<ObjectType> *)array;
 
 - (instancetype)initWithObjects:(ObjectType)firstObj, ... NS_REQUIRES_NIL_TERMINATION;

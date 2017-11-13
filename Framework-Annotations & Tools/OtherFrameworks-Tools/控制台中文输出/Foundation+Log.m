@@ -1,24 +1,16 @@
-/*
- * Foundation+Log.m
- * 白开水ln（https://github.com/CustomPBWaters）
- *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
- *
- * http://www.jianshu.com/u/fd745d76c816
- *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
- * 中文输出
- */
- 
-
-//-------【用于控制字典和数组打印输出格式为中文(直接拖入项目中就可以了,不要做任何处理) 】------------//
+//
+//  Foundation+Log.m
+//  中文输出
+//
+//  Created by LN on 16/-/-.
+//  Copyright © 2016年 Wechat-Codeidea. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 
 @implementation NSDictionary (Log)
 
-//重写系统的方法控制输出
+// 重写系统的方法控制输出
 -(NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level
 {
     NSMutableString *string = [NSMutableString string];
@@ -45,7 +37,7 @@
 
 @implementation NSArray (Log)
 
-//重写系统的方法控制输出
+// 重写系统的方法控制输出
 -(NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level
 {
     NSMutableString *string = [NSMutableString string];
@@ -70,5 +62,5 @@
 }
 
 @end
-#START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+
 
