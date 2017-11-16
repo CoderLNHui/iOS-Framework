@@ -241,7 +241,7 @@
 | 11 | 22 |
 
  
->未完、每月末(`争取`)、更新 ~ ; ❓ [Apple译文 & GitHub源码](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea)
+>未完、每月末(`争取`)、更新 ~  ❓ [Apple译文 & GitHub源码](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea)
 
  
  
