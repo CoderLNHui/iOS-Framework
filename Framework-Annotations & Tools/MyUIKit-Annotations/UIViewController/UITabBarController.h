@@ -3,7 +3,7 @@
  * UIKit
  * 白开水ln（https://github.com/CustomPBWaters）
  *
- * (c) 2007-2015
+ * (c) 2007-2017
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
@@ -12,6 +12,7 @@
  *
  * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
+ 
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIViewController.h>
@@ -84,4 +85,5 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITabBarController : UIViewController <UI
 
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+NS_ASSUME_NONNULL_END
+
