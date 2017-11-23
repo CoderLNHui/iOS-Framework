@@ -219,7 +219,17 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 @property(nonatomic,getter=isMultipleTouchEnabled) BOOL multipleTouchEnabled __TVOS_PROHIBITED;   // default is NO
 @property(nonatomic,getter=isExclusiveTouch) BOOL       exclusiveTouch __TVOS_PROHIBITED;         // default is NO
 
+
+/**
+ 此方法返回的View是本次点击事件需要的最佳View
+ 底层实现: 说明一个view的子控件是如何判断是否接收点击事件的.
+ 场景: 解决当子控件超出父视图frame范围,子视图超出部分点击事件无响应❓
+ */
 - (nullable UIView *)hitTest:(CGPoint)point withEvent:(nullable UIEvent *)event;   // recursively calls -pointInside:withEvent:. point is in the receiver's coordinate system
+
+/**
+ 判断点是否在bounds范围内
+ */
 - (BOOL)pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event;   // default returns YES if point is in bounds
 
 

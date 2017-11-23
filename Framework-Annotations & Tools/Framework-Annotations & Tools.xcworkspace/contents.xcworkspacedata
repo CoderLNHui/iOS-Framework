@@ -332,6 +332,18 @@
          location = "group:UIBarItem"
          name = "UIBarItem">
          <FileRef
+            location = "group:UINavigationBar.h">
+         </FileRef>
+         <FileRef
+            location = "group:UINavigationItem.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITabBar.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIToolbar.h">
+         </FileRef>
+         <FileRef
             location = "group:UIBarButtonItem.h">
          </FileRef>
          <FileRef
@@ -339,9 +351,6 @@
          </FileRef>
          <FileRef
             location = "group:UITabBarItem.h">
-         </FileRef>
-         <FileRef
-            location = "group:&#x6587;&#x4ef6;.h">
          </FileRef>
       </Group>
       <Group
@@ -458,9 +467,6 @@
             location = "group:UILabel.h">
          </FileRef>
          <FileRef
-            location = "group:UINavigationBar.h">
-         </FileRef>
-         <FileRef
             location = "group:UIPickerView.h">
          </FileRef>
          <FileRef
@@ -482,9 +488,6 @@
             location = "group:UIStackView.h">
          </FileRef>
          <FileRef
-            location = "group:UITabBar.h">
-         </FileRef>
-         <FileRef
             location = "group:UITableView.h">
          </FileRef>
          <FileRef
@@ -501,9 +504,6 @@
          </FileRef>
          <FileRef
             location = "group:UITextView.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIToolbar.h">
          </FileRef>
          <FileRef
             location = "group:UIView.h">
@@ -1538,8 +1538,8 @@
       location = "group:MyFoundation-Annotations"
       name = "MyFoundation-Annotations">
       <Group
-         location = "group:Other"
-         name = "Other">
+         location = "group:Foundation"
+         name = "Foundation">
          <FileRef
             location = "group:Foundation.h">
          </FileRef>
@@ -1547,6 +1547,12 @@
       <Group
          location = "group:NSObject"
          name = "NSObject">
+         <FileRef
+            location = "group:NSDate.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDate.m">
+         </FileRef>
          <FileRef
             location = "group:NSString.h">
          </FileRef>
@@ -2225,16 +2231,6 @@
          </FileRef>
          <FileRef
             location = "group:NSTimer+Timer.m">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:Tools"
-         name = "Tools">
-         <FileRef
-            location = "group:Foundation+Log.m">
-         </FileRef>
-         <FileRef
-            location = "group:Single.h">
          </FileRef>
       </Group>
    </Group>

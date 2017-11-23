@@ -14,6 +14,8 @@
 
 
 /**
+  作者: 白开水ln 微众: Codeidea
+ 
   UIKit 框架 是 Objective-C 语言应用于苹果移动设备的界面呈现、管理功能库，功能之强大，本专题 致力于将苹果官网的海量的文档进行 归类整理，框架各分类文件注解，并对每一类中常用的功能进行案例渐进式解析，以 简化初学者入门和老手回顾的繁索过程，尽快切入主题，快速应用起来。
  */
 
@@ -241,7 +243,7 @@
 
 #START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
  
-
+NS_WELCOME YOU TO Join_GitHub & Wechat_Codeidea_ASSUME_NONNULL_END
 
 
 

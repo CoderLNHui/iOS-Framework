@@ -1,17 +1,19 @@
 /*
- * UIToolbar.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File: UIToolbar.h
+ * Framework: UIKit
+ * Author: 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2006-2015
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * http://www.jianshu.com/u/fd745d76c816
+ * JaneBook:  http://www.jianshu.com/u/fd745d76c816
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * @HEADER_WELCOME YOU TO Join_GitHub & Wechat_Codeidea_END@
  */
+
+
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKitDefines.h>

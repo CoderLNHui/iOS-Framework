@@ -1,14 +1,16 @@
 /*
- * UIBarButtonItem.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File: UIBarButtonItem.h
+ * Framework: UIKit
+ * Author: 白开水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2008-2015
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * JaneBook:  http://www.jianshu.com/u/fd745d76c816
+ *
+ * @HEADER_WELCOME YOU TO Join_GitHub & Wechat_Codeidea_END@
  */
 
 
@@ -28,37 +30,43 @@ typedef NS_ENUM(NSInteger, UIBarButtonItemStyle) {
     UIBarButtonItemStyleDone,
 };
 
+
 typedef NS_ENUM(NSInteger, UIBarButtonSystemItem) {
-    UIBarButtonSystemItemDone,
-    UIBarButtonSystemItemCancel,
-    UIBarButtonSystemItemEdit,
-    UIBarButtonSystemItemSave,
-    UIBarButtonSystemItemAdd,
-    UIBarButtonSystemItemFlexibleSpace,
-    UIBarButtonSystemItemFixedSpace,
-    UIBarButtonSystemItemCompose,
-    UIBarButtonSystemItemReply,
-    UIBarButtonSystemItemAction,
-    UIBarButtonSystemItemOrganize,
-    UIBarButtonSystemItemBookmarks,
-    UIBarButtonSystemItemSearch,
-    UIBarButtonSystemItemRefresh,
-    UIBarButtonSystemItemStop,
-    UIBarButtonSystemItemCamera,
-    UIBarButtonSystemItemTrash,
-    UIBarButtonSystemItemPlay,
-    UIBarButtonSystemItemPause,
-    UIBarButtonSystemItemRewind,
-    UIBarButtonSystemItemFastForward,
-    UIBarButtonSystemItemUndo NS_ENUM_AVAILABLE_IOS(3_0),
-    UIBarButtonSystemItemRedo NS_ENUM_AVAILABLE_IOS(3_0),
-    UIBarButtonSystemItemPageCurl NS_ENUM_AVAILABLE_IOS(4_0),
+    UIBarButtonSystemItemDone,//显示完成
+    UIBarButtonSystemItemCancel,//显示取消
+    UIBarButtonSystemItemEdit,  //显示编辑
+    UIBarButtonSystemItemSave, //显示保存
+    UIBarButtonSystemItemAdd,//显示加号
+    UIBarButtonSystemItemFlexibleSpace,//什么都不显示，占位一个空间位置
+    UIBarButtonSystemItemFixedSpace,//和上一个类似
+    UIBarButtonSystemItemCompose,//显示写入按钮
+    UIBarButtonSystemItemReply,//显示循环按钮
+    UIBarButtonSystemItemAction,//显示活动按钮
+    UIBarButtonSystemItemOrganize,//显示组合按钮
+    UIBarButtonSystemItemBookmarks,//显示图书按钮
+    UIBarButtonSystemItemSearch,//显示查找按钮
+    UIBarButtonSystemItemRefresh,//显示刷新按钮
+    UIBarButtonSystemItemStop,//显示停止按钮
+    UIBarButtonSystemItemCamera,//显示相机按钮
+    UIBarButtonSystemItemTrash,//显示移除按钮
+    UIBarButtonSystemItemPlay,//显示播放按钮
+    UIBarButtonSystemItemPause,//显示暂停按钮
+    UIBarButtonSystemItemRewind,//显示退后按钮
+    UIBarButtonSystemItemFastForward,//显示前进按钮
+    UIBarButtonSystemItemUndo NS_ENUM_AVAILABLE_IOS(3_0),//显示消除按钮
+    UIBarButtonSystemItemRedo NS_ENUM_AVAILABLE_IOS(3_0),//显示重做按钮
+    UIBarButtonSystemItemPageCurl NS_ENUM_AVAILABLE_IOS(4_0),//在tool上有效
 };
+
+
 
 @class UIImage, UIView;
 
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UIBarButtonItem : UIBarItem <NSCoding>
 
+/**
+ 初始化方法
+ */
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithImage:(nullable UIImage *)image style:(UIBarButtonItemStyle)style target:(nullable id)target action:(nullable SEL)action;
@@ -67,7 +75,10 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIBarButtonItem : UIBarItem <NSCoding>
 - (instancetype)initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem target:(nullable id)target action:(nullable SEL)action;
 - (instancetype)initWithCustomView:(UIView *)customView;
 
-@property(nonatomic)         UIBarButtonItemStyle style;            // default is UIBarButtonItemStylePlain
+
+
+
+@property(nonatomic)         UIBarButtonItemStyle style;  //类型          // default is UIBarButtonItemStylePlain
 @property(nonatomic)         CGFloat              width;            // default is 0.0
 @property(nullable, nonatomic,copy)    NSSet<NSString *>   *possibleTitles;   // default is nil
 @property(nullable, nonatomic,strong)  __kindof UIView     *customView;       // default is nil
@@ -87,11 +98,16 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIBarButtonItem : UIBarItem <NSCoding>
  
  This sets the background image for buttons of any style.
  */
+// 为任意style的button设置背景图片
 - (void)setBackgroundImage:(nullable UIImage *)backgroundImage forState:(UIControlState)state barMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR;
 - (nullable UIImage *)backgroundImageForState:(UIControlState)state barMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR;
 
+
+
+
 /* This sets the background image for buttons with a specific style. When calling this on a UIBarButtonItem instance, the style argument must match the button's style; when calling on the UIAppearance proxy, any style may be passed.
  */
+// 为特定style的button设置背景图片
 - (void)setBackgroundImage:(nullable UIImage *)backgroundImage forState:(UIControlState)state style:(UIBarButtonItemStyle)style barMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(6_0) UI_APPEARANCE_SELECTOR;
 - (nullable UIImage *)backgroundImageForState:(UIControlState)state style:(UIBarButtonItemStyle)style barMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(6_0) UI_APPEARANCE_SELECTOR;
 
@@ -99,27 +115,37 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIBarButtonItem : UIBarItem <NSCoding>
 
 /* For adjusting the vertical centering of bordered bar buttons within the bar
  */
+// 设置背景图片垂直方向的偏移量
 - (void)setBackgroundVerticalPositionAdjustment:(CGFloat)adjustment forBarMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR;
 - (CGFloat)backgroundVerticalPositionAdjustmentForBarMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR;
 
 /* For adjusting the position of a title (if any) within a bordered bar button
  */
+// 设置标题的偏移量
 - (void)setTitlePositionAdjustment:(UIOffset)adjustment forBarMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR;
 - (UIOffset)titlePositionAdjustmentForBarMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR;
+
+
+
 
 /* The remaining appearance modifiers apply solely to UINavigationBar back buttons and are ignored by other buttons.
  */
 /*
  backgroundImage must be a resizable image for good results.
  */
+// 设置返回按钮标题偏移量
 - (void)setBackButtonBackgroundImage:(nullable UIImage *)backgroundImage forState:(UIControlState)state barMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR __TVOS_PROHIBITED;
 - (nullable UIImage *)backButtonBackgroundImageForState:(UIControlState)state barMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR __TVOS_PROHIBITED;
 
 - (void)setBackButtonTitlePositionAdjustment:(UIOffset)adjustment forBarMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR __TVOS_PROHIBITED;
 - (UIOffset)backButtonTitlePositionAdjustmentForBarMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR __TVOS_PROHIBITED;
 
+
+
+
 /* For adjusting the vertical centering of bordered bar buttons within the bar
  */
+// 设置返回按钮背景图片在垂直方向上的偏移量
 - (void)setBackButtonBackgroundVerticalPositionAdjustment:(CGFloat)adjustment forBarMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR __TVOS_PROHIBITED;
 - (CGFloat)backButtonBackgroundVerticalPositionAdjustmentForBarMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR __TVOS_PROHIBITED;
 
