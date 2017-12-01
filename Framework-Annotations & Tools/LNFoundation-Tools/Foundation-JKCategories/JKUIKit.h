@@ -4,7 +4,7 @@
 //
 //  Created by Jakey on 16/5/29.
 //  Copyright © 2016年  All rights reserved.
-//  转载大牛Demo
+//  转载大牛
 
 /*
  该 **JKCategories** ,

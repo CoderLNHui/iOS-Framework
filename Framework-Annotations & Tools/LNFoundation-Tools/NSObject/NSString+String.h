@@ -37,6 +37,8 @@
  */
 - (CGSize)ln_textSizeWithContentSize:(CGSize)size font:(UIFont *)font;
 
+
+
 /**
  *  @brief  根据文本字数/文本宽度约束/文本字体 求得text的Size
  *  @param width 宽度约束
@@ -45,6 +47,8 @@
  */
 - (CGFloat)ln_textHeightWithContentWidth:(CGFloat)width font:(UIFont *)font;
 
+
+
 /**
  *  @brief  根据文本字数/文本宽度约束/文本字体 求得text的Size
  *  @param height 宽度约束
@@ -52,10 +56,6 @@
  *  @return 文本的实际长度
  */
 - (CGFloat)ln_textWidthWithContentHeight:(CGFloat)height font:(UIFont *)font;
-
-
-
-
 
 
 

@@ -18,7 +18,6 @@
 #import <CommonCrypto/CommonHMAC.h>    // hash
 #import <CommonCrypto/CommonCrypto.h>  // md5
 
-/*CC_MD5_DIGEST_LENGTH*/
 
 #define  MD5_LENGTH   32
 
@@ -46,6 +45,7 @@
 - (CGSize)ln_textSizeWithContentSize:(CGSize)size font:(UIFont *)font {
     return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : font} context:nil].size;
 }
+
 
 
 /**
@@ -197,6 +197,8 @@
     return attrs.fileSize;
 }
 
+
+
 - (instancetype)cacheDir
 {
     NSString *dir = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
@@ -220,6 +222,9 @@
 //--------------------------- <#我是分割线#> ------------------------------//
 //--------------------------- <#我是分割线#> ------------------------------//
 //
+
+
+
 @implementation NSString (Hash)
 
 - (NSString *)md5String
