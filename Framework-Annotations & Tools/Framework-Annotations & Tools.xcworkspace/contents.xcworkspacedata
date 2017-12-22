@@ -1,56 +1,706 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
-      location = "group:&#x652f;&#xb7;&#x8d5e;&#x8d4f;.gif">
-   </FileRef>
    <Group
-      location = "group:Framework&#x7c7b;&#x7ed3;&#x6784;&#x56fe;&#x89e3;"
-      name = "Framework&#x7c7b;&#x7ed3;&#x6784;&#x56fe;&#x89e3;">
-      <FileRef
-         location = "group:Foundation &#x5206;&#x7c7b;&#x7ed3;&#x6784;.jpeg">
-      </FileRef>
-      <FileRef
-         location = "group:iOS10User Notifications Framework &#x4ecb;&#x7ecd;.jpeg">
-      </FileRef>
-      <FileRef
-         location = "group:MJRefresh&#x7ed3;&#x6784;&#x56fe;.jpeg">
-      </FileRef>
-      <FileRef
-         location = "group:runloop 5&#x4e2a;&#x76f8;&#x5173;&#x7c7b;&#x5173;&#x7cfb;.jpeg">
-      </FileRef>
-      <FileRef
-         location = "group:runloop&#x5185;&#x90e8;&#x5b9e;&#x73b0;&#x6d41;&#x7a0b;.jpeg">
-      </FileRef>
-      <FileRef
-         location = "group:UIKit &#x5206;&#x7c7b;&#x7ed3;&#x6784;.jpeg">
-      </FileRef>
-      <FileRef
-         location = "group:WechatCodeidea.jpeg">
-      </FileRef>
-      <FileRef
-         location = "group:&#x5fae;&#x4f17;&#xff1a;Codeidea.jpeg">
-      </FileRef>
-      <FileRef
-         location = "group:&#x68b3;&#x7406;SDWebImage&#x7684;&#x5de5;&#x4f5c;&#x6d41;&#x7a0b;.jpeg">
-      </FileRef>
-      <FileRef
-         location = "group:&#x81ea;&#x5b9a;&#x4e49;NSOperation&#x4e0b;&#x8f7d;&#x56fe;&#x7247;&#x601d;&#x8def;.gif">
-      </FileRef>
-   </Group>
-   <Group
-      location = "group:MyUIKit-Annotations"
-      name = "MyUIKit-Annotations">
+      location = "group:LNFoundation-Annotations"
+      name = "LNFoundation-Annotations">
       <Group
-         location = "group:UIKit.h"
-         name = "UIKit.h">
+         location = "group:NSObject"
+         name = "NSObject">
          <FileRef
-            location = "group:UIKit.h">
+            location = "group:NSArray.h">
          </FileRef>
          <FileRef
-            location = "group:UIKit&#x6846;&#x67b6;.jpg">
+            location = "group:NSArray.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSAttributedString.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSAttributedString.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSBundle.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSNotification.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSNotification.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSNotificationQueue.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLSession.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFileManager.h">
          </FileRef>
       </Group>
+      <Group
+         location = "group:Other"
+         name = "Other">
+         <FileRef
+            location = "group:Foundation.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:RunLoop"
+         name = "RunLoop">
+         <FileRef
+            location = "group:CFRunLoop.c">
+         </FileRef>
+         <FileRef
+            location = "group:CFRunLoop.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSRunLoop.h">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:LNFoundation-Tools"
+      name = "LNFoundation-Tools">
+      <Group
+         location = "group:Foundation-JKCategories"
+         name = "Foundation-JKCategories">
+         <FileRef
+            location = "group:JKUIKit.h">
+         </FileRef>
+         <Group
+            location = "group:NSArray"
+            name = "NSArray">
+            <FileRef
+               location = "group:NSArray+JKBlock.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSArray+JKBlock.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSArray+JKSafeAccess.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSArray+JKSafeAccess.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSBundle"
+            name = "NSBundle">
+            <FileRef
+               location = "group:NSBundle+JKAppIcon.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSBundle+JKAppIcon.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSData"
+            name = "NSData">
+            <FileRef
+               location = "group:NSData+JKAPNSToken.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKAPNSToken.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKBase64.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKBase64.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKDataCache.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKDataCache.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKEncrypt.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKEncrypt.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKGzip.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKGzip.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKHash.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKHash.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKPCM.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKPCM.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKzlib.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+JKzlib.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSDate"
+            name = "NSDate">
+            <FileRef
+               location = "group:NSDate+JKCupertinoYankee.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKCupertinoYankee.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKExtension.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKExtension.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKFormatter.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKFormatter.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKInternetDateTime.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKInternetDateTime.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKReporting.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKReporting.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKUtilities.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKUtilities.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKZeroDate.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDate+JKZeroDate.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSDateFormatter"
+            name = "NSDateFormatter">
+            <FileRef
+               location = "group:NSDateFormatter+JKMake.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDateFormatter+JKMake.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSDictionary"
+            name = "NSDictionary">
+            <FileRef
+               location = "group:NSDictionary+JKBlock.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+JKBlock.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+JKJSONString.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+JKJSONString.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+JKMerge.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+JKMerge.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+JKSafeAccess.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+JKSafeAccess.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+JKURL.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+JKURL.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+JKXML.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+JKXML.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSException"
+            name = "NSException">
+            <FileRef
+               location = "group:NSException+JKTrace.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSException+JKTrace.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSFileHandle"
+            name = "NSFileHandle">
+            <FileRef
+               location = "group:NSFileHandle+JKReadLine.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSFileHandle+JKReadLine.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSFileManager"
+            name = "NSFileManager">
+            <FileRef
+               location = "group:NSFileManager+JKPaths.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSFileManager+JKPaths.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSHTTPCookieStorage"
+            name = "NSHTTPCookieStorage">
+            <FileRef
+               location = "group:NSHTTPCookieStorage+JKFreezeDry.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSHTTPCookieStorage+JKFreezeDry.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSIndexPath"
+            name = "NSIndexPath">
+            <FileRef
+               location = "group:NSIndexPath+JKOffset.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSIndexPath+JKOffset.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSInvocation"
+            name = "NSInvocation">
+            <FileRef
+               location = "group:NSInvocation+JKBb.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSInvocation+JKBb.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSInvocation+JKBlock.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSInvocation+JKBlock.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSNotificationCenter"
+            name = "NSNotificationCenter">
+            <FileRef
+               location = "group:NSNotificationCenter+JKMainThread.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSNotificationCenter+JKMainThread.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSNumber"
+            name = "NSNumber">
+            <FileRef
+               location = "group:NSDecimalNumber+JKCalculatingByString.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDecimalNumber+JKCalculatingByString.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSDecimalNumber+JKExtensions.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDecimalNumber+JKExtensions.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSNumber+JKCGFloat.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSNumber+JKCGFloat.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSNumber+JKRomanNumerals.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSNumber+JKRomanNumerals.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSNumber+JKRound.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSNumber+JKRound.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSObject"
+            name = "NSObject">
+            <FileRef
+               location = "group:NSObject+JKAddProperty.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKAddProperty.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKAppInfo.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKAppInfo.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKAssociatedObject.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKAssociatedObject.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKAutoCoding.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKAutoCoding.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKBlocks.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKBlocks.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKBlockTimer.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKBlockTimer.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKEasyCopy.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKEasyCopy.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKGCD.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKGCD.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKKVOBlocks.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKKVOBlocks.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKReflection.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKReflection.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKRuntime.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+JKRuntime.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSRunLoop"
+            name = "NSRunLoop">
+            <FileRef
+               location = "group:NSRunLoop+JKPerformBlock.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSRunLoop+JKPerformBlock.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSSet"
+            name = "NSSet">
+            <FileRef
+               location = "group:NSSet+JKBlock.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSSet+JKBlock.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSString"
+            name = "NSString">
+            <FileRef
+               location = "group:NSString+JKBase64.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKBase64.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKContains.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKContains.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKDictionaryValue.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKDictionaryValue.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKEmoji.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKEmoji.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKEncrypt.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKEncrypt.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKHash.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKHash.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKHTML.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKHTML.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKMatcher.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKMatcher.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKMIME.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKMIME.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKNormalRegex.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKNormalRegex.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKPinyin.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKPinyin.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKRemoveEmoji.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKRemoveEmoji.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKScore.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKScore.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKSize.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKSize.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKStringPages.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKStringPages.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKTrims.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKTrims.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKURLEncode.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKURLEncode.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKUUID.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKUUID.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKXMLDictionary.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+JKXMLDictionary.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSTimer"
+            name = "NSTimer">
+            <FileRef
+               location = "group:NSTimer+JKAddition.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSTimer+JKAddition.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSTimer+JKBlocks.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSTimer+JKBlocks.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSURL"
+            name = "NSURL">
+            <FileRef
+               location = "group:NSURL+JKParam.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSURL+JKParam.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSURL+JKQueryDictionary.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSURL+JKQueryDictionary.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSURLConnection"
+            name = "NSURLConnection">
+            <FileRef
+               location = "group:NSURLConnection+JKSelfSigned.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSURLConnection+JKSelfSigned.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSURLRequest"
+            name = "NSURLRequest">
+            <FileRef
+               location = "group:NSMutableURLRequest+JKUpload.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSMutableURLRequest+JKUpload.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSURLRequest+JKParamsFromDictionary.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSURLRequest+JKParamsFromDictionary.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSURLSession"
+            name = "NSURLSession">
+            <FileRef
+               location = "group:NSURLSession+JKSynchronousTask.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSURLSession+JKSynchronousTask.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:NSUserDefaults"
+            name = "NSUserDefaults">
+            <FileRef
+               location = "group:NSUserDefaults+JKiCloudSync.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSUserDefaults+JKiCloudSync.m">
+            </FileRef>
+            <FileRef
+               location = "group:NSUserDefaults+JKSafeAccess.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSUserDefaults+JKSafeAccess.m">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:NSObject"
+         name = "NSObject">
+         <FileRef
+            location = "group:NSData+Data.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSData+Data.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+Dictionary.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+Dictionary.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSMutableAttributedString+AttributedString.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSMutableAttributedString+AttributedString.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSObject+Runtime.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSObject+Runtime.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+String.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+String.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSTimer+Timer.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSTimer+Timer.m">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:LNKit-Annotations"
+      name = "LNKit-Annotations">
       <Group
          location = "group:NSObject"
          name = "NSObject">
@@ -381,6 +1031,12 @@
             location = "group:UISwitch.h">
          </FileRef>
          <FileRef
+            location = "group:UITextField.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextField.m">
+         </FileRef>
+         <FileRef
             location = "group:&#x6587;&#x4ef6;.h">
          </FileRef>
       </Group>
@@ -410,6 +1066,16 @@
          </FileRef>
          <FileRef
             location = "group:UITapGestureRecognizer.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:UIKit.h"
+         name = "UIKit.h">
+         <FileRef
+            location = "group:UIKit.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIKit&#x6846;&#x67b6;.jpg">
          </FileRef>
       </Group>
       <Group
@@ -584,8 +1250,92 @@
       </Group>
    </Group>
    <Group
-      location = "group:MyUIKit-Tools"
-      name = "MyUIKit-Tools">
+      location = "group:LNKit-Tools"
+      name = "LNKit-Tools">
+      <Group
+         location = "group:NSObject"
+         name = "NSObject">
+         <FileRef
+            location = "group:ImageUtil.h">
+         </FileRef>
+         <FileRef
+            location = "group:ImageUtil.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSDate+Date.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDate+Date.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSDate+LXExtension.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDate+LXExtension.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSObject+Runtime.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSObject+Runtime.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIColor+Color.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIColor+Color.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIDevice+Device.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDevice+Device.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIImage+Image.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIImage+Image.m">
+         </FileRef>
+         <FileRef
+            location = "group:UINavigationItem+Item.h">
+         </FileRef>
+         <FileRef
+            location = "group:UINavigationItem+Item.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:UIBarItem"
+         name = "UIBarItem">
+         <FileRef
+            location = "group:UIBarButtonItem+Item.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIBarButtonItem+Item.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:UIControl"
+         name = "UIControl">
+         <FileRef
+            location = "group:LNTextField.h">
+         </FileRef>
+         <FileRef
+            location = "group:LNTextField.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIButton+Button.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIButton+Button.m">
+         </FileRef>
+         <FileRef
+            location = "group:UITextField+TextField.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextField+TextField.m">
+         </FileRef>
+      </Group>
       <Group
          location = "group:UIKit-JKCategories"
          name = "UIKit-JKCategories">
@@ -1406,92 +2156,17 @@
          </Group>
       </Group>
       <Group
-         location = "group:NSObject"
-         name = "NSObject">
-         <FileRef
-            location = "group:ImageUtil.h">
-         </FileRef>
-         <FileRef
-            location = "group:ImageUtil.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSDate+Date.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDate+Date.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSDate+LXExtension.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDate+LXExtension.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSObject+Runtime.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSObject+Runtime.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIColor+Color.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIColor+Color.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIDevice+Device.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDevice+Device.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIImage+Image.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImage+Image.m">
-         </FileRef>
-         <FileRef
-            location = "group:UINavigationItem+Item.h">
-         </FileRef>
-         <FileRef
-            location = "group:UINavigationItem+Item.m">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:UIBarItem"
-         name = "UIBarItem">
-         <FileRef
-            location = "group:UIBarButtonItem+Item.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIBarButtonItem+Item.m">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:UIControl"
-         name = "UIControl">
-         <FileRef
-            location = "group:UIButton+Button.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIButton+Button.m">
-         </FileRef>
-         <FileRef
-            location = "group:LNTextField.h">
-         </FileRef>
-         <FileRef
-            location = "group:LNTextField.m">
-         </FileRef>
-         <FileRef
-            location = "group:UITextField+TextField.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITextField+TextField.m">
-         </FileRef>
-      </Group>
-      <Group
          location = "group:UIView"
          name = "UIView">
+         <FileRef
+            location = "group:LNInputView.h">
+         </FileRef>
+         <FileRef
+            location = "group:LNInputView.m">
+         </FileRef>
+         <FileRef
+            location = "group:LNInputViewController.m">
+         </FileRef>
          <FileRef
             location = "group:UIControl+Control.h">
          </FileRef>
@@ -1535,712 +2210,15 @@
       </Group>
    </Group>
    <Group
-      location = "group:MyFoundation-Annotations"
-      name = "MyFoundation-Annotations">
+      location = "group:LNOtherFrameworks-Annotations"
+      name = "LNOtherFrameworks-Annotations">
       <Group
-         location = "group:Other"
-         name = "Other">
+         location = "group:AlgorithmFunction"
+         name = "AlgorithmFunction">
          <FileRef
-            location = "group:Foundation.h">
+            location = "group:Math.h">
          </FileRef>
       </Group>
-      <Group
-         location = "group:NSObject"
-         name = "NSObject">
-         <FileRef
-            location = "group:NSString.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSString.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSArray.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSArray.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSDictionary.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDictionary.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSAttributedString.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSAttributedString.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSNotification.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSNotification.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSNotificationQueue.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSBundle.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSURLSession.h">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:RunLoop"
-         name = "RunLoop">
-         <FileRef
-            location = "group:CFRunLoop.c">
-         </FileRef>
-         <FileRef
-            location = "group:CFRunLoop.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSRunLoop.h">
-         </FileRef>
-      </Group>
-   </Group>
-   <Group
-      location = "group:MyFoundation-Tools"
-      name = "MyFoundation-Tools">
-      <Group
-         location = "group:Foundation-JKCategories"
-         name = "Foundation-JKCategories">
-         <FileRef
-            location = "group:JKUIKit.h">
-         </FileRef>
-         <Group
-            location = "group:NSArray"
-            name = "NSArray">
-            <FileRef
-               location = "group:NSArray+JKBlock.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSArray+JKBlock.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSArray+JKSafeAccess.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSArray+JKSafeAccess.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSBundle"
-            name = "NSBundle">
-            <FileRef
-               location = "group:NSBundle+JKAppIcon.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSBundle+JKAppIcon.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSData"
-            name = "NSData">
-            <FileRef
-               location = "group:NSData+JKAPNSToken.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKAPNSToken.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKBase64.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKBase64.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKDataCache.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKDataCache.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKEncrypt.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKEncrypt.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKGzip.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKGzip.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKHash.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKHash.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKPCM.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKPCM.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKzlib.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSData+JKzlib.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSDate"
-            name = "NSDate">
-            <FileRef
-               location = "group:NSDate+JKCupertinoYankee.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKCupertinoYankee.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKExtension.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKExtension.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKFormatter.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKFormatter.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKInternetDateTime.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKInternetDateTime.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKReporting.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKReporting.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKUtilities.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKUtilities.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKZeroDate.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDate+JKZeroDate.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSDateFormatter"
-            name = "NSDateFormatter">
-            <FileRef
-               location = "group:NSDateFormatter+JKMake.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDateFormatter+JKMake.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSDictionary"
-            name = "NSDictionary">
-            <FileRef
-               location = "group:NSDictionary+JKBlock.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDictionary+JKBlock.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSDictionary+JKJSONString.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDictionary+JKJSONString.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSDictionary+JKMerge.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDictionary+JKMerge.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSDictionary+JKSafeAccess.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDictionary+JKSafeAccess.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSDictionary+JKURL.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDictionary+JKURL.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSDictionary+JKXML.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDictionary+JKXML.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSException"
-            name = "NSException">
-            <FileRef
-               location = "group:NSException+JKTrace.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSException+JKTrace.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSFileHandle"
-            name = "NSFileHandle">
-            <FileRef
-               location = "group:NSFileHandle+JKReadLine.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSFileHandle+JKReadLine.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSFileManager"
-            name = "NSFileManager">
-            <FileRef
-               location = "group:NSFileManager+JKPaths.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSFileManager+JKPaths.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSHTTPCookieStorage"
-            name = "NSHTTPCookieStorage">
-            <FileRef
-               location = "group:NSHTTPCookieStorage+JKFreezeDry.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSHTTPCookieStorage+JKFreezeDry.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSIndexPath"
-            name = "NSIndexPath">
-            <FileRef
-               location = "group:NSIndexPath+JKOffset.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSIndexPath+JKOffset.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSInvocation"
-            name = "NSInvocation">
-            <FileRef
-               location = "group:NSInvocation+JKBb.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSInvocation+JKBb.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSInvocation+JKBlock.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSInvocation+JKBlock.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSNotificationCenter"
-            name = "NSNotificationCenter">
-            <FileRef
-               location = "group:NSNotificationCenter+JKMainThread.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSNotificationCenter+JKMainThread.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSNumber"
-            name = "NSNumber">
-            <FileRef
-               location = "group:NSDecimalNumber+JKCalculatingByString.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDecimalNumber+JKCalculatingByString.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSDecimalNumber+JKExtensions.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSDecimalNumber+JKExtensions.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSNumber+JKCGFloat.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSNumber+JKCGFloat.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSNumber+JKRomanNumerals.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSNumber+JKRomanNumerals.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSNumber+JKRound.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSNumber+JKRound.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSObject"
-            name = "NSObject">
-            <FileRef
-               location = "group:NSObject+JKAddProperty.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKAddProperty.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKAppInfo.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKAppInfo.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKAssociatedObject.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKAssociatedObject.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKAutoCoding.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKAutoCoding.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKBlocks.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKBlocks.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKBlockTimer.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKBlockTimer.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKEasyCopy.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKEasyCopy.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKGCD.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKGCD.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKKVOBlocks.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKKVOBlocks.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKReflection.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKReflection.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKRuntime.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSObject+JKRuntime.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSRunLoop"
-            name = "NSRunLoop">
-            <FileRef
-               location = "group:NSRunLoop+JKPerformBlock.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSRunLoop+JKPerformBlock.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSSet"
-            name = "NSSet">
-            <FileRef
-               location = "group:NSSet+JKBlock.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSSet+JKBlock.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSString"
-            name = "NSString">
-            <FileRef
-               location = "group:NSString+JKBase64.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKBase64.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKContains.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKContains.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKDictionaryValue.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKDictionaryValue.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKEmoji.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKEmoji.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKEncrypt.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKEncrypt.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKHash.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKHash.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKHTML.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKHTML.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKMatcher.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKMatcher.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKMIME.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKMIME.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKNormalRegex.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKNormalRegex.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKPinyin.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKPinyin.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKRemoveEmoji.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKRemoveEmoji.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKScore.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKScore.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKSize.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKSize.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKStringPages.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKStringPages.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKTrims.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKTrims.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKURLEncode.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKURLEncode.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKUUID.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKUUID.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKXMLDictionary.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSString+JKXMLDictionary.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSTimer"
-            name = "NSTimer">
-            <FileRef
-               location = "group:NSTimer+JKAddition.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSTimer+JKAddition.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSTimer+JKBlocks.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSTimer+JKBlocks.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSURL"
-            name = "NSURL">
-            <FileRef
-               location = "group:NSURL+JKParam.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSURL+JKParam.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSURL+JKQueryDictionary.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSURL+JKQueryDictionary.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSURLConnection"
-            name = "NSURLConnection">
-            <FileRef
-               location = "group:NSURLConnection+JKSelfSigned.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSURLConnection+JKSelfSigned.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSURLRequest"
-            name = "NSURLRequest">
-            <FileRef
-               location = "group:NSMutableURLRequest+JKUpload.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSMutableURLRequest+JKUpload.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSURLRequest+JKParamsFromDictionary.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSURLRequest+JKParamsFromDictionary.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSURLSession"
-            name = "NSURLSession">
-            <FileRef
-               location = "group:NSURLSession+JKSynchronousTask.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSURLSession+JKSynchronousTask.m">
-            </FileRef>
-         </Group>
-         <Group
-            location = "group:NSUserDefaults"
-            name = "NSUserDefaults">
-            <FileRef
-               location = "group:NSUserDefaults+JKiCloudSync.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSUserDefaults+JKiCloudSync.m">
-            </FileRef>
-            <FileRef
-               location = "group:NSUserDefaults+JKSafeAccess.h">
-            </FileRef>
-            <FileRef
-               location = "group:NSUserDefaults+JKSafeAccess.m">
-            </FileRef>
-         </Group>
-      </Group>
-      <Group
-         location = "group:NSObject"
-         name = "NSObject">
-         <FileRef
-            location = "group:NSData+Data.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSData+Data.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSDictionary+Dictionary.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDictionary+Dictionary.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSMutableAttributedString+AttributedString.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSMutableAttributedString+AttributedString.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSObject+Runtime.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSObject+Runtime.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSString+String.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSString+String.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSTimer+Timer.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSTimer+Timer.m">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:Tools"
-         name = "Tools">
-         <FileRef
-            location = "group:Foundation+Log.m">
-         </FileRef>
-         <FileRef
-            location = "group:Single.h">
-         </FileRef>
-      </Group>
-   </Group>
-   <Group
-      location = "group:OtherFrameworks-Annotations"
-      name = "OtherFrameworks-Annotations">
       <Group
          location = "group:AVKit&amp;AVFoundation"
          name = "AVKit&amp;AVFoundation">
@@ -2366,8 +2344,8 @@
       </Group>
    </Group>
    <Group
-      location = "group:OtherFrameworks-Tools"
-      name = "OtherFrameworks-Tools">
+      location = "group:LNOtherFrameworks-Tools"
+      name = "LNOtherFrameworks-Tools">
       <Group
          location = "group:CALayer&#x52a8;&#x753b;"
          name = "CALayer&#x52a8;&#x753b;">
@@ -2408,6 +2386,13 @@
          </FileRef>
       </Group>
       <Group
+         location = "group:&#x63a7;&#x5236;&#x53f0;&#x4e2d;&#x6587;&#x8f93;&#x51fa;"
+         name = "&#x63a7;&#x5236;&#x53f0;&#x4e2d;&#x6587;&#x8f93;&#x51fa;">
+         <FileRef
+            location = "group:Foundation+Log.m">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:&#x751f;&#x6210;&#x4e8c;&#x7ef4;&#x7801;"
          name = "&#x751f;&#x6210;&#x4e8c;&#x7ef4;&#x7801;">
          <FileRef
@@ -2419,8 +2404,8 @@
       </Group>
    </Group>
    <Group
-      location = "group:ProjectFile"
-      name = "ProjectFile">
+      location = "group:LNProjectFile"
+      name = "LNProjectFile">
       <FileRef
          location = "group:Header.h">
       </FileRef>
@@ -2434,4 +2419,41 @@
          location = "group:Singleton.h">
       </FileRef>
    </Group>
+   <Group
+      location = "group:LNFramework&#x7c7b;&#x7ed3;&#x6784;&#x56fe;&#x89e3;"
+      name = "LNFramework&#x7c7b;&#x7ed3;&#x6784;&#x56fe;&#x89e3;">
+      <FileRef
+         location = "group:Foundation &#x5206;&#x7c7b;&#x7ed3;&#x6784;.jpeg">
+      </FileRef>
+      <FileRef
+         location = "group:iOS10User Notifications Framework &#x4ecb;&#x7ecd;.jpeg">
+      </FileRef>
+      <FileRef
+         location = "group:MJRefresh&#x7ed3;&#x6784;&#x56fe;.jpeg">
+      </FileRef>
+      <FileRef
+         location = "group:runloop 5&#x4e2a;&#x76f8;&#x5173;&#x7c7b;&#x5173;&#x7cfb;.jpeg">
+      </FileRef>
+      <FileRef
+         location = "group:runloop&#x5185;&#x90e8;&#x5b9e;&#x73b0;&#x6d41;&#x7a0b;.jpeg">
+      </FileRef>
+      <FileRef
+         location = "group:UIKit &#x5206;&#x7c7b;&#x7ed3;&#x6784;.jpeg">
+      </FileRef>
+      <FileRef
+         location = "group:WechatCodeidea.jpeg">
+      </FileRef>
+      <FileRef
+         location = "group:&#x5fae;&#x4f17;&#xff1a;Codeidea.jpeg">
+      </FileRef>
+      <FileRef
+         location = "group:&#x68b3;&#x7406;SDWebImage&#x7684;&#x5de5;&#x4f5c;&#x6d41;&#x7a0b;.jpeg">
+      </FileRef>
+      <FileRef
+         location = "group:&#x81ea;&#x5b9a;&#x4e49;NSOperation&#x4e0b;&#x8f7d;&#x56fe;&#x7247;&#x601d;&#x8def;.gif">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:&#x652f;&#xb7;&#x8d5e;&#x8d4f;.gif">
+   </FileRef>
 </Workspace>
