@@ -1,7 +1,7 @@
 /*
  * File:  UIView.h
  * Framework:  UIKit
- * Author:  白开水ln（https://github.com/CustomPBWaters）
+ * Author:  白水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2005-2017
  *

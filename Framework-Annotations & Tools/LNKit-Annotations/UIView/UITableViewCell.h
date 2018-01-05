@@ -1,7 +1,7 @@
 /*
- * UITableViewCell.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  UITableViewCell.h
+ * Framework:  UIKit
+ * Author:  白水ln（https://github.com/CustomPBWaters）
  *
  * (c) 2005-2016
  *
@@ -26,17 +26,17 @@ NS_ASSUME_NONNULL_BEGIN
 @class UIImage, UIColor, UILabel, UIImageView, UIButton, UITextField, UITableView, UILongPressGestureRecognizer;
 
 typedef NS_ENUM(NSInteger, UITableViewCellStyle) {
-    UITableViewCellStyleDefault,	// Simple cell with text label and optional image view (behavior of UITableViewCell in iPhoneOS 2.x)
-    UITableViewCellStyleValue1,		// Left aligned label on left and right aligned label on right with blue text (Used in Settings)
-    UITableViewCellStyleValue2,		// Right aligned label on left with blue text and left aligned label on right (Used in Phone/Contacts)
-    UITableViewCellStyleSubtitle	// Left aligned label on top and left aligned label on bottom with gray text (Used in iPod).
+    UITableViewCellStyleDefault,    // Simple cell with text label and optional image view (behavior of UITableViewCell in iPhoneOS 2.x)
+    UITableViewCellStyleValue1,        // Left aligned label on left and right aligned label on right with blue text (Used in Settings)
+    UITableViewCellStyleValue2,        // Right aligned label on left with blue text and left aligned label on right (Used in Phone/Contacts)
+    UITableViewCellStyleSubtitle    // Left aligned label on top and left aligned label on bottom with gray text (Used in iPod).
 };             // available in iPhone OS 3.0
 
 typedef NS_ENUM(NSInteger, UITableViewCellSeparatorStyle) {
     UITableViewCellSeparatorStyleNone,
     UITableViewCellSeparatorStyleSingleLine,
     UITableViewCellSeparatorStyleSingleLineEtched   // This separator style is only supported for grouped style table views currently
-} __TVOS_PROHIBITED;
+} __TVOS_PROHIBITED; // 设置分割线样式
 
 typedef NS_ENUM(NSInteger, UITableViewCellSelectionStyle) {
     UITableViewCellSelectionStyleNone, // 不能选中
@@ -54,7 +54,7 @@ typedef NS_ENUM(NSInteger, UITableViewCellEditingStyle) {
     UITableViewCellEditingStyleNone,
     UITableViewCellEditingStyleDelete,
     UITableViewCellEditingStyleInsert
-};
+}; // 设置cell编辑样式
 
 typedef NS_ENUM(NSInteger, UITableViewCellAccessoryType) {
     UITableViewCellAccessoryNone, // 无                                                     // don't show any accessory view
@@ -62,7 +62,7 @@ typedef NS_ENUM(NSInteger, UITableViewCellAccessoryType) {
     UITableViewCellAccessoryDetailDisclosureButton __TVOS_PROHIBITED, //按钮                // info button w/ chevron. tracks
     UITableViewCellAccessoryCheckmark,// 箭头                                                 // checkmark. doesn't track
     UITableViewCellAccessoryDetailButton NS_ENUM_AVAILABLE_IOS(7_0)  __TVOS_PROHIBITED // info button. tracks // 感叹号的按钮(详情)
-};
+}; // 设置cell右侧附件类型
 
 typedef NS_OPTIONS(NSUInteger, UITableViewCellStateMask) {
     UITableViewCellStateDefaultMask                     = 0,
@@ -72,13 +72,22 @@ typedef NS_OPTIONS(NSUInteger, UITableViewCellStateMask) {
 
 #define UITableViewCellStateEditingMask UITableViewCellStateShowingEditControlMask
 
+
+#pragma mark - Cell初始化
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableViewCell : UIView <NSCoding, UIGestureRecognizerDelegate>
 
 // Designated initializer.  If the cell can be reused, you must pass in a reuse identifier.  You should use the same reuse identifier for all cells of the same form.
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier NS_AVAILABLE_IOS(3_0) NS_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 
+
+
+
+
+#pragma mark - ↑
+#pragma mark - Cell属性
 // Content.  These properties provide direct access to the internal label and image views used by the table view cell.  These should be used instead of the content properties below.
+// 图片
 @property (nonatomic, readonly, strong, nullable) UIImageView *imageView NS_AVAILABLE_IOS(3_0);   // default is nil.  image view will be created if necessary.
 
 /** 标题Lable */
@@ -111,7 +120,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableViewCell : UIView <NSCoding, UIGes
 /** 高亮 */
 @property (nonatomic, getter=isHighlighted) BOOL      highlighted;                // set highlighted state (title, image, background). default is NO. animated is NO
 
-/** 当cell处于高亮状态时，uitableview内部会自动调用该方法，重写该方法可以在cell处于高亮时做一些额外操作 */
+/** 当cell处于高亮状态时，UItableview内部会自动调用该方法，重写该方法可以在cell处于高亮时做一些额外操作 */
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;                     // animate between regular and selected state
 /** 重写layoutsubviews方法，为了查看当cell改变编辑状态时，有什么subview */
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated;               // animate between regular and highlighted state
@@ -147,16 +156,32 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableViewCell : UIView <NSCoding, UIGes
 // These methods can be used by subclasses to animate additional changes to the cell when the cell is changing state
 // Note that when the cell is swiped, the cell will be transitioned into the UITableViewCellStateShowingDeleteConfirmationMask state,
 // but the UITableViewCellStateShowingEditControlMask will not be set.
-/** 当cell的状态变为编辑时，uitableview内部会自动调用该方法，重写该方法可以改变cell的布局 */
+/** 当cell的状态变为编辑时，UItableview内部会自动调用该方法，重写该方法可以改变cell的布局 */
 - (void)willTransitionToState:(UITableViewCellStateMask)state NS_AVAILABLE_IOS(3_0);
 - (void)didTransitionToState:(UITableViewCellStateMask)state NS_AVAILABLE_IOS(3_0);
 
 @end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 弃用 UIDeprecated
 @interface UITableViewCell (UIDeprecated)
 
 // Frame is ignored.  The size will be specified by the table view width and row height.
-/** 当cell被选中时，uitableview内部会自动调用该方法，重写该方法可以在cell被选中时做一些额外的操作 */
 - (id)initWithFrame:(CGRect)frame reuseIdentifier:(nullable NSString *)reuseIdentifier NS_DEPRECATED_IOS(2_0, 3_0) __TVOS_PROHIBITED;
 
 
@@ -182,5 +207,5 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableViewCell : UIView <NSCoding, UIGes
 @property (nonatomic, nullable) SEL               accessoryAction NS_DEPRECATED_IOS(2_0, 3_0) __TVOS_PROHIBITED;             // action to call on accessory view clicked. set by UITableView
 
 @end
-
 NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+
