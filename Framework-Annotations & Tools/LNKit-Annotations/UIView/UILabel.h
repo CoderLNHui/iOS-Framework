@@ -142,10 +142,26 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UILabel : UIView <NSCoding, UIContentSize
 
 // Support for constraint-based layout (auto layout)
 // If nonzero, this is used when determining -intrinsicContentSize for multiline labels
+// 手动设置label文字的最大宽度 (目地是为了能过计算label真实的高度)
 @property(nonatomic) CGFloat preferredMaxLayoutWidth NS_AVAILABLE_IOS(6_0);
 
 
-// deprecated: 弃用
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#warning deprecated: 弃用
+
 /**
  设置最小收缩字号，如果Label宽度小于文字长度时，文字字号减小，低于设定字号后，不再减小。//6.0以后不再使用了。
  */

@@ -521,10 +521,10 @@
             location = "group:UIInputViewController.h">
          </FileRef>
          <FileRef
-            location = "group:UINavigationController.h">
+            location = "group:UIPageViewController.h">
          </FileRef>
          <FileRef
-            location = "group:UIPageViewController.h">
+            location = "group:UINavigationController.h">
          </FileRef>
          <FileRef
             location = "group:UIReferenceLibraryViewController.h">
