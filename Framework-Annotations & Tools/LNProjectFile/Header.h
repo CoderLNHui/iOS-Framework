@@ -7,8 +7,7 @@
  *
  * http://www.jianshu.com/u/fd745d76c816
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
- *
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
  * 说明：转载请注明出处，GitHub(https://github.com/CustomPBWaters) 和 简书(http://www.jianshu.com/u/fd745d76c816)，谢谢。
  */
 

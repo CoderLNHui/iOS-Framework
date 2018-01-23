@@ -10,7 +10,7 @@
  *
  * http://www.jianshu.com/u/fd745d76c816
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
  */
 
 #import <Foundation/Foundation.h>
@@ -149,19 +149,18 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 
 
 
-#pragma mark - 设置高度、估算值、自定义视图
-
+#pragma mark - 设置行高、区头高度、区尾高度
 // Variable height support
-//【设置行高，头视图高度 和 尾视图高度的方法】
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section;
 
 
+
 // Use the estimatedHeight methods to quickly calcuate guessed values which will allow for fast load times of the table.
 // If these methods are implemented, the above -tableView:heightForXXX calls will be deferred until views are ready to be displayed, so more expensive logic can be placed there.
 
-#pragma mark - 设置行高，头视图高度 和 尾视图高度的预设值
+#pragma mark - 设置估算行高、估算区头高度、估算区尾高度
 // 对于高度可变的情况下，提高效率
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(7_0);
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section NS_AVAILABLE_IOS(7_0);
@@ -171,7 +170,7 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 
 
 // Section header & footer information. Views are preferred over title should you decide to provide both
-#pragma mark - 设置自定义头视图 和 尾视图
+#pragma mark - 设置区头视图、区尾视图
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;   // custom view for header. will be adjusted to default or specified header height
 - (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section;   // custom view for footer. will be adjusted to default or specified footer height
 
@@ -180,9 +179,12 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 
 
 // Accessories (disclosures).
-
+#pragma mark - 设置附件
 - (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath NS_DEPRECATED_IOS(2_0, 3_0) __TVOS_PROHIBITED;
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath;
+
+
+
 
 
 // Selection -- 选择
@@ -209,13 +211,17 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(3_0);
 
 
+
+
+
+
 // Editing -- 编辑
 #pragma mark - 编辑回调代理方法
 
 // Allows customization of the editingStyle for a particular cell located at 'indexPath'. If not implemented, all editable cells will have UITableViewCellEditingStyleDelete set for them when the table has editing property set to YES.
 //【设置tableView被编辑时的状态风格，如果不设置，默认都是删除风格】
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath;
-//【自定义删除按钮的标题】
+//【自定义左滑删除按钮的标题】
 - (nullable NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED;
 //【下面这个方法是IOS8中的新方法，用于自定义创建tableView被编辑时右边的按钮，按钮类型为UITableViewRowAction】
 - (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(8_0) __TVOS_PROHIBITED; // supercedes -tableView:titleForDeleteConfirmationButtonForRowAtIndexPath: if return value is non-nil
@@ -243,6 +249,10 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 
 
 
+
+
+
+
 // Copy/Paste.-- 复制/粘贴  All three methods must be implemented by the delegate.
 #pragma mark - 复制/粘贴
 
@@ -252,6 +262,9 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 - (BOOL)tableView:(UITableView *)tableView canPerformAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(nullable id)sender NS_AVAILABLE_IOS(5_0);
 //【选择菜单项完成之后调用此方法】
 - (void)tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(nullable id)sender NS_AVAILABLE_IOS(5_0);
+
+
+
 
 // Focus -- 焦点
 
@@ -263,6 +276,10 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 @end
 
 UIKIT_EXTERN NSNotificationName const UITableViewSelectionDidChangeNotification;
+
+
+
+
 
 
 //_______________________________________________________________________________________________________________
@@ -370,9 +387,13 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding>
 
 
 
+
+
+
+
 // Row insertion/deletion/reloading. -- 行的插入/删除/刷新
 #pragma mark - ↑
-#pragma mark - 行的插入/删除/刷新
+#pragma mark - tableView操作：行的插入/删除/刷新
 
 //【允许多个插入/行和段被同时删除动画。可排序】
 - (void)beginUpdates;   // allow multiple insert/delete of rows and sections to be animated simultaneously. Nestable
@@ -426,6 +447,8 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding>
 
 
 // Selection -- 选中
+#pragma mark - ↑
+#pragma mark - 手动选中行
 
 //【选中的行所在的分区(单选)】
 @property (nonatomic, readonly, nullable) NSIndexPath *indexPathForSelectedRow; // returns nil or index path representing section and row of selection.
@@ -558,7 +581,10 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding>
 
 // After a row has the minus or plus button invoked (based on the UITableViewCellEditingStyle for the cell), the dataSource must commit the change
 // Not called for edit actions using UITableViewRowAction - the action's handler will be invoked instead
-//【tableView接受编辑时调用的方法】
+/**
+【tableView接受编辑时调用的方法】
+ 只要实现这个方法,就拥有系统左滑删除功能,点击左滑出删除按钮会调用这个方法.
+ */
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath;
 
 

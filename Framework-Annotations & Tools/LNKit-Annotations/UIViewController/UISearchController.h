@@ -10,7 +10,7 @@
  *
  * http://www.jianshu.com/u/fd745d76c816
  *
- * 🐾知识形成单一模块系统化的总结，快来微众领取你正需的彩蛋👣
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
  */
 
 #import <UIKit/UIPresentationController.h>
@@ -65,7 +65,7 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface UISearchController : UIViewController <UI
 // 控制器代理  遵循 UISearchControllerDelegate协议
 @property (nullable, nonatomic, weak) id <UISearchControllerDelegate> delegate;
 
-// 当搜索框激活时, 是否添加一个透明视图
+// 当搜索框激活时, 是否添加一个背景透明蒙版
 @property (nonatomic, assign) BOOL dimsBackgroundDuringPresentation __TVOS_PROHIBITED; // default is YES, and has the same behavior as obscuresBackgroundDuringPresentation.
 @property (nonatomic, assign) BOOL obscuresBackgroundDuringPresentation NS_AVAILABLE_IOS(9_1); // default is YES. On tvOS, defaults to NO when contained in UISearchContainerViewController.
 

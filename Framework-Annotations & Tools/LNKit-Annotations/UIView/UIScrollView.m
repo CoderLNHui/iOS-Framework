@@ -10,11 +10,13 @@
  *
  * http://www.jianshu.com/u/fd745d76c816
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
  */
 
-//--------------------------- UIScrollView概念 & 重要属性 ------------------------------//
-//
+
+
+#pragma mark - ↑
+#pragma mark - UIScrollView概念 & 重要属性
 
 /**
  UIScrollView是一个非常重要的控件,其可以展示比设备屏幕更大区域的内容,我们可以通过手指滑动来查看内容视图的每一部分内容,也可以通过手指捏合来对内容视图进行缩放操作,UITableView、UICollectionView和UITextView等常用控件全部继承自UIScrollView,而UIWebView控件内部也是基于UIScrollView实现的,我们每天开发中都不断显式或隐式地与UIScrollView打交道
@@ -32,25 +34,19 @@
  frame : 是以父控件内容的左上角为坐标原点{0, 0}
  
  bounds : 是以自己内容的左上角为坐标原点{0, 0}
-
- 重点：图解属性相关
- 链接：http://fromwiz.com/share/s/1g2OHm1Yz4U22t9uLe1FIePS0hnQMy19KA5B26lMX40GUAMJ
- 密码：mzen
-
-
-
-
-
-
-
-
-
-//--------------------------- 常见需求原理解析 ------------------------------//
-//
-
-/**
- 1.导航栏半透明效果
  
+
+
+
+
+
+
+ 
+#pragma mark - ↑
+#pragma mark - 常见需求原理解析
+
+#pragma mark - 1.导航栏半透明效果
+/**
  原理解析:
  
  默认情况下,在有UINavigationBar存在时,系统为了防止UIScrollView被遮挡,其contentInset和scrollIndicatorInsets属性都会被设置为UIEdgeInsetsMake(64, 0, 0, 0);在有UITabBar存在时,系统为了防止UIScrollView被遮挡,其contentInset和scrollIndicatorInsets属性都会被设置为UIEdgeInsetsMake(0, 0, 49, 0)
@@ -64,9 +60,11 @@
  */
 
 
+
+
+
+#pragma mark - 2.控件悬停
 /**
- 2.控件悬停
- 
  原理解析:
  
  方式一: 在悬停位置放置一个与待悬停控件相同的控件,通过-scrollViewDidScroll:代理方法跟踪contentOffset的的变化,当不满足悬停条件时,将该控件hidden属性设置为YES;当满足悬停条件时,将该控件hidden属性设置为NO
@@ -75,9 +73,9 @@
  */
 
 
+
+#pragma mark - 3.下拉头部图片放大
 /**
- 3.下拉头部图片放大
- 
  原理解析:
  
  通过-scrollViewDidScroll:代理方法跟踪contentOffset的的变化,根据contentOffset动态设置图片的缩放比例
@@ -85,9 +83,9 @@
  */
 
 
+
+#pragma mark - 4.图片无限轮播
 /**
- 4.图片无限轮播
- 
  原理解析:
  
  在已知图片数组有N个元素前提下,在UIScrollView中创建N+2个UIImageView,其中第1个至第N个图片为真实内容,第0个与第N个一样,第N+1个与第1个一样,通过-scrollViewDidScroll:代理方法跟踪contentOffset的的变化,在滑动到首尾两个图片处直接设置contentOffset到真实图片处即可
@@ -96,8 +94,14 @@
 
 
 
-//--------------------------- 常用功能性代码案例 ------------------------------//
-//
+
+
+
+
+
+
+#pragma mark - ↑
+#pragma mark - 常用功能性代码案例
 
 /**
 // 以"控件悬停方式二"为例
@@ -138,16 +142,10 @@
 
 
 
-//--------------------------- 本系统文件相关实用文章推荐 ------------------------------//
-//
 
 /**
  1.高效图片轮播，两个ImageView实现
  http://www.jianshu.com/p/ef03ec7f23b2
- 
- 
- 
- 
  
  */
 

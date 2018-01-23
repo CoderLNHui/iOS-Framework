@@ -193,6 +193,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIViewController : UIResponder <NSCoding,
  UIModalPresentationCurrentContext.  If no ancestor view controller has this flag set, then the presenter
  will be the root view controller.
  */
+// 注意：当导航控制器为不透明时，务必设置此属性
 @property(nonatomic,assign) BOOL definesPresentationContext NS_AVAILABLE_IOS(5_0);
 
 // A controller that defines the presentation context can also specify the modal transition style if this property is true.

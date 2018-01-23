@@ -10,7 +10,7 @@
  *
  * JaneBook: http://www.jianshu.com/u/fd745d76c816
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
  */
 
 
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSArray<__covariant ObjectType> : NSObject <NSCopying, NSMutableCopying, NSSecureCoding, NSFastEnumeration>
 
 @property (readonly) NSUInteger count;
-- (ObjectType)objectAtIndex:(NSUInteger)index;
+- (ObjectType)objectAtIndex:(NSUInteger)index;// 获取数组中对应下标的内容
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithObjects:(const ObjectType _Nonnull [_Nullable])objects count:(NSUInteger)cnt NS_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
@@ -138,17 +138,13 @@ typedef NS_OPTIONS(NSUInteger, NSBinarySearchingOptions) {
 
 
 
-/**************************************************************************
- *                                                                        *
- *                       WechatPublic - Codeidea                          *
- *                                                                        *
- *  WeChat-Codeidea    用文字记录自己的思想与经验,关于编程、职场、阅读以及摄影.     *
- *  WeChat-Codeidea    希望在这个浮躁的社会中通过自己的一丝经历与感知 ~            *
- *  WeChat-Codeidea    些许能带给你新思想或是习惯.                             *
- *  JaneBook-白开水ln   Reprinted Please indicate the source.Mustbe.       *
- *                 WELCOME YOU TO JOIN_GitHub & Codeidea                  *
- *                                                                        *
- **************************************************************************/
+/************************************************************************
+ *                                                                      *
+ *                       WechatPublic - Codeidea                        *
+ *                                                                      *
+ *         |用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 |            *
+ *                                                                      *
+ ************************************************************************/
 
 
 

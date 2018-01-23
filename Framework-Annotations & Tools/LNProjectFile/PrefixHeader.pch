@@ -7,7 +7,7 @@
  *
  * http://www.jianshu.com/u/fd745d76c816
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
  */
 
 #ifndef PrefixHeader_pch
@@ -51,6 +51,15 @@
 #define LNRandomColor   [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
 #define LNUnifiedBgColor RGB(206, 206, 206)
 #define LNClearColor [UIColor clearColor]
+
+#define LNColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#十六进制示例：UIColorFromRGB(0xff6a50);
+
+
+
+
+
+
 
 
 

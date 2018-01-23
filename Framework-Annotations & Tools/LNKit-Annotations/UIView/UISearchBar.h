@@ -10,7 +10,7 @@
  *
  * http://www.jianshu.com/u/fd745d76c816
  *
- * 🐾知识形成单一模块系统化的总结，快来微众领取你正需的彩蛋👣
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
  */
 
 
@@ -232,28 +232,37 @@ typedef NS_ENUM(NSInteger, UISearchBarIcon) {
 
 // 1. 将要开始编辑文本时会调用该方法，返回 NO 将不会变成第一响应者
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar;                      // return NO to not become first responder
+
 // 2. 开始输入文本会调用该方法
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar;                     // called when text starts editing
 
-// 3. 将要结束编辑文本时会调用该方法，返回 NO 将不会释放第一响应者
-- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar;                        // return NO to not resign first responder
-// 4. 结束编辑文本时调用该方法
-- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar;                       // called when text ends editing
-
-// 5. 文本改变会调用该方法（包含clear文本）
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText;   // called when text changes (including clear)
-// 6. 文字改变前会调用该方法，返回NO则不能加入新的编辑文字
+// 3. 文字改变前会调用该方法，返回NO则不能加入新的编辑文字
 - (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text NS_AVAILABLE_IOS(3_0); // called before text changes
 
-// 7. 键盘上的搜索按钮点击的会调用该方法
+
+// 4. 文本改变会调用该方法（包含clear文本）
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText;   // called when text changes (including clear)
+
+// 5. 键盘上的搜索按钮点击的会调用该方法
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;                     // called when keyboard search button pressed
-// 8. 搜索框右侧图书按钮点击会调用该方法
+
+
+// 6. 搜索框右侧图书按钮点击会调用该方法
 - (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar __TVOS_PROHIBITED; // called when bookmark button pressed
-// 9.点击取消按钮会调用该方法
+// 6.点击取消按钮会调用该方法
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar __TVOS_PROHIBITED;   // called when cancel button pressed
-// 10.搜索结果列表按钮被按下会调用该方法
+// 6.搜索结果列表按钮被按下会调用该方法
 - (void)searchBarResultsListButtonClicked:(UISearchBar *)searchBar NS_AVAILABLE_IOS(3_2) __TVOS_PROHIBITED; // called when search results button pressed
-// 11. 搜索框的附属按钮视图中切换按钮会调用该方法
+
+
+// 6. 将要结束编辑文本时会调用该方法，返回 NO 将不会释放第一响应者
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar;                        // return NO to not resign first responder
+
+// 7. 结束编辑文本时调用该方法
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar;                       // called when text ends editing
+
+
+// 8. 搜索框的附属按钮视图中切换按钮会调用该方法
 - (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope NS_AVAILABLE_IOS(3_0);
 
 @end
