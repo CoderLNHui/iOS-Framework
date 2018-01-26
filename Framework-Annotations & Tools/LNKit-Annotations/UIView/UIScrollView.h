@@ -10,7 +10,7 @@
  *
  * http://www.jianshu.com/u/fd745d76c816
  *
- * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
 
 
@@ -24,8 +24,8 @@
 
 
 NS_ASSUME_NONNULL_BEGIN
-#pragma mark - ↑
-#pragma mark - NS_ENUM & Const
+
+#pragma mark - 枚举 & 常量
 
 typedef NS_ENUM(NSInteger, UIScrollViewIndicatorStyle) {
     UIScrollViewIndicatorStyleDefault, // 黑内容白边框,适用于任何背景    // black with white border. good against any background
@@ -49,28 +49,54 @@ UIKIT_EXTERN const CGFloat UIScrollViewDecelerationRateFast NS_AVAILABLE_IOS(3_0
 
 
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
+
 #pragma mark - ↑
-#pragma mark - 内容视图属性方法相关
+#pragma mark - 内容视图属性/方法相关
 
 /**
- 内容视图的原点相对于scrollView的原点的【内容偏移量】,默认为CGPointZero
- (上/左(向外) 方向偏移为正数, 下/右(向里) 方向偏移为负数)
+ 作用: 内容视图大小, 是指定scollView能显示的内容的大小
+ 
+ 使用:
+ 
+ 注解: 如果不设置contentSize的大小默认contentSize的大小就是scrollView的view的frame的大小
+ */
+@property(nonatomic)         CGSize                       contentSize;                    // default CGSizeZero
+
+
+/**
+ 作用: 内容偏移量, (xy: 上左为正,下右为负)
+ 
+ 使用:
+    x轴不滑动: 可以写成 self.scrollView.contentOffset.x 不建议直接写成0
+    y轴滑动:   y = 100 向上滑动偏移100(显示下部内容)
+    [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x, 100) animated:YES];
+ 
+ 注解:
+    contentOffset = scrollView.frame.size.width左上角 - contentSize.width内容视图的左上角
  */
 @property(nonatomic)         CGPoint                      contentOffset;                  // default CGPointZero
 
-/** 【内容视图的大小】,默认为CGSizeZero */
-@property(nonatomic)         CGSize                       contentSize;                    // default CGSizeZero
 
 /**
- 在内容周围额外增加的间距【tableView内边距】，始终粘着内容,默认为UIEdgeInsetsZero
- CGFloat top-, CGFloat left-, CGFloat bottom+, CGFloat right+
+ 作用: 内边距, (上左下右: 向里为正,向外为负), 在内容周围额外增加的间距始终粘着内容;
+ 
+ 使用:
+ 
+ 注解:
  */
 @property(nonatomic)         UIEdgeInsets                 contentInset;                   // default UIEdgeInsetsZero. add additional scroll area around content
 
-/** 代理【id 任何对象】 */
-@property(nullable,nonatomic,weak) id<UIScrollViewDelegate>        delegate;                       // default nil. weak reference
 
-/** 设置内容视图的原点相对于scrollView的原点的【内容偏移量】，带动画效果 */
+@property(nullable,nonatomic,weak) id<UIScrollViewDelegate>        delegate;// 代理【id 任何对象】         // default nil. weak reference
+
+
+/**
+ 作用: 设置内容视图的原点相对于scrollView的原点的【内容偏移量】，带动画效果;
+ 
+ 使用: [self.scrollView setContentOffset:CGPointMake(0, 100) animated:YES];
+ 
+ 注解: 方法动画结束时调用 scrollViewDidEndScrollingAnimation: (仅当animated设置为YES时才调用)
+ */
 - (void)setContentOffset:(CGPoint)contentOffset animated:(BOOL)animated;  // animate at constant velocity to new offset
 
 
@@ -93,7 +119,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 /** 是否总是有触底反弹效果(即使内容视图小于scrollView的大小),默认为NO(注: 生效的前提条件为bounces = YES) */
 @property(nonatomic)         BOOL                         alwaysBounceVertical;           // default NO. if YES and bounces is YES, even if content is smaller than bounds, allow drag vertically
-
 @property(nonatomic)         BOOL                         alwaysBounceHorizontal;         // default NO. if YES and bounces is YES, even if content is smaller than bounds, allow drag horizontally
 
 /** 是否按页数进行滑动,默认为NO,如果设置为YES,则在滑动时只会停止在scrollView的bounds的倍数处 */

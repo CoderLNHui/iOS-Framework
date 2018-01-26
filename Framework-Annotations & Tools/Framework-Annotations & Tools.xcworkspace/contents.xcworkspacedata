@@ -489,9 +489,6 @@
          <FileRef
             location = "group:UIWindow.h">
          </FileRef>
-         <FileRef
-            location = "group:&#x6587;&#x4ef6;.h">
-         </FileRef>
       </Group>
       <Group
          location = "group:UIViewController"

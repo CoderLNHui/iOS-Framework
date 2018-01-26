@@ -10,7 +10,7 @@
  *
  * JaneBook: http://www.jianshu.com/u/fd745d76c816
  *
- * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
 
 
@@ -25,16 +25,26 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma mark - ↑
+#pragma mark - NSArray初始化
 @interface NSArray<__covariant ObjectType> : NSObject <NSCopying, NSMutableCopying, NSSecureCoding, NSFastEnumeration>
 
-@property (readonly) NSUInteger count;
+@property (readonly) NSUInteger count;// 数组中的个数
+
 - (ObjectType)objectAtIndex:(NSUInteger)index;// 获取数组中对应下标的内容
+
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithObjects:(const ObjectType _Nonnull [_Nullable])objects count:(NSUInteger)cnt NS_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 
 @end
 
+
+
+
+
+#pragma mark - ↑
+#pragma mark - NSExtendedArray
 @interface NSArray<ObjectType> (NSExtendedArray)
 
 - (NSArray<ObjectType> *)arrayByAddingObject:(ObjectType)anObject;
@@ -51,10 +61,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSUInteger)indexOfObjectIdenticalTo:(ObjectType)anObject;
 - (NSUInteger)indexOfObjectIdenticalTo:(ObjectType)anObject inRange:(NSRange)range;
 - (BOOL)isEqualToArray:(NSArray<ObjectType> *)otherArray;
-@property (nullable, nonatomic, readonly) ObjectType firstObject API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
-@property (nullable, nonatomic, readonly) ObjectType lastObject;
-- (NSEnumerator<ObjectType> *)objectEnumerator;
-- (NSEnumerator<ObjectType> *)reverseObjectEnumerator; /** 反向遍历 */
+
+
+@property (nullable, nonatomic, readonly) ObjectType firstObject API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));// 第一位
+@property (nullable, nonatomic, readonly) ObjectType lastObject;// 最后一位
+
+- (NSEnumerator<ObjectType> *)objectEnumerator;//
+- (NSEnumerator<ObjectType> *)reverseObjectEnumerator;// 反向遍历
+
 @property (readonly, copy) NSData *sortedArrayHint;
 - (NSArray<ObjectType> *)sortedArrayUsingFunction:(NSInteger (NS_NOESCAPE *)(ObjectType, ObjectType, void * _Nullable))comparator context:(nullable void *)context;
 - (NSArray<ObjectType> *)sortedArrayUsingFunction:(NSInteger (NS_NOESCAPE *)(ObjectType, ObjectType, void * _Nullable))comparator context:(nullable void *)context hint:(nullable NSData *)hint;
@@ -63,7 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
 /* Serializes this instance to the specified URL in the NSPropertyList format (using NSPropertyListXMLFormat_v1_0). For other formats use NSPropertyListSerialization directly. */
 - (BOOL)writeToURL:(NSURL *)url error:(NSError **)error API_AVAILABLE(macos(10.13), ios(11.0), watchos(4.0), tvos(11.0));
 
-
+// 设置数组中的每个对象都执行这个方法
 - (void)makeObjectsPerformSelector:(SEL)aSelector NS_SWIFT_UNAVAILABLE("Use enumerateObjectsUsingBlock: or a for loop instead");
 - (void)makeObjectsPerformSelector:(SEL)aSelector withObject:(nullable id)argument NS_SWIFT_UNAVAILABLE("Use enumerateObjectsUsingBlock: or a for loop instead");
 
@@ -96,8 +110,14 @@ typedef NS_OPTIONS(NSUInteger, NSBinarySearchingOptions) {
 
 @end
 
+
+
+
+#pragma mark - ↑
+#pragma mark - NSArrayCreation
 @interface NSArray<ObjectType> (NSArrayCreation)
 
+#pragma mark - NSArray初始化
 + (instancetype)array;
 + (instancetype)arrayWithObject:(ObjectType)anObject;
 + (instancetype)arrayWithObjects:(const ObjectType _Nonnull [_Nonnull])objects count:(NSUInteger)cnt;
@@ -115,6 +135,11 @@ typedef NS_OPTIONS(NSUInteger, NSBinarySearchingOptions) {
 
 @end
 
+
+
+
+#pragma mark - ↑
+#pragma mark - NSDeprecated 弃用
 @interface NSArray<ObjectType> (NSDeprecated)
 
 /* This method is unsafe because it could potentially cause buffer overruns. You should use -getObjects:range: instead.
@@ -122,6 +147,7 @@ typedef NS_OPTIONS(NSUInteger, NSBinarySearchingOptions) {
 
 - (void)getObjects:(ObjectType _Nonnull __unsafe_unretained [_Nonnull])objects NS_SWIFT_UNAVAILABLE("Use 'as [AnyObject]' instead") API_DEPRECATED("Use -getObjects:range: instead", macos(10.0, 10.13), ios(2.0, 11.0), watchos(2.0, 4.0), tvos(9.0, 11.0));
 
+/*** 弃用 ***/
 /* These methods are deprecated, and will be marked with API_DEPRECATED in a subsequent release. Use the variants that use errors instead. */
 + (nullable NSArray<ObjectType> *)arrayWithContentsOfFile:(NSString *)path;
 + (nullable NSArray<ObjectType> *)arrayWithContentsOfURL:(NSURL *)url;
@@ -142,7 +168,7 @@ typedef NS_OPTIONS(NSUInteger, NSBinarySearchingOptions) {
  *                                                                      *
  *                       WechatPublic - Codeidea                        *
  *                                                                      *
- *         |用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 |            *
+ *         |用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 |      *
  *                                                                      *
  ************************************************************************/
 
@@ -152,12 +178,13 @@ typedef NS_OPTIONS(NSUInteger, NSBinarySearchingOptions) {
 
 
 
-#pragma mark ------------------
+#pragma mark - ↑
 #pragma mark -【NSMutableArray】
 /****************    Mutable Array        ****************/
 
 @interface NSMutableArray<ObjectType> : NSArray<ObjectType>
 
+#pragma mark - 基本操作(插入、移除)
 - (void)addObject:(ObjectType)anObject;
 - (void)insertObject:(ObjectType)anObject atIndex:(NSUInteger)index;
 - (void)removeLastObject;
@@ -171,6 +198,7 @@ typedef NS_OPTIONS(NSUInteger, NSBinarySearchingOptions) {
 
 @interface NSMutableArray<ObjectType> (NSExtendedMutableArray)
 
+#pragma mark - 修改资源(插入、移除)
 - (void)addObjectsFromArray:(NSArray<ObjectType> *)otherArray;
 - (void)exchangeObjectAtIndex:(NSUInteger)idx1 withObjectAtIndex:(NSUInteger)idx2;
 - (void)removeAllObjects;
@@ -178,7 +206,7 @@ typedef NS_OPTIONS(NSUInteger, NSBinarySearchingOptions) {
 - (void)removeObject:(ObjectType)anObject;
 - (void)removeObjectIdenticalTo:(ObjectType)anObject inRange:(NSRange)range;
 - (void)removeObjectIdenticalTo:(ObjectType)anObject;
-- (void)removeObjectsFromIndices:(NSUInteger *)indices numIndices:(NSUInteger)cnt API_DEPRECATED("Not supported", macos(10.0,10.6), ios(2.0,4.0), watchos(2.0,2.0), tvos(9.0,9.0));
+- (void)removeObjectsFromIndices:(NSUInteger *)indices numIndices:(NSUInteger)cnt API_DEPRECATED("Not supported", macos(10.0,10.6), ios(2.0,4.0), watchos(2.0,2.0), tvos(9.0,9.0));// 弃用
 - (void)removeObjectsInArray:(NSArray<ObjectType> *)otherArray;
 - (void)removeObjectsInRange:(NSRange)range;
 - (void)replaceObjectsInRange:(NSRange)range withObjectsFromArray:(NSArray<ObjectType> *)otherArray range:(NSRange)otherRange;
@@ -200,6 +228,7 @@ typedef NS_OPTIONS(NSUInteger, NSBinarySearchingOptions) {
 
 @interface NSMutableArray<ObjectType> (NSMutableArrayCreation)
 
+#pragma mark - 加载资源
 + (instancetype)arrayWithCapacity:(NSUInteger)numItems;
 
 + (nullable NSMutableArray<ObjectType> *)arrayWithContentsOfFile:(NSString *)path;

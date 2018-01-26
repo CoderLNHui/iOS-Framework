@@ -1,15 +1,17 @@
-/*
- * File:  NSAttributedString.m
- * Framework:  UIKit
- * Author: 白开水ln（https://github.com/CustomPBWaters）
- *
- * (c) 2011-2015
- *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
- *
- * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
- */
+
+/************************************************************************
+ *                                                                      *
+ *                    👣 WechatPublic - Codeidea 👣                     *
+ *                      @Email: pbwaterln@sina.com                      *
+ *                                                                      *
+ *         |用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 |      *
+ *                                                                      *
+ *                      ⚠️ 转载请告知 且 注明出处 蟹蟹 ⚠️                   *
+ ************************************************************************/
+
+
+
+
 
 //--------------------------- 【属性】 ------------------------------//
 //

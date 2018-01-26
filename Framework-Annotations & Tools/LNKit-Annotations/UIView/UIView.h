@@ -196,11 +196,11 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 
 // use bounds/center and not frame if non-identity transform. if bounds dimension is odd, center may be have fractional part
 /**
- 边界，参照是上级视图的坐标系
+ 宽高，参照是上级视图的坐标系
  */
 @property(nonatomic) CGRect            bounds;      // default bounds is zero origin, frame size. animatable
 /**
- 中心，参照是上级视图的坐标系
+ 中心点，参照是上级视图的坐标系
  */
 @property(nonatomic) CGPoint           center;      // center is center of frame. animatable
 /**

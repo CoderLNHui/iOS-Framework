@@ -1,17 +1,12 @@
-/*
- * File:  UITableView.m
- * Framework:  UIKit
- * Author:  白水ln（https://github.com/CustomPBWaters）
- *
- * (c) 2005-2016
- *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
- *
- * http://www.jianshu.com/u/fd745d76c816
- *
- * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
- */
+
+/************************************************************************
+ *                                                                      *
+ *                    👣 WechatPublic - Codeidea 👣                     *
+ *                      @Email: pbwaterln@sina.com                      *
+ *                                                                      *
+ *         |用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 |      *
+ *                                                                      *
+ ************************************************************************/
 
 
 #pragma mark - UITableView常用属性
