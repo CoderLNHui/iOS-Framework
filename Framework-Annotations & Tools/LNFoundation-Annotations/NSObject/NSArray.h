@@ -1,7 +1,7 @@
 /*
  * File:  NSArray
  * Framework:  Foundation
- * Author: 白开水ln（https://github.com/CustomPBWaters）
+ * Author:  白开水ln（https://github.com/CoderLN）
  *
  * (c) 1994-2017
  *

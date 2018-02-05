@@ -1,7 +1,7 @@
 /*
  * UIScrollView.h
  * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * 白开水ln（https://github.com/CoderLN）
  *
  * (c) 2007-2016
  *
@@ -56,7 +56,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 /**
  作用: 内容视图大小, 是指定scollView能显示的内容的大小
  
- 使用:
+ 使用: self.scrollView.contentSize = CGSizeMake(image.size.width, image.size.height);
  
  注解: 如果不设置contentSize的大小默认contentSize的大小就是scrollView的view的frame的大小
  */
@@ -80,7 +80,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 /**
  作用: 内边距, (上左下右: 向里为正,向外为负), 在内容周围额外增加的间距始终粘着内容;
  
- 使用:
+ 使用: self.scrollView.contentInset = UIEdgeInsetsMake(20, 20, 20, 20);
  
  注解:
  */

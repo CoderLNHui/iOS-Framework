@@ -1,6 +1,7 @@
 /*
- * NSDate+LXExtension.m
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File: NSDate+LXExtension.m
+ * Framework: UIKit
+ * Author:  白开水ln（https://github.com/CoderLN）
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.

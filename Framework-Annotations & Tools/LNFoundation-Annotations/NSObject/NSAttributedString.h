@@ -1,7 +1,7 @@
 /*
  * File:  NSAttributedString.h
  * Framework:  UIKit
- * Author: 白开水ln（https://github.com/CustomPBWaters）
+ * Author:  白开水ln（https://github.com/CoderLN）
  *
  * (c) 2011-2017
  *

@@ -1,6 +1,7 @@
 /*
  * NSObject+Runtime.h
- * 白开水ln（https://github.com/CustomPBWaters）
+ * Framework:  Foundation
+ * Author:  白开水ln（https://github.com/CoderLN）
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.

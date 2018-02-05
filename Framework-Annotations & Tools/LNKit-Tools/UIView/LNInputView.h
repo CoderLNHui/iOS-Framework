@@ -1,14 +1,7 @@
-//
-//  LNInputView.h
-//  LNInputAccessoryView
-//
-//  Created by LN on 2017/10/24.
-//  Copyright © 2017年 WechatCodeidea. All rights reserved.
-//
 /*
  * File:  LNInputView.h
- * Framework:  UIScrollView - UIView
- * Author:  白开水ln（https://github.com/CustomPBWaters）
+ * Framework: UIScrollView - UIView
+ * Author: 白开水ln（https://github.com/CustomPBWaters）
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
