@@ -1,22 +1,22 @@
 /*
- * UIResponder.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  UIResponder.h
+ * Framework:  UIKit
+ * Author:  白开水ln（https://github.com/CoderLN）
  *
- * (c) 2005-2016
+ * (c) 2005-2017
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * http://www.jianshu.com/u/fd745d76c816
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
 
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKitDefines.h>
 #import <UIKit/UIEvent.h>
+#import <UIKit/UIPasteConfigurationSupporting.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -70,14 +70,26 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIResponder : NSObject <UIResponderStanda
 - (BOOL)isFirstResponder;
 #endif
 
+
 // Generally, all responders which do custom touch handling should override all four of these methods.
 // Your responder will receive either touchesEnded:withEvent: or touchesCancelled:withEvent: for each
 // touch it is handling (those touches it received in touchesBegan:withEvent:).
 // *** You must handle cancelled touches to ensure correct behavior in your application.  Failure to
 // do so is very likely to lead to incorrect behavior or crashes.
+
+#pragma mark - ↑
+#pragma mark - touches触摸事件
+// 触摸开始调用
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event;
+
+// 触摸移动调用 (做UIView的拖拽(anyObject任意一个))
+// NSSet:无序; NSArray:有序
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event;
+
+// 触摸离开调用
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event;
+
+// 当发生系统事件时会调用(如:打入电话,自动关机)
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event;
 - (void)touchesEstimatedPropertiesUpdated:(NSSet<UITouch *> *)touches NS_AVAILABLE_IOS(9_1);
 
@@ -121,7 +133,7 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface UIKeyCommand : NSObject <NSCopying, NSSec
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 
-@property (nonatomic,readonly) NSString *input;
+@property (nullable,nonatomic,readonly) NSString *input;
 @property (nonatomic,readonly) UIKeyModifierFlags modifierFlags;
 @property (nullable,nonatomic,copy) NSString *discoverabilityTitle NS_AVAILABLE_IOS(9_0);
 
@@ -166,7 +178,7 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface UIKeyCommand : NSObject <NSCopying, NSSec
 @property (nullable, nonatomic, readonly, strong) UITextInputMode *textInputMode NS_AVAILABLE_IOS(7_0);
 /* When the first responder changes and an identifier is queried, the system will establish a context to
  * track the textInputMode automatically. The system will save and restore the state of that context to
- * the user defaults via the app identifier. Use of -textInputMode above will supercede use of -textInputContextIdentifier. */
+ * the user defaults via the app identifier. Use of -textInputMode above will supersede use of -textInputContextIdentifier. */
 @property (nullable, nonatomic, readonly, strong) NSString *textInputContextIdentifier NS_AVAILABLE_IOS(7_0);
 // This call is to remove stored app identifier state that is no longer needed.
 + (void)clearTextInputContextIdentifier:(NSString *)identifier NS_AVAILABLE_IOS(7_0);
@@ -189,5 +201,10 @@ UIKIT_EXTERN NSString *const UIKeyInputEscape          NS_AVAILABLE_IOS(7_0);
 - (void)restoreUserActivityState:(NSUserActivity *)activity NS_AVAILABLE_IOS(8_0);
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+#if TARGET_OS_IOS
+@interface UIResponder (UIPasteConfigurationSupporting) <UIPasteConfigurationSupporting>
+@end
+#endif
+
+NS_ASSUME_NONNULL_END
 

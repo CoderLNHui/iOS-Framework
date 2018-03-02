@@ -1,16 +1,15 @@
 /*
- * UICollectionViewCell.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  UICollectionViewCell.h
+ * Framework:  UIKit
+ * Author:  白开水ln（https://github.com/CoderLN）
  *
- * (c) 2011-2015
+ * (c) 2011-2017
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * http://www.jianshu.com/u/fd745d76c816
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
 
 
@@ -25,9 +24,12 @@ NS_ASSUME_NONNULL_BEGIN
 @class UICollectionViewLayoutAttributes;
 @class UILongPressGestureRecognizer;
 
+
+#pragma mark - ↑
+#pragma mark - UICollectionReusableView 补充视图
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionReusableView : UIView
 
-@property (nonatomic, readonly, copy, nullable) NSString *reuseIdentifier;
+@property (nonatomic, readonly, copy, nullable) NSString *reuseIdentifier;// 标识
 
 // Override point.
 // Called by the collection view before the instance is returned from the reuse queue.
@@ -48,6 +50,10 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionReusableView : UIView
 
 @end
 
+
+
+#pragma mark - ↑
+#pragma mark - UICollectionViewCell 视图内容
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewCell : UICollectionReusableView
 
 @property (nonatomic, readonly) UIView *contentView; // add custom subviews to the cell's contentView
@@ -56,13 +62,13 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewCell : UICollectionReusab
 // The selected state is toggled when the user lifts up from a highlighted cell.
 // Override these methods to provide custom UI for a selected or highlighted state.
 // The collection view may call the setters inside an animation block.
-@property (nonatomic, getter=isSelected) BOOL selected;
-@property (nonatomic, getter=isHighlighted) BOOL highlighted;
+@property (nonatomic, getter=isSelected) BOOL selected;// 选择
+@property (nonatomic, getter=isHighlighted) BOOL highlighted;// 高亮
 
 // The background view is a subview behind all other views.
 // If selectedBackgroundView is different than backgroundView, it will be placed above the background view and animated in on selection.
-@property (nonatomic, strong, nullable) UIView *backgroundView;
-@property (nonatomic, strong, nullable) UIView *selectedBackgroundView;
+@property (nonatomic, strong, nullable) UIView *backgroundView;// 背景视图
+@property (nonatomic, strong, nullable) UIView *selectedBackgroundView;// 选中背景视图
 
 @end
 

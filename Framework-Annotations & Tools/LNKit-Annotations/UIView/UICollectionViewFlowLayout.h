@@ -1,16 +1,15 @@
 /*
- * UICollectionViewFlowLayout.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  UICollectionViewFlowLayout.h
+ * Framework:  UIKit
+ * Author:  白开水ln（https://github.com/CoderLN）
  *
- * (c) 2011-2016
+ * (c) 2011-2017
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * http://www.jianshu.com/u/fd745d76c816
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
 
 
@@ -37,58 +36,82 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface UICollectionViewFlowLayoutInvalidationCon
 
 @end
 
+
+#pragma mark - ↑
+#pragma mark - UICollectionView DelegateFlowLayout(与属性对应的代理方法)
 @protocol UICollectionViewDelegateFlowLayout <UICollectionViewDelegate>
 @optional
-/**
- 下面的代理方法是针对indexPath对应的item进行个性化设置
- 如果使用的是UICollectionViewFlowLayout布局，这些代理方法自动调用
- */
 
-/** 设置指定indexPath的单元格的大小(itemSize) */
+/**
+ 作用:设置指定indexPath的单元格的大小(itemSize)
+ */
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 
-/** 设置分组中的每一个单元格的上下左右的空白距离(内边距) */
+/**
+ 作用:设置分组中的每一个单元格的上下左右的空白距离(内边距)
+ */
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section;
 
-/** 设置分组中的单元格的行间距(竖直) */
+/**
+ 作用:设置分组中的单元格的行间距(竖直)
+ */
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section;
 
-/** 设置每行中的item的(列)间距(水平) */
+/**
+ 作用:设置每行中的item的(列)间距(水平)
+ */
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section;
 
-/** 分组的头部视图的size大小，含义也是有滚动方向决定的 */
+/**
+ 作用:分组的头部视图的size大小，含义也是有滚动方向决定的
+ */
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section;
 
-/** 分组的尾部视图的size大小，含义也是有滚动方向决定的 */
+/**
+ 作用:分组的尾部视图的size大小，含义也是有滚动方向决定的
+ */
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section;
 
 @end
 
+
+
+
+#pragma mark - ↑
+#pragma mark - UICollectionViewFlowLayout 流水布局(与代理方法对应的属性)
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewFlowLayout : UICollectionViewLayout
 
 @property (nonatomic) CGFloat minimumLineSpacing; // 设置行之间的最小间距(竖直)
 @property (nonatomic) CGFloat minimumInteritemSpacing; // 设置2个item之间(列)的最小间隙(水平)，
 @property (nonatomic) CGSize itemSize; // 设置item的大小
 
-/** 预设item大小 */
+/**
+ 作用:预设item大小
+ */
 @property (nonatomic) CGSize estimatedItemSize NS_AVAILABLE_IOS(8_0); // defaults to CGSizeZero - setting a non-zero size enables cells that self-size via -preferredLayoutAttributesFittingAttributes:
 
-/** 设置滚动方向，默认是竖直滚动 V */
+/**
+ 作用:设置滚动方向，默认是竖直滚动 V
+ */
 @property (nonatomic) UICollectionViewScrollDirection scrollDirection; // default is UICollectionViewScrollDirectionVertical
-typedef NS_ENUM(NSInteger, UICollectionViewScrollDirection) {
-    UICollectionViewScrollDirectionVertical, // 默认是竖直滚动
-    UICollectionViewScrollDirectionHorizontal // 水平滚动
-};// 设置滚动方向，
 
-/** 1.如果是垂直滚动，高度起作用，宽度忽略 / 2.如果是水平滚动，宽度期作用，高度忽略 */
+
+
+/**
+ 注解:1.如果是垂直滚动，高度起作用，宽度忽略 / 2.如果是水平滚动，宽度期作用，高度忽略
+ */
 @property (nonatomic) CGSize headerReferenceSize; // 分组的头部视图的size大小
 @property (nonatomic) CGSize footerReferenceSize; // 分组的尾部视图的size大小
 @property (nonatomic) UIEdgeInsets sectionInset; // 设置区的内边距
 
 // Set these properties to YES to get headers that pin to the top of the screen and footers that pin to the bottom while scrolling (similar to UITableView).
-// 头部视图悬停设为YES
+/**
+ 作用:头部视图悬停设为YES
+ */
 @property (nonatomic) BOOL sectionHeadersPinToVisibleBounds NS_AVAILABLE_IOS(9_0);
-// 尾部视图悬停设为YES
+/**
+ 作用:尾部视图悬停设为YES
+ */
 @property (nonatomic) BOOL sectionFootersPinToVisibleBounds NS_AVAILABLE_IOS(9_0);
 
 @end

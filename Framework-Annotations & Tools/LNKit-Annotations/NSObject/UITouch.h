@@ -1,23 +1,25 @@
 /*
- * UITouch.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  UITouch.h
+ * Framework:  UIKit
+ * Author:  白开水ln（https://github.com/CoderLN）
  *
- * (c) 2007-2015
+ * (c) 2007-2017
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * http://www.jianshu.com/u/fd745d76c816
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
- 
+
+
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKitDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
+#pragma mark - ↑
+#pragma mark - NS_ENUM
 
 @class UIWindow, UIView, UIGestureRecognizer;
 
@@ -48,10 +50,17 @@ typedef NS_OPTIONS(NSInteger, UITouchProperties) {
     UITouchPropertyLocation = (1UL << 3), // For predicted Touches
 } NS_AVAILABLE_IOS(9_1);
 
+
+
+#pragma mark - ↑
+#pragma mark - UITouch Attribute&Method
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UITouch : NSObject
 
+/** 记录了触摸时间产生或变化时的时间,单位是秒 */
 @property(nonatomic,readonly) NSTimeInterval      timestamp;
 @property(nonatomic,readonly) UITouchPhase        phase;
+
+/** 短时间内点按屏幕的次数,可以根据tapCount判断单击、双击或是更多的点击 */
 @property(nonatomic,readonly) NSUInteger          tapCount;   // touch down within a certain point within a certain amount of time
 @property(nonatomic,readonly) UITouchType         type NS_AVAILABLE_IOS(9_0);
 
@@ -60,12 +69,25 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITouch : NSObject
 @property(nonatomic,readonly) CGFloat majorRadius NS_AVAILABLE_IOS(8_0);
 @property(nonatomic,readonly) CGFloat majorRadiusTolerance NS_AVAILABLE_IOS(8_0);
 
-@property(nullable,nonatomic,readonly,strong) UIWindow                        *window;
-@property(nullable,nonatomic,readonly,strong) UIView                          *view;
+@property(nullable,nonatomic,readonly,strong) UIWindow                        *window; /** 触摸产生时所处的窗口 */
+@property(nullable,nonatomic,readonly,strong) UIView                          *view; /** 触摸产生时所处的视图 */
 @property(nullable,nonatomic,readonly,copy)   NSArray <UIGestureRecognizer *> *gestureRecognizers NS_AVAILABLE_IOS(3_2);
 
+
+/**
+ 1.返回值表示触摸在View上的位置(当前点)
+ 2.这里返回的位置是针对View的坐标系(以View的左上角为圆点(0,0))
+ 3.调用时传入的View参数为nil的话,返回的是触摸点在UIWindow的位置
+ */
 - (CGPoint)locationInView:(nullable UIView *)view;
+
+
+/**
+ 1.该方法记录了(上一点)的位置
+ */
 - (CGPoint)previousLocationInView:(nullable UIView *)view;
+
+
 
 // Use these methods to gain additional precision that may be available from touches.
 // Do not use precise locations for hit testing. A touch may hit test inside a view, yet have a precise location that lies just outside.
@@ -103,4 +125,5 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITouch : NSObject
 
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+NS_ASSUME_NONNULL_END
+

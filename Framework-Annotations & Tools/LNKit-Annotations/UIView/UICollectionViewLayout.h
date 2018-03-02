@@ -1,18 +1,16 @@
 /*
- * UICollectionViewLayout.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * File:  UICollectionViewLayout.h
+ * Framework:  UIKit
+ * Author:  白开水ln（https://github.com/CoderLN）
  *
- * (c) 2011-2016
+ * (c) 2011-2017
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming.
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * http://www.jianshu.com/u/fd745d76c816
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
-
 
 #import <UIKit/UIKitDefines.h>
 #import <Foundation/Foundation.h>
@@ -35,6 +33,9 @@ typedef NS_ENUM(NSUInteger, UICollectionElementCategory) {
 @class UICollectionView;
 @class UINib;
 
+
+#pragma mark - ↑
+#pragma mark - UICollectionViewLayoutAttributes 相当于cell
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayoutAttributes : NSObject <NSCopying, UIDynamicItem>
 
 @property (nonatomic) CGRect frame; // 布局视图的frame简单明了
@@ -66,6 +67,10 @@ typedef NS_ENUM(NSInteger, UICollectionUpdateAction) {
     UICollectionUpdateActionNone
 };
 
+
+
+#pragma mark - ↑
+#pragma mark - UICollectionViewUpdateItem
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewUpdateItem : NSObject
 
 @property (nonatomic, readonly, nullable) NSIndexPath *indexPathBeforeUpdate; // nil for UICollectionUpdateActionInsert
@@ -74,6 +79,10 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewUpdateItem : NSObject
 
 @end
 
+
+
+#pragma mark - ↑
+#pragma mark - UICollectionViewLayoutInvalidationContext
 NS_CLASS_AVAILABLE_IOS(7_0) @interface UICollectionViewLayoutInvalidationContext : NSObject
 
 @property (nonatomic, readonly) BOOL invalidateEverything; // set to YES when invalidation occurs because the collection view is sent -reloadData
@@ -96,6 +105,10 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface UICollectionViewLayoutInvalidationContext
 
 @end
 
+
+
+#pragma mark - ↑
+#pragma mark - UICollectionViewLayout 布局对象
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCoding>
 
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
@@ -106,18 +119,29 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 
 @property (nullable, nonatomic, readonly) UICollectionView *collectionView;
 
+
 // Call -invalidateLayout to indicate that the collection view needs to requery the layout information.
 // Subclasses must always call super if they override.
-/** layout失效，需要重新布局 */
+/**
+ 作用:layout失效，需要重新布局
+ 注解:
+     和UIView的setNeedsLayout方法十分类似
+ */
 - (void)invalidateLayout;
 - (void)invalidateLayoutWithContext:(UICollectionViewLayoutInvalidationContext *)context NS_AVAILABLE_IOS(7_0);
 
-/** 注册要使用的cell对应的类型 */
+
+/**
+ 作用:注册要使用的背景视图对应的类型
+ */
 - (void)registerClass:(nullable Class)viewClass forDecorationViewOfKind:(NSString *)elementKind;
 - (void)registerNib:(nullable UINib *)nib forDecorationViewOfKind:(NSString *)elementKind;
 
 @end
 
+
+#pragma mark - ↑
+#pragma mark - 分类 UISubclassingHooks
 @interface UICollectionViewLayout (UISubclassingHooks)
 
 #if UIKIT_DEFINE_AS_PROPERTIES
@@ -133,32 +157,39 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 // Subclasses should always call super if they override.
 
 /**
- 什么时候调用:collectionView第一次布局,collectionView刷新的时候也会调用
  作用:计算cell的布局，条件:ell的位置是固定不变的.
+ 调用:collectionView第一次布局,collectionView刷新的时候也会调用
  */
 - (void)prepareLayout;
+
+
 
 // UICollectionView calls these four methods to determine the layout information.
 // Implement -layoutAttributesForElementsInRect: to return layout attributes for for supplementary or decoration views, or to perform layout in an as-needed-on-screen fashion.
 // Additionally, all layout subclasses should implement -layoutAttributesForItemAtIndexPath: to return layout attributes instances on demand for specific index paths.
 // If the layout supports any supplementary or decoration view types, it should also implement the respective atIndexPath: methods for those types.
-
 /**
- 作用:指定一段区域给你这段区域cell的尺寸(可以一次性返回所有cell尺寸,也可以每隔一个距离返回cell)
- 系统传递过来一个区域rect，我们需要返回在该区域中的item的位置信息
- 返回的是一个数组，数组中包含UICollectionViewLayoutAttributes 对象
+ 作用:指定一段区域返回这段区域cell的尺寸(可以一次性返回所有cell尺寸,也可以每隔一个距离返回cell)
+ 注解:
+     系统传递过来一个区域rect，我们需要返回在该区域中的item的位置信息
+     返回的是一个数组，数组中包含UICollectionViewLayoutAttributes 对象
  */
 - (nullable NSArray<__kindof UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect; // return an array layout attributes instances for all the views in the given rect
 
+
 /**
- UICollectionViewLayoutAttributes 该对象保存每一个cell的位置
- 根据指定的indexPath返回该indexPath对应的cell的位置信息
+ 作用:获取指定该indexPath对应的 item、SupplementaryView、DecorationView 的位置信息
+ 注解:
+     UICollectionViewLayoutAttributes 该对象保存每一个cell的位置
  */
 - (nullable UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath;
 - (nullable UICollectionViewLayoutAttributes *)layoutAttributesForSupplementaryViewOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath;
 - (nullable UICollectionViewLayoutAttributes *)layoutAttributesForDecorationViewOfKind:(NSString*)elementKind atIndexPath:(NSIndexPath *)indexPath;
 
-// 在滚动的时候是否允许刷新(Invalidate)布局
+
+/**
+ 作用:在滚动的时候是否允许刷新(Invalidate)布局
+ */
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds; // return YES to cause the collection view to requery the layout for geometry information
 - (UICollectionViewLayoutInvalidationContext *)invalidationContextForBoundsChange:(CGRect)newBounds NS_AVAILABLE_IOS(7_0);
 
@@ -167,17 +198,21 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 
 
 /**
- 什么时候调用:用户手指一松开就会调用
  作用:确定最终偏移量
+ 调用:用户手指一松开就会调用
+ 注解:
+     可以根据offset偏移量做一些动画判断,如：水平滚动相册
  */
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity; // return a point at which to rest after scrolling - for layouts that want snap-to-point scrolling behavior
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset NS_AVAILABLE_IOS(7_0); // a layout can return the content offset to be applied during transition or update animations
 
 #if UIKIT_DEFINE_AS_PROPERTIES
-@property(nonatomic, readonly) CGSize collectionViewContentSize; // Subclasses must override this method and use it to return the width and height of the collection view’s content. These values represent the width and height of all the content, not just the content that is currently visible. The collection view uses this information to configure its own content size to facilitate scrolling.
+@property(nonatomic, readonly) CGSize collectionViewContentSize;// 内容视图大小 // Subclasses must override this method and use it to return the width and height of the collection view’s content. These values represent the width and height of all the content, not just the content that is currently visible. The collection view uses this information to configure its own content size to facilitate scrolling.
 #else
 
-/** 由于UICollectionVeiw继承自UIScrollView，所以需要重写该函数，告诉contentSize大小 */
+/**
+ 由于UICollectionVeiw继承自UIScrollView，所以需要重写该函数，告诉contentSize内容尺寸大小
+ */
 - (CGSize)collectionViewContentSize; // Subclasses must override this method and use it to return the width and height of the collection view’s content. These values represent the width and height of all the content, not just the content that is currently visible. The collection view uses this information to configure its own content size to facilitate scrolling.
 #endif
 
@@ -230,3 +265,37 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 @end
 
 NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
