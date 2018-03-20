@@ -1,14 +1,16 @@
 /*
- * File:  NSAttributedString.h
- * Framework:  UIKit
- * Author:  白开水ln（https://github.com/CoderLN）
+ * File:  NSAttributedString.h 
  *
  * (c) 2011-2017
+ * Framework: Foundation
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ * Author: 白开水ln,（https://github.com/CoderLN）
  *
- * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming.
+ * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
+ *
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
 
 #import <Foundation/NSAttributedString.h>

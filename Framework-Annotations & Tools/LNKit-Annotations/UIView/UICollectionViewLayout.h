@@ -1,12 +1,13 @@
 /*
- * File:  UICollectionViewLayout.h
- * Framework:  UIKit
- * Author:  白开水ln（https://github.com/CoderLN）
+ * File:  UICollectionViewLayout.h 
  *
  * (c) 2011-2017
+ * Framework: UIKit
+ *
+ * Author: 白开水ln,（https://github.com/CoderLN）
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
  *
  *
  * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
@@ -36,6 +37,7 @@ typedef NS_ENUM(NSUInteger, UICollectionElementCategory) {
 
 #pragma mark - ↑
 #pragma mark - UICollectionViewLayoutAttributes 相当于cell
+
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayoutAttributes : NSObject <NSCopying, UIDynamicItem>
 
 @property (nonatomic) CGRect frame; // 布局视图的frame简单明了
@@ -107,8 +109,15 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface UICollectionViewLayoutInvalidationContext
 
 
 
+
+
+
+
+
+
 #pragma mark - ↑
 #pragma mark - UICollectionViewLayout 布局对象
+
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCoding>
 
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
@@ -117,7 +126,8 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 // Methods in this class are meant to be overridden and will be called by its collection view to gather layout information.
 // To get the truth on the current state of the collection view, call methods on UICollectionView rather than these.
 
-@property (nullable, nonatomic, readonly) UICollectionView *collectionView;
+
+@property (nullable, nonatomic, readonly) UICollectionView *collectionView;// 视图
 
 
 // Call -invalidateLayout to indicate that the collection view needs to requery the layout information.
@@ -125,7 +135,7 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 /**
  作用:layout失效，需要重新布局
  注解:
-     和UIView的setNeedsLayout方法十分类似
+     和UIView的setNeedsLayout方法类似
  */
 - (void)invalidateLayout;
 - (void)invalidateLayoutWithContext:(UICollectionViewLayoutInvalidationContext *)context NS_AVAILABLE_IOS(7_0);
@@ -138,6 +148,9 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 - (void)registerNib:(nullable UINib *)nib forDecorationViewOfKind:(NSString *)elementKind;
 
 @end
+
+
+
 
 
 #pragma mark - ↑
@@ -156,7 +169,7 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 // The collection view calls -prepareLayout again after layout is invalidated and before requerying the layout information.
 // Subclasses should always call super if they override.
 
-/**
+/**1
  作用:计算cell的布局，条件:ell的位置是固定不变的.
  调用:collectionView第一次布局,collectionView刷新的时候也会调用
  */
@@ -168,7 +181,7 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 // Implement -layoutAttributesForElementsInRect: to return layout attributes for for supplementary or decoration views, or to perform layout in an as-needed-on-screen fashion.
 // Additionally, all layout subclasses should implement -layoutAttributesForItemAtIndexPath: to return layout attributes instances on demand for specific index paths.
 // If the layout supports any supplementary or decoration view types, it should also implement the respective atIndexPath: methods for those types.
-/**
+/**2
  作用:指定一段区域返回这段区域cell的尺寸(可以一次性返回所有cell尺寸,也可以每隔一个距离返回cell)
  注解:
      系统传递过来一个区域rect，我们需要返回在该区域中的item的位置信息
@@ -177,7 +190,7 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 - (nullable NSArray<__kindof UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect; // return an array layout attributes instances for all the views in the given rect
 
 
-/**
+/**3
  作用:获取指定该indexPath对应的 item、SupplementaryView、DecorationView 的位置信息
  注解:
      UICollectionViewLayoutAttributes 该对象保存每一个cell的位置
@@ -187,8 +200,9 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 - (nullable UICollectionViewLayoutAttributes *)layoutAttributesForDecorationViewOfKind:(NSString*)elementKind atIndexPath:(NSIndexPath *)indexPath;
 
 
-/**
- 作用:在滚动的时候是否允许刷新(Invalidate)布局
+/**4
+ 作用:在滚动的时候是否允许刷新(Invalidate)布局;
+ return YES
  */
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds; // return YES to cause the collection view to requery the layout for geometry information
 - (UICollectionViewLayoutInvalidationContext *)invalidationContextForBoundsChange:(CGRect)newBounds NS_AVAILABLE_IOS(7_0);
@@ -197,7 +211,7 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 - (UICollectionViewLayoutInvalidationContext *)invalidationContextForPreferredLayoutAttributes:(UICollectionViewLayoutAttributes *)preferredAttributes withOriginalAttributes:(UICollectionViewLayoutAttributes *)originalAttributes NS_AVAILABLE_IOS(8_0);
 
 
-/**
+/**5
  作用:确定最终偏移量
  调用:用户手指一松开就会调用
  注解:
@@ -210,13 +224,43 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewLayout : NSObject <NSCodi
 @property(nonatomic, readonly) CGSize collectionViewContentSize;// 内容视图大小 // Subclasses must override this method and use it to return the width and height of the collection view’s content. These values represent the width and height of all the content, not just the content that is currently visible. The collection view uses this information to configure its own content size to facilitate scrolling.
 #else
 
-/**
+/**6
  由于UICollectionVeiw继承自UIScrollView，所以需要重写该函数，告诉contentSize内容尺寸大小
  */
 - (CGSize)collectionViewContentSize; // Subclasses must override this method and use it to return the width and height of the collection view’s content. These values represent the width and height of all the content, not just the content that is currently visible. The collection view uses this information to configure its own content size to facilitate scrolling.
 #endif
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- - - - - - - - - - - -         - - - - - - - - - - - -         - - - - - - - - - - - -
+# WechatPublic-Codeidea         # WechatPublic-Codeidea         # WechatPublic-Codeidea
+- - - - - - - - - - - -         - - - - - - - - - - - -         - - - - - - - - - - - -
+
+
+
+
+
+
+
+
 
 @interface UICollectionViewLayout (UIUpdateSupportHooks)
 

@@ -1,12 +1,13 @@
 /*
- * File:  UICollectionViewCell.h
- * Framework:  UIKit
- * Author:  白开水ln（https://github.com/CoderLN）
+ * File:  UICollectionViewCell.h 
  *
  * (c) 2011-2017
+ * Framework: UIKit
+ *
+ * Author: 白开水ln,（https://github.com/CoderLN）
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
  *
  *
  * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
@@ -34,7 +35,16 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionReusableView : UIView
 // Override point.
 // Called by the collection view before the instance is returned from the reuse queue.
 // Subclassers must call super.
+/**
+ 作用:重用 ❓
+ 注解:
+     重写cell的prepareForReuse官方头文件中有说明.当前已经被分配的cell如果被重用了(通常是滚动出屏幕外了),会调用cell的prepareForReuse通知cell.
+     注意这里重写方法的时候,注意一定要调用父类方法[super prepareForReuse] .
+     这个在使用cell作为网络访问的代理容器时尤其要注意,需要在这里通知取消掉前一次网络请求.不要再给这个cell发数据了.
+ */
 - (void)prepareForReuse;
+
+
 
 // Classes that want to support custom layout attributes specific to a given UICollectionViewLayout subclass can apply them here.
 // This allows the view to work in conjunction with a layout class that returns a custom subclass of UICollectionViewLayoutAttributes from -layoutAttributesForItem: or the corresponding layoutAttributesForHeader/Footer methods.
@@ -52,10 +62,20 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionReusableView : UIView
 
 
 
+
+
+
 #pragma mark - ↑
 #pragma mark - UICollectionViewCell 视图内容
+
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewCell : UICollectionReusableView
 
+/**
+ 作用:内容视图
+ 注解:
+     Cell需要自定义 且 必须通过注册,原因: 系统cell没有任何子控件;
+     子控件imageView,label 添加到contentView上
+ */
 @property (nonatomic, readonly) UIView *contentView; // add custom subviews to the cell's contentView
 
 // Cells become highlighted when the user touches them.
@@ -72,5 +92,13 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewCell : UICollectionReusab
 
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+
+
+
+
+
+
+
+
+
 

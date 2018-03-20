@@ -1,18 +1,17 @@
 /*
- * Foundation.h
- * Framework:  Foundation
- * Author:  白开水ln（https://github.com/CoderLN）
+ * Foundation.h 
  *
  * (c) 1994-2016
+ * Framework: Foundation
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ * Author: 白开水ln,（https://github.com/CoderLN）
  *
- * http://www.jianshu.com/u/fd745d76c816
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming.
+ * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
+ *
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
-
 
 /**
   iOS Foundation 框架 是 Objective-C 语言应用于苹果移动设备的基础功能库，功能之强大，本专题 致力于将苹果官网的海量的文档进行 归类整理，框架各分类文件注解，并对每一类中常用的功能进行案例渐进式解析，以 简化初学者入门和老手回顾的繁索过程，尽快切入主题，快速应用起来。

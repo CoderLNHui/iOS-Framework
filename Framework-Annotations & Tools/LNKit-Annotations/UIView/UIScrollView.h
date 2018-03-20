@@ -1,14 +1,14 @@
 /*
- * UIScrollView.h
- * UIKit
- * 白开水ln（https://github.com/CoderLN）
+ * UIScrollView.h 
  *
  * (c) 2007-2016
+ * Framework: UIKit
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ * Author: 白开水ln,（https://github.com/CoderLN）
  *
- * http://www.jianshu.com/u/fd745d76c816
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming.
+ * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
  *
  * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
@@ -56,9 +56,11 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 /**
  作用: 内容视图大小, 是指定scollView能显示的内容的大小
  
- 使用: self.scrollView.contentSize = CGSizeMake(image.size.width, image.size.height);
+ 使用:
+ self.scrollView.contentSize = CGSizeMake(image.size.width, image.size.height);
  
- 注解: 如果不设置contentSize的大小默认contentSize的大小就是scrollView的view的frame的大小
+ 注解:
+ 如果不设置contentSize的大小默认contentSize的大小就是scrollView的view的frame的大小
  */
 @property(nonatomic)         CGSize                       contentSize;                    // default CGSizeZero
 
@@ -80,7 +82,8 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 /**
  作用: 内边距, (上左下右: 向里为正,向外为负), 在内容周围额外增加的间距始终粘着内容;
  
- 使用: self.scrollView.contentInset = UIEdgeInsetsMake(20, 20, 20, 20);
+ 使用:
+ self.scrollView.contentInset = UIEdgeInsetsMake(20, 20, 20, 20);
  
  注解:
  */
@@ -93,9 +96,11 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 /**
  作用: 设置内容视图的原点相对于scrollView的原点的【内容偏移量】，带动画效果;
  
- 使用: [self.scrollView setContentOffset:CGPointMake(0, 100) animated:YES];
+ 使用:
+ [self.scrollView setContentOffset:CGPointMake(0, 100) animated:YES];
  
- 注解: 方法动画结束时调用 scrollViewDidEndScrollingAnimation: (仅当animated设置为YES时才调用)
+ 注解:
+ 方法动画结束时调用 scrollViewDidEndScrollingAnimation: (仅当animated设置为YES时才调用)
  */
 - (void)setContentOffset:(CGPoint)contentOffset animated:(BOOL)animated;  // animate at constant velocity to new offset
 
@@ -114,7 +119,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
  */
 @property(nonatomic,getter=isDirectionalLockEnabled) BOOL directionalLockEnabled;         // default NO. if YES, try to lock vertical or horizontal scrolling while dragging
 
-/** 是否有触底反弹效果,默认为YES */
+/** 是否有触底反弹效果(可以看到背景颜色),默认为YES */
 @property(nonatomic)         BOOL                         bounces;                        // default YES. if YES, bounces past edge of content and back again
 
 /** 是否总是有触底反弹效果(即使内容视图小于scrollView的大小),默认为NO(注: 生效的前提条件为bounces = YES) */

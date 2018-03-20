@@ -1,14 +1,16 @@
 /*
- * UIControl.h
- * UIKit
- * 白开水ln（https://github.com/CustomPBWaters）
+ * UIControl.h 
  *
  * (c) 2008-2015
+ * Framework: UIKit
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ * Author: 白开水ln,（https://github.com/CoderLN）
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming.
+ * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
+ *
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
 
 #import <Foundation/Foundation.h>

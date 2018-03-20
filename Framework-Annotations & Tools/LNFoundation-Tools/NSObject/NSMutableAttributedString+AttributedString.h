@@ -1,14 +1,14 @@
 /*
  * NSMutableAttributedString+AttributedString.h
- * Framework:  Foundation
- * Author:  白开水ln（https://github.com/CoderLN）
+ * Framework: Foundation
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ * Author: 白开水ln,（https://github.com/CoderLN）
  *
- * http://www.jianshu.com/u/fd745d76c816
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming.
+ * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
+ *
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
 
 #import <Foundation/Foundation.h>

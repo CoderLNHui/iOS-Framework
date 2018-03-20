@@ -10,7 +10,6 @@
  * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
  * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
- * 尊重原创整理者, 谢谢 ！
  * \\\
  * This file contains Original Code and/or Modifications of Original Code
  * as defined in and that are subject to the Apple Public Source License

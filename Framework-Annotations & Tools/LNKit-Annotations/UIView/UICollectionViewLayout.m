@@ -40,9 +40,36 @@
 
 /**
  在初始化一个UICollectionViewLayout实例后,会有一系列准备方法被自动调用,以保证layout实例的正确
+ 
  首先, - (void)prepareLayout;将被调用, 默认该方法什么没做,但是在自己的子类实现中,一般在该方法中设定一些必要的layout的结果和初始需要的参数等;
  
  其次, - (CGSize)collectionViewContentSize;将被调用, 以确定collection应该占据的尺寸, 注意这里的尺寸不是指可视部分的尺寸,而应该是所有内容所占的尺寸,collectionView的本质是一个scrollView, 因此需要这个尺寸来配置滚动范围.
  
  然后, - (nullable NSArray *)layoutAttributesForElementsInRect; 被调用。 初始的layout的外观由该方法返回的LayoutAttributes决定的。
  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -290,9 +290,6 @@
          <FileRef
             location = "group:UITabBarItem.h">
          </FileRef>
-         <FileRef
-            location = "group:&#x6587;&#x4ef6;.h">
-         </FileRef>
       </Group>
       <Group
          location = "group:UIControl"
@@ -336,9 +333,6 @@
          <FileRef
             location = "group:UITextField.m">
          </FileRef>
-         <FileRef
-            location = "group:&#x6587;&#x4ef6;.h">
-         </FileRef>
       </Group>
       <Group
          location = "group:UIGestureRecognizer"
@@ -381,6 +375,12 @@
       <Group
          location = "group:UIView"
          name = "UIView">
+         <FileRef
+            location = "group:UIVisualEffectView_S.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIVisualEffectView.h">
+         </FileRef>
          <FileRef
             location = "group:UIActionSheet.h">
          </FileRef>
@@ -546,9 +546,6 @@
          </FileRef>
          <FileRef
             location = "group:UIViewController.h">
-         </FileRef>
-         <FileRef
-            location = "group:&#x6587;&#x4ef6;.h">
          </FileRef>
       </Group>
    </Group>
@@ -1519,6 +1516,12 @@
          location = "group:NSObject"
          name = "NSObject">
          <FileRef
+            location = "group:NSIndexPath.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSPredicate.h">
+         </FileRef>
+         <FileRef
             location = "group:NSArray.h">
          </FileRef>
          <FileRef
@@ -2213,8 +2216,8 @@
       location = "group:LNOtherFrameworks-Annotations"
       name = "LNOtherFrameworks-Annotations">
       <Group
-         location = "group:AlgorithmFunction"
-         name = "AlgorithmFunction">
+         location = "group:AlgorithmMathFunction"
+         name = "AlgorithmMathFunction">
          <FileRef
             location = "group:Math.h">
          </FileRef>
@@ -2406,6 +2409,12 @@
    <Group
       location = "group:LNProjectFile"
       name = "LNProjectFile">
+      <FileRef
+         location = "group:UIFactory.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIFactory.m">
+      </FileRef>
       <FileRef
          location = "group:Header.h">
       </FileRef>

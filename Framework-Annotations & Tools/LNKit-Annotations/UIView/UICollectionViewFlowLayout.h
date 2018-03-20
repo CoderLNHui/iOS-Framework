@@ -1,12 +1,13 @@
 /*
- * File:  UICollectionViewFlowLayout.h
- * Framework:  UIKit
- * Author:  白开水ln（https://github.com/CoderLN）
+ * File:  UICollectionViewFlowLayout.h 
  *
  * (c) 2011-2017
+ * Framework: UIKit
+ *
+ * Author: 白开水ln,（https://github.com/CoderLN）
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
  *
  *
  * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
@@ -29,6 +30,9 @@ typedef NS_ENUM(NSInteger, UICollectionViewScrollDirection) {
     UICollectionViewScrollDirectionHorizontal // 水平滚动
 };// 设置滚动方向，
 
+
+
+
 NS_CLASS_AVAILABLE_IOS(7_0) @interface UICollectionViewFlowLayoutInvalidationContext : UICollectionViewLayoutInvalidationContext
 
 @property (nonatomic) BOOL invalidateFlowLayoutDelegateMetrics; // if set to NO, flow layout will not requery the collection view delegate for size information etc.
@@ -37,8 +41,13 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface UICollectionViewFlowLayoutInvalidationCon
 @end
 
 
+
+
+
+
 #pragma mark - ↑
 #pragma mark - UICollectionView DelegateFlowLayout(与属性对应的代理方法)
+
 @protocol UICollectionViewDelegateFlowLayout <UICollectionViewDelegate>
 @optional
 
@@ -53,12 +62,12 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface UICollectionViewFlowLayoutInvalidationCon
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section;
 
 /**
- 作用:设置分组中的单元格的行间距(竖直)
+ 作用:设置分组中的单元格的Line行间距(横向)
  */
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section;
 
 /**
- 作用:设置每行中的item的(列)间距(水平)
+ 作用:设置每行中的item的(列)间距(竖向)
  */
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section;
 
@@ -79,6 +88,7 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface UICollectionViewFlowLayoutInvalidationCon
 
 #pragma mark - ↑
 #pragma mark - UICollectionViewFlowLayout 流水布局(与代理方法对应的属性)
+
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewFlowLayout : UICollectionViewLayout
 
 @property (nonatomic) CGFloat minimumLineSpacing; // 设置行之间的最小间距(竖直)
@@ -104,6 +114,8 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewFlowLayout : UICollection
 @property (nonatomic) CGSize footerReferenceSize; // 分组的尾部视图的size大小
 @property (nonatomic) UIEdgeInsets sectionInset; // 设置区的内边距
 
+
+
 // Set these properties to YES to get headers that pin to the top of the screen and footers that pin to the bottom while scrolling (similar to UITableView).
 /**
  作用:头部视图悬停设为YES
@@ -116,4 +128,28 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewFlowLayout : UICollection
 
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

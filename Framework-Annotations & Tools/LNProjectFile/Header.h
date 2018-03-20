@@ -1,14 +1,13 @@
 /*
  * Header.h【高效开发常用宏-适时慎用】
- * 白开水ln（https://github.com/CustomPBWaters）
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ * Author: 白开水ln,（https://github.com/CoderLN）
  *
- * http://www.jianshu.com/u/fd745d76c816
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming.
+ * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 👣
- * 说明：转载请注明出处，GitHub(https://github.com/CustomPBWaters) 和 简书(http://www.jianshu.com/u/fd745d76c816)，谢谢。
+ *
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
 
 //#ifndef PchHeader_h

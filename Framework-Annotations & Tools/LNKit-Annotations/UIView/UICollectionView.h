@@ -1,12 +1,13 @@
 /*
- * File:  UICollectionView.h
- * Framework:  UIKit
- * Author:  白开水ln（https://github.com/CoderLN）
+ * File:  UICollectionView.h 
  *
  * (c) 2011-2017
+ * Framework: UIKit
+ *
+ * Author: 白开水ln,（https://github.com/CoderLN）
  *
  * Created by 【WechatPublic-Codeidea】 on Elegant programming.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
  *
  *
  * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
@@ -21,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - ↑
 #pragma mark - NS_ENUM
+
 typedef NS_OPTIONS(NSUInteger, UICollectionViewScrollPosition) {
     UICollectionViewScrollPositionNone                 = 0,
     
@@ -41,7 +43,10 @@ typedef NS_ENUM(NSInteger, UICollectionViewReorderingCadence) {
     UICollectionViewReorderingCadenceImmediate,
     UICollectionViewReorderingCadenceFast,
     UICollectionViewReorderingCadenceSlow
-} API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos, watchos);
+} API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos, watchos); // 排序
+
+
+
 
 @class UICollectionView;
 @class UICollectionViewCell;
@@ -51,6 +56,9 @@ typedef NS_ENUM(NSInteger, UICollectionViewReorderingCadence) {
 @class UITouch;
 @class UINib;
 @class UICollectionReusableView;
+
+
+
 
 // layout transition block signature
 typedef void (^UICollectionViewLayoutInteractiveTransitionCompletion)(BOOL completed, BOOL finished);
@@ -74,13 +82,13 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
 @required（必须）
 
 /**
- 作用:设置容器视图各个组Section中有多少个item
+ 作用:设置每个组Section中有多少个item
  */
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 /**
- 作用:设置每个区中 item的内容，类似于UITableViewCell的设置
+ 作用:设置每个组中 item的内容，类似于UITableViewCell的设置
  */
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 
@@ -111,6 +119,11 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
 - (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath NS_AVAILABLE_IOS(9_0);
 
 @end
+
+
+
+
+
 
 @protocol UICollectionViewDataSourcePrefetching <NSObject>
 @required
@@ -158,7 +171,7 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
 
 
 
-#pragma mark - 下面是和高亮有关的方法
+#pragma mark - Cell高亮效果显示
 /**
  作用:cell点击时是否高亮
  */
@@ -185,6 +198,11 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
  */
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldDeselectItemAtIndexPath:(NSIndexPath *)indexPath; // called when the user taps on an already-selected item in multi-select mode
 
+
+
+
+
+#pragma mark - Cell的选中状态
 
 /**
  作用:选中item
@@ -215,9 +233,12 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
 
 
 
+
+
+
 // These methods provide support for copy/paste actions on cells.
 // All three should be implemented if any are.
-#pragma mark - 复制/粘贴操作相关方法
+#pragma mark - 支持长按后的菜单 复制/粘贴操作相关方法
 /**
  作用:是否弹出菜单，需要返回YES
  */
@@ -279,7 +300,8 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
 
 #pragma mark - ↑
 #pragma mark - UICollectionView 综合视图
-NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView
+
+NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView <UIDataSourceTranslating>
 
 #pragma mark - UICollectionView 初始化
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout NS_DESIGNATED_INITIALIZER;
@@ -320,19 +342,30 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView
 
 
 
-#pragma mark - 注册 和 复用队列
+#pragma mark - UICollectionView 常用方法: 注册 和 复用队列
+
 // For each reuse identifier that the collection view will use, register either a class or a nib from which to instantiate a cell.
 // If a nib is registered, it must contain exactly 1 top level object which is a UICollectionViewCell.
 // If a class is registered, it will be instantiated via alloc/initWithFrame:
 /**
  作用:注册要使用的cell对应的类型
+ 使用:
+     [self.collectionView registerClass:[LNCollectionViewCell class] forCellWithReuseIdentifier:cellID];
+ 
+     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([LNCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:cellID];
  */
 - (void)registerClass:(nullable Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier;
 - (void)registerNib:(nullable UINib *)nib forCellWithReuseIdentifier:(NSString *)identifier;
 
 
+
+
 /**
  作用:注册要使用的补充视图(HeaderView 和 FooterView)对应的类型
+ 使用:
+     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HeadViewID];
+ 
+     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([LNHeaderCollectionReusableView class]) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HeadViewID];
  */
 - (void)registerClass:(nullable Class)viewClass forSupplementaryViewOfKind:(NSString *)elementKind withReuseIdentifier:(NSString *)identifier;
 - (void)registerNib:(nullable UINib *)nib forSupplementaryViewOfKind:(NSString *)kind withReuseIdentifier:(NSString *)identifier;
@@ -340,6 +373,10 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView
 
 /**
  作用:复用队列
+ 使用:
+     LNCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+ 
+     LNHeaderCollectionReusableView *headView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HeadViewID forIndexPath:indexPath];
  */
 - (__kindof UICollectionViewCell *)dequeueReusableCellWithReuseIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath;
 - (__kindof UICollectionReusableView *)dequeueReusableSupplementaryViewOfKind:(NSString *)elementKind withReuseIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath;
@@ -354,6 +391,9 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView
  作用:允许多个选择
  */
 @property (nonatomic) BOOL allowsMultipleSelection; // default is NO
+
+
+
 
 #if UIKIT_DEFINE_AS_PROPERTIES
 @property (nonatomic, readonly, nullable) NSArray<NSIndexPath *> *indexPathsForSelectedItems; // returns nil or an array of selected index paths
@@ -384,8 +424,13 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView
 - (void)finishInteractiveTransition NS_AVAILABLE_IOS(7_0);
 - (void)cancelInteractiveTransition NS_AVAILABLE_IOS(7_0);
 
-// Information about the current state of the collection view.
 
+
+
+
+// Information about the current state of the collection view.
+#pragma mark - ↑
+#pragma mark - 获取对应信息
 #if UIKIT_DEFINE_AS_PROPERTIES
 @property (nonatomic, readonly) NSInteger numberOfSections;
 #else
@@ -400,6 +445,12 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView
 - (nullable NSIndexPath *)indexPathForCell:(UICollectionViewCell *)cell;
 
 - (nullable UICollectionViewCell *)cellForItemAtIndexPath:(NSIndexPath *)indexPath;
+
+
+
+
+
+
 #if UIKIT_DEFINE_AS_PROPERTIES
 @property (nonatomic, readonly) NSArray<__kindof UICollectionViewCell *> *visibleCells;
 @property (nonatomic, readonly) NSArray<NSIndexPath *> *indexPathsForVisibleItems;
@@ -441,7 +492,7 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView
 // 移动Item
 - (void)moveItemAtIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)newIndexPath;
 
-
+// 也可以批量操作
 - (void)performBatchUpdates:(void (^ __nullable)(void))updates completion:(void (^ __nullable)(BOOL finished))completion; // allows multiple insert/delete/reload/move calls to be animated simultaneously. Nestable.
 
 // Support for reordering
@@ -465,6 +516,20 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView
 
 
 @end
+
+
+
+
+
+
+
+
+
+- - - - - - - - - - - -         - - - - - - - - - - - -         - - - - - - - - - - - -
+# WechatPublic-Codeidea         # WechatPublic-Codeidea         # WechatPublic-Codeidea
+- - - - - - - - - - - -         - - - - - - - - - - - -         - - - - - - - - - - - -
+
+
 
 // _______________________________________________________________________________________________________________
 // Drag & Drop
