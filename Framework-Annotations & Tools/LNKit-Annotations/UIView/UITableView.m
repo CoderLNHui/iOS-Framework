@@ -149,34 +149,92 @@ self.tableView.sectionIndexBackgroundColor = [UIColor yellowColor];
 
 
 
+/**
+ 
+ #warning - 以下为功能模块相关的方法示例, 具体方法作用、注解、使用请移步 -> github.com/CoderLN/Framework-Codeidea
+ 
+ #pragma mark - UITableView 初始化
+/**
+ 作用：【创建时必须指定类型(有普通(UITableViewStylePlain)和分组两种类型(UITableViewStyleGrouped))】
+ */
+- (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style NS_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 
 
 
+#pragma mark - UITableView 常用属性
+
+@property (nonatomic, readonly) UITableViewStyle style;//【列表视图的类型，只读】
+@property (nonatomic, weak, nullable) id <UITableViewDataSource> dataSource; // 数据源
+@property (nonatomic, weak, nullable) id <UITableViewDelegate> delegate; // 代理方法
+ 
+/**
+ 作用：全局设置行row高(默认 44)、区头高、区尾高
+ */
+@property (nonatomic) CGFloat rowHeight;
+@property (nonatomic) CGFloat sectionHeaderHeight;
+@property (nonatomic) CGFloat sectionFooterHeight;
 
 
+/**
+ 作用：全局设置Row的预设高度、区头的预设高度、区尾的预设高度
+ */
+@property (nonatomic) CGFloat estimatedRowHeight NS_AVAILABLE_IOS(7_0);
+@property (nonatomic) CGFloat estimatedSectionHeaderHeight NS_AVAILABLE_IOS(7_0);
+@property (nonatomic) CGFloat estimatedSectionFooterHeight NS_AVAILABLE_IOS(7_0);
+
+/**
+ 作用：【设置分割线的frame】
+ */
+@property (nonatomic) UIEdgeInsets separatorInset NS_AVAILABLE_IOS(7_0) UI_APPEARANCE_SELECTOR;
+
+/**
+ 作用：【背景视图(自动匹配tableView视图的大小)】
+ 注解：
+     设置后作为列表视图(tableView)的子视图，且在所有cell和headers/footers的后面。默认nil
+ */
+@property (nonatomic, strong, nullable) UIView *backgroundView NS_AVAILABLE_IOS(3_2);
+
+/**
+ 作用：【设置tableView 表头视图 和 表尾部视图】
+ 使用：
+     self.tableView.tableFooterView = [[UIView alloc] init]; // 隐藏多余分割线
+ */
+@property (nonatomic, strong, nullable) UIView *tableHeaderView;
+@property (nonatomic, strong, nullable) UIView *tableFooterView;
 
 
+//【全局刷新】
+- (void)reloadData;
+//【刷新section这个方法常用于新加或者删除了索引类别而无需刷新整个表视图的情况下】
+- (void)reloadSectionIndexTitles NS_AVAILABLE_IOS(3_0);
 
 
+/**
+ 使表格定位到某一位置(行)
+ */
+- (void)scrollToRowAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated;
+/**
+ 使表格定位到选中行
+ */
+- (void)scrollToNearestSelectedRowAtScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated;
 
 
+#pragma mark - 【Cell操作：行的插入/删除/刷新】
 
+#pragma mark - 【编辑模式。设置之后，行的显示会基于数据源查询插入/删除/重排序的控制】
 
+#pragma mark - 【Cell注册】
 
+#pragma mark - 【Cell复用队列】
 
+#pragma mark - 【设置分割线】
 
+#pragma mark - 【设置右侧索引】
 
+#pragma mark - 【手动选中行】
 
-
-
-
-
-
-
-
-
-
-
+ */
 
 
 

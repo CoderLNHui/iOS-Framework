@@ -400,10 +400,10 @@
             location = "group:UICollectionView.m">
          </FileRef>
          <FileRef
-            location = "group:UICollectionViewCell.h">
+            location = "group:UICollectionViewFlowLayout.h">
          </FileRef>
          <FileRef
-            location = "group:UICollectionViewFlowLayout.h">
+            location = "group:UICollectionViewCell.h">
          </FileRef>
          <FileRef
             location = "group:UICollectionViewLayout.h">
