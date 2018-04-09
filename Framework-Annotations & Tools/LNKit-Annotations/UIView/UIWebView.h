@@ -52,27 +52,41 @@ NS_CLASS_AVAILABLE_IOS(2_0) __TVOS_PROHIBITED @interface UIWebView : UIView <NSC
 
 @property (nonatomic, readonly, strong) UIScrollView *scrollView NS_AVAILABLE_IOS(5_0);
 
+
+
+/**
+ API提供了三种方法：
+ */
 - (void)loadRequest:(NSURLRequest *)request;
 - (void)loadHTMLString:(NSString *)string baseURL:(nullable NSURL *)baseURL;
 - (void)loadData:(NSData *)data MIMEType:(NSString *)MIMEType textEncodingName:(NSString *)textEncodingName baseURL:(NSURL *)baseURL;
 
+
+
+
+
 @property (nullable, nonatomic, readonly, strong) NSURLRequest *request;
 
-- (void)reload;
-- (void)stopLoading;
+- (void)reload;// 刷新
+- (void)stopLoading;// 停止刷新
 
-- (void)goBack;
-- (void)goForward;
+- (void)goBack;// 返回
+- (void)goForward;// 前进
 
-@property (nonatomic, readonly, getter=canGoBack) BOOL canGoBack;
-@property (nonatomic, readonly, getter=canGoForward) BOOL canGoForward;
-@property (nonatomic, readonly, getter=isLoading) BOOL loading;
+@property (nonatomic, readonly, getter=canGoBack) BOOL canGoBack;// 返回
+@property (nonatomic, readonly, getter=canGoForward) BOOL canGoForward;// 前进
+@property (nonatomic, readonly, getter=isLoading) BOOL loading;// 刷新
 
+
+// OC与JS交互方法
 - (nullable NSString *)stringByEvaluatingJavaScriptFromString:(NSString *)script;
 
+// 设置网页自适应显示
 @property (nonatomic) BOOL scalesPageToFit;
 
 @property (nonatomic) BOOL detectsPhoneNumbers NS_DEPRECATED_IOS(2_0, 3_0);
+
+// 设置显示特殊字符显示样式 (如：电话、网址 链接显示)
 @property (nonatomic) UIDataDetectorTypes dataDetectorTypes NS_AVAILABLE_IOS(3_0);
 
 @property (nonatomic) BOOL allowsInlineMediaPlayback NS_AVAILABLE_IOS(4_0); // iPhone Safari defaults to NO. iPad Safari defaults to YES
@@ -98,9 +112,16 @@ NS_CLASS_AVAILABLE_IOS(2_0) __TVOS_PROHIBITED @interface UIWebView : UIView <NSC
 __TVOS_PROHIBITED @protocol UIWebViewDelegate <NSObject>
 
 @optional
+// 即将加载某个请求的时候调用  OC与JS交互代理方法
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
+
+// 开始加载调用
 - (void)webViewDidStartLoad:(UIWebView *)webView;
+
+// 加载完成调用
 - (void)webViewDidFinishLoad:(UIWebView *)webView;
+
+// 加载失败调用
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
 
 @end

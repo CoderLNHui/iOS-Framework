@@ -47,6 +47,9 @@
             location = "group:NSURLSession.h">
          </FileRef>
          <FileRef
+            location = "group:NSURLSession.m">
+         </FileRef>
+         <FileRef
             location = "group:UIAccelerometer.h">
          </FileRef>
          <FileRef
@@ -2426,6 +2429,9 @@
       </FileRef>
       <FileRef
          location = "group:Singleton.h">
+      </FileRef>
+      <FileRef
+         location = "group:FormatConversion.h">
       </FileRef>
    </Group>
    <Group

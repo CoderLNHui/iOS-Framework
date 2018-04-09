@@ -1,9 +1,14 @@
-//
-//  UIFactory.h
-//
-//  Created by liuNan on 15-8-12.
-//  Copyright (c) 2015年 liuNan. All rights reserved.
-//
+/*
+ * UIFactory.h【效率开发常用工厂类-阶段续更】
+ *
+ * Author: 白开水ln,（https://github.com/CoderLN）
+ *
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming.
+ * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
+ *
+ *
+ * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
+ */
 
 /**
  所谓工厂方法，就是把对象的生成和对象的使用分开，减少代码重复
