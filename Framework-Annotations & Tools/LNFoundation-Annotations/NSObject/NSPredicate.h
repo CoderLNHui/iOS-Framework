@@ -1,5 +1,5 @@
 /*
- * File:  NSPredicate.h 
+ * NSPredicate.h【谓词过滤器】
  *
  * (c) 1994-2017
  * Framework: Foundation

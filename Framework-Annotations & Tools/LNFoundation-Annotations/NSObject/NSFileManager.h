@@ -1,5 +1,5 @@
 /*
- * File:  NSFileManager.h 
+ * NSFileManager.h【文件管理】
  *
  * (c) 1994-2017
  * Framework: Foundation
@@ -12,10 +12,7 @@
  *
  * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
  */
-
-/*    NSFileManager.h
- Copyright (c) 1994-2017, Apple Inc. All rights reserved.
- */
+ 
 
 #import <Foundation/NSObject.h>
 #import <Foundation/NSEnumerator.h>
