@@ -1519,6 +1519,9 @@
          location = "group:NSObject"
          name = "NSObject">
          <FileRef
+            location = "group:NSPathUtilities.h">
+         </FileRef>
+         <FileRef
             location = "group:NSIndexPath.h">
          </FileRef>
          <FileRef
@@ -1562,9 +1565,6 @@
          </FileRef>
          <FileRef
             location = "group:NSURLSession.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSURLSession.m">
          </FileRef>
          <FileRef
             location = "group:NSFileManager.h">
@@ -2432,9 +2432,6 @@
       </FileRef>
       <FileRef
          location = "group:Singleton.h">
-      </FileRef>
-      <FileRef
-         location = "group:FormatConversion.h">
       </FileRef>
    </Group>
    <Group

@@ -460,8 +460,7 @@ static class *_instance; \
 
 
 /*
- * NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
- * 说明：转载请注明出处，GitHub(https://github.com/CustomPBWaters) 和 简书(http://www.jianshu.com/u/fd745d76c816)，谢谢。
+ * Author: 白开水ln  -  WechatPublic：Codeidea  -  Repository：github.com/CoderLN/Framework-Codeidea
  */
 
 

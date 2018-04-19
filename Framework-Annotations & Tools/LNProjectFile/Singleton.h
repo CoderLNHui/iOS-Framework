@@ -1,4 +1,6 @@
-/** 快速创建单例：微众 Codeidea */
+# * Author: 白开水ln  -  WechatPublic：Codeidea  -  Repository：github.com/CoderLN/Framework-Codeidea
+
+
 
 // .h
 #define single_interface(class)  + (class *)shared##class;
