@@ -1,15 +1,12 @@
 /*
  * UIDocumentInteractionController.h
- * Framework: UIKit
- * Author: 白开水ln,（https://github.com/CoderLN）
  *
- * (c) 2009-2015
+ * Framework: UIKit (c) 2009-2015
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
+ * About ME『Public：Codeidea / https://githubidea.github.io』.
+ * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
  *
- *
- * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
+ * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
 #import <Foundation/Foundation.h>

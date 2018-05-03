@@ -1,13 +1,12 @@
 /*
  * UIViewController+Controller.m
- * 白开水ln（https://github.com/CustomPBWaters）
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
+ * Framework: UIKit
  *
- * http://www.jianshu.com/u/fd745d76c816
+ * About ME『Public：Codeidea / https://githubidea.github.io』.
+ * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
  *
- * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
+ * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
 #import "UIViewController+Controller.h"
