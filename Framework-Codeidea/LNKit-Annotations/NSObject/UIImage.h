@@ -1,13 +1,15 @@
 /*
- * UIImage.h
+ * File:  UIImage.h 
  *
- * Framework: UIKit (c) 2005-2016
+ *
+ * Framework: UIKit (c) 2005-2017
  *
  * About ME『Public：Codeidea / https://githubidea.github.io』.
  * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
  *
  * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
  */
+
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
@@ -17,6 +19,7 @@
 #import <UIKit/UIKitDefines.h>
 #import <UIKit/UIColor.h>
 #import <UIKit/UIGeometry.h>
+#import <UIKit/NSItemProvider+UIKitAdditions.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -60,27 +63,111 @@ typedef NS_ENUM(NSInteger, UIImageRenderingMode) {
 
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UIImage : NSObject <NSSecureCoding>
 
+/**
+【类方法，从应用程序包中加载图片，通过这种方式创建会建立图像缓存，第一次从文件中加载，以后都是从缓存中直接读取。】
+ 示例：
+ UIImage * image = [UIImage iamgeNamed:@"img"];// 作为.png格式的图片，我们可以不添加后缀
+ UIImage * image = [UIImage iamgeNamed:@"img.jpg"];// 其他格式需要加，如.jpg
+ */
 + (nullable UIImage *)imageNamed:(NSString *)name;      // load from main bundle
+
+
+
+
 #if __has_include(<UIKit/UITraitCollection.h>)
 + (nullable UIImage *)imageNamed:(NSString *)name inBundle:(nullable NSBundle *)bundle compatibleWithTraitCollection:(nullable UITraitCollection *)traitCollection NS_AVAILABLE_IOS(8_0);
 #endif
 
+
+/**
+【类方法，通过文件路径创建图像。】
+ 示例：
+ 1.【从应用程序包加载】
+ NSString * path = [[NSBundle mainBundle] pathForResource:@"img" ofType:@"png"];
+ UIImage * image = [UIImage imageWithContentsOfFile:path];
+ 
+ 2.【从沙盒Document文件夹下加载】
+ NSString * path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"img.png"];
+ UIImage * image = [UIImage imageWithContentsOfFile:path];
+ */
 + (nullable UIImage *)imageWithContentsOfFile:(NSString *)path;
+
+
+/**
+【类方法，通过内存中的NSData对象创建图像。】
+ 示例：
+ 1.【从应用程序包中加载】
+ NSString * path = [[NSBundle mainBundle] pathForResource:@"img" ofType:@"png"];
+ NSData * data = [[NSData alloc] initWithContentsFile:path];
+ UIImage * image = [UIImage imageWithData:path];
+ 
+ 2.【从沙盒Document文件夹下加载】
+ NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+ path = [path stringByAppendingPathComponent:@"img.png"];
+ NSData * data = [[NSData alloc] initWithContentsOfFile:path];
+ UIImage * image = [UIImage imageWithData:path];
+ 
+ 3.【从网络上加载】
+ NSURL * url = [NSURL URLWithString:@"http://xxx/img.png"];
+ NSData * data = [[NSData alloc] initWithContentsOfURL:url];
+ UIImage * image = [UIImage imageWithData:path];
+ */
 + (nullable UIImage *)imageWithData:(NSData *)data;
 + (nullable UIImage *)imageWithData:(NSData *)data scale:(CGFloat)scale NS_AVAILABLE_IOS(6_0);
+
+
+/**
+【类方法，通过CGImageRef对象创建图像。】
+ 示例：
+ CGImageRef imageRef;
+ UIImage * image = [UIImage imageWithCGImage:imageRef];
+ */
 + (UIImage *)imageWithCGImage:(CGImageRef)cgImage;
+// 该方面使用一个CGImageRef创建UIImage，在创建时还可以指定方法倍数以及旋转方向。当scale设置为1的时候，新创建的图像将和原图像尺寸一摸一样，而orientaion则可以指定新的图像的绘制方向
 + (UIImage *)imageWithCGImage:(CGImageRef)cgImage scale:(CGFloat)scale orientation:(UIImageOrientation)orientation NS_AVAILABLE_IOS(4_0);
+
+
+
 #if __has_include(<CoreImage/CoreImage.h>)
+/**
+【类方法，通过CIImage对象创建图像。】
+ 示例：
+ CIImage * image;
+ UIImage * image = [UIImage imageWithCIImage:image];
+ */
 + (UIImage *)imageWithCIImage:(CIImage *)ciImage NS_AVAILABLE_IOS(5_0);
 + (UIImage *)imageWithCIImage:(CIImage *)ciImage scale:(CGFloat)scale orientation:(UIImageOrientation)orientation NS_AVAILABLE_IOS(6_0);
 #endif
 
+/**
+【实例方法，跟+ imageWithContentsOfFile:的用法相似，只不过它是实例方法。】
+ 示例：
+ UIImage * image = [[UIImage alloc] initWithContentsOfFile:path];
+ */
 - (nullable instancetype)initWithContentsOfFile:(NSString *)path;
+
+/**
+【实例方法，跟+ imageWithData:的用法相似，只不过它是实例方法。】
+ 示例：
+ UIImage * image = [[UIImage alloc] initWithContentsOfData:data];
+ */
 - (nullable instancetype)initWithData:(NSData *)data;
 - (nullable instancetype)initWithData:(NSData *)data scale:(CGFloat)scale NS_AVAILABLE_IOS(6_0);
+
+/**
+【实例方法，跟+ imageWithCGImage:的用法相似，只不过它是实例方法。】
+ 示例：
+ UIImage * image = [[UIImage alloc] initWithCGImage:imageRef];
+ */
 - (instancetype)initWithCGImage:(CGImageRef)cgImage;
 - (instancetype)initWithCGImage:(CGImageRef)cgImage scale:(CGFloat)scale orientation:(UIImageOrientation)orientation NS_AVAILABLE_IOS(4_0);
 #if __has_include(<CoreImage/CoreImage.h>)
+
+/**
+【实例方法，跟+ imageWithCIImage:的用法相似，只不过它是实例方法。】
+ 示例：
+ UIImage * image = [[UIImage alloc] initWithCIImage:image];
+ */
 - (instancetype)initWithCIImage:(CIImage *)ciImage NS_AVAILABLE_IOS(5_0);
 - (instancetype)initWithCIImage:(CIImage *)ciImage scale:(CGFloat)scale orientation:(UIImageOrientation)orientation NS_AVAILABLE_IOS(6_0);
 #endif
@@ -151,6 +238,15 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIImage : NSObject <NSSecureCoding>
 
 @end
 
+#if TARGET_OS_IOS
+@interface UIImage (NSItemProvider) <NSItemProviderReading, NSItemProviderWriting, UIItemProviderPresentationSizeProviding>
+#else
+@interface UIImage (NSItemProvider) <NSItemProviderReading, NSItemProviderWriting>
+#endif
+
+@end
+
+
 @interface UIImage(UIImageDeprecated)
 
 // use resizableImageWithCapInsets: and capInsets.
@@ -171,9 +267,16 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIImage : NSObject <NSSecureCoding>
 @end
 #endif
 
+
+
+/**
+ 出于性能考虑,将上传图片进行压缩
+ */
 UIKIT_EXTERN  NSData * __nullable UIImagePNGRepresentation(UIImage * __nonnull image);                               // return image as PNG. May return nil if image has no CGImageRef or invalid bitmap format
 UIKIT_EXTERN  NSData * __nullable UIImageJPEGRepresentation(UIImage * __nonnull image, CGFloat compressionQuality);  // return image as JPEG. May return nil if image has no CGImageRef or invalid bitmap format. compression is 0(most)..1(least)
 
-START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
-NS_ASSUME_NONNULL_END
+#NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+
+
+ 
 
