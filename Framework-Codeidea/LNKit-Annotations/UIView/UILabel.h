@@ -103,13 +103,11 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UILabel : UIView <NSCoding, UIContentSize
 /**
  当adjustsFontSizeToFitWidth=YES时候，如果文本font要缩小时
  baselineAdjustment这个值控制文本的基线位置，只有文本行数为1是有效
- ![Snip20160817_5.png](http://upload-images.jianshu.io/upload_images/2230763-0c52f7bd1dd91ec5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
- 
  
  typedef NS_ENUM(NSInteger, UIBaselineAdjustment) {
- UIBaselineAdjustmentAlignBaselines = 0, 默认，文本最上端与中线对齐。
- UIBaselineAdjustmentAlignCenters, 文本中线与label中线对齐。
- UIBaselineAdjustmentNone, 文本最低端与label中线对齐。
+    UIBaselineAdjustmentAlignBaselines = 0, 默认，文本最上端与中线对齐。
+    UIBaselineAdjustmentAlignCenters, 文本中线与label中线对齐。
+    UIBaselineAdjustmentNone, 文本最低端与label中线对齐。
  };
  */
 @property(nonatomic) UIBaselineAdjustment baselineAdjustment; // default is UIBaselineAdjustmentAlignBaselines

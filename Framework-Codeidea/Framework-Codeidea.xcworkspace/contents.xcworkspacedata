@@ -576,6 +576,15 @@
          location = "group:NSObject"
          name = "NSObject">
          <FileRef
+            location = "group:NSCalendar.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDateFormatter.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSThread.h">
+         </FileRef>
+         <FileRef
             location = "group:NSPredicate.h">
          </FileRef>
          <FileRef

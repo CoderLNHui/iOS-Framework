@@ -17,10 +17,8 @@
 
 
 
-
-//--------------------------- 『WechatPublic-Codeidea』【Xcode】 ------------------------------//
-// ↓
-
+#pragma mark - ↑
+#pragma mark - 【颜色相关】
 
 //彩色打印
 #define LogBlue(frmt, ...)          NSLog((XCODE_COLORS_ESCAPE @"fg0,0,255;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
@@ -31,12 +29,7 @@
 ---
 
 
-//控制台颜色插件
-#define XCODE_COLORS_ESCAPE         @"\033["
-#define XCODE_COLORS_RESET_FG       XCODE_COLORS_ESCAPE @"fg;" // Clear any foreground color
-#define XCODE_COLORS_RESET_BG       XCODE_COLORS_ESCAPE @"bg;" // Clear any background color
-#define XCODE_COLORS_RESET          XCODE_COLORS_ESCAPE @";"   // Clear any foreground or background color
-
+ 
 
 ---
 
@@ -53,6 +46,11 @@
 
 
 ---
+
+
+
+
+
 
 
 static NSString* const          FONT_TITLE = @"PingFangSC-Regular";//常规
@@ -167,7 +165,11 @@ static NSString * const         Arial_MT = @"ArialMT";//Arial粗体
 
 
 ---
-
+/**
+ 颜色相关
+ alpha 透明度 [0不透明 ~ 1透明]
+ alpha值大于0.01时才会相应事件
+ */
 
 // 黑色和白色
 #define KWHITE_COLOR            [UIColor whiteColor]
@@ -443,22 +445,6 @@ static class *_instance; \
 //--------------------------- 【自定义Log】 ------------------------------//
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
- * Author: 白开水ln  -  WechatPublic：Codeidea  -  Repository：github.com/CoderLN/Framework-Codeidea
- */
 
 
 

@@ -192,10 +192,6 @@
 
 
 
-
-
-// Include any system framework and library headers here that should be included in all compilation units.
-// Author: 白开水ln  -  WechatPublic：Codeidea  -  Repository：github.com/CoderLN/Framework-Codeidea
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+ 
 #endif /* PrefixHeader_pch */
  
