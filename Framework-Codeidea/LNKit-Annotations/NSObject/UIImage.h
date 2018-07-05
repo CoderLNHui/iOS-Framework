@@ -251,6 +251,14 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIImage : NSObject <NSSecureCoding>
 
 // use resizableImageWithCapInsets: and capInsets.
 
+/**
+ // 获取图片的尺寸
+ CGFloat width = self.size.width * 0.5;
+ CGFloat height = self.size.height * 0.5;
+ 
+ // 返回一张拉伸且受保护的图片
+ return [self stretchableImageWithLeftCapWidth:width topCapHeight:height];
+ */
 - (UIImage *)stretchableImageWithLeftCapWidth:(NSInteger)leftCapWidth topCapHeight:(NSInteger)topCapHeight __TVOS_PROHIBITED;
 @property(nonatomic,readonly) NSInteger leftCapWidth __TVOS_PROHIBITED;   // default is 0. if non-zero, horiz. stretchable. right cap is calculated as width - leftCapWidth - 1
 @property(nonatomic,readonly) NSInteger topCapHeight __TVOS_PROHIBITED;   // default is 0. if non-zero, vert. stretchable. bottom cap is calculated as height - topCapWidth - 1

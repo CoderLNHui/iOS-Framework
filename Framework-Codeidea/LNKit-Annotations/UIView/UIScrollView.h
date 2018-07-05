@@ -131,7 +131,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 @property(nonatomic)         BOOL                         alwaysBounceHorizontal;         // default NO. if YES and bounces is YES, even if content is smaller than bounds, allow drag horizontally
 
 /**
- 作用：是否按页数进行滑动,默认为NO
+ 作用：是否分页进行滑动,默认为NO
  注解：如果设置为YES,则在滑动时只会停止在scrollView的bounds的倍数处
  */
 @property(nonatomic,getter=isPagingEnabled) BOOL          pagingEnabled __TVOS_PROHIBITED;// default NO. if YES, stop on multiples of view bounds
@@ -426,7 +426,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 /**
  作用：手指滑动: 减速完成调用, 开启定时器
  注解：
-    只要设置了scrollView的分页显示，当手动(使用手指)滚动结束后，该代理方法会被调用
+    只要设置了scrollView的分页显示，当手动(使用手指)滚动结束后，该代理方法就会被调用
  */
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;      // called when scroll view grinds to a halt
 
@@ -451,7 +451,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 
 
-#pragma mark ------------------
+#pragma mark - ↑
 #pragma mark - 缩放代理方法
 
 /**

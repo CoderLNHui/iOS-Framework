@@ -1,7 +1,7 @@
 /*
  * UIButton.h 
  *
- * Framework: UIKit (c) 2008-2015
+ * Framework: UIKit (c) 2008-2017
  *
  * About ME『Public：Codeidea / https://githubidea.github.io』.
  * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
@@ -28,8 +28,10 @@ typedef NS_ENUM(NSInteger, UIButtonType) {
     UIButtonTypeInfoLight,
     UIButtonTypeInfoDark,
     UIButtonTypeContactAdd,
+
+    UIButtonTypePlain API_AVAILABLE(tvos(11.0)) API_UNAVAILABLE(ios, watchos), // standard system button without the blurred background view
     
-    UIButtonTypeRoundedRect = UIButtonTypeSystem,   // Deprecated, use UIButtonTypeSystem instead
+    UIButtonTypeRoundedRect = UIButtonTypeSystem   // Deprecated, use UIButtonTypeSystem instead
 };
 
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UIButton : UIControl <NSCoding>
