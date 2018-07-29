@@ -36,11 +36,10 @@ typedef NS_OPTIONS(NSUInteger, NSStringCompareOptions) {
 };
 /**
  比较结果:
- 
- NSComparisonResult	说明
- NSOrderedAscending	升序 (左小右大)
- NSOrderedSame	相同 (内容相同)
- NSOrderedDescending	降序 (左大右小)
+    NSComparisonResult	说明
+    NSOrderedAscending	升序 (左小右大)
+    NSOrderedSame	相同 (内容相同)
+    NSOrderedDescending	降序 (左大右小)
  */
 
 
@@ -258,23 +257,7 @@ NS_ENUM(NSStringEncoding) {
 @property (readonly) NSInteger integerValue NS_AVAILABLE(10_5, 2_0);
 @property (readonly) long long longLongValue NS_AVAILABLE(10_5, 2_0);
 @property (readonly) BOOL boolValue NS_AVAILABLE(10_5, 2_0);  // Skips initial space characters (whitespaceSet), or optional -/+ sign followed by zeroes. Returns YES on encountering one of "Y", "y", "T", "t", or a digit 1-9. It ignores any trailing characters.
-/**
- //////////字符串基本类型转换//////////
- NSString *numStr = @"87234.2345";
- 
- NSLog(@"double型:        %f", numStr.doubleValue);
- NSLog(@"float型:         %f", numStr.floatValue);
- NSLog(@"int型:           %d", numStr.intValue);
- NSLog(@"NSInteger型:     %ld", numStr.integerValue);
- NSLog(@"long long型:     %lld", numStr.longLongValue);
- NSLog(@"BOOL型:          %d", numStr.boolValue);
- //输出:   double型:        87234.234500
- //输出:   float型:         87234.234375
- //输出:   int型:           87234
- //输出:   NSInteger型:     87234
- //输出:   long long型:     87234
- //输出:   BOOL型:          1
- */
+
 
 
 
@@ -607,26 +590,7 @@ FOUNDATION_EXPORT NSStringEncodingDetectionOptionsKey const NSStringEncodingDete
     
     
     
-    
 
-/**************************************************************************
- *                                                                        *
- *                       WechatPublic - Codeidea                          *
- *                                                                        *
- *  WeChat-Codeidea    用文字记录自己的思想与经验,关于编程、职场、阅读以及摄影.     *
- *  WeChat-Codeidea    希望在这个浮躁的社会中通过自己的一丝经历与感知 ~            *
- *  WeChat-Codeidea    些许能带给你新思想或是习惯.                             *
- *  JaneBook-白开水ln   Reprinted Please indicate the source.Mustbe.       *
- *                 WELCOME YOU TO JOIN_GitHub & Codeidea                  *
- *                                                                        *
- **************************************************************************/
-
-
-    
-    
-    
-    
-    
 @interface NSMutableString : NSString
 
 #pragma mark *** Mutable string ***

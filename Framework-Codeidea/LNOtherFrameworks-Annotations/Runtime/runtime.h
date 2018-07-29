@@ -26,8 +26,6 @@
  * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
-/** iOS 底层-Class注解 */
-
 #ifndef _OBJC_RUNTIME_H
 #define _OBJC_RUNTIME_H
 
@@ -44,25 +42,33 @@
 
 
 /* Types */
-#pragma mark ------------------
-#pragma mark - 【类型】✔️
+#pragma mark - 类型
 
 #if !OBJC_TYPES_DEFINED
 
 /// An opaque type that represents a method in a class definition.
+#pragma mark -类方法
 typedef struct objc_method *Method;
 
 /// An opaque type that represents an instance variable.
+#pragma mark -成员变量,以下划线开头
 typedef struct objc_ivar *Ivar;
 
 /// An opaque type that represents a category.
+#pragma mark -类别
 typedef struct objc_category *Category;
 
 /// An opaque type that represents an Objective-C declared property.
+#pragma mark -声明的属性
 typedef struct objc_property *objc_property_t;
 
+#pragma mark - 每个Class都有一个isa指针
+/**
+ 可以看到运行时一个类还关联了它的超类指针，类名，成员变量，方法，缓存，还有附属的协议。
+ 在objc_class结构体中：ivars是objc_ivar_list指针；methodLists是指向objc_method_list指针的指针。也就是说可以动态修改 *methodLists 的值来添加成员方法，这也是Category实现的原理。
+ */
 struct objc_class {
-    Class isa  OBJC_ISA_AVAILABILITY;//每个Class都有一个isa指针
+    Class isa  OBJC_ISA_AVAILABILITY;//
     
 #if !__OBJC2__
     Class super_class                                        OBJC2_UNAVAILABLE;//父类
@@ -105,8 +111,7 @@ typedef struct {
 
 
 /* Functions */
-#pragma mark ------------------
-#pragma mark - 【功能】✔️
+#pragma mark - 函数
 
 /* Working with Instances */
 
@@ -141,7 +146,7 @@ OBJC_ARC_UNAVAILABLE;
  * @return The class object of which \e object is an instance,
  *  or \c Nil if \e object is \c nil.
  */
-//【get*(获取)】
+#pragma mark - 获得类方法
 OBJC_EXPORT Class object_getClass(id obj)
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
@@ -226,7 +231,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  * @note \c object_setIvar is faster than \c object_setInstanceVariable if the Ivar
  *  for the instance variable is already known.
  */
-//【设置实例变量】
+#pragma mark - 找到后可以直接对私有成员变量赋值（强制修改name属性）
 OBJC_EXPORT void object_setIvar(id obj, Ivar ivar, id value)
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
@@ -504,6 +509,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  * @return A pointer to an \c Ivar data structure containing information about
  *  the instance variable specified by \e name.
  */
+#pragma mark - 根据名字得到实例变量的Ivar指针
 OBJC_EXPORT Ivar class_getInstanceVariable(Class cls, const char *name)
 OBJC_AVAILABLE(10.0, 2.0, 9.0, 1.0);
 
@@ -515,6 +521,7 @@ OBJC_AVAILABLE(10.0, 2.0, 9.0, 1.0);
  *
  * @return A pointer to an \c Ivar data structure containing information about the class variable specified by \e name.
  */
+#pragma mark - 根据名字得到类变量的Ivar指针，但是这个在OC中好像毫无意义
 OBJC_EXPORT Ivar class_getClassVariable(Class cls, const char *name)
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
@@ -531,7 +538,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *
  *  If the class declares no instance variables, or cls is Nil, NULL is returned and *outCount is 0.
  */
-//【获得某个类的所有成员变量（outCount 会返回成员变量的总数）】
+#pragma mark - 获得某个类的所有成员变量（outCount 会返回成员变量的总数）
 OBJC_EXPORT Ivar *class_copyIvarList(Class cls, unsigned int *outCount)OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
 /**
@@ -546,7 +553,7 @@ OBJC_EXPORT Ivar *class_copyIvarList(Class cls, unsigned int *outCount)OBJC_AVAI
  *
  * @note This function searches superclasses for implementations, whereas \c class_copyMethodList does not.
  */
-//【获得某个类的实例对象方法】
+#pragma mark - 获得某个类的实例对象方法
 OBJC_EXPORT Method class_getInstanceMethod(Class cls, SEL name)
 OBJC_AVAILABLE(10.0, 2.0, 9.0, 1.0);
 
@@ -563,7 +570,7 @@ OBJC_AVAILABLE(10.0, 2.0, 9.0, 1.0);
  * @note Note that this function searches superclasses for implementations,
  *  whereas \c class_copyMethodList does not.
  */
-//【获得某个类的类方法】
+#pragma mark - 获得某个类的类方法
 OBJC_EXPORT Method class_getClassMethod(Class cls, SEL name)
 OBJC_AVAILABLE(10.0, 2.0, 9.0, 1.0);
 
@@ -631,7 +638,8 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  * @note To get the implementations of methods that may be implemented by superclasses,
  *  use \c class_getInstanceMethod or \c class_getClassMethod.
  */
-//【获取类里面所有方法】本质:创建谁的对象
+#pragma mark - 获取类的所有方法
+//本质:创建谁的对象
 OBJC_EXPORT Method *class_copyMethodList(Class cls, unsigned int *outCount)
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
@@ -661,6 +669,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *
  *  If cls adopts no protocols, or cls is Nil, returns NULL and *outCount is 0.
  */
+#pragma mark - 获取协议列表
 OBJC_EXPORT Protocol * __unsafe_unretained *class_copyProtocolList(Class cls, unsigned int *outCount)
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
@@ -690,7 +699,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *
  *  If \e cls declares no properties, or \e cls is \c Nil, returns \c NULL and \c *outCount is \c 0.
  */
-//【获取类里面属性】
+#pragma mark - 获取类中所有的属性
 OBJC_EXPORT objc_property_t *class_copyPropertyList(Class cls, unsigned int *outCount)OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
 /**
@@ -728,7 +737,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *  but will not replace an existing implementation in this class.
  *  To change an existing implementation, use method_setImplementation.
  */
-//【增加类方法】
+#pragma mark - 动态添加方法
 OBJC_EXPORT BOOL class_addMethod(Class cls, SEL name, IMP imp,
                                  const char *types)
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
@@ -751,7 +760,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *  - If the method identified by \e name does exist, its \c IMP is replaced as if \c method_setImplementation were called.
  *    The type encoding specified by \e types is ignored.
  */
-//【修改方法】
+#pragma mark - 替换原方法实现
 OBJC_EXPORT IMP class_replaceMethod(Class cls, SEL name, IMP imp,
                                     const char *types)
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
@@ -1069,7 +1078,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *  method_setImplementation(m2, imp1);
  *  \endcode
  */
-//【交换两个方法的实现】
+#pragma mark - 交换两个方法的实现
 OBJC_EXPORT void method_exchangeImplementations(Method m1, Method m2)
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
@@ -1083,7 +1092,7 @@ OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
  *
  * @return A C string containing the instance variable's name.
  */
-//【获得成员变量的名字】
+#pragma mark - 获得成员变量的名字
 OBJC_EXPORT const char *ivar_getName(Ivar v)
 OBJC_AVAILABLE(10.5, 2.0, 9.0, 1.0);
 
@@ -1599,7 +1608,7 @@ typedef OBJC_ENUM(uintptr_t, objc_AssociationPolicy) {
  * @see objc_setAssociatedObject
  * @see objc_removeAssociatedObjects
  */
-//【将某个值跟某个对象关联起来，将某个值存储到某个对象中】
+#pragma mark - 将某个值跟某个对象关联起来，将某个值存储到某个对象中
 OBJC_EXPORT void objc_setAssociatedObject(id object, const void *key, id value, objc_AssociationPolicy policy)
 OBJC_AVAILABLE(10.6, 3.1, 9.0, 1.0);
 
@@ -1613,7 +1622,7 @@ OBJC_AVAILABLE(10.6, 3.1, 9.0, 1.0);
  *
  * @see objc_setAssociatedObject
  */
-//【利用参数key 将对象object中存储的对应值取出来】
+#pragma mark - 利用参数key 将对象object中存储的对应值取出来
 OBJC_EXPORT id objc_getAssociatedObject(id object, const void *key)
 OBJC_AVAILABLE(10.6, 3.1, 9.0, 1.0);
 

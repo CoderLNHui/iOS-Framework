@@ -31,8 +31,8 @@ typedef NS_ENUM(NSInteger, UIScrollViewIndicatorStyle) {
 
 typedef NS_ENUM(NSInteger, UIScrollViewKeyboardDismissMode) {
     UIScrollViewKeyboardDismissModeNone, // 不隐藏键盘
-    UIScrollViewKeyboardDismissModeOnDrag,  // 当拖拽scrollView时隐藏键盘    // dismisses the keyboard when a drag begins
-    UIScrollViewKeyboardDismissModeInteractive,// 当拖拽键盘上方时隐藏键盘 // the keyboard follows the dragging touch off screen, and may be pulled upward again to cancel the dismiss
+    UIScrollViewKeyboardDismissModeOnDrag,  // 当拖动scrollView时隐藏键盘    // dismisses the keyboard when a drag begins
+    UIScrollViewKeyboardDismissModeInteractive,// 当拖动键盘上方时隐藏键盘 // the keyboard follows the dragging touch off screen, and may be pulled upward again to cancel the dismiss
 } NS_ENUM_AVAILABLE_IOS(7_0);// 键盘的消失模式
 
 
@@ -58,9 +58,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 #pragma mark - 内容视图属性/方法
 
 /**
- 作用： 内容视图大小, 是指定scollView能显示的内容的大小
- 使用：
-    self.scrollView.contentSize = CGSizeMake(image.size.width, image.size.height);
+ 作用：内容视图大小, 是指定scollView能显示的内容的大小
  注解：
     如果不设置contentSize的大小默认contentSize的大小就是scrollView的view的frame的大小
  */
@@ -68,9 +66,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 
 /**
- 作用： 内容偏移量, (xy: 上左为正,下右为负)
- 使用：
-    [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x, 100) animated:YES];
+ 作用：内容偏移量, (xy: 上左为正,下右为负)
  注解：
     contentOffset = scrollView.frame.size.width左上角 - contentSize.width内容视图的左上角
     x轴不滑动: 可以写成 self.scrollView.contentOffset.x 不建议直接写成0
@@ -80,9 +76,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 
 /**
- 作用： 内边距, (上左下右: 向里为正,向外为负), 在内容周围额外增加的间距始终粘着内容;
- 使用：
-    self.scrollView.contentInset = UIEdgeInsetsMake(20, 20, 20, 20);
+ 作用：内边距, (上左下右: 向里为正,向外为负), 在内容周围额外增加的间距始终粘着内容;
  */
 @property(nonatomic)         UIEdgeInsets                 contentInset;                   // default UIEdgeInsetsZero. add additional scroll area around content
 
@@ -91,9 +85,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 
 /**
- 作用： 设置内容视图的原点相对于scrollView的原点的【内容偏移量】，带动画效果;
- 使用：
-    [self.scrollView setContentOffset:CGPointMake(0, 100) animated:YES];
+ 作用：设置内容视图的原点相对于scrollView的原点的【内容偏移量】，带动画效果;
  注解：
     方法动画结束时调用 scrollViewDidEndScrollingAnimation: (仅当animated设置为YES时才调用)
  */
@@ -365,8 +357,8 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 #pragma mark - 键盘的消失模式
 /**
  作用：设置隐藏键盘模式,默认为UIScrollViewKeyboardDismissModeNone(不隐藏键盘),
-      ModeOnDrag(当拖拽scrollView时隐藏键盘)、
-      ModeInteractive(当拖拽键盘上方时隐藏键盘)
+      ModeOnDrag(当拖动scrollView时隐藏键盘)、
+      ModeInteractive(当拖动键盘上方时隐藏键盘)
  */
 @property(nonatomic) UIScrollViewKeyboardDismissMode keyboardDismissMode NS_AVAILABLE_IOS(7_0); // default is UIScrollViewKeyboardDismissModeNone
 
@@ -402,7 +394,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 // called on finger up if the user dragged. velocity is in points/millisecond. targetContentOffset may be changed to adjust where the scroll view comes to rest
 /**
- 作用：用户即将停止拖拽时调用
+ 作用：用户即将停止拖动时调用
  注解：
     应用程序可以通过修改targetContentOffset参数的值来调整内容视图content view停止的位置
  */
@@ -410,16 +402,16 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 // called on finger up if the user dragged. decelerate is true if it will continue moving afterwards
 /**
- 作用：用户已经停止拖拽时调用
+ 作用：用户已经停止拖动时调用
  注解：
-    如果内容视图content view在停止拖拽后但由于惯性会继续滚动，减速,则decelerate参数为YES
+    如果内容视图content view在停止拖动后但由于惯性会继续滚动，减速,则decelerate参数为YES
  */
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
 
 /**
  作用：将要开始减速时调用
  注解：
-    仅当停止拖拽后继续移动时才会被调用
+    仅当停止拖动后继续移动时才会被调用
  */
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView;   // called on finger up as we are moving
 

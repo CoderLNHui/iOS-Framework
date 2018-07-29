@@ -21,18 +21,30 @@ NS_ASSUME_NONNULL_BEGIN
 @class UICollectionViewLayoutAttributes;
 @class UILongPressGestureRecognizer;
 
+typedef NS_ENUM(NSInteger, UICollectionViewCellDragState) {
+    UICollectionViewCellDragStateNone,
+    /* The cell is in the "lifting" state.
+     */
+    UICollectionViewCellDragStateLifting,
+    
+    /* A cell in the "dragging" state is left behind with a
+     * "ghosted" appearance to denote where the drag
+     * started from.
+     */
+    UICollectionViewCellDragStateDragging
+} API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos, watchos);
 
-#pragma mark - ↑
-#pragma mark - UICollectionReusableView 补充视图
+#pragma mark - 复用视图
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionReusableView : UIView
 
-@property (nonatomic, readonly, copy, nullable) NSString *reuseIdentifier;// 标识
+#pragma mark -标识
+@property (nonatomic, readonly, copy, nullable) NSString *reuseIdentifier;//
 
 // Override point.
 // Called by the collection view before the instance is returned from the reuse queue.
 // Subclassers must call super.
+#pragma mark -准备复用（当cell被复用会调用）
 /**
- 作用:重用 ❓
  注解:
      重写cell的prepareForReuse官方头文件中有说明.当前已经被分配的cell如果被重用了(通常是滚动出屏幕外了),会调用cell的prepareForReuse通知cell.
      注意这里重写方法的时候,注意一定要调用父类方法[super prepareForReuse] .
@@ -59,15 +71,11 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionReusableView : UIView
 
 
 
-
-
-#pragma mark - ↑
-#pragma mark - UICollectionViewCell 视图内容
-
+#pragma mark - cell视图内容（继承复用视图ReusableView）
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewCell : UICollectionReusableView
 
+#pragma mark -内容视图
 /**
- 作用:内容视图
  注解:
      Cell需要自定义 且 必须通过注册,原因: 系统cell没有任何子控件;
      子控件imageView,label 添加到contentView上
@@ -78,13 +86,24 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewCell : UICollectionReusab
 // The selected state is toggled when the user lifts up from a highlighted cell.
 // Override these methods to provide custom UI for a selected or highlighted state.
 // The collection view may call the setters inside an animation block.
-@property (nonatomic, getter=isSelected) BOOL selected;// 选择
-@property (nonatomic, getter=isHighlighted) BOOL highlighted;// 高亮
+#pragma mark -选择
+@property (nonatomic, getter=isSelected) BOOL selected;//
+#pragma mark -高亮
+@property (nonatomic, getter=isHighlighted) BOOL highlighted;//
+
+// Override this method to modify the visual appearance for a particular
+// dragState.
+//
+// Call super if you want to add to the existing default implementation.
+//
+- (void)dragStateDidChange:(UICollectionViewCellDragState)dragState API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos, watchos);
 
 // The background view is a subview behind all other views.
 // If selectedBackgroundView is different than backgroundView, it will be placed above the background view and animated in on selection.
-@property (nonatomic, strong, nullable) UIView *backgroundView;// 背景视图
-@property (nonatomic, strong, nullable) UIView *selectedBackgroundView;// 选中背景视图
+#pragma mark -背景视图
+@property (nonatomic, strong, nullable) UIView *backgroundView;//
+#pragma mark -选中背景视图
+@property (nonatomic, strong, nullable) UIView *selectedBackgroundView;//
 
 @end
 

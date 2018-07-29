@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_OPTIONS(NSUInteger, UIControlEvents) {
     UIControlEventTouchDown                                         = 1 <<  0,      // on all touch downs
-    UIControlEventTouchDownRepeat【连续点击】                                   = 1 <<  1,      // on multiple touchdowns (tap count > 1)
+    UIControlEventTouchDownRepeat【在短时间内连续店家按钮】                                   = 1 <<  1,      // on multiple touchdowns (tap count > 1)
     UIControlEventTouchDragInside【】                                   = 1 <<  2,
     UIControlEventTouchDragOutside【】                                  = 1 <<  3,
     UIControlEventTouchDragEnter【】                                    = 1 <<  4,

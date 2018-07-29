@@ -16,9 +16,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#pragma mark - ↑
-#pragma mark - NS_ENUM
 
+#pragma mark - NS_ENUM
+#pragma mark -滚动位置
 typedef NS_OPTIONS(NSUInteger, UICollectionViewScrollPosition) {
     UICollectionViewScrollPositionNone                 = 0,
     
@@ -32,35 +32,34 @@ typedef NS_OPTIONS(NSUInteger, UICollectionViewScrollPosition) {
     UICollectionViewScrollPositionLeft                 = 1 << 3,
     UICollectionViewScrollPositionCenteredHorizontally = 1 << 4,
     UICollectionViewScrollPositionRight                = 1 << 5
-};// 滚动位置
+};
 
-
+#pragma mark -重新排列节奏
 typedef NS_ENUM(NSInteger, UICollectionViewReorderingCadence) {
     UICollectionViewReorderingCadenceImmediate,
     UICollectionViewReorderingCadenceFast,
     UICollectionViewReorderingCadenceSlow
-} API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos, watchos); // 排序
+} API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos, watchos);
 
 
 
 
-@class UICollectionView;
-@class UICollectionViewCell;
-@class UICollectionViewLayout;
-@class UICollectionViewTransitionLayout;
-@class UICollectionViewLayoutAttributes;
-@class UITouch;
-@class UINib;
-@class UICollectionReusableView;
+@class UICollectionView, UICollectionReusableView, UICollectionViewCell, UICollectionViewLayout, UICollectionViewTransitionLayout, UICollectionViewLayoutAttributes, UITouch, UINib;
+@class UIDragItem, UIDragPreviewParameters, UIDragPreviewTarget;
+@class UICollectionViewDropProposal, UICollectionViewPlaceholder, UICollectionViewDropPlaceholder;
+@protocol UIDataSourceTranslating, UISpringLoadedInteractionContext;
+@protocol UIDragSession, UIDropSession;
+@protocol UICollectionViewDragDelegate, UICollectionViewDropDelegate, UICollectionViewDropCoordinator, UICollectionViewDropItem, UICollectionViewDropPlaceholderContext;
 
 
 
 
+#pragma mark -布局转换Block
 // layout transition block signature
 typedef void (^UICollectionViewLayoutInteractiveTransitionCompletion)(BOOL completed, BOOL finished);
 
 
-#pragma mark - ↑
+
 #pragma mark - UICollectionView FocusUpdateContext
 NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFocusUpdateContext
 
@@ -71,56 +70,43 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
 
 
 
-#pragma mark - ↑
-#pragma mark - UICollectionView DataSource
 
+#pragma mark - DataSource
 @protocol UICollectionViewDataSource <NSObject>
-@required（必须）
 
-/**
- 作用:设置每个组Section中有多少个item
- */
+#pragma mark -@required（必须）
+
+#pragma mark -设置每个组Section中有多少个item
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
 
+#pragma mark -设置每个组中 item的内容，类似于UITableViewCell的设置
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-/**
- 作用:设置每个组中 item的内容，类似于UITableViewCell的设置
- */
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 
-@optional（可选）
+#pragma mark -@optional（可选）
 
-/**
- 作用:设置容器视图有多少组Section，系统默认返回值为1
- */
+#pragma mark -设置容器视图有多少组Section，系统默认返回值为1
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView;
 
+#pragma mark -返回顶部视图和底部视图，通过kind参数分辨是设置顶部还是底部（补充视图）
 // The view that is returned must be retrieved from a call to -dequeueReusableSupplementaryViewOfKind:withReuseIdentifier:forIndexPath:
 /**
- 作用:返回顶部视图和底部视图，通过kind参数分辨是设置顶部还是底部（补充视图）
- 注解:
-     补充视图，这里可以充当区的头和尾，我们自己不实现的话，系统默认返回值为nil
+ 注解：补充视图，这里可以充当区的头和尾，我们自己不实现的话，系统默认返回值为nil
  */
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath;
 
-/**
- 作用:指定的单元格项目是否可以移动到集合视图中的另一个位置，默认返回值为NO
- */
+#pragma mark -指定的单元格项目是否可以移动到集合视图中的另一个位置，默认返回值为NO
 - (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(9_0);
 
-/**
- 作用:将指定的单元格项目从一个位置移动到集合视图中的另一个位置
- */
+#pragma mark -将指定的单元格项目从一个位置移动到集合视图中的另一个位置
 - (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath NS_AVAILABLE_IOS(9_0);
 
 @end
 
 
 
-
-
-
+#pragma mark - DataSourcePrefetching
 @protocol UICollectionViewDataSourcePrefetching <NSObject>
 @required
 // indexPaths are ordered ascending by geometric distance from the collection view
@@ -134,24 +120,16 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
 
 
 
-
-
-#pragma mark - ↑
-#pragma mark - UICollectionView Delegate
+#pragma mark - Delegate
 @protocol UICollectionViewDelegate <UIScrollViewDelegate>
 @optional
 /**
  事件的处理顺序如下：
- 
- 1、手指按下：shouldHighlightItemAtIndexPath (如果返回YES则向下执行，否则执行到这里为止)。
- 
- 2、didHighlightItemAtIndexPath (高亮)。
- 
- 3、手指松开：didUnhighlightItemAtIndexPath (取消高亮)。
- 
- 4、shouldSelectItemAtIndexPath (如果返回YES则向下执行，否则执行到这里为止)。
- 
- 5、didSelectItemAtIndexPath (执行选择事件)。
+    1、手指按下：shouldHighlightItemAtIndexPath (如果返回YES则向下执行，否则执行到这里为止)。
+    2、didHighlightItemAtIndexPath (高亮)。
+    3、手指松开：didUnhighlightItemAtIndexPath (取消高亮)。
+    4、shouldSelectItemAtIndexPath (如果返回YES则向下执行，否则执行到这里为止)。
+    5、didSelectItemAtIndexPath (执行选择事件)。
  */
 // Methods for notification of selection/deselection and highlight/unhighlight events.
 // The sequence of calls leading to selection from a user touch is:
@@ -165,60 +143,31 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
 // 4. -collectionView:didSelectItemAtIndexPath: or -collectionView:didDeselectItemAtIndexPath:
 // 5. -collectionView:didUnhighlightItemAtIndexPath:
 
-
-
-#pragma mark - Cell高亮效果显示
-/**
- 作用:cell点击时是否高亮
- */
+#pragma mark -cell点击时是否高亮
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath;
 
-/**
- 作用:手指长按下高亮
- */
+#pragma mark -手指长按下高亮
 - (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath;
 
-/**
- 作用:手指松开取消高亮
- */
+#pragma mark -手指松开取消高亮
 - (void)collectionView:(UICollectionView *)collectionView didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath;
 
-
-/**
- 作用:当前item是否可以点击
- */
+#pragma mark -当前item是否可以点击
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath;
 
-/**
- 作用:当前item是否取消点击
- */
+#pragma mark -当前item是否取消点击
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldDeselectItemAtIndexPath:(NSIndexPath *)indexPath; // called when the user taps on an already-selected item in multi-select mode
 
 
-
-
-
-#pragma mark - Cell的选中状态
-
-/**
- 作用:选中item
- */
+#pragma mark - 选中item 和 取消选中item
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
-
-/**
- 作用:取消选中item
- */
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath;
 
 
 
-
-
-
 #pragma mark - 指定indexPath的cell的显示或移除调用方法
-
 /**
- 作用:这两个方法分别是 指定indexPath的cell将要显示出的时候调用, 指定indexPath的头部或尾部视图view将要显示出来的时候调用
+ 这两个方法分别是 指定indexPath的cell将要显示出的时候调用, 指定indexPath的头部或尾部视图view将要显示出来的时候调用
  */
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(8_0);
 - (void)collectionView:(UICollectionView *)collectionView willDisplaySupplementaryView:(UICollectionReusableView *)view forElementKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(8_0);
@@ -228,26 +177,17 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
 
 
 
-
-
-
-
 // These methods provide support for copy/paste actions on cells.
 // All three should be implemented if any are.
 #pragma mark - 支持长按后的菜单 复制/粘贴操作相关方法
-/**
- 作用:是否弹出菜单，需要返回YES
- */
+
+#pragma mark -是否弹出菜单，需要返回YES
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath;
 
-/**
- 作用:是否可以弹出事件，使copy和paste有效
- */
+#pragma mark -是否可以弹出事件，使copy和paste有效
 - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(nullable id)sender;
 
-/**
- 作用:对事件进行相应操作
- */
+#pragma mark -对事件进行相应操作
 - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(nullable id)sender;
 /**
  示例：假如我们只想使用拷贝和粘贴，可以这样写：
@@ -260,11 +200,10 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
  */
 
 
-
-// support for custom transition layout
+#pragma mark - support for custom transition layout
 - (nonnull UICollectionViewTransitionLayout *)collectionView:(UICollectionView *)collectionView transitionLayoutForOldLayout:(UICollectionViewLayout *)fromLayout newLayout:(UICollectionViewLayout *)toLayout;
 
-// Focus
+#pragma mark - Focus
 - (BOOL)collectionView:(UICollectionView *)collectionView canFocusItemAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(9_0);
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldUpdateFocusInContext:(UICollectionViewFocusUpdateContext *)context NS_AVAILABLE_IOS(9_0);
 - (void)collectionView:(UICollectionView *)collectionView didUpdateFocusInContext:(UICollectionViewFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator NS_AVAILABLE_IOS(9_0);
@@ -275,7 +214,7 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
 - (CGPoint)collectionView:(UICollectionView *)collectionView targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset NS_AVAILABLE_IOS(9_0); // customize the content offset to be applied during transition or update animations
 
 
-// Spring Loading
+#pragma mark - Spring Loading
 
 /* Allows opting-out of spring loading for an particular item.
  *
@@ -294,25 +233,25 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
 
 
 
-#pragma mark - ↑
-#pragma mark - UICollectionView 综合视图
 
+#pragma mark - 综合视图
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView <UIDataSourceTranslating>
 
-#pragma mark - UICollectionView 初始化
+#pragma mark - 初始化
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout NS_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 
-
-#pragma mark - UICollectionView 常用属性
-@property (nonatomic, strong) UICollectionViewLayout *collectionViewLayout;// 布局对象
-@property (nonatomic, weak, nullable) id <UICollectionViewDelegate> delegate;// 代理
-@property (nonatomic, weak, nullable) id <UICollectionViewDataSource> dataSource;// 数据源
-
+#pragma mark - 常用属性
+#pragma mark -布局对象
+@property (nonatomic, strong) UICollectionViewLayout *collectionViewLayout;
+#pragma mark -代理
+@property (nonatomic, weak, nullable) id <UICollectionViewDelegate> delegate;
+#pragma mark -数据源
+@property (nonatomic, weak, nullable) id <UICollectionViewDataSource> dataSource;
 @property (nonatomic, weak, nullable) id<UICollectionViewDataSourcePrefetching> prefetchDataSource NS_AVAILABLE_IOS(10_0);
 
 /**
- 作用:预加载
+ 预加载
  */
 @property (nonatomic, getter=isPrefetchingEnabled) BOOL prefetchingEnabled NS_AVAILABLE_IOS(10_0);
 
@@ -331,23 +270,19 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView <UIDataSo
 @property (nonatomic) UICollectionViewReorderingCadence reorderingCadence API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos, watchos);
 
 
-/**
- 作用:背景视图
- */
+#pragma mark -背景视图
 @property (nonatomic, strong, nullable) UIView *backgroundView; // will be automatically resized to track the size of the collection view and placed behind all cells and supplementary views.
 
 
 
-#pragma mark - UICollectionView 常用方法: 注册 和 复用队列
-
+#pragma mark - 常用方法
+#pragma mark -cell注册（Class、Xib）
 // For each reuse identifier that the collection view will use, register either a class or a nib from which to instantiate a cell.
 // If a nib is registered, it must contain exactly 1 top level object which is a UICollectionViewCell.
 // If a class is registered, it will be instantiated via alloc/initWithFrame:
 /**
- 作用:注册要使用的cell对应的类型
- 使用:
+ 使用：
      [self.collectionView registerClass:[LNCollectionViewCell class] forCellWithReuseIdentifier:cellID];
- 
      [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([LNCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:cellID];
  */
 - (void)registerClass:(nullable Class)cellClass forCellWithReuseIdentifier:(NSString *)identifier;
@@ -356,9 +291,9 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView <UIDataSo
 
 
 
+#pragma mark -补充视图(HeaderView 和 FooterView)注册（Class、Xib）
 /**
- 作用:注册要使用的补充视图(HeaderView 和 FooterView)对应的类型
- 使用:
+ 使用：
      [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HeadViewID];
  
      [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([LNHeaderCollectionReusableView class]) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HeadViewID];
@@ -367,9 +302,9 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView <UIDataSo
 - (void)registerNib:(nullable UINib *)nib forSupplementaryViewOfKind:(NSString *)kind withReuseIdentifier:(NSString *)identifier;
 
 
+#pragma mark -cell复用队列（访问缓存池）
 /**
- 作用:复用队列
- 使用:
+ 使用：
      LNCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
  
      LNHeaderCollectionReusableView *headView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HeadViewID forIndexPath:indexPath];
@@ -377,20 +312,14 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView <UIDataSo
 - (__kindof UICollectionViewCell *)dequeueReusableCellWithReuseIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath;
 - (__kindof UICollectionReusableView *)dequeueReusableSupplementaryViewOfKind:(NSString *)elementKind withReuseIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath;
 
-
+#pragma mark - 允许选择 或 多个选择
 // These properties control whether items can be selected, and if so, whether multiple items can be simultaneously selected.
-/**
- 作用:允许选择
- */
 @property (nonatomic) BOOL allowsSelection; // default is YES
-/**
- 作用:允许多个选择
- */
 @property (nonatomic) BOOL allowsMultipleSelection; // default is NO
 
 
 
-
+#pragma mark - 返回所有选中Items 下标的数组
 #if UIKIT_DEFINE_AS_PROPERTIES
 @property (nonatomic, readonly, nullable) NSArray<NSIndexPath *> *indexPathsForSelectedItems; // returns nil or an array of selected index paths
 #else
@@ -403,30 +332,23 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView <UIDataSo
 @property (nonatomic, readonly) BOOL hasUncommittedUpdates API_AVAILABLE(ios(11.0));
 
 
-/**
- 作用:全局刷新
- */
+#pragma mark - 全局刷新
 - (void)reloadData; // discard the dataSource and delegate data and requery as necessary
 
 
-/**
- 作用:这两个方法是 布局动画
- */
+
+#pragma mark - 这两个方法是布局动画
 - (void)setCollectionViewLayout:(UICollectionViewLayout *)layout animated:(BOOL)animated; // transition from one layout to another
 - (void)setCollectionViewLayout:(UICollectionViewLayout *)layout animated:(BOOL)animated completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(7_0);
 
-
+#pragma mark - Transition
 - (UICollectionViewTransitionLayout *)startInteractiveTransitionToCollectionViewLayout:(UICollectionViewLayout *)layout completion:(nullable UICollectionViewLayoutInteractiveTransitionCompletion)completion NS_AVAILABLE_IOS(7_0);
 - (void)finishInteractiveTransition NS_AVAILABLE_IOS(7_0);
 - (void)cancelInteractiveTransition NS_AVAILABLE_IOS(7_0);
 
 
-
-
-
-// Information about the current state of the collection view.
-#pragma mark - ↑
 #pragma mark - 获取对应信息
+// Information about the current state of the collection view.
 #if UIKIT_DEFINE_AS_PROPERTIES
 @property (nonatomic, readonly) NSInteger numberOfSections;
 #else
@@ -445,8 +367,6 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView <UIDataSo
 
 
 
-
-
 #if UIKIT_DEFINE_AS_PROPERTIES
 @property (nonatomic, readonly) NSArray<__kindof UICollectionViewCell *> *visibleCells;
 @property (nonatomic, readonly) NSArray<NSIndexPath *> *indexPathsForVisibleItems;
@@ -460,35 +380,35 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView <UIDataSo
 - (NSArray<NSIndexPath *> *)indexPathsForVisibleSupplementaryElementsOfKind:(NSString *)elementKind NS_AVAILABLE_IOS(9_0);
 
 // Interacting with the collection view.
-
+/**
+ 与综合视图交互
+ */
 - (void)scrollToItemAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UICollectionViewScrollPosition)scrollPosition animated:(BOOL)animated;
 
 
 
-
-// These methods allow dynamic modification of the current set of items in the collection view
-#pragma mark - ↑
 #pragma mark - 允许动态修改当前的Item 和 Section方法
+// These methods allow dynamic modification of the current set of items in the collection view
 
-// 插入Section
+#pragma mark -插入Section
 - (void)insertSections:(NSIndexSet *)sections;
-// 删除Section
+#pragma mark -删除Section
 - (void)deleteSections:(NSIndexSet *)sections;
-// 刷新Section
+#pragma mark -刷新Section
 - (void)reloadSections:(NSIndexSet *)sections;
-// 移动Section
+#pragma mark -移动Section
 - (void)moveSection:(NSInteger)section toSection:(NSInteger)newSection;
 
-// 插入Item
+#pragma mark -插入Item
 - (void)insertItemsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths;
-// 删除Item
+#pragma mark -删除Item
 - (void)deleteItemsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths;
-// 刷新Item
+#pragma mark -刷新Item
 - (void)reloadItemsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths;
-// 移动Item
+#pragma mark -移动Item
 - (void)moveItemAtIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)newIndexPath;
 
-// 也可以批量操作
+#pragma mark -也可以批量操作
 - (void)performBatchUpdates:(void (^ __nullable)(void))updates completion:(void (^ __nullable)(BOOL finished))completion; // allows multiple insert/delete/reload/move calls to be animated simultaneously. Nestable.
 
 // Support for reordering
@@ -512,24 +432,11 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView <UIDataSo
 
 
 @end
-
-
-
-
-
-
-
-
-
-- - - - - - - - - - - -         - - - - - - - - - - - -         - - - - - - - - - - - -
-# WechatPublic-Codeidea         # WechatPublic-Codeidea         # WechatPublic-Codeidea
-- - - - - - - - - - - -         - - - - - - - - - - - -         - - - - - - - - - - - -
-
-
+# WechatPublic-Codeidea
 
 // _______________________________________________________________________________________________________________
 // Drag & Drop
-
+#pragma mark - Drag & Drop (ios(11.0))
 
 #if TARGET_OS_IOS
 @interface UICollectionView (UIDragAndDrop) <UISpringLoadedInteractionSupporting>
