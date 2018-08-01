@@ -1,7 +1,7 @@
 /*
  * UIWebView.h 
  *
- * Framework: UIKit  (c) 2007-2015
+ * Framework: UIKit  (c) 2007-2017
  *
  * About ME『Public：Codeidea / https://githubidea.github.io』.
  * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
@@ -17,6 +17,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma mark - NS_ENUM
+#pragma mark -导航类型
 typedef NS_ENUM(NSInteger, UIWebViewNavigationType) {
     UIWebViewNavigationTypeLinkClicked,
     UIWebViewNavigationTypeFormSubmitted,
@@ -26,6 +28,7 @@ typedef NS_ENUM(NSInteger, UIWebViewNavigationType) {
     UIWebViewNavigationTypeOther
 } __TVOS_PROHIBITED;
 
+#pragma mark -标记页码方式
 typedef NS_ENUM(NSInteger, UIWebPaginationMode) {
     UIWebPaginationModeUnpaginated,
     UIWebPaginationModeLeftToRight,
@@ -34,6 +37,7 @@ typedef NS_ENUM(NSInteger, UIWebPaginationMode) {
     UIWebPaginationModeRightToLeft
 } __TVOS_PROHIBITED;
 
+#pragma mark -标记页码阻断方式
 typedef NS_ENUM(NSInteger, UIWebPaginationBreakingMode) {
     UIWebPaginationBreakingModePage,
     UIWebPaginationBreakingModeColumn
@@ -50,15 +54,10 @@ NS_CLASS_AVAILABLE_IOS(2_0) __TVOS_PROHIBITED @interface UIWebView : UIView <NSC
 
 
 
-/**
- API提供了三种方法：
- */
+#pragma mark - API提供了三种方法加载
 - (void)loadRequest:(NSURLRequest *)request;
 - (void)loadHTMLString:(NSString *)string baseURL:(nullable NSURL *)baseURL;
 - (void)loadData:(NSData *)data MIMEType:(NSString *)MIMEType textEncodingName:(NSString *)textEncodingName baseURL:(NSURL *)baseURL;
-
-
-
 
 
 @property (nullable, nonatomic, readonly, strong) NSURLRequest *request;
@@ -74,7 +73,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) __TVOS_PROHIBITED @interface UIWebView : UIView <NSC
 @property (nonatomic, readonly, getter=isLoading) BOOL loading;// 刷新
 
 
-// OC与JS交互方法
+#pragma mark - OC与JS交互方法
 - (nullable NSString *)stringByEvaluatingJavaScriptFromString:(NSString *)script;
 
 // 设置网页自适应显示
@@ -108,18 +107,18 @@ NS_CLASS_AVAILABLE_IOS(2_0) __TVOS_PROHIBITED @interface UIWebView : UIView <NSC
 __TVOS_PROHIBITED @protocol UIWebViewDelegate <NSObject>
 
 @optional
-// 即将加载某个请求的时候调用  OC与JS交互代理方法
+
+#pragma mark -即将加载某个请求的时候调用  OC与JS交互代理方法
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
 
-// 开始加载调用
+#pragma mark -开始加载调用
 - (void)webViewDidStartLoad:(UIWebView *)webView;
 
-// 加载完成调用
+#pragma mark -加载完成调用
 - (void)webViewDidFinishLoad:(UIWebView *)webView;
 
-// 加载失败调用
+#pragma mark -加载失败调用
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
 
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
