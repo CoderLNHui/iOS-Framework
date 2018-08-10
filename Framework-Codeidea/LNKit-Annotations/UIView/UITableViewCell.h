@@ -1,4 +1,5 @@
 /*
+ * 作用、注解
  * File:  UITableViewCell.h 
  *
  * Framework: UIKit (c) 2005-2017
@@ -130,7 +131,8 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableViewCell : UIView <NSCoding, UIGes
 #pragma mark -当被重用的cell将要显示时调用
 /**
  注解：
-     这个方法最大的用武之地是当你自定义的cell上面有图片时，如果产生了重用，图片可能会错乱（当图片来自异步下载时及其明显），这时我们可以重写这个方法把内容抹掉。
+    这个方法最大的用武之地是当你自定义的cell上面有图片时，如果产生了重用，图片可能会错乱（当图片来自异步下载时及其明显），这时我们可以重写这个方法把内容抹掉。
+    可以在该函数中做一些初始化的操作 比如停掉原来cell中播放的视频音乐等
  */
 - (void)prepareForReuse;                                                        // if the cell is reusable (has a reuse identifier), this is called just before the cell is returned from the table view method dequeueReusableCellWithIdentifier:.  If you override, you MUST call super.
 

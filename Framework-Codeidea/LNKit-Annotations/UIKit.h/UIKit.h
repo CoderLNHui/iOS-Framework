@@ -1,7 +1,7 @@
 /*
  * UIKit.h
  *
- * Framework: UIKit (c) 2005-2016
+ * Framework: UIKit (c) 2005-2017
  *
  * About ME『Public：Codeidea / https://githubidea.github.io』.
  * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
@@ -14,7 +14,6 @@
   UIKit 框架 是 Objective-C 语言应用于苹果移动设备的界面呈现、管理功能库，功能之强大，本专题 致力于将苹果官网的海量的文档进行 归类整理，框架各分类文件注解，并对每一类中常用的功能进行案例渐进式解析，以 简化初学者入门和老手回顾的繁索过程，尽快切入主题，快速应用起来。
  */
 
-
 #import <UIKit/UIKitDefines.h>
 
 #if __has_include(<UIKit/UIAccelerometer.h>)
@@ -23,6 +22,10 @@
 #endif
 
 #import <UIKit/UIAccessibilityConstants.h>
+
+#if __has_include(<UIKit/UIAccessibilityContentSizeCategoryImageAdjusting.h>)
+#import <UIKit/UIAccessibilityContentSizeCategoryImageAdjusting.h>
+#endif
 
 #if __has_include(<UIKit/UIActivityIndicatorView.h>)
 #import <UIKit/UIActivityIndicatorView.h>
@@ -68,12 +71,16 @@
 #import <UIKit/UIDocumentPickerExtensionViewController.h>
 #import <UIKit/UICloudSharingController.h>
 #import <UIKit/NSFileProviderExtension.h>
+#import <UIKit/UIVisualEffect.h>
+#import <UIKit/UIBlurEffect.h>
+#import <UIKit/UIVibrancyEffect.h>
 #import <UIKit/UIVisualEffectView.h>
 #import <UIKit/UIEvent.h>
 #endif
 
 #import <UIKit/UIFont.h>
 #import <UIKit/UIFontDescriptor.h>
+#import <UIKit/UIFontMetrics.h>
 #import <UIKit/UIGeometry.h>
 
 #if __has_include(<UIKit/UIGestureRecognizer.h>)
@@ -108,8 +115,10 @@
 #import <UIKit/UIApplicationShortcutItem.h>
 #import <UIKit/UIUserNotificationSettings.h>
 #import <UIKit/UIFocus.h>
+#import <UIKit/UIFocusSystem.h>
 #import <UIKit/UIFocusGuide.h>
 #import <UIKit/UIFocusAnimationCoordinator.h>
+#import <UIKit/UIFocusDebugger.h>
 #import <UIKit/UILocalizedIndexedCollation.h>
 #import <UIKit/UILongPressGestureRecognizer.h>
 #import <UIKit/UIManagedDocument.h>
@@ -124,6 +133,8 @@
 #import <UIKit/UIPageViewController.h>
 #import <UIKit/UIPanGestureRecognizer.h>
 #import <UIKit/UIPasteboard.h>
+#import <UIKit/UIPasteConfiguration.h>
+#import <UIKit/UIPasteConfigurationSupporting.h>
 #import <UIKit/UIPickerView.h>
 #import <UIKit/UIPinchGestureRecognizer.h>
 #import <UIKit/UIPopoverController.h>
@@ -182,9 +193,25 @@
 #import <UIKit/UIViewController.h>
 #import <UIKit/UIWebView.h>
 #import <UIKit/UIWindow.h>
+
+#import <UIKit/UIDragInteraction.h>
+#import <UIKit/UIDragItem.h>
+#import <UIKit/UIDragPreview.h>
+#import <UIKit/UIDragPreviewParameters.h>
+#import <UIKit/UIDragSession.h>
+#import <UIKit/UIDropInteraction.h>
+#import <UIKit/UIInteraction.h>
+#import <UIKit/UITargetedDragPreview.h>
+#import <UIKit/UISpringLoadedInteraction.h>
+#import <UIKit/UISpringLoadedInteractionSupporting.h>
+
 #endif
 
 #import <UIKit/NSAttributedString.h>
+
+#if __has_include(<UIKit/NSItemProvider+UIKitAdditions.h>)
+#import <UIKit/NSItemProvider+UIKitAdditions.h>
+#endif
 
 #if __has_include(<UIKit/NSLayoutConstraint.h>)
 #import <UIKit/NSLayoutConstraint.h>
@@ -195,6 +222,7 @@
 #endif
 
 #import <UIKit/NSParagraphStyle.h>
+
 
 #if __has_include(<UIKit/NSShadow.h>)
 #import <UIKit/NSShadow.h>
@@ -225,6 +253,14 @@
 #import <UIKit/UIRegion.h>
 #endif
 
+#if __has_include(<UIKit/UITextDragging.h>)
+#import <UIKit/UITextDragging.h>
+#import <UIKit/UITextDropping.h>
+#import <UIKit/UITextDropProposal.h>
+#import <UIKit/UITextDragPreviewRenderer.h>
+#import <UIKit/UITextDragURLPreviews.h>
+#endif
+
 #if __has_include(<UIKit/UIViewPropertyAnimator.h>)
 #import <UIKit/UIViewPropertyAnimator.h>
 #endif
@@ -236,8 +272,9 @@
 #import <UIKit/UINotificationFeedbackGenerator.h>
 #endif
 
-#START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
- 
+#if __has_include(<DocumentManager/DocumentManager.h>)
+#import <DocumentManager/DocumentManager.h>
+#endif
 
 
 

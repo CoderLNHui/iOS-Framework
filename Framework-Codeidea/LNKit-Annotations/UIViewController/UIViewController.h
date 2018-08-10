@@ -36,11 +36,13 @@ NS_ASSUME_NONNULL_BEGIN
 @class UIScrollView;
 @protocol UIViewControllerTransitionCoordinator;
 
+
+#pragma mark -模态过渡样式
 typedef NS_ENUM(NSInteger, UIModalTransitionStyle) {
-    UIModalTransitionStyleCoverVertical = 0,
-    UIModalTransitionStyleFlipHorizontal __TVOS_PROHIBITED,
-    UIModalTransitionStyleCrossDissolve,
-    UIModalTransitionStylePartialCurl NS_ENUM_AVAILABLE_IOS(3_2) __TVOS_PROHIBITED,
+    UIModalTransitionStyleCoverVertical = 0,//覆盖垂直
+    UIModalTransitionStyleFlipHorizontal __TVOS_PROHIBITED,//翻转水平
+    UIModalTransitionStyleCrossDissolve,//交叉溶解
+    UIModalTransitionStylePartialCurl NS_ENUM_AVAILABLE_IOS(3_2) __TVOS_PROHIBITED,//部分卷曲
 };
 
 typedef NS_ENUM(NSInteger, UIModalPresentationStyle) {
@@ -94,6 +96,7 @@ typedef NS_ENUM(NSInteger, UIModalPresentationStyle) {
 // Sometimes view controllers that are using showViewController:sender and showDetailViewController:sender: will need to know when the split view controller environment above it has changed. This notification will be posted when that happens (for example, when a split view controller is collapsing or expanding). The NSNotification's object will be the view controller that caused the change.
 UIKIT_EXTERN NSNotificationName const UIViewControllerShowDetailTargetDidChangeNotification NS_AVAILABLE_IOS(8_0);
 
+#pragma mark - 控制器
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UIViewController : UIResponder <NSCoding, UIAppearanceContainer, UITraitEnvironment, UIContentContainer, UIFocusEnvironment>
 
 /*
@@ -105,14 +108,19 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIViewController : UIResponder <NSCoding,
  name is the same as your view controller's class. If no such NIB in fact exists then you must either call
  -setView: before -view is invoked, or override the -loadView method to set up your views programatically.
  */
+#pragma mark -初始化
 - (instancetype)initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil NS_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 
+#pragma mark -常用属性
 @property(null_resettable, nonatomic,strong) UIView *view; // The getter first invokes [self loadView] if the view hasn't been set yet. Subclasses must call super if they override the setter or getter.
 - (void)loadView; // This is where subclasses should create their custom view hierarchy if they aren't using a nib. Should never be called directly.
 - (void)loadViewIfNeeded NS_AVAILABLE_IOS(9_0); // Loads the view controller's view if it has not already been set.
 @property(nullable, nonatomic, readonly, strong) UIView *viewIfLoaded NS_AVAILABLE_IOS(9_0); // Returns the view controller's view if loaded, nil if not.
 
+/**
+ viewDidUnload 这时候viewController的view已经是nil了。由于这一般发生在内存警告时，所以在这里你应该将那些不在显示的view释放了。比如你在viewcontroller的view上加了一个label，而且这个label是viewcontroller的属性，那么你要把这个属性设置成nil，以免占用不必要的内存，而这个label在viewDidLoad时会重新创建
+ */
 - (void)viewWillUnload NS_DEPRECATED_IOS(5_0,6_0) __TVOS_PROHIBITED;
 - (void)viewDidUnload NS_DEPRECATED_IOS(3_0,6_0) __TVOS_PROHIBITED; // Called after the view controller's view is released and set to nil. For example, a memory warning which causes the view to be purged. Not invoked as a result of -dealloc.
 
@@ -239,6 +247,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIViewController : UIResponder <NSCoding,
  this property on the view controller to be presented, not the presenter.  Defaults to
  UIModalTransitionStyleCoverVertical.
  */
+#pragma mark -模态过渡样式
 @property(nonatomic,assign) UIModalTransitionStyle modalTransitionStyle NS_AVAILABLE_IOS(3_0);
 @property(nonatomic,assign) UIModalPresentationStyle modalPresentationStyle NS_AVAILABLE_IOS(3_2);
 // This controls whether this view controller takes over control of the status bar's appearance when presented non-full screen on another view controller. Defaults to NO.

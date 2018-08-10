@@ -257,7 +257,7 @@ NS_CLASS_AVAILABLE(NSURLSESSION_AVAILABLE, 7_0)
  * must be sent the -resume message before they will execute.
  */
 
-#pragma mark - 添加dataTask任务
+#pragma mark - 添加dataTask(数据)任务
 
 /* Creates a data task with the given request.  The request may have a body stream. */
 // 获取指定URLRequest内容
@@ -281,7 +281,7 @@ NS_CLASS_AVAILABLE(NSURLSESSION_AVAILABLE, 7_0)
 
 
 
-#pragma mark - 添加uploadTask任务
+#pragma mark - 添加uploadTask(上传)任务
 
 /* Creates an upload task with the given request.  The previously set body stream of the request (if any) is ignored and the URLSession:task:needNewBodyStream: delegate will be called when the body payload is required. */
 // 通过HTTP请求发送指定URLRequest数据流给指定URL
@@ -312,7 +312,7 @@ NS_CLASS_AVAILABLE(NSURLSESSION_AVAILABLE, 7_0)
 
 
 
-#pragma mark - 添加downloadTask任务
+#pragma mark - 添加downloadTask(下载)任务
 
 /* Creates a download task with the given request. */
 // 下载指定URLRequest内容
@@ -343,7 +343,7 @@ NS_CLASS_AVAILABLE(NSURLSESSION_AVAILABLE, 7_0)
 
 
 
-#pragma mark - 添加streamTask任务
+#pragma mark - 添加streamTask(流)任务
 
 /* Creates a bidirectional stream task to a given host and port.
  */

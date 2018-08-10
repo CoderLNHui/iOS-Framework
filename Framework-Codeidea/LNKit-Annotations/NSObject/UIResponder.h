@@ -39,6 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+#pragma mark - 响应
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UIResponder : NSObject <UIResponderStandardEditActions>
 
 #if UIKIT_DEFINE_AS_PROPERTIES
@@ -73,20 +74,19 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIResponder : NSObject <UIResponderStanda
 // touch it is handling (those touches it received in touchesBegan:withEvent:).
 // *** You must handle cancelled touches to ensure correct behavior in your application.  Failure to
 // do so is very likely to lead to incorrect behavior or crashes.
-
-#pragma mark - ↑
 #pragma mark - touches触摸事件
-// 触摸开始调用
+#pragma mark -触摸开始调用
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event;
 
-// 触摸移动调用 (做UIView的拖拽(anyObject任意一个))
+#pragma mark -触摸移动调用
 // NSSet:无序; NSArray:有序
+// (做UIView的拖拽(anyObject任意一个))
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event;
 
-// 触摸离开调用
+#pragma mark -触摸离开调用
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event;
 
-// 当发生系统事件时会调用(如:打入电话,自动关机)
+#pragma mark -当发生系统事件时会调用(如:打入电话,自动关机)
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event;
 - (void)touchesEstimatedPropertiesUpdated:(NSSet<UITouch *> *)touches NS_AVAILABLE_IOS(9_1);
 

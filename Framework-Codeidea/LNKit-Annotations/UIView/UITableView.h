@@ -347,8 +347,8 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 @property (nonatomic) CGFloat estimatedSectionHeaderHeight NS_AVAILABLE_IOS(7_0); // default is 0, which means there is no estimate
 @property (nonatomic) CGFloat estimatedSectionFooterHeight NS_AVAILABLE_IOS(7_0); // default is 0, which means there is no estimate
 
-#pragma mark - 设置分割线的内边距
-@property (nonatomic) UIEdgeInsets separatorInset NS_AVAILABLE_IOS(7_0) UI_APPEARANCE_SELECTOR; // allows customization of the frame of cell separators
+#pragma mark - 设置分割线的内边距dequeueReusableCellWithIdentifier
+@property (nonatomic) UIEdgeInsets separatorInset NS_AVAILABLE_IOS(7_0) UI_APPEARANCE_SELECTOR-separatorInset; // allows customization of the frame of cell separators
 
 @property (nonatomic, weak, nullable) id <UITableViewDragDelegate> dragDelegate API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos, watchos);
 @property (nonatomic, weak, nullable) id <UITableViewDropDelegate> dropDelegate API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos, watchos);
@@ -527,9 +527,20 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 
 
 #pragma mark - Cell复用队列
-#pragma mark -从复用池中取cell
+#pragma mark -获取复用池中cell
+/**
+ 不注册方式，cell复用队列使用这个方法.
+ 是只要缓存池有待复用的cell，不管什么类型这个方法都会拿来复用吗❓
+ 委托用于获取已分配的单元格，而不是分配一个新的单元格
+ */
 - (nullable __kindof UITableViewCell *)dequeueReusableCellWithIdentifier:(NSString *)identifier;  // Used by the delegate to acquire an already allocated cell, in lieu of allocating a new one.
+
 #pragma mark -获取一个已注册的cell
+/**
+ 采用注册方式，cell复用队列使用这个方法.
+ 根据注册的标识ID，在缓存池中获取对应的cell❓
+ 假设标识符已注册，则较新的dequeue方法可确保正确返回单元格并调整其大小
+ */
 - (__kindof UITableViewCell *)dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(6_0); // newer dequeue method guarantees a cell is returned and resized properly, assuming identifier is registered
 #pragma mark -从复用池获取头视图或尾视图
 - (nullable __kindof UITableViewHeaderFooterView *)dequeueReusableHeaderFooterViewWithIdentifier:(NSString *)identifier NS_AVAILABLE_IOS(6_0);  // like dequeueReusableCellWithIdentifier:, but for headers/footers

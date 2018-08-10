@@ -9,15 +9,21 @@
  * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
+#pragma mark - 释义
+/**
+ UITouch
+ An object representing the location, size, movement, and force of a touch occurring on the screen.
+ 
+ 释义：表示屏幕上发生的触摸的位置，大小，移动和推动的对象。
+ */
+
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKitDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
-#pragma mark - ↑
 #pragma mark - NS_ENUM
-
 @class UIWindow, UIView, UIGestureRecognizer;
 
 typedef NS_ENUM(NSInteger, UITouchPhase) {
@@ -49,15 +55,18 @@ typedef NS_OPTIONS(NSInteger, UITouchProperties) {
 
 
 
-#pragma mark - ↑
-#pragma mark - UITouch Attribute&Method
+
+#pragma mark - 触摸
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UITouch : NSObject
 
-/** 记录了触摸时间产生或变化时的时间,单位是秒 */
+#pragma mark - 常用属性
+#pragma mark -记录了触摸时间产生或变化时的时间,单位是秒
 @property(nonatomic,readonly) NSTimeInterval      timestamp;
+#pragma mark -阶段
 @property(nonatomic,readonly) UITouchPhase        phase;
 
-/** 短时间内点按屏幕的次数,可以根据tapCount判断单击、双击或是更多的点击 */
+#pragma mark -点按屏幕的次数
+//短时间内点按屏幕的次数,可以根据tapCount判断单击、双击或是更多的点击
 @property(nonatomic,readonly) NSUInteger          tapCount;   // touch down within a certain point within a certain amount of time
 @property(nonatomic,readonly) UITouchType         type NS_AVAILABLE_IOS(9_0);
 
@@ -66,22 +75,23 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITouch : NSObject
 @property(nonatomic,readonly) CGFloat majorRadius NS_AVAILABLE_IOS(8_0);
 @property(nonatomic,readonly) CGFloat majorRadiusTolerance NS_AVAILABLE_IOS(8_0);
 
-@property(nullable,nonatomic,readonly,strong) UIWindow                        *window; /** 触摸产生时所处的窗口 */
-@property(nullable,nonatomic,readonly,strong) UIView                          *view; /** 触摸产生时所处的视图 */
+#pragma mark -触摸产生时所处的窗口
+@property(nullable,nonatomic,readonly,strong) UIWindow                        *window;
+#pragma mark -触摸产生时所处的视图
+@property(nullable,nonatomic,readonly,strong) UIView                          *view;
+#pragma mark -存放手势的数组
 @property(nullable,nonatomic,readonly,copy)   NSArray <UIGestureRecognizer *> *gestureRecognizers NS_AVAILABLE_IOS(3_2);
 
 
+#pragma mark - 常用方法
+#pragma mark -返回触摸在View上的位置(当前点)
 /**
- 1.返回值表示触摸在View上的位置(当前点)
- 2.这里返回的位置是针对View的坐标系(以View的左上角为圆点(0,0))
- 3.调用时传入的View参数为nil的话,返回的是触摸点在UIWindow的位置
+ 这里返回的位置是针对View的坐标系(以View的左上角为圆点(0,0))
+ 调用时传入的View参数为nil的话,返回的是触摸点在UIWindow的位置
  */
 - (CGPoint)locationInView:(nullable UIView *)view;
 
-
-/**
- 1.该方法记录了(上一点)的位置
- */
+#pragma mark -该方法记录了(上一点)的位置
 - (CGPoint)previousLocationInView:(nullable UIView *)view;
 
 
