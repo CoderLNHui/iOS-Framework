@@ -1,14 +1,21 @@
 /*
  * UIPresentationController.h
  *
- * Framework: UIKit (c) 2014-2016
+ * Framework: UIKit (c) 2014-2017
  *
  * About ME『Public：Codeidea / https://githubidea.github.io』.
  * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
  *
- * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
+ * ◕ 作用
+ * ◕ 分解
+ * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者[star]，该模块将系统化学习，后续替换、补充文章内容 ~
  */
- 
+
+#pragma mark - 释义
+/**
+ UIPopoverPresentationController继承自UIPresentationController，这个对象的作用官方文档说是：一个为弹出的视图控制器提供高级视图和转场管理的对象。
+ */
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKitDefines.h>
 #import <UIKit/UIApplication.h>
@@ -23,11 +30,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class UIPresentationController;
 
+#pragma mark - 自适应展示代理方法
 @protocol UIAdaptivePresentationControllerDelegate <NSObject>
 
 @optional
 
 /* For iOS8.0, the only supported adaptive presentation styles are UIModalPresentationFullScreen and UIModalPresentationOverFullScreen. */
+#pragma mark -自适应展示样式
 - (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller;
 
 // Returning UIModalPresentationNone will indicate that an adaptation should not happen.
@@ -118,5 +127,6 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface UIPresentationController : NSObject <UIAp
 
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+NS_ASSUME_NONNULL_END
+
 

@@ -22,9 +22,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-#pragma mark - ↑
 #pragma mark - NS_ENUM
-
+#pragma mark -状态栏样式
 typedef NS_ENUM(NSInteger, UIStatusBarStyle) {
     UIStatusBarStyleDefault                                     = 0, // Dark content, for use on light backgrounds
     UIStatusBarStyleLightContent     NS_ENUM_AVAILABLE_IOS(7_0) = 1, // Light content, for use on dark backgrounds
@@ -33,12 +32,14 @@ typedef NS_ENUM(NSInteger, UIStatusBarStyle) {
     UIStatusBarStyleBlackOpaque      NS_ENUM_DEPRECATED_IOS(2_0, 7_0, "Use UIStatusBarStyleLightContent") = 2,
 } __TVOS_PROHIBITED;
 
+#pragma mark -状态栏动画
 typedef NS_ENUM(NSInteger, UIStatusBarAnimation) {
     UIStatusBarAnimationNone,
     UIStatusBarAnimationFade NS_ENUM_AVAILABLE_IOS(3_2),
     UIStatusBarAnimationSlide NS_ENUM_AVAILABLE_IOS(3_2),
 } __TVOS_PROHIBITED;
 
+#pragma mark -界面方向
 // Note that UIInterfaceOrientationLandscapeLeft is equal to UIDeviceOrientationLandscapeRight (and vice versa).
 // This is because rotating the device to the left requires rotating the content to the right.
 typedef NS_ENUM(NSInteger, UIInterfaceOrientation) {
@@ -54,6 +55,7 @@ typedef NS_ENUM(NSInteger, UIInterfaceOrientation) {
  */
 UIKIT_EXTERN NSExceptionName const UIApplicationInvalidInterfaceOrientationException NS_AVAILABLE_IOS(6_0) __TVOS_PROHIBITED;
 
+#pragma mark -界面方向遮罩
 typedef NS_OPTIONS(NSUInteger, UIInterfaceOrientationMask) {
     UIInterfaceOrientationMaskPortrait = (1 << UIInterfaceOrientationPortrait),
     UIInterfaceOrientationMaskLandscapeLeft = (1 << UIInterfaceOrientationLandscapeLeft),
@@ -74,6 +76,7 @@ static inline BOOL UIInterfaceOrientationIsLandscape(UIInterfaceOrientation orie
     return ((orientation) == UIInterfaceOrientationLandscapeLeft || (orientation) == UIInterfaceOrientationLandscapeRight);
 }
 
+#pragma mark -远程通知类型
 typedef NS_OPTIONS(NSUInteger, UIRemoteNotificationType) {
     UIRemoteNotificationTypeNone    = 0,
     UIRemoteNotificationTypeBadge   = 1 << 0,
@@ -82,18 +85,21 @@ typedef NS_OPTIONS(NSUInteger, UIRemoteNotificationType) {
     UIRemoteNotificationTypeNewsstandContentAvailability = 1 << 3,
 } NS_ENUM_DEPRECATED_IOS(3_0, 8_0, "Use UserNotifications Framework's UNAuthorizationOptions for user notifications and registerForRemoteNotifications for receiving remote notifications instead.") __TVOS_PROHIBITED;
 
+#pragma mark -获取背景结果
 typedef NS_ENUM(NSUInteger, UIBackgroundFetchResult) {
     UIBackgroundFetchResultNewData,
     UIBackgroundFetchResultNoData,
     UIBackgroundFetchResultFailed
 } NS_ENUM_AVAILABLE_IOS(7_0);
 
+#pragma mark -刷新状态
 typedef NS_ENUM(NSInteger, UIBackgroundRefreshStatus) {
     UIBackgroundRefreshStatusRestricted, //< unavailable on this system due to device configuration; the user cannot enable the feature
     UIBackgroundRefreshStatusDenied,     //< explicitly disabled by the user for this application
     UIBackgroundRefreshStatusAvailable   //< enabled for this application
 } API_AVAILABLE(ios(7.0), tvos(11.0));
 
+#pragma mark -应用状态
 typedef NS_ENUM(NSInteger, UIApplicationState) {
     UIApplicationStateActive,// 在前台
     UIApplicationStateInactive,// 从后台进入前台
@@ -102,17 +108,7 @@ typedef NS_ENUM(NSInteger, UIApplicationState) {
 
 
 
-
-
-
-
-
-
-
-#pragma mark - ↑
 #pragma mark - const常量
-
-
 typedef NSUInteger UIBackgroundTaskIdentifier;
 UIKIT_EXTERN const UIBackgroundTaskIdentifier UIBackgroundTaskInvalid  NS_AVAILABLE_IOS(4_0);
 UIKIT_EXTERN const NSTimeInterval UIMinimumKeepAliveTimeout  NS_AVAILABLE_IOS(4_0);
@@ -127,19 +123,7 @@ UIKIT_EXTERN const NSTimeInterval UIApplicationBackgroundFetchIntervalNever API_
 @class INIntentResponse;
 
 
-
-
-
-
-
-
-
-
-
-#pragma mark - ↑
-#pragma mark - UIApplication 创建、属性、方法
-
-
+#pragma mark - 应用
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 
 #if UIKIT_DEFINE_AS_PROPERTIES
@@ -171,6 +155,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 
 - (void)sendEvent:(UIEvent *)event;
 
+#pragma mark -窗口
 @property(nullable, nonatomic,readonly) UIWindow *keyWindow;
 @property(nonatomic,readonly) NSArray<__kindof UIWindow *>  *windows;
 
@@ -233,18 +218,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 
 
 
-
-
-
-
-
-
-
-
-
-#pragma mark - ↑
-#pragma mark - 远程通知 RemoteNotifications
-
+#pragma mark - 远程通知
 @interface UIApplication (UIRemoteNotifications)
 
 // Calling this will result in either application:didRegisterForRemoteNotificationsWithDeviceToken: or application:didFailToRegisterForRemoteNotificationsWithError: to be called on the application delegate. Note: these callbacks will be made only if the application has successfully registered for user notifications with registerUserNotificationSettings:, or if it is enabled for Background App Refresh.
@@ -277,7 +251,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 
 
 
-#pragma mark - ↑
 #pragma mark - 本地通知 LocalNotifications
 
 // In iOS 8.0 and later, your application must register for user notifications using -[UIApplication registerUserNotificationSettings:] before being able to schedule and present UILocalNotifications
@@ -305,7 +278,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 
 
 
-#pragma mark - ↑
 #pragma mark - 用户设置通知 UIUserNotificationSettings
 
 @class UIUserNotificationSettings;
@@ -329,7 +301,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 
 
 
-#pragma mark - ↑
 #pragma mark - UIRemoteControlEvents
 
 @interface UIApplication (UIRemoteControlEvents)
@@ -398,7 +369,6 @@ typedef NSString * UIApplicationLaunchOptionsKey;
 
 
 
-#pragma mark - ↑
 #pragma mark - ApplicationDelegate
 
 @protocol UIApplicationDelegate<NSObject>

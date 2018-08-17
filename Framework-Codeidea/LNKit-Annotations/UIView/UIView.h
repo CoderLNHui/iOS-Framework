@@ -23,6 +23,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma mark - NS_ENUM
+#pragma mark -动画曲线
 typedef NS_ENUM(NSInteger, UIViewAnimationCurve) {
     UIViewAnimationCurveEaseInOut,// 缓慢的开始和结束         // slow at beginning and end
     UIViewAnimationCurveEaseIn, // 在缓慢的开始           // slow at beginning
@@ -30,6 +32,7 @@ typedef NS_ENUM(NSInteger, UIViewAnimationCurve) {
     UIViewAnimationCurveLinear,// 动画曲线线性的
 };
 
+#pragma mark -内容模式
 typedef NS_ENUM(NSInteger, UIViewContentMode) {
     UIViewContentModeScaleToFill, //按比例填充
     UIViewContentModeScaleAspectFit, //按比例去适应固定图形,余下透明     // contents scaled to fit with fixed aspect. remainder is transparent
@@ -46,6 +49,7 @@ typedef NS_ENUM(NSInteger, UIViewContentMode) {
     UIViewContentModeBottomRight,//下右
 };
 
+#pragma mark -动画过渡
 typedef NS_ENUM(NSInteger, UIViewAnimationTransition) {
     UIViewAnimationTransitionNone,//动画轨迹无
     UIViewAnimationTransitionFlipFromLeft,//从左边弹出
@@ -54,6 +58,7 @@ typedef NS_ENUM(NSInteger, UIViewAnimationTransition) {
     UIViewAnimationTransitionCurlDown,//从下面卷起
 };
 
+#pragma mark -自适应尺寸
 typedef NS_OPTIONS(NSUInteger, UIViewAutoresizing) {
     UIViewAutoresizingNone                 = 0,//自适应无
     UIViewAutoresizingFlexibleLeftMargin   = 1 << 0,//弯曲左边距离
@@ -64,6 +69,7 @@ typedef NS_OPTIONS(NSUInteger, UIViewAutoresizing) {
     UIViewAutoresizingFlexibleBottomMargin = 1 << 5//弯曲底部距离
 };
 
+#pragma mark -动画选择项
 typedef NS_OPTIONS(NSUInteger, UIViewAnimationOptions) {
     UIViewAnimationOptionLayoutSubviews            = 1 <<  0,//布局子view
     UIViewAnimationOptionAllowUserInteraction      = 1 <<  1,//打开用户交互当动画时候 // turn on user interaction while animating
@@ -96,6 +102,7 @@ typedef NS_OPTIONS(NSUInteger, UIViewAnimationOptions) {
     
 } NS_ENUM_AVAILABLE_IOS(4_0);
 
+#pragma mark -关键帧动画选择项
 typedef NS_OPTIONS(NSUInteger, UIViewKeyframeAnimationOptions) {
     UIViewKeyframeAnimationOptionLayoutSubviews            = UIViewAnimationOptionLayoutSubviews,
     UIViewKeyframeAnimationOptionAllowUserInteraction      = UIViewAnimationOptionAllowUserInteraction, // turn on user interaction while animating
@@ -112,10 +119,12 @@ typedef NS_OPTIONS(NSUInteger, UIViewKeyframeAnimationOptions) {
     UIViewKeyframeAnimationOptionCalculationModeCubicPaced = 4 << 10
 } NS_ENUM_AVAILABLE_IOS(7_0);
 
+#pragma mark -系统动画
 typedef NS_ENUM(NSUInteger, UISystemAnimation) {
     UISystemAnimationDelete,    // removes the views from the hierarchy when complete
 } NS_ENUM_AVAILABLE_IOS(7_0);
 
+#pragma mark -着色调整模式
 typedef NS_ENUM(NSInteger, UIViewTintAdjustmentMode) {
     UIViewTintAdjustmentModeAutomatic,
     
@@ -123,6 +132,7 @@ typedef NS_ENUM(NSInteger, UIViewTintAdjustmentMode) {
     UIViewTintAdjustmentModeDimmed,
 } NS_ENUM_AVAILABLE_IOS(7_0);
 
+#pragma mark -内容属性
 typedef NS_ENUM(NSInteger, UISemanticContentAttribute) {
     UISemanticContentAttributeUnspecified = 0,
     UISemanticContentAttributePlayback, // for playback controls such as Play/RW/FF buttons and playhead scrubbers
@@ -131,38 +141,44 @@ typedef NS_ENUM(NSInteger, UISemanticContentAttribute) {
     UISemanticContentAttributeForceRightToLeft
 } NS_ENUM_AVAILABLE_IOS(9_0);
 
+#pragma mark - 视图之间坐标点的转换
 @protocol UICoordinateSpace <NSObject>
 
-/**
- 视图之间坐标点的转换
- */
 - (CGPoint)convertPoint:(CGPoint)point toCoordinateSpace:(id <UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
 - (CGPoint)convertPoint:(CGPoint)point fromCoordinateSpace:(id <UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
 - (CGRect)convertRect:(CGRect)rect toCoordinateSpace:(id <UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
 - (CGRect)convertRect:(CGRect)rect fromCoordinateSpace:(id <UICoordinateSpace>)coordinateSpace NS_AVAILABLE_IOS(8_0);
 
+#pragma mark - 界限
 @property (readonly, nonatomic) CGRect bounds NS_AVAILABLE_IOS(8_0);
 
 @end
 
 @class UIBezierPath, UIEvent, UIWindow, UIViewController, UIColor, UIGestureRecognizer, UIMotionEffect, CALayer, UILayoutGuide;
 
+#pragma mark - 视图
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppearance, UIAppearanceContainer, UIDynamicItem, UITraitEnvironment, UICoordinateSpace, UIFocusItem, CALayerDelegate>
 
 #if UIKIT_DEFINE_AS_PROPERTIES
+#pragma mark - 获取layer的类型
 @property(class, nonatomic, readonly) Class layerClass;                        // default is [CALayer class]. Used when creating the underlying layer for the view.
 #else
 + (Class)layerClass;                        // default is [CALayer class]. Used when creating the underlying layer for the view.
 #endif
 
+#pragma mark - 初始化
 - (instancetype)initWithFrame:(CGRect)frame NS_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 
+
+#pragma mark - 常用属性
+#pragma mark -是否交互
 @property(nonatomic,getter=isUserInteractionEnabled) BOOL userInteractionEnabled;  // default is YES. if set to NO, user events (touch, keys) are ignored and removed from the event queue.
+
+#pragma mark -标签值
 @property(nonatomic)                                 NSInteger tag;                // default is 0
-/**
- 图层
- */
+
+#pragma mark -图层
 @property(nonatomic,readonly,strong)                 CALayer  *layer;              // returns view's layer. Will always return a non-nil value. view is layer's delegate
 
 #if UIKIT_DEFINE_AS_PROPERTIES
@@ -185,163 +201,138 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 
 @end
 
+#pragma mark - 常用属性
 @interface UIView(UIViewGeometry)
 
 // animatable. do not use frame if view is transformed since it will not correctly reflect the actual location of the view. use bounds + center instead.
+#pragma mark -大小 = bounds + center，参照是父视图的坐标系
 @property(nonatomic) CGRect            frame;
 
 // use bounds/center and not frame if non-identity transform. if bounds dimension is odd, center may be have fractional part
-/**
- 宽高，参照是上级视图的坐标系
- */
+
+#pragma mark -宽高，参照的是当前视图的坐标系
 @property(nonatomic) CGRect            bounds;      // default bounds is zero origin, frame size. animatable
-/**
- 中心点，参照是上级视图的坐标系
- */
+
+#pragma mark -中心点，参照是父视图的坐标系
 @property(nonatomic) CGPoint           center;      // center is center of frame. animatable
+
+#pragma mark -形变
 /**
- 形变
  CGAffineTransformMakeTranslation (CGFloat tx, CGFloat ty) 平移
  CGAffineTransformMakeRotation (CGFloat angle) 旋转
  CGAffineTransformMakeScale (CGFloat sx, CGFloat sy) 缩放
  CGAffineTransformIdentity 原始位置
  */
 @property(nonatomic) CGAffineTransform transform;   // default is CGAffineTransformIdentity. animatable
-/**
- 内容缩放比例
- */
+
+#pragma mark -内容缩放比例
 @property(nonatomic) CGFloat           contentScaleFactor NS_AVAILABLE_IOS(4_0);
 
 @property(nonatomic,getter=isMultipleTouchEnabled) BOOL multipleTouchEnabled __TVOS_PROHIBITED;   // default is NO
 @property(nonatomic,getter=isExclusiveTouch) BOOL       exclusiveTouch __TVOS_PROHIBITED;         // default is NO
 
+#pragma mark - 触摸点所在的View
 - (nullable UIView *)hitTest:(CGPoint)point withEvent:(nullable UIEvent *)event;   // recursively calls -pointInside:withEvent:. point is in the receiver's coordinate system
+#pragma mark -判断触摸点是否在视图上
 - (BOOL)pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event;   // default returns YES if point is in bounds
 
 
+#pragma mark - 视图之间坐标点的转换
 /**
- 视图之间坐标点的转换
+ 从view(self父视图)上的坐标系转换成子控件publishBtn上的坐标系
+ CGPoint newPoint = [self.publishBtn convertPoint:point fromView:self];
  */
 - (CGPoint)convertPoint:(CGPoint)point toView:(nullable UIView *)view;
 - (CGPoint)convertPoint:(CGPoint)point fromView:(nullable UIView *)view;
 - (CGRect)convertRect:(CGRect)rect toView:(nullable UIView *)view;
 - (CGRect)convertRect:(CGRect)rect fromView:(nullable UIView *)view;
 
-/**
- 决定当视图的bounds发生变化时，其子视图是否会自动调整
- */
+#pragma mark - 是否子视图随父视图的bounds改变而自动调整
 @property(nonatomic) BOOL               autoresizesSubviews; // default is YES. if set, subviews are adjusted according to their autoresizingMask if self.bounds changes
 
-/**
- 决定上级视图bounds变化时，本视图该如何响应，当时用autolayout时，该属性被忽略，因为这时系统会自动设置其大小
- */
+#pragma mark -子视图随父视图的bounds改变而自动调整
+//决定上级视图bounds变化时，本视图该如何响应，当时用autolayout时，该属性被忽略，因为这时系统会自动设置其大小
 @property(nonatomic) UIViewAutoresizing autoresizingMask;    // simple resize. default is UIViewAutoresizingNone
 
 - (CGSize)sizeThatFits:(CGSize)size;     // return 'best' size to fit given size. does not actually resize view. Default is return existing view size
 
-/**
- 自动调整到最合适的位置，如：根据文本内容的宽度来自动调整UILable的高度
- */
+#pragma mark -自动调整到大小
+//如：根据文本内容的宽度来自动调整UILable的高度
 - (void)sizeToFit;                       // calls sizeThatFits: with current view bounds and changes bounds size.
 
 @end
 
+
+#pragma mark - 视图层次
 @interface UIView(UIViewHierarchy)
 
+#pragma mark -父视图
 @property(nullable, nonatomic,readonly) UIView       *superview;
+#pragma mark -所有的子视图Views
 @property(nonatomic,readonly,copy) NSArray<__kindof UIView *> *subviews;
+#pragma mark -窗口
 @property(nullable, nonatomic,readonly) UIWindow     *window;
 
-/**
- 从父视图上移除
- */
+#pragma mark - 视图位置改变
+#pragma mark -从父视图上移除
 - (void)removeFromSuperview;
-/**
- 将视图插入到subviews数组的对应下标处，插入操作会使subviews下标增加
- */
+
+#pragma mark -将视图插入到subviews数组的对应下标处
 - (void)insertSubview:(UIView *)view atIndex:(NSInteger)index;
-/**
- 交换对应下标视图的位置
- */
+
+#pragma mark -交换对应下标视图的位置
 - (void)exchangeSubviewAtIndex:(NSInteger)index1 withSubviewAtIndex:(NSInteger)index2;
 
-
-/**
- 将视图添加到本视图上
- */
+#pragma mark -将视图添加到本视图上
 - (void)addSubview:(UIView *)view;
-/**
- 在siblingSubview后添加view 视图
- */
+
+#pragma mark -将视图插入到指定视图的下面
 - (void)insertSubview:(UIView *)view belowSubview:(UIView *)siblingSubview;
-/**
- 在siblingSubview前添加view 视图
- */
+
+#pragma mark -将视图插入到指定视图的上面
 - (void)insertSubview:(UIView *)view aboveSubview:(UIView *)siblingSubview;
 
-
-/**
- 将子视图向前移(把指定的子视图移动到顶层)
- */
+#pragma mark -将子视图向前移(把指定的子视图移动到顶层)
 - (void)bringSubviewToFront:(UIView *)view;
-/**
- 将子视图向后移(把指定的子视图移动到最底部)
- */
+
+#pragma mark -将子视图向后移(把指定的子视图移动到最底部)
 - (void)sendSubviewToBack:(UIView *)view;
 
-/**
- 已经添加了子view
- */
+
+#pragma mark - 已经添加了子view
 - (void)didAddSubview:(UIView *)subview;
-/**
- 将要移除子view
- */
+
+#pragma mark -将要移除子view
 - (void)willRemoveSubview:(UIView *)subview;
 
-/**
- 将要移动到新父view
- */
+#pragma mark -将要移动到新父view
 - (void)willMoveToSuperview:(nullable UIView *)newSuperview;
-/**
- 已经移动到父view
- */
+
+#pragma mark -已经移动到父view
 - (void)didMoveToSuperview;
-/**
- 将会移动到新窗口
- */
+
+#pragma mark -将要移动到新窗口
 - (void)willMoveToWindow:(nullable UIWindow *)newWindow;
-/**
- 已经移动到新窗口
- */
+
+#pragma mark -已经移动到新窗口
 - (void)didMoveToWindow;
 
-/**
- 查看某视图是否是当前视图的上级视图
- */
+#pragma mark -查看某视图是否是当前视图的上级视图
 - (BOOL)isDescendantOfView:(UIView *)view;  // returns YES for self.
-/**
- 递归地探究,包括自己, Tag值
- */
+
+#pragma mark -递归遍历查找相对应view的tag值(包括自己)
 - (nullable __kindof UIView *)viewWithTag:(NSInteger)tag; // recursive search. includes self
 
-// Allows you to perform layout before the drawing cycle happens. -layoutIfNeeded forces layout early
-#warning【待注解.m】
-/**
- 标记需要刷新
- */
-- (void)setNeedsLayout;
 
-#warning【待注解.m】
-/**
- 立即强制刷新
- */
+
+
+// Allows you to perform layout before the drawing cycle happens. -layoutIfNeeded forces layout early
+#pragma mark - 标记需要刷新
+- (void)setNeedsLayout;
+#pragma mark -立即强制刷新
 - (void)layoutIfNeeded;
 
-
-#warning【待注解.m】
-/**
- 约束布局
- */
+#pragma mark -约束布局
 - (void)layoutSubviews;    // override point. called by layoutIfNeeded automatically. As of iOS 6.0, when constraints-based layout is used the base implementation applies the constraints-based layout, otherwise it does nothing.
 
 /* -layoutMargins returns a set of insets from the edge of the view's bounds that denote a default spacing for laying out content.
@@ -382,60 +373,51 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 @property(nonatomic,readonly,strong) UILayoutGuide *safeAreaLayoutGuide API_AVAILABLE(ios(11.0),tvos(11.0));
 @end
 
+
+#pragma mark - UIView绘制
 @interface UIView(UIViewRendering)
 
-/**
- 绘制可见区域
- */
+#pragma mark -绘制可见区域
 - (void)drawRect:(CGRect)rect;
 
-/**
- 标记需要重新绘制
- */
+#pragma mark -标记需要重新绘制
 - (void)setNeedsDisplay;
-/**
- 标记在哪需要绘制
- */
+
+#pragma mark -标记在哪需要绘制
 - (void)setNeedsDisplayInRect:(CGRect)rect;
 
 
+#pragma mark - 超出范围裁剪
 /**
- 确定系统是否应该把超出本视图的bounds的部分显示出来,YES为不显示剪掉
- UIView   clipsToBounds
  CALayer  masksToBounds
+ UIView   clipsToBounds
  */
 @property(nonatomic)                 BOOL              clipsToBounds;              // When YES, content and subviews are clipped to the bounds of the view. Default is NO.
+#pragma mark -背景颜色
 @property(nullable, nonatomic,copy)            UIColor          *backgroundColor UI_APPEARANCE_SELECTOR; // default is nil. Can be useful with the appearance proxy on custom UIView subclasses.
-/**
- 透明度,默认为1,不透明
- */
+
+#pragma mark -透明度(0透明，1不透明)
 @property(nonatomic)                 CGFloat           alpha;                      // animatable. default is 1.0
+
+#pragma mark -是否不透明(默认是yes)
 /**
- 是否不透明,默认是yes,不透明view必须填充他们整个边界或者结果是未定义的.这个活跃上下文在绘制区域将不会被清除和可能有不为空的像素
+ 不透明view必须填充他们整个边界或者结果是未定义的.这个活跃上下文在绘制区域将不会被清除和可能有不为空的像素
  */
 @property(nonatomic,getter=isOpaque) BOOL              opaque;                     // default is YES. opaque views must fill their entire bounds or the results are undefined. the active CGContext in drawRect: will not have been cleared and may have non-zeroed pixels
-/**
- 清除上下文在绘制的时候
- */
+
+#pragma mark -清除上下文在绘制的时候
 @property(nonatomic)                 BOOL              clearsContextBeforeDrawing; // default is YES. ignored for opaque views. for non-opaque views causes the active CGContext in drawRect: to be pre-filled with transparent pixels
-/**
- 是否隐藏 默认为no,不检查父view.
- */
+
+#pragma mark -是否隐藏 默认为no,不检查父view
 @property(nonatomic,getter=isHidden) BOOL              hidden;                     // default is NO. doesn't check superviews
 
-/**
- 内容填充模式,默认是按比例去填充
- */
+#pragma mark -内容填充模式,默认是按比例去填充
 @property(nonatomic)                 UIViewContentMode contentMode;                // default is UIViewContentModeScaleToFill
-/**
- 可动画,默认是单元长方形,现在弃用,请使用
- [UIImage resizableImageWithCapInsets:]
- */
+
+#pragma mark -内容拉伸(弃用)，替换使用：[UIImage resizableImageWithCapInsets:]
 @property(nonatomic)                 CGRect            contentStretch NS_DEPRECATED_IOS(3_0,6_0) __TVOS_PROHIBITED; // animatable. default is unit rectangle {{0,0} {1,1}}. Now deprecated: please use -[UIImage resizableImageWithCapInsets:] to achieve the same effect.
 
-/**
- 遮罩view
- */
+#pragma mark -遮罩view
 @property(nullable, nonatomic,strong)          UIView           *maskView NS_AVAILABLE_IOS(8_0);
 
 /*
@@ -444,9 +426,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
  If this view's -tintAdjustmentMode returns Dimmed, then the color that is returned for -tintColor will automatically be dimmed.
  If your view subclass uses tintColor in its rendering, override -tintColorDidChange in order to refresh the rendering if the color changes.
  */
-/**
- 渲染颜色
- */
+#pragma mark -渲染颜色
 @property(null_resettable, nonatomic, strong) UIColor *tintColor NS_AVAILABLE_IOS(7_0);
 
 /*
@@ -455,6 +435,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
  When tintAdjustmentMode has a value of UIViewTintAdjustmentModeDimmed for a view, the color it returns from tintColor will be modified to give a dimmed appearance.
  When the tintAdjustmentMode of a view changes (either the view's value changing or by one of its superview's values changing), -tintColorDidChange will be called to allow the view to refresh its rendering.
  */
+#pragma mark - 着色调整模式
 @property(nonatomic) UIViewTintAdjustmentMode tintAdjustmentMode NS_AVAILABLE_IOS(7_0);
 
 /*
@@ -465,25 +446,36 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 @end
 
 
-#pragma mark ------------------
-#pragma mark -【UIViewAnimation 动画】
-@interface UIView(UIViewAnimation)
 
+#pragma mark - UIViewAnimation 动画
+@interface UIView(UIViewAnimation)
+//开始动画
 + (void)beginAnimations:(nullable NSString *)animationID context:(nullable void *)context;  // additional context info passed to will start/did stop selectors. begin/commit can be nested
+//提交动画
 + (void)commitAnimations;                                                 // starts up any animations when the top level animation is commited
 
 // no getters. if called outside animation block, these setters have no effect.
+//动画代理
 + (void)setAnimationDelegate:(nullable id)delegate;                          // default = nil
+//动画将要开始执行方法
 + (void)setAnimationWillStartSelector:(nullable SEL)selector;                // default = NULL. -animationWillStart:(NSString *)animationID context:(void *)context
+//动画结束停止执行方法
 + (void)setAnimationDidStopSelector:(nullable SEL)selector;                  // default = NULL. -animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context
+//动画持续时间
 + (void)setAnimationDuration:(NSTimeInterval)duration;              // default = 0.2
+//动画延迟时间
 + (void)setAnimationDelay:(NSTimeInterval)delay;                    // default = 0.0
+//动画开始日期
 + (void)setAnimationStartDate:(NSDate *)startDate;                  // default = now ([NSDate date])
+//动画运动曲线
 + (void)setAnimationCurve:(UIViewAnimationCurve)curve;              // default = UIViewAnimationCurveEaseInOut
+//动画重复次数
 + (void)setAnimationRepeatCount:(float)repeatCount;                 // default = 0.0.  May be fractional
+//动画重复自动反转
 + (void)setAnimationRepeatAutoreverses:(BOOL)repeatAutoreverses;    // default = NO. used if repeat count is non-zero
+//从当前位置开始新的动画
 + (void)setAnimationBeginsFromCurrentState:(BOOL)fromCurrentState;  // default = NO. If YES, the current view position is always used for new animations -- allowing animations to "pile up" on each other. Otherwise, the last end state is used for the animation (the default).
-
+//动画平移
 + (void)setAnimationTransition:(UIViewAnimationTransition)transition forView:(UIView *)view cache:(BOOL)cache;  // current limitation - only one per begin/commit block
 
 + (void)setAnimationsEnabled:(BOOL)enabled;                         // ignore any attribute changes while set.
@@ -503,10 +495,9 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 @end
 
 
-#pragma mark ------------------
-#pragma mark -【动画 block】
-@interface UIView(UIViewAnimationWithBlocks)
 
+#pragma mark - Block动画animateWithDuration:
+@interface UIView(UIViewAnimationWithBlocks)
 
 + (void)animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(4_0);
 
@@ -517,29 +508,53 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 /* Performs `animations` using a timing curve described by the motion of a spring. When `dampingRatio` is 1, the animation will smoothly decelerate to its final model values without oscillating. Damping ratios less than 1 will oscillate more and more before coming to a complete stop. You can use the initial spring velocity to specify how fast the object at the end of the simulated spring was moving before it was attached. It's a unit coordinate system, where 1 is defined as travelling the total animation distance in a second. So if you're changing an object's position by 200pt in this animation, and you want the animation to behave as if the object was moving at 100pt/s before the animation started, you'd pass 0.5. You'll typically want to pass 0 for the velocity. */
 + (void)animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay usingSpringWithDamping:(CGFloat)dampingRatio initialSpringVelocity:(CGFloat)velocity options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(7_0);
 
+1、弹性动画
+[UIView animateWithDuration:<#(NSTimeInterval)#>：动画持续时间
+                      delay:<#(NSTimeInterval)#>：动画延迟多长时间开始
+     usingSpringWithDamping:<#(CGFloat)#>：阻尼(范围0-1，一般为0.7 阻尼越接近于0弹性效果越明显)
+      initialSpringVelocity:<#(CGFloat)#>：弹性复位的速度(一般为0)
+                    options:<#(UIViewAnimationOptions)#>：动画类型(速度曲线、翻转方式等)
+                 animations:<#^(void)animations#>：执行动画过程
+                 completion:<#^(BOOL finished)completion#>：动画完成的回调
+
+ 
+// 平移View做动画
 + (void)transitionWithView:(UIView *)view duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options animations:(void (^ __nullable)(void))animations completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(4_0);
 
 + (void)transitionFromView:(UIView *)fromView toView:(UIView *)toView duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(4_0); // toView added to fromView.superview, fromView removed from its superview
 
 /* Performs the requested system-provided animation on one or more views. Specify addtional animations in the parallelAnimations block. These additional animations will run alongside the system animation with the same timing and duration that the system animation defines/inherits. Additional animations should not modify properties of the view on which the system animation is being performed. Not all system animations honor all available options.
  */
+// 执行系统动画
 + (void)performSystemAnimation:(UISystemAnimation)animation onViews:(NSArray<__kindof UIView *> *)views options:(UIViewAnimationOptions)options animations:(void (^ __nullable)(void))parallelAnimations completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(7_0);
 
 @end
 
 
-#pragma mark ------------------
-#pragma mark -【核心架构动画】
+
+#pragma mark - 关键帧动画animateKeyframesWithDuration:
 @interface UIView (UIViewKeyframeAnimations)
 
 + (void)animateKeyframesWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewKeyframeAnimationOptions)options animations:(void (^)(void))animations completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(7_0);
 + (void)addKeyframeWithRelativeStartTime:(double)frameStartTime relativeDuration:(double)frameDuration animations:(void (^)(void))animations NS_AVAILABLE_IOS(7_0); // start time and duration are values between 0.0 and 1.0 specifying time and duration relative to the overall time of the keyframe animation
 
+2、关键帧动画
+[UIView animateKeyframesWithDuration:<#(NSTimeInterval)#><#(NSTimeInterval)#>：动画持续时间
+                                delay:<#(NSTimeInterval)#>：等待时间
+                              options:<#(UIViewKeyframeAnimationOptions)#>：动画类型
+                           animations:<#^(void)animations#>：执行动画过程
+                           completion:<#^(BOOL finished)completion#>：动画完成的回调
 @end
 
 
-#pragma mark ------------------
-#pragma mark -【手势识别】
+ 
+ 
+ 
+ 
+ 
+//----------------------- <#我是分割线#> ------------------------//
+ 
+#pragma mark - 手势识别GestureRecognizers
 @interface UIView (UIViewGestureRecognizers)
 
 @property(nullable, nonatomic,copy) NSArray<__kindof UIGestureRecognizer *> *gestureRecognizers NS_AVAILABLE_IOS(3_2);
@@ -555,8 +570,8 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 @end
 
 
-#pragma mark ------------------
-#pragma mark -【动作效果】
+
+//动作效果
 @interface UIView (UIViewMotionEffects)
 
 /*! Begins applying `effect` to the receiver. The effect's emitted keyPath/value pairs will be
@@ -589,8 +604,8 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
 /* A constraint is typically installed on the closest common ancestor of the views involved in the constraint.
  It is required that a constraint be installed on _a_ common ancestor of every view involved.  The numbers in a constraint are interpreted in the coordinate system of the view it is installed on.  A view is considered to be an ancestor of itself.
  */
-#pragma mark ------------------
-#pragma mark -【约束基于布局】
+
+//约束布局
 @interface UIView (UIConstraintBasedLayoutInstallingConstraints)
 
 @property(nonatomic,readonly) NSArray<__kindof NSLayoutConstraint *> *constraints NS_AVAILABLE_IOS(6_0);
@@ -612,8 +627,8 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
  Please see the conceptual documentation for a discussion of these methods.
  */
 
-#pragma mark ------------------
-#pragma mark -【核心布局方法】
+
+//核心布局方法
 @interface UIView (UIConstraintBasedLayoutCoreMethods)
 - (void)updateConstraintsIfNeeded NS_AVAILABLE_IOS(6_0); // Updates the constraints from the bottom up for the view hierarchy rooted at the receiver. UIWindow's implementation creates a layout engine if necessary first.
 - (void)updateConstraints NS_AVAILABLE_IOS(6_0) NS_REQUIRES_SUPER; // Override this to adjust your special constraints during a constraints update pass
@@ -624,8 +639,8 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
 
 
 // Compatibility and Adoption
-#pragma mark ------------------
-#pragma mark -【布局兼容性】
+
+//布局兼容性
 @interface UIView (UIConstraintBasedCompatibility)
 
 /* By default, the autoresizing mask on a view gives rise to constraints that fully determine
@@ -648,8 +663,8 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
 
 
 
-#pragma mark ------------------
-#pragma mark -【布局图层】
+
+//布局图层
 // Separation of Concerns
 @interface UIView (UIConstraintBasedLayoutLayering)
 
@@ -730,8 +745,8 @@ UIKIT_EXTERN const CGFloat UIViewNoIntrinsicMetric NS_AVAILABLE_IOS(6_0); // -1
 UIKIT_EXTERN const CGSize UILayoutFittingCompressedSize NS_AVAILABLE_IOS(6_0);
 UIKIT_EXTERN const CGSize UILayoutFittingExpandedSize NS_AVAILABLE_IOS(6_0);
 
-#pragma mark ------------------
-#pragma mark -【约束基于布局适应尺寸】
+
+//约束基于布局适应尺寸
 @interface UIView (UIConstraintBasedLayoutFittingSize)
 /* The size fitting most closely to targetSize in which the receiver's subtree can be laid out while optimally satisfying the constraints. If you want the smallest possible size, pass UILayoutFittingCompressedSize; for the largest possible size, pass UILayoutFittingExpandedSize.
  Also see the comment for UILayoutPriorityFittingSizeLevel.
@@ -741,8 +756,8 @@ UIKIT_EXTERN const CGSize UILayoutFittingExpandedSize NS_AVAILABLE_IOS(6_0);
 @end
 
 
-#pragma mark ------------------
-#pragma mark -【布局指南支持】
+
+//布局支持
 @interface UIView (UILayoutGuideSupport)
 
 /* UILayoutGuide objects owned by the receiver.
@@ -781,8 +796,8 @@ UIKIT_EXTERN const CGSize UILayoutFittingExpandedSize NS_AVAILABLE_IOS(6_0);
 
 /* Everything in this section should be used in debugging only, never in shipping code.  These methods may not exist in the future - no promises.
  */
-#pragma mark ------------------
-#pragma mark -【布局debug】
+
+//布局debug
 @interface UIView (UIConstraintBasedLayoutDebugging)
 
 /* This returns a list of all the constraints that are affecting the current location of the receiver.  The constraints do not necessarily involve the receiver, they may affect the frame indirectly.
@@ -806,8 +821,8 @@ UIKIT_EXTERN const CGSize UILayoutFittingExpandedSize NS_AVAILABLE_IOS(6_0);
 
 /* Everything in this section should be used in debugging only, never in shipping code.  These methods may not exist in the future - no promises.
  */
-#pragma mark ------------------
-#pragma mark -【状态复位】
+
+//状态复位
 @interface UILayoutGuide (UIConstraintBasedLayoutDebugging)
 
 /* This returns a list of all the constraints that are affecting the current location of the receiver.  The constraints do not necessarily involve the receiver, they may affect the frame indirectly.
