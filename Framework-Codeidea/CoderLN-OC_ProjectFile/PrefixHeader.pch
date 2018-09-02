@@ -1,0 +1,60 @@
+/*
+ * PrefixHeader.pch
+ * 创建 cmd+n -> PCHFile
+ *
+ * About ME『Public：Codeidea / https://githubidea.github.io』.
+ * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
+ *
+ * 作用：效率开发常用宏 - 适时慎用
+ * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
+ */
+
+
+#pragma mark - ↑
+#pragma mark - 常用第三方库
+
+#import <AFNetworking/AFNetworking.h>//数据请求
+#import <MJExtension/MJExtension.h>//字典转模型
+#import <UIImageView+WebCache.h>//图片下载
+#import <SVProgressHUD/SVProgressHUD.h>//用户进度提示
+#import <MJRefresh/MJRefresh.h>//下拉刷新和上垃圾加载
+
+#define MAS_SHORTHAND //定义这个常量，就可以不用在开发过程中使用"mas_"前缀。
+#define MAS_SHORTHAND_GLOBALS //定义这个常量，Masonry帮我们自动把基础数据类型的数据，自动装箱为对象类型。
+#import <Masonry/Masonry.h>//适配约束
+
+
+
+
+
+
+
+
+#pragma mark - ↑
+#pragma mark - 常用分类
+
+#import "UIImage+Image.h"
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+Item.h"
+#import "UIImageView+ImageView.h"
+#import "UITextField+TextField.h"
+#import "Const.h"  // 常量
+#import "LNFileCache.h" // 处理文件缓存
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

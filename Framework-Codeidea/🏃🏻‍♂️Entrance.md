@@ -1,5 +1,5 @@
 ## 内容目录
-1、以Framework（UIKit、UIFoundation 为主）功能模块相关的 API 注解；
+1、以Framework（UIKit、UIFoundation 为主）功能模块相关的 SDK 注解；
 2、与上一条相对应的工具类 Tools；
 3、Framework 类结构图解
 4、模块知识梳理脑图
@@ -65,7 +65,6 @@
 
 ## 说明：
 向优秀的创作者致敬！向优秀的分享者致敬！
-欢迎来自大厂的你，把你的创作（GitHub相关）、来此分享！
 
 内部有注解均摘录网络加以自己理解总结的 Data，在文件中都会有对应的链接体现， (`由于不知原因`) 如果你看到内部 Data 是你的 Data 且这里没有注明你的链接，请你[简信](https://www.jianshu.com/u/fd745d76c816)我，我会及时补充上。 
 
