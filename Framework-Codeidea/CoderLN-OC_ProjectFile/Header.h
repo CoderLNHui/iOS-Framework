@@ -1,12 +1,12 @@
 /*
- * Header.h
+ * Header.h 效率开发常用宏
  * 创建 cmd+n -> HeaderFile
  *
- * About ME『Public：Codeidea / https://githubidea.github.io』.
- * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/Coder』.
+ * 不知名刘先生
+ * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
  *
- * 作用：效率开发常用宏 - 适时慎用
- * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
+ * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
 //#ifndef PchHeader_h
@@ -14,18 +14,16 @@
 //
 //#endif /* PchHeader_h */
 
-
-
 🏃🏻‍♂️
 #pragma mark - 【颜色宏相关】
 /*
  概念：
     颜色：3种颜色通道 R G B，颜色表达方式：24位,32位，每一个颜色通道是8位,范围(0~256)
  
- 表现方式一：（R:213, G:213, B:213）
+ 表现方式一：（R:213, G:213, B:213）10进制
     [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:a]
  
- 表现方式二：（#ffffff）
+ 表现方式二：（#ffffff）16进制
     #ffffff   -> f=15
     R:FF => 10进制 15 * 16^0 + 15 * 16^1 = 255
     G:FF => 255

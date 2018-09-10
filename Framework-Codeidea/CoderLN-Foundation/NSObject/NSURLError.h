@@ -1,13 +1,13 @@
 /*
- * NSURLError.h
+ * NSURLError.h 苹果相应的错误码
  *
- * Framework: Foundation (c) 2003-2017
+ * Foundation (c) 2003-2017
  *
- * About ME『Public：Codeidea / https://githubidea.github.io』.
- * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
+ * 不知名刘先生
+ * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
  *
- * 作用：苹果相应的错误码
- * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
+ * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
 

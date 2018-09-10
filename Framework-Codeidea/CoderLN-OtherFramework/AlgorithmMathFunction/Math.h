@@ -1,11 +1,12 @@
 /*
+ * Math.h 数学公式
  * Copyright (c) 2002-2017 Apple Inc. All rights reserved.
  *
  * @APPLE_LICENSE_HEADER_START@
- * 白开水ln（https://github.com/CustomPBWaters）
+ * 白开水ln（https://github.com/CoderLN）
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced.
+ * Created by 【WechatPublic-CoderLN】 on Elegant programming16.
+ * Copyright (c) Unauthorized shall（https://githubidea.github.io）not be reproduced.
  *
  * The contents of this file constitute Original Code as defined in and
  * are subject to the Apple Public Source License Version 1.1 (the
@@ -25,12 +26,6 @@
  * @APPLE_LICENSE_HEADER_END@
  */
 
-
-/******************************************************************************
- *                                                                            *
- *                WechatPublic-Codeidea        Math Functions                 *
- *                                                                            *
- ******************************************************************************/
 
 // 求反余弦值
 extern float acosf(float);

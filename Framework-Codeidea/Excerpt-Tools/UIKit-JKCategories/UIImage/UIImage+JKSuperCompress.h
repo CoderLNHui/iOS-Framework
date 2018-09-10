@@ -3,7 +3,7 @@
 //  JKCategories (https://github.com/shaojiankui/JKCategories)
 //
 //  Created by Jakey on 16/1/22.
-//  Copyright © 2016年 Jakey. All rights reserved.
+//  Copyright (c) 2016年 Jakey. All rights reserved.
 //  https://github.com/CompletionHandler/CYImageCompress
 
 //usage      [UIImage compressImage:image toMaxLength:512*1024*8 maxWidth:1024];

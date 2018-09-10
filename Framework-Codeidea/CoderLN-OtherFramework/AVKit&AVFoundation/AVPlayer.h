@@ -1,16 +1,13 @@
 /*
- * File:  AVPlayer.h 
+ * AVPlayer.h 
  *
- * © 2010-2017
- * Framework: AVFoundation
+ * AVFoundation (c) 2010-2017
  *
- * Author: 白开水ln,（https://github.com/CoderLN）
+ * 不知名刘先生
+ * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming.
- * Copyright © Reprinted（Blog https://githubidea.github.io）Please indicate the source.Mustbe.
- *
- *
- * 🐾 |Codeidea 用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 | 👣
+ * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
 

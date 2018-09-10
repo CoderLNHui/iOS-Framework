@@ -3,7 +3,7 @@
  说明该 **JKCategories**
  原作者 https://github.com/remember17/WHKit
  
- 建议也为原作者库送上 Star
+ 建议也为原作者库送上你的 Star
  阅读总会能有点收获 ！向优秀的开源者致敬 ！向优秀的分享者致敬 ！
  */
 

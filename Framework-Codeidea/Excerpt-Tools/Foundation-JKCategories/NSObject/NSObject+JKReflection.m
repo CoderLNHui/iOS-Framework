@@ -3,7 +3,7 @@
 //  NSObject-JKReflection
 //
 //  Created by Jakey on 15/12/22.
-//  Copyright © 2015年 Jakey. All rights reserved.
+//  Copyright (c) 2015年 Jakey. All rights reserved.
 //
 
 #import "NSObject+JKReflection.h"

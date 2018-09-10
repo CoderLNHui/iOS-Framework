@@ -1,14 +1,13 @@
 /*
  * NSString.m
  *
- * Framework: Foundation (c) 1994-2017
+ * Foundation (c) 1994-2017
  *
- * About ME『Public：Codeidea / https://githubidea.github.io』.
- * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
+ * 不知名刘先生
+ * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
  *
- * ◕ 使用
- * ◕ 场景
- * 🏃🏻‍♂️ ◕ 尊重熬夜总结、整理的作者[star & provenance]，该模块将系统化学习，后续替换、补充文章内容 ~
+ * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
 #pragma mark - 【字符串属性】
@@ -94,7 +93,7 @@ NSLog(@"%@",msg);
 #pragma mark - 【字符串拼接】
 ```objc
 NSString * str1 = @"/Users/CoderLN/Desktop";
-NSString * str2 = @"Codeidea.plist";
+NSString * str2 = @"CoderLN.plist";
 
 NSString * str3 = [str1 stringByAppendingString:[NSString stringWithFormat:@"/%@",str2]];//需要手动添加斜线/
 NSString * str4 = [str1 stringByAppendingFormat:@"+%@", str2];//格式化拼接
@@ -102,10 +101,10 @@ NSString * str5 = [str1 stringByAppendingPathComponent:str2];//自动添加斜�
 NSString * str6 = [str1 stringByAppendingPathExtension:str2];//自动添加点.
 
 NSLog(@"\n%@\n %@\n %@\n %@\n",str3,str4,str5,str6);
-//打印：3/Users/CoderLN/Desktop/Codeidea.plist
-//打印：4/Users/CoderLN/Desktop+Codeidea.plist
-//打印：5/Users/CoderLN/Desktop/Codeidea.plist
-//打印：6/Users/CoderLN/Desktop.Codeidea.plist
+//打印：3/Users/CoderLN/Desktop/CoderLN.plist
+//打印：4/Users/CoderLN/Desktop+CoderLN.plist
+//打印：5/Users/CoderLN/Desktop/CoderLN.plist
+//打印：6/Users/CoderLN/Desktop.CoderLN.plist
 ```
 
 

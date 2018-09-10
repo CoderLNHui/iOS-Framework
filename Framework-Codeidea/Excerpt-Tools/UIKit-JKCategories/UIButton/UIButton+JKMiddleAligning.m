@@ -3,7 +3,7 @@
 //  UIButton+MiddleAligning
 //
 //  Created by Barry on 12/11/15.
-//  Copyright © 2015 BarryLee. All rights reserved.
+//  Copyright (c) 2015 BarryLee. All rights reserved.
 //
 
 #import "UIButton+JKMiddleAligning.h"

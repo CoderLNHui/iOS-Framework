@@ -3,7 +3,7 @@
 //  JKCategories (https://github.com/shaojiankui/JKCategories)
 //
 //  Created by Jakey on 2016/12/14.
-//  Copyright © 2016年 www.skyfox.org. All rights reserved.
+//  Copyright (c) 2016年 www.skyfox.org. All rights reserved.
 //
 
 #import "UIWebView+JKWebStorage.h"

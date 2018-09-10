@@ -4,128 +4,128 @@
    <Group
       location = "group:CoderLN-UIKit"
       name = "CoderLN-UIKit">
+      <FileRef
+         location = "group:UIKit.h">
+      </FileRef>
       <Group
          location = "group:UIView"
          name = "UIView">
          <FileRef
-            location = "group:UIWindow.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIProgressView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UILabel+LNLabel.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITableView.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIView+LNFrame.m">
-         </FileRef>
-         <FileRef
-            location = "group:UITableViewCell.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIImageView+LNImageView.m">
+            location = "group:UIActionSheet.h">
          </FileRef>
          <FileRef
             location = "group:UIActivityIndicatorView.h">
          </FileRef>
          <FileRef
-            location = "group:UICollectionView.m">
-         </FileRef>
-         <FileRef
-            location = "group:UISearchBar.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIVisualEffectView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIToolbar.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIInputView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPickerView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIView_&#x89c6;&#x56fe;.m">
-         </FileRef>
-         <FileRef
-            location = "group:UITextView.m">
-         </FileRef>
-         <FileRef
-            location = "group:UILabel.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIScrollView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UILabel_&#x6587;&#x672c;&#x6807;&#x7b7e;.m">
-         </FileRef>
-         <FileRef
-            location = "group:UILabel+LNLabel.m">
-         </FileRef>
-         <FileRef
-            location = "group:UITableViewHeaderFooterView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UICollectionViewCell.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImageView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UINavigationBar.h">
-         </FileRef>
-         <FileRef
-            location = "group:UICollectionViewLayout.m">
+            location = "group:UIAlertView.h">
          </FileRef>
          <FileRef
             location = "group:UICollectionView.h">
          </FileRef>
          <FileRef
-            location = "group:UIImageView+LNImageView.h">
+            location = "group:UICollectionView.m">
          </FileRef>
          <FileRef
-            location = "group:UITableViewCell.h">
+            location = "group:UICollectionViewCell.h">
          </FileRef>
          <FileRef
-            location = "group:UIView+LNFrame.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITableView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImageView&amp;UIImage_&#x56fe;&#x7247;.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIPopoverBackgroundView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITabBar.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIAlertView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIActionSheet.h">
+            location = "group:UICollectionViewLayout.m">
          </FileRef>
          <FileRef
             location = "group:UIGraphics.h">
          </FileRef>
          <FileRef
-            location = "group:UIStackView.h">
+            location = "group:UIImageView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIImageView&amp;UIImage_&#x56fe;&#x7247;.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIImageView+LNImageView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIImageView+LNImageView.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIInputView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UILabel_&#x6587;&#x672c;&#x6807;&#x7b7e;.m">
+         </FileRef>
+         <FileRef
+            location = "group:UILabel.h">
+         </FileRef>
+         <FileRef
+            location = "group:UILabel+LNLabel.h">
+         </FileRef>
+         <FileRef
+            location = "group:UILabel+LNLabel.m">
+         </FileRef>
+         <FileRef
+            location = "group:UINavigationBar.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPickerView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPopoverBackgroundView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIProgressView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIScrollView.h">
          </FileRef>
          <FileRef
             location = "group:UIScrollView.m">
          </FileRef>
          <FileRef
+            location = "group:UISearchBar.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIStackView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITabBar.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITableView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITableView.m">
+         </FileRef>
+         <FileRef
+            location = "group:UITableViewCell.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITableViewCell.m">
+         </FileRef>
+         <FileRef
+            location = "group:UITableViewHeaderFooterView.h">
+         </FileRef>
+         <FileRef
             location = "group:UITextView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIToolbar.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIView_&#x89c6;&#x56fe;.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIView+LNFrame.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIView+LNFrame.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIVisualEffectView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIWindow.h">
          </FileRef>
       </Group>
       <Group
@@ -138,126 +138,126 @@
             location = "group:UIBarButtonItem+LNItem.h">
          </FileRef>
          <FileRef
-            location = "group:UITabBarItem.h">
-         </FileRef>
-         <FileRef
             location = "group:UIBarButtonItem+LNItem.m">
          </FileRef>
          <FileRef
             location = "group:UIBarItem.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITabBarItem.h">
          </FileRef>
       </Group>
       <Group
          location = "group:UIViewController"
          name = "UIViewController">
          <FileRef
-            location = "group:UIPageViewController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UICloudSharingController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewController+LNController.m">
-         </FileRef>
-         <FileRef
-            location = "group:UICollectionViewController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIReferenceLibraryViewController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewController+LNExample.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIImagePickerController.h">
+            location = "group:UIActivityViewController.h">
          </FileRef>
          <FileRef
             location = "group:UIAlertController.h">
          </FileRef>
          <FileRef
-            location = "group:UIViewController.h">
+            location = "group:UICloudSharingController.h">
          </FileRef>
          <FileRef
-            location = "group:UINavigationController+LNController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDocumentPickerExtensionViewController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIInputViewController.h">
+            location = "group:UICollectionViewController.h">
          </FileRef>
          <FileRef
             location = "group:UIDocumentMenuViewController.h">
          </FileRef>
          <FileRef
-            location = "group:UIViewController+LNController.h">
+            location = "group:UIDocumentPickerExtensionViewController.h">
          </FileRef>
          <FileRef
             location = "group:UIDocumentPickerViewController.h">
          </FileRef>
          <FileRef
-            location = "group:UINavigationController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UISplitViewController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewController+LNExample.h">
+            location = "group:UIImagePickerController.h">
          </FileRef>
          <FileRef
             location = "group:UIImagePickerController.m">
          </FileRef>
          <FileRef
-            location = "group:UITableViewController.h">
+            location = "group:UIInputViewController.h">
          </FileRef>
          <FileRef
-            location = "group:UISearchContainerViewController.h">
+            location = "group:UINavigationController.h">
          </FileRef>
          <FileRef
-            location = "group:UITabBarController.h">
+            location = "group:UINavigationController+LNController.h">
          </FileRef>
          <FileRef
             location = "group:UINavigationController+LNController.m">
          </FileRef>
          <FileRef
-            location = "group:UIActivityViewController.h">
+            location = "group:UIPageViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIReferenceLibraryViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UISearchContainerViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UISearchController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UISplitViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITabBarController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITableViewController.h">
          </FileRef>
          <FileRef
             location = "group:UIVideoEditorController.h">
          </FileRef>
          <FileRef
-            location = "group:UISearchController.h">
+            location = "group:UIViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewController+LNController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewController+LNController.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewController+LNExample.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewController+LNExample.m">
          </FileRef>
       </Group>
       <Group
          location = "group:UIControl"
          name = "UIControl">
          <FileRef
-            location = "group:UIStepper.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITextField_&#x6587;&#x672c;&#x8f93;&#x5165;&#x6846;.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIControl+LNControl.m">
-         </FileRef>
-         <FileRef
             location = "group:UIButton_&#x6309;&#x94ae;.m">
          </FileRef>
          <FileRef
-            location = "group:UITextField+LNTextField.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITextField.h">
+            location = "group:UIButton.h">
          </FileRef>
          <FileRef
             location = "group:UIButton+LNButton.h">
          </FileRef>
          <FileRef
-            location = "group:UIDataDetectors.h">
+            location = "group:UIButton+LNButton.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIControl_&#x63a7;&#x4ef6;.m">
          </FileRef>
          <FileRef
             location = "group:UIControl.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIControl+LNControl.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIControl+LNControl.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIDataDetectors.h">
          </FileRef>
          <FileRef
             location = "group:UIDatePicker.h">
@@ -266,44 +266,38 @@
             location = "group:UIPageControl.h">
          </FileRef>
          <FileRef
-            location = "group:UIControl+LNControl.h">
-         </FileRef>
-         <FileRef
             location = "group:UIRefreshControl.h">
-         </FileRef>
-         <FileRef
-            location = "group:UISwitch.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIButton.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITextField+LNTextField.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIControl_&#x63a7;&#x4ef6;.m">
          </FileRef>
          <FileRef
             location = "group:UISegmentedControl.h">
          </FileRef>
          <FileRef
-            location = "group:UIButton+LNButton.m">
+            location = "group:UISlider.h">
          </FileRef>
          <FileRef
-            location = "group:UISlider.h">
+            location = "group:UIStepper.h">
+         </FileRef>
+         <FileRef
+            location = "group:UISwitch.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextField_&#x6587;&#x672c;&#x8f93;&#x5165;&#x6846;.m">
+         </FileRef>
+         <FileRef
+            location = "group:UITextField.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextField+LNTextField.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextField+LNTextField.m">
          </FileRef>
       </Group>
       <Group
          location = "group:UIGestureRecognizer"
          name = "UIGestureRecognizer">
          <FileRef
-            location = "group:UIPinchGestureRecognizer.h">
-         </FileRef>
-         <FileRef
-            location = "group:UISwipeGestureRecognizer.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITapGestureRecognizer.h">
+            location = "group:UIGestureRecognizer.h">
          </FileRef>
          <FileRef
             location = "group:UILongPressGestureRecognizer.h">
@@ -312,239 +306,266 @@
             location = "group:UIPanGestureRecognizer.h">
          </FileRef>
          <FileRef
+            location = "group:UIPinchGestureRecognizer.h">
+         </FileRef>
+         <FileRef
             location = "group:UIRotationGestureRecognizer.h">
          </FileRef>
          <FileRef
             location = "group:UIScreenEdgePanGestureRecognizer.h">
          </FileRef>
          <FileRef
-            location = "group:UIGestureRecognizer.h">
+            location = "group:UISwipeGestureRecognizer.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITapGestureRecognizer.h">
          </FileRef>
       </Group>
       <Group
          location = "group:NSObject"
          name = "NSObject">
          <FileRef
-            location = "group:UIDynamicBehavior.h">
+            location = "group:DocumentManager.h">
          </FileRef>
          <FileRef
-            location = "group:UIGravityBehavior.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIVibrancyEffect.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSTextContainer.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDragItem.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImageAsset.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSLayoutManager.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSLayoutAnchor.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIFocusGuide.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSParagraphStyle.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIAccessibilityConstants.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIColor.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPresentationController.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSTextStorage.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPasteConfiguration.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIUserNotificationSettings.h">
+            location = "group:NSDataAsset.h">
          </FileRef>
          <FileRef
             location = "group:NSDate+Date.h">
          </FileRef>
          <FileRef
-            location = "group:UIBlurEffect.h">
+            location = "group:NSDate+Date.m">
          </FileRef>
          <FileRef
-            location = "group:UIPrintInteractionController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITextDragPreviewRenderer.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITouch.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDynamicItemBehavior.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIMotionEffect.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIStateRestoration.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIScreenMode.h">
-         </FileRef>
-         <FileRef
-            location = "group:UINavigationItem+LNItem.h">
-         </FileRef>
-         <FileRef
-            location = "group:UICollectionViewLayout.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPopoverPresentationController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIResponder.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIGraphicsImageRenderer.h">
-         </FileRef>
-         <FileRef
-            location = "group:UINotificationFeedbackGenerator.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDragPreview.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITextInput.h">
+            location = "group:NSDate+LXExtension.h">
          </FileRef>
          <FileRef
             location = "group:NSDate+LXExtension.m">
          </FileRef>
          <FileRef
-            location = "group:UIFocusAnimationCoordinator.h">
+            location = "group:NSFileProviderExtension.h">
          </FileRef>
          <FileRef
-            location = "group:UIStringDrawing.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDevice.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDragPreviewParameters.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDevice+LNDevice.m">
-         </FileRef>
-         <FileRef
-            location = "group:UICollectionViewFlowLayout.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIVisualEffectView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UISpringLoadedInteractionSupporting.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPrinterPickerController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIApplicationShortcutItem.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPress.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITextDragURLPreviews.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPressesEvent.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIEvent.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImage+LNImage.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIInterface.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPrintFormatter.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPrintPageRenderer.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewPropertyAnimator.h">
-         </FileRef>
-         <FileRef
-            location = "group:UILayoutGuide.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPrintInfo.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITextDropProposal.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSText.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIStoryboard.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIAccelerometer.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITraitCollection.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDocumentInteractionController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewControllerTransitionCoordinator.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIGraphicsRenderer.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDropInteraction.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDragSession.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPushBehavior.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewControllerTransitioning.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPrintPaper.h">
+            location = "group:NSLayoutAnchor.h">
          </FileRef>
          <FileRef
             location = "group:NSLayoutConstraint.h">
          </FileRef>
          <FileRef
-            location = "group:UICollisionBehavior.h">
+            location = "group:NSLayoutManager.h">
          </FileRef>
          <FileRef
-            location = "group:UIFont.h">
+            location = "group:NSParagraphStyle.h">
          </FileRef>
          <FileRef
-            location = "group:UIColor+LNColor.m">
+            location = "group:NSShadow.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSStringDrawing.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSText.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSTextAttachment.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSTextContainer.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSTextStorage.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIAccelerometer.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIAccessibility.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIAccessibilityConstants.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIAccessibilityContentSizeCategoryImageAdjusting.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIActivity.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIActivityItemProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIAppearance.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIApplication_&#x5e94;&#x7528;&#x7a0b;&#x5e8f;.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIApplication.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIApplicationShortcutItem.h">
          </FileRef>
          <FileRef
             location = "group:UIAttachmentBehavior.h">
          </FileRef>
          <FileRef
+            location = "group:UIBarButtonItemGroup.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIBezierPath.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIBlurEffect.h">
+         </FileRef>
+         <FileRef
+            location = "group:UICollectionViewFlowLayout.h">
+         </FileRef>
+         <FileRef
+            location = "group:UICollectionViewLayout.h">
+         </FileRef>
+         <FileRef
+            location = "group:UICollectionViewTransitionLayout.h">
+         </FileRef>
+         <FileRef
+            location = "group:UICollisionBehavior.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIColor.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIColor+LNColor.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIColor+LNColor.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIContentSizeCategory.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIContentSizeCategoryAdjusting.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDevice.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDevice+LNDevice.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDevice+LNDevice.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIDocument.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDocumentInteractionController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDragInteraction.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDragItem.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDragPreview.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDragPreviewParameters.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDragSession.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDropInteraction.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDynamicAnimator.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDynamicBehavior.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDynamicItemBehavior.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIEvent.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIFeedbackGenerator.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIFieldBehavior.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIFocus.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIFocusAnimationCoordinator.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIFocusDebugger.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIFocusGuide.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIFocusSystem.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIFont.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIFontDescriptor.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIFontMetrics.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIGeometry.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIGraphicsImageRenderer.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIGraphicsPDFRenderer.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIGraphicsRenderer.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIGravityBehavior.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIImage.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIImage+LNImage.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIImage+LNImage.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIImageAsset.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIImpactFeedbackGenerator.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIInteraction.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIInterface.h">
+         </FileRef>
+         <FileRef
             location = "group:UIKitDefines.h">
+         </FileRef>
+         <FileRef
+            location = "group:UILayoutGuide.h">
+         </FileRef>
+         <FileRef
+            location = "group:UILexicon.h">
+         </FileRef>
+         <FileRef
+            location = "group:UILocalizedIndexedCollation.h">
          </FileRef>
          <FileRef
             location = "group:UILocalNotification.h">
@@ -553,207 +574,183 @@
             location = "group:UIManagedDocument.h">
          </FileRef>
          <FileRef
-            location = "group:UIFocus.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDate+Date.m">
-         </FileRef>
-         <FileRef
-            location = "group:UICollectionViewTransitionLayout.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSShadow.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITextInputTraits.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIGraphicsPDFRenderer.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITextDragging.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIFeedbackGenerator.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPrinter.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITargetedDragPreview.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDragInteraction.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImage.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIStoryboardSegue.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIActivityItemProvider.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPrintError.h">
-         </FileRef>
-         <FileRef
-            location = "group:UISnapBehavior.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITextDropping.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDate+LXExtension.h">
-         </FileRef>
-         <FileRef
-            location = "group:UISelectionFeedbackGenerator.h">
-         </FileRef>
-         <FileRef
             location = "group:UIMenuController.h">
          </FileRef>
          <FileRef
-            location = "group:UISpringLoadedInteraction.h">
+            location = "group:UIMotionEffect.h">
          </FileRef>
          <FileRef
-            location = "group:DocumentManager.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIApplication_&#x5e94;&#x7528;&#x7a0b;&#x5e8f;.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSDataAsset.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITextChecker.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIRegion.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDocument.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIScreen.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIAccessibility.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPopoverPresentationController.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIInteraction.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDynamicAnimator.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIFocusSystem.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIApplication.h">
+            location = "group:UINavigationItem+LNItem.h">
          </FileRef>
          <FileRef
             location = "group:UINavigationItem+LNItem.m">
          </FileRef>
          <FileRef
-            location = "group:UITouch.m">
-         </FileRef>
-         <FileRef
-            location = "group:UISearchDisplayController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPasteboard.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIAccessibilityContentSizeCategoryImageAdjusting.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIStoryboardPopoverSegue.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIFocusDebugger.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPreviewInteraction.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIBezierPath.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImage+LNImage.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIBarButtonItemGroup.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIVisualEffect.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIFontMetrics.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDevice+LNDevice.h">
-         </FileRef>
-         <FileRef
             location = "group:UINib.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIColor+LNColor.h">
-         </FileRef>
-         <FileRef
-            location = "group:UILexicon.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImpactFeedbackGenerator.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSStringDrawing.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIContentSizeCategoryAdjusting.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIActivity.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIFieldBehavior.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIPasteConfigurationSupporting.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSFileProviderExtension.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIContentSizeCategory.h">
          </FileRef>
          <FileRef
             location = "group:UINibLoading.h">
          </FileRef>
          <FileRef
-            location = "group:UILocalizedIndexedCollation.h">
+            location = "group:UINotificationFeedbackGenerator.h">
          </FileRef>
          <FileRef
-            location = "group:UIGeometry.h">
+            location = "group:UIPasteboard.h">
          </FileRef>
          <FileRef
-            location = "group:UIFontDescriptor.h">
+            location = "group:UIPasteConfiguration.h">
          </FileRef>
          <FileRef
-            location = "group:UIAppearance.h">
+            location = "group:UIPasteConfigurationSupporting.h">
          </FileRef>
          <FileRef
             location = "group:UIPopoverController.h">
          </FileRef>
          <FileRef
-            location = "group:NSTextAttachment.h">
+            location = "group:UIPopoverPresentationController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPopoverPresentationController.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIPresentationController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPress.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPressesEvent.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPreviewInteraction.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPrinter.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPrinterPickerController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPrintError.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPrintFormatter.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPrintInfo.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPrintInteractionController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPrintPageRenderer.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPrintPaper.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIPushBehavior.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIRegion.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIResponder.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIScreen.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIScreenMode.h">
+         </FileRef>
+         <FileRef
+            location = "group:UISearchDisplayController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UISelectionFeedbackGenerator.h">
+         </FileRef>
+         <FileRef
+            location = "group:UISnapBehavior.h">
+         </FileRef>
+         <FileRef
+            location = "group:UISpringLoadedInteraction.h">
+         </FileRef>
+         <FileRef
+            location = "group:UISpringLoadedInteractionSupporting.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIStateRestoration.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIStoryboard.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIStoryboardPopoverSegue.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIStoryboardSegue.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIStringDrawing.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITargetedDragPreview.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextChecker.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextDragging.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextDragPreviewRenderer.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextDragURLPreviews.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextDropping.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextDropProposal.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextInput.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITextInputTraits.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITouch.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITouch.m">
+         </FileRef>
+         <FileRef
+            location = "group:UITraitCollection.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIUserNotificationSettings.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIVibrancyEffect.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewControllerTransitionCoordinator.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewControllerTransitioning.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewPropertyAnimator.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIVisualEffect.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIVisualEffectView.h">
          </FileRef>
       </Group>
-      <FileRef
-         location = "group:UIKit.h">
-      </FileRef>
    </Group>
    <Group
       location = "group:CoderLN-Foundation"
@@ -778,10 +775,181 @@
          location = "group:NSObject"
          name = "NSObject">
          <FileRef
-            location = "group:NSTimer+LNTimer.m">
+            location = "group:NSArray.h">
          </FileRef>
          <FileRef
-            location = "group:NSPredicate.h">
+            location = "group:NSArray.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSAttributedString_&#x5c5e;&#x6027;&#x5b57;&#x7b26;&#x4e32;.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSAttributedString.h">
+         </FileRef>
+         <FileRef
+            location = "group:/Users/sunhui/Documents/LNLearnPoint/LN_GitHub/iOS UIKit&#x6846;&#x67b6;/Framework-Codeidea/CoderLN-Foundation/NSObject/NSAttributedString+LNAttributedString.h">
+         </FileRef>
+         <FileRef
+            location = "group:/Users/sunhui/Documents/LNLearnPoint/LN_GitHub/iOS UIKit&#x6846;&#x67b6;/Framework-Codeidea/CoderLN-Foundation/NSObject/NSAttributedString+LNAttributedString.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSAutoreleasePool.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSBundle.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSByteCountFormatter.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSByteOrder.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSCache.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSCalendar.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSCharacterSet.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSCoder.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSComparisonPredicate.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSCompoundPredicate.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSData.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSData+LNData.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSData+LNData.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSDate.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDateComponentsFormatter.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDateFormatter.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDateInterval.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDateIntervalFormatter.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDecimal.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDecimalNumber.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+LNDictionary.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+LNDictionary.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSEnergyFormatter.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSEnumerator.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSError.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSException.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSExpression.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSExtensionContext.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSExtensionItem.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSExtensionRequestHandling.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFileCoordinator.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFileHandle.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFileManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFilePresenter.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFileVersion.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFileWrapper.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFormatter.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSHashTable.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSHTTPCookie.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSHTTPCookieStorage.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSIndexPath.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSIndexSet.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSInvocation.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSISO8601DateFormatter.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSItemProvider.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSJSONSerialization.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSKeyedArchiver.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSKeyValueCoding.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSKeyValueObserving.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSLengthFormatter.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSLinguisticTagger.h">
          </FileRef>
          <FileRef
             location = "group:NSLocale.h">
@@ -790,376 +958,205 @@
             location = "group:NSLock.h">
          </FileRef>
          <FileRef
-            location = "group:NSFileVersion.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSNull.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSAttributedString.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSExtensionItem.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSURL.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSData.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDecimalNumber.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSHTTPCookieStorage.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSOrthography.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSURLError.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSPointerFunctions.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSException.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSURLSession.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDate.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSOperation.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSURLProtectionSpace.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSNetServices.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSURLRequest.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSExpression.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSNotification.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSCoder.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSUnit.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDictionary.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSMethodSignature.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSByteCountFormatter.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSAutoreleasePool.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSLengthFormatter.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSScanner.h">
-         </FileRef>
-         <FileRef
             location = "group:NSMapTable.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSComparisonPredicate.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSFileWrapper.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSISO8601DateFormatter.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDateIntervalFormatter.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSData+LNData.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSFilePresenter.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSTimer.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSURLCache.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSURLResponse.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDateComponentsFormatter.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSCharacterSet.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSString.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSDateFormatter.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSTextCheckingResult.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSURLConnection.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSZone.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSHTTPCookie.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSStream.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSExtensionRequestHandling.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSProxy.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSString+LNString.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSMutableAttributedString+LNAttributedString.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSArray.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDateInterval.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSPort.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSURLProtocol.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSSet.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSFileManager.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDictionary+LNDictionary.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSMeasurementFormatter.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSPersonNameComponentsFormatter.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSBundle.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSString_&#x5b57;&#x7b26;&#x4e32;.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSIndexSet.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSUbiquitousKeyValueStore.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSAttributedString_&#x5c5e;&#x6027;&#x5b57;&#x7b26;&#x4e32;.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSNotificationQueue.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSURLSession.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSURLCredential.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSExtensionContext.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSFileCoordinator.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSTimeZone.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSCache.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSTimer+LNTimer.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSFormatter.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSUserActivity.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSEnumerator.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSMetadataAttributes.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSThread.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSValueTransformer.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSOrderedSet.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSProgress.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSLinguisticTagger.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSIndexPath.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSXPCConnection.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSKeyValueCoding.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSValue.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSUserDefaults.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDictionary.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSItemProvider.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSCompoundPredicate.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSInvocation.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSJSONSerialization.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSEnergyFormatter.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSNotification.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSPathUtilities.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSCalendar.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSKeyValueObserving.h">
          </FileRef>
          <FileRef
             location = "group:NSMassFormatter.h">
          </FileRef>
          <FileRef
-            location = "group:NSError.h">
+            location = "group:NSMeasurement.h">
          </FileRef>
          <FileRef
-            location = "group:NSPointerArray.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSString.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDecimal.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSData+LNData.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSFileHandle.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSSortDescriptor.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSRange.h">
+            location = "group:NSMeasurementFormatter.h">
          </FileRef>
          <FileRef
             location = "group:NSMetadata.h">
          </FileRef>
          <FileRef
-            location = "group:NSURLAuthenticationChallenge.h">
+            location = "group:NSMetadataAttributes.h">
          </FileRef>
          <FileRef
-            location = "group:NSUndoManager.h">
+            location = "group:NSMethodSignature.h">
          </FileRef>
          <FileRef
-            location = "group:NSProcessInfo.h">
+            location = "group:NSNetServices.h">
          </FileRef>
          <FileRef
-            location = "group:NSRegularExpression.h">
+            location = "group:NSNotification.h">
          </FileRef>
          <FileRef
-            location = "group:NSKeyedArchiver.h">
+            location = "group:NSNotification.m">
          </FileRef>
          <FileRef
-            location = "group:NSXMLParser.h">
+            location = "group:NSNotificationQueue.h">
          </FileRef>
          <FileRef
-            location = "group:NSURLCredentialStorage.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDictionary+LNDictionary.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSMeasurement.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSPersonNameComponents.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSHashTable.h">
+            location = "group:NSNull.h">
          </FileRef>
          <FileRef
             location = "group:NSNumberFormatter.h">
          </FileRef>
          <FileRef
-            location = "group:NSArray.m">
+            location = "group:NSOperation.h">
          </FileRef>
          <FileRef
-            location = "group:NSMutableAttributedString+LNAttributedString.m">
+            location = "group:NSOrderedSet.h">
          </FileRef>
          <FileRef
-            location = "group:NSByteOrder.h">
+            location = "group:NSOrthography.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSPathUtilities.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSPersonNameComponents.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSPersonNameComponentsFormatter.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSPointerArray.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSPointerFunctions.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSPort.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSPredicate.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSProcessInfo.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSProgress.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSPropertyList.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSProxy.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSRange.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSRegularExpression.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSScanner.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSSet.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSSortDescriptor.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSStream.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString_&#x5b57;&#x7b26;&#x4e32;.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSString.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString.m">
          </FileRef>
          <FileRef
             location = "group:NSString+LNString.h">
          </FileRef>
          <FileRef
-            location = "group:NSPropertyList.h">
+            location = "group:NSString+LNString.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSTextCheckingResult.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSThread.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSTimer.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSTimer+LNTimer.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSTimer+LNTimer.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSTimeZone.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSUbiquitousKeyValueStore.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSUndoManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSUnit.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURL.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLAuthenticationChallenge.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLCache.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLConnection.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLCredential.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLCredentialStorage.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLError.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLProtectionSpace.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLProtocol.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLRequest.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLResponse.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLSession.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSURLSession.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSUserActivity.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSUserDefaults.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSValue.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSValueTransformer.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSXMLParser.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSXPCConnection.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSZone.h">
          </FileRef>
       </Group>
    </Group>
@@ -1167,13 +1164,10 @@
       location = "group:CoderLN-OtherFramework"
       name = "CoderLN-OtherFramework">
       <Group
-         location = "group:WebKit"
-         name = "WebKit">
+         location = "group:AlgorithmMathFunction"
+         name = "AlgorithmMathFunction">
          <FileRef
-            location = "group:UIWebView.h">
-         </FileRef>
-         <FileRef
-            location = "group:WKWebView.h">
+            location = "group:Math.h">
          </FileRef>
       </Group>
       <Group
@@ -1202,6 +1196,42 @@
          </FileRef>
       </Group>
       <Group
+         location = "group:CoreLocation"
+         name = "CoreLocation">
+         <FileRef
+            location = "group:CLLocation.h">
+         </FileRef>
+         <FileRef
+            location = "group:CLGeocoder.h">
+         </FileRef>
+         <FileRef
+            location = "group:CLLocationManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:CLLocationManagerDelegate.m">
+         </FileRef>
+         <FileRef
+            location = "group:CLLocationManagerDelegate.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:MapKit"
+         name = "MapKit">
+         <FileRef
+            location = "group:MKMapView.m">
+         </FileRef>
+         <FileRef
+            location = "group:MKMapView.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:NSObject.h"
+         name = "NSObject.h">
+         <FileRef
+            location = "group:NSObject.h">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:Runtime"
          name = "Runtime">
          <FileRef
@@ -1224,59 +1254,6 @@
          </FileRef>
          <FileRef
             location = "group:NSObject+LNRuntime1.h">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:MapKit"
-         name = "MapKit">
-         <FileRef
-            location = "group:MKMapView.m">
-         </FileRef>
-         <FileRef
-            location = "group:MKMapView.h">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:NSObject.h"
-         name = "NSObject.h">
-         <FileRef
-            location = "group:NSObject.h">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:XCTest.h"
-         name = "XCTest.h">
-         <FileRef
-            location = "group:XCTestAssertions.m">
-         </FileRef>
-         <FileRef
-            location = "group:XCTestAssertions.h">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:CoreLocation"
-         name = "CoreLocation">
-         <FileRef
-            location = "group:CLLocation.h">
-         </FileRef>
-         <FileRef
-            location = "group:CLGeocoder.h">
-         </FileRef>
-         <FileRef
-            location = "group:CLLocationManager.h">
-         </FileRef>
-         <FileRef
-            location = "group:CLLocationManagerDelegate.m">
-         </FileRef>
-         <FileRef
-            location = "group:CLLocationManagerDelegate.h">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:AlgorithmMathFunction"
-         name = "AlgorithmMathFunction">
-         <FileRef
-            location = "group:Math.h">
          </FileRef>
       </Group>
       <Group
@@ -1331,28 +1308,32 @@
             location = "group:UserNotifications.m">
          </FileRef>
       </Group>
+      <Group
+         location = "group:WebKit"
+         name = "WebKit">
+         <FileRef
+            location = "group:UIWebView.h">
+         </FileRef>
+         <FileRef
+            location = "group:WKWebView.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:XCTest.h"
+         name = "XCTest.h">
+         <FileRef
+            location = "group:XCTestAssertions.m">
+         </FileRef>
+         <FileRef
+            location = "group:XCTestAssertions.h">
+         </FileRef>
+      </Group>
    </Group>
    <Group
       location = "group:CoderLN-FrameworkDiagram"
       name = "CoderLN-FrameworkDiagram">
-      <Group
-         location = "group:Runloop"
-         name = "Runloop">
-         <FileRef
-            location = "group:runloop&#x5185;&#x90e8;&#x5b9e;&#x73b0;&#x6d41;&#x7a0b;.jpeg">
-         </FileRef>
-         <FileRef
-            location = "group:runloop 5&#x4e2a;&#x76f8;&#x5173;&#x7c7b;&#x5173;&#x7cfb;.jpeg">
-         </FileRef>
-      </Group>
       <FileRef
          location = "group:Git&#x5e38;&#x7528;&#x547d;&#x4ee4;&#x901f;&#x67e5;&#x8868;.jpeg">
-      </FileRef>
-      <FileRef
-         location = "group:UIKit &#x5206;&#x7c7b;&#x7ed3;&#x6784;.jpeg">
-      </FileRef>
-      <FileRef
-         location = "group:UIFoundation &#x5206;&#x7c7b;&#x7ed3;&#x6784;.jpeg">
       </FileRef>
       <Group
          location = "group:iOS10&#x901a;&#x77e5;&#x56fe;&#x89e3;"
@@ -1376,12 +1357,40 @@
             location = "group:UINotificationResponse.png">
          </FileRef>
       </Group>
+      <Group
+         location = "group:Runloop"
+         name = "Runloop">
+         <FileRef
+            location = "group:runloop&#x5185;&#x90e8;&#x5b9e;&#x73b0;&#x6d41;&#x7a0b;.jpeg">
+         </FileRef>
+         <FileRef
+            location = "group:runloop 5&#x4e2a;&#x76f8;&#x5173;&#x7c7b;&#x5173;&#x7cfb;.jpeg">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:UIFoundation &#x5206;&#x7c7b;&#x7ed3;&#x6784;.jpeg">
+      </FileRef>
+      <FileRef
+         location = "group:UIKit &#x5206;&#x7c7b;&#x7ed3;&#x6784;.jpeg">
+      </FileRef>
    </Group>
    <Group
       location = "group:CoderLN-OC_ProjectFile"
       name = "CoderLN-OC_ProjectFile">
       <FileRef
+         location = "group:Const.h">
+      </FileRef>
+      <FileRef
+         location = "group:Const.m">
+      </FileRef>
+      <FileRef
+         location = "group:ExtractMethod.h">
+      </FileRef>
+      <FileRef
          location = "group:ExtractMethod.m">
+      </FileRef>
+      <FileRef
+         location = "group:FormatConversion.h">
       </FileRef>
       <FileRef
          location = "group:Header.h">
@@ -1390,31 +1399,19 @@
          location = "group:LNChineseOutput.h">
       </FileRef>
       <FileRef
-         location = "group:UIFactoryClass.h">
-      </FileRef>
-      <FileRef
-         location = "group:Const.m">
-      </FileRef>
-      <FileRef
          location = "group:LNSingle.h">
-      </FileRef>
-      <FileRef
-         location = "group:ExtractMethod.h">
-      </FileRef>
-      <FileRef
-         location = "group:FormatConversion.h">
-      </FileRef>
-      <FileRef
-         location = "group:UIFactoryClass.m">
-      </FileRef>
-      <FileRef
-         location = "group:PrefixHeader.pch">
       </FileRef>
       <FileRef
          location = "group:LRMacroDefinitionHeader.h">
       </FileRef>
       <FileRef
-         location = "group:Const.h">
+         location = "group:PrefixHeader.pch">
+      </FileRef>
+      <FileRef
+         location = "group:UIFactoryClass.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIFactoryClass.m">
       </FileRef>
    </Group>
    <Group
@@ -2009,166 +2006,6 @@
                location = "group:NSDate+JKCupertinoYankee.m">
             </FileRef>
          </Group>
-      </Group>
-      <Group
-         location = "group:UIKit-WKCategories"
-         name = "UIKit-WKCategories">
-         <FileRef
-            location = "group:NSArray+WHArray.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIDevice+WHDevice.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSDate+WHDate.h">
-         </FileRef>
-         <FileRef
-            location = "group:CALayer+WHLayer.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIImage+WHImage.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSString+WHString.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSNumber+WHNumber.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSObject+WHObject.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIScrollView+WHScrollView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIButton+WHButton.h">
-         </FileRef>
-         <FileRef
-            location = "group:UITableView+WHTableView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UINavigationController+WHNavigationController.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIColor+WHColor.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSObject+WHRuntime.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIAlertController+WHAlert.m">
-         </FileRef>
-         <FileRef
-            location = "group:UILabel+WHLabel.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSTimer+WHTimer.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSFileManager+WHFileManager.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDictionary+WHDictionary.m">
-         </FileRef>
-         <FileRef
-            location = "group:SerializeKit.h">
-         </FileRef>
-         <FileRef
-            location = "group:WHMethods.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIView+WHView.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIImageView+WHImageView.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIBarButtonItem+WHBarButtonItem.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewController+WHVC.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImage+WHImage.m">
-         </FileRef>
-         <FileRef
-            location = "group:WHSingleton.h">
-         </FileRef>
-         <FileRef
-            location = "group:CALayer+WHLayer.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDate+WHDate.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIDevice+WHDevice.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSArray+WHArray.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIAlertController+WHAlert.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSObject+WHRuntime.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIColor+WHColor.m">
-         </FileRef>
-         <FileRef
-            location = "group:UINavigationController+WHNavigationController.m">
-         </FileRef>
-         <FileRef
-            location = "group:UITableView+WHTableView.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIButton+WHButton.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIScrollView+WHScrollView.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSObject+WHObject.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSNumber+WHNumber.h">
-         </FileRef>
-         <FileRef
-            location = "group:0WHKit.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSString+WHString.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSFileManager+WHFileManager.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSTimer+WHTimer.m">
-         </FileRef>
-         <FileRef
-            location = "group:UILabel+WHLabel.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIBarButtonItem+WHBarButtonItem.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIViewController+WHVC.m">
-         </FileRef>
-         <FileRef
-            location = "group:WHMethods.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIView+WHView.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIImageView+WHImageView.h">
-         </FileRef>
-         <FileRef
-            location = "group:WHMacro.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDictionary+WHDictionary.h">
-         </FileRef>
       </Group>
       <Group
          location = "group:UIKit-JKCategories"
@@ -2988,6 +2825,166 @@
                location = "group:UITextField+JKBlocks.m">
             </FileRef>
          </Group>
+      </Group>
+      <Group
+         location = "group:UIKit-WKCategories"
+         name = "UIKit-WKCategories">
+         <FileRef
+            location = "group:NSArray+WHArray.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIDevice+WHDevice.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSDate+WHDate.h">
+         </FileRef>
+         <FileRef
+            location = "group:CALayer+WHLayer.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIImage+WHImage.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+WHString.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSNumber+WHNumber.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSObject+WHObject.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIScrollView+WHScrollView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIButton+WHButton.h">
+         </FileRef>
+         <FileRef
+            location = "group:UITableView+WHTableView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UINavigationController+WHNavigationController.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIColor+WHColor.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSObject+WHRuntime.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIAlertController+WHAlert.m">
+         </FileRef>
+         <FileRef
+            location = "group:UILabel+WHLabel.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSTimer+WHTimer.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFileManager+WHFileManager.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+WHDictionary.m">
+         </FileRef>
+         <FileRef
+            location = "group:SerializeKit.h">
+         </FileRef>
+         <FileRef
+            location = "group:WHMethods.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIView+WHView.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIImageView+WHImageView.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIBarButtonItem+WHBarButtonItem.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewController+WHVC.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIImage+WHImage.m">
+         </FileRef>
+         <FileRef
+            location = "group:WHSingleton.h">
+         </FileRef>
+         <FileRef
+            location = "group:CALayer+WHLayer.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDate+WHDate.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIDevice+WHDevice.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSArray+WHArray.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIAlertController+WHAlert.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSObject+WHRuntime.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIColor+WHColor.m">
+         </FileRef>
+         <FileRef
+            location = "group:UINavigationController+WHNavigationController.m">
+         </FileRef>
+         <FileRef
+            location = "group:UITableView+WHTableView.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIButton+WHButton.m">
+         </FileRef>
+         <FileRef
+            location = "group:UIScrollView+WHScrollView.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSObject+WHObject.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSNumber+WHNumber.h">
+         </FileRef>
+         <FileRef
+            location = "group:0WHKit.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSString+WHString.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSFileManager+WHFileManager.m">
+         </FileRef>
+         <FileRef
+            location = "group:NSTimer+WHTimer.m">
+         </FileRef>
+         <FileRef
+            location = "group:UILabel+WHLabel.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIBarButtonItem+WHBarButtonItem.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIViewController+WHVC.m">
+         </FileRef>
+         <FileRef
+            location = "group:WHMethods.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIView+WHView.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIImageView+WHImageView.h">
+         </FileRef>
+         <FileRef
+            location = "group:WHMacro.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDictionary+WHDictionary.h">
+         </FileRef>
       </Group>
    </Group>
 </Workspace>

@@ -1,15 +1,3 @@
-
-/************************************************************************
- *                                                                      *
- *                    👣 WechatPublic - Codeidea 👣                     *
- *                      @Email: pbwaterln@sina.com                      *
- *                                                                      *
- *         |用文字记录自己的思想与经验 | 编程 | 职场 | 阅读 | 摄影 | 体验 |      *
- *                                                                      *
- *                      ⚠️ 转载请告知 且 注明出处 蟹蟹 ⚠️                   *
- ************************************************************************/
-
-
 /*
  参考：http://www.jianshu.com/p/81122d98fbc5
  
@@ -115,7 +103,7 @@
  
  2.【对象方法】
  
-    // 增加大头针数据模型时会调用，类似于tableView的cellForRowAtIndexPath:《WechatPublic-Codeidea》
+    // 增加大头针数据模型时会调用，类似于tableView的cellForRowAtIndexPath:《WechatPublic-CoderLN》
     - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation;
 
 

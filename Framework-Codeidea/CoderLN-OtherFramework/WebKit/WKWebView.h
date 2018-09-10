@@ -1,9 +1,9 @@
 /*
  * WKWebView.h
- * 白开水ln（https://github.com/CoderLN）
+ * https://github.com/CoderLN
  *
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced.
+ * Created by 【Public-CoderLN】 on Elegant programming16.
+ * Copyright (c) Unauthorized shall（https://githubidea.github.io）not be reproduced.
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
  * are met:

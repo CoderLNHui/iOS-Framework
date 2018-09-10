@@ -1,12 +1,13 @@
 /*
- * File:  NSAttributedString.h 
+ * NSAttributedString.h 
  *
- * Framework: Foundation (c) 2011-2017
+ * Foundation (c) 2011-2017
  *
- * About ME『Public：Codeidea / https://githubidea.github.io』.
- * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
+ * 不知名刘先生
+ * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
  *
- * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
+ * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
 
@@ -135,13 +136,13 @@ UIKIT_EXTERN NSString *const NSTextEffectLetterpressStyle NS_AVAILABLE(10_10, 7_
 
 /**************************************************************************
  *                                                                        *
- *                       WechatPublic - Codeidea                          *
+ *                       WechatPublic - CoderLN                          *
  *                                                                        *
- *  WeChat-Codeidea    用文字记录自己的思想与经验,关于编程、职场、阅读以及摄影.     *
- *  WeChat-Codeidea    希望在这个浮躁的社会中通过自己的一丝经历与感知 ~            *
- *  WeChat-Codeidea    些许能带给你新思想或是习惯.                             *
+ *  WeChat-CoderLN    用文字记录自己的思想与经验,关于编程、职场、阅读以及摄影.     *
+ *  WeChat-CoderLN    希望在这个浮躁的社会中通过自己的一丝经历与感知 ~            *
+ *  WeChat-CoderLN    些许能带给你新思想或是习惯.                             *
  *  JaneBook-白开水ln   Reprinted Please indicate the source.Mustbe.       *
- *                 WELCOME YOU TO JOIN_GitHub & Codeidea                  *
+ *                 WELCOME YOU TO JOIN_GitHub & CoderLN                  *
  *                                                                        *
  **************************************************************************/
 

@@ -1,9 +1,9 @@
 /*
  * runtime.h
- * 白水ln（https://github.com/CoderLN）
+ * 白开水ln（https://github.com/CoderLN）
  *
  * (c) 1999-2007
- * Created by 【Public：Codeidea】 on Elegant programming16.
+ * Created by 【Public - CoderLN  】 on Elegant programming16.
  *
  * @APPLE_LICENSE_HEADER_START@
  *

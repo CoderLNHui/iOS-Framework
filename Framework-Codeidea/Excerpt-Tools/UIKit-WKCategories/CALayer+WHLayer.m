@@ -3,7 +3,7 @@
 //  WHKit
 //  https://github.com/remember17/WHKit
 //  Created by 吴浩 on 2017/7/7.
-//  Copyright © 2017年 remember17. All rights reserved.
+//  Copyright (c) 2017年 remember17. All rights reserved.
 //  http://www.jianshu.com/p/c935314b078e
 
 #import "CALayer+WHLayer.h"

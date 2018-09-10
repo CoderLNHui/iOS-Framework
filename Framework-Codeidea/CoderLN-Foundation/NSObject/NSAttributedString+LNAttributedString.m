@@ -1,13 +1,13 @@
 /*
  * NSMutableAttributedString+LNAttributedString.m
  *
- * Framework: Foundation
+ * Foundation
  *
- * About ME - Public：Codeidea / https://www.jianshu.com/u/fd745d76c816
- * Copyright © All members (Star|Fork) have the right to read and write -> https://github.com/CoderLN
+ * 不知名刘先生
+ * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
  *
- * 作用：
- * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
+ * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
 #import "NSMutableAttributedString+LNAttributedString.h"
@@ -39,7 +39,7 @@
 - (void)attributedString
 {
     //【常用方式】
-    NSMutableAttributedString *AttributedStr = [[NSMutableAttributedString alloc]initWithString:@"我是帅锅的帅锅的人"];
+    NSMutableAttributedString *AttributedStr = [[NSMutableAttributedString alloc]initWithString:@"我是CoderLN,你是核仁？"];
     [AttributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16.0] range:NSMakeRange(2, 2)];
     [AttributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(2, 2)];
     //    testLabel.attributedText = AttributedStr;

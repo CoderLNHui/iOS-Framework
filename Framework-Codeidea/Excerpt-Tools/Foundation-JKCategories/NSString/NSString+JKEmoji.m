@@ -725,7 +725,7 @@ static NSDictionary * jk_s_cheatCodesToUnicode = nil;
                                  @"🕤": @":clock930:",
                                  @"㊗": @":congratulations:",
                                  @"🆒": @":cool:",
-                                 @"©": @":copyright:",
+                                 @"(c)": @":copyright:",
                                  @"➰": @":curly_loop:",
                                  @"💱": @":currency_exchange:",
                                  @"🛃": @":customs:",

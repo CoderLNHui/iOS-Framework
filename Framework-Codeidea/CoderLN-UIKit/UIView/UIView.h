@@ -1,12 +1,13 @@
 /*
- * File:  UIView.h 
+ * UIView.h 
  *
- * Framework: UIKit  (c) 2005-2017
+ * UIKit (c) 2005-2017
  *
- * About ME『Public：Codeidea / https://githubidea.github.io』.
- * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
+ * 不知名刘先生
+ * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
  *
- * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
+ * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
 
@@ -58,15 +59,15 @@ typedef NS_ENUM(NSInteger, UIViewAnimationTransition) {
     UIViewAnimationTransitionCurlDown,//从下面卷起
 };
 
-#pragma mark -自适应尺寸
+#pragma mark -Autoresizing自适应尺寸
 typedef NS_OPTIONS(NSUInteger, UIViewAutoresizing) {
-    UIViewAutoresizingNone                 = 0,//自适应无
-    UIViewAutoresizingFlexibleLeftMargin   = 1 << 0,//弯曲左边距离
-    UIViewAutoresizingFlexibleWidth        = 1 << 1,//弯曲宽度
-    UIViewAutoresizingFlexibleRightMargin  = 1 << 2,//弯曲右边距离
-    UIViewAutoresizingFlexibleTopMargin    = 1 << 3,//弯曲上边宽度
-    UIViewAutoresizingFlexibleHeight       = 1 << 4,//弯曲高度
-    UIViewAutoresizingFlexibleBottomMargin = 1 << 5//弯曲底部距离
+    UIViewAutoresizingNone // 不自动调整。
+    UIViewAutoresizingFlexibleLeftMargin // 自动弹性的调整与superView左边的距离，保证与superView右边的距离不变。
+    UIViewAutoresizingFlexibleRightMargin // 自动弹性的调整与superView的右边距离，保证与superView左边的距离不变。
+    UIViewAutoresizingFlexibleTopMargin // 自动弹性d调整与superView顶部的距离，保证与superView底部的距离不变。
+    UIViewAutoresizingFlexibleBottomMargin // 自动弹性的调整与superView底部的距离，也就是说，与superView顶部的距离不变。
+    UIViewAutoresizingFlexibleWidth // 自动弹性的调整自己的宽度，保证与superView左边和右边的距离不变。
+    UIViewAutoresizingFlexibleHeight // 自动弹性的调整自己的高度，保证与superView顶部和底部的距离不变。
 };
 
 #pragma mark -动画选择项

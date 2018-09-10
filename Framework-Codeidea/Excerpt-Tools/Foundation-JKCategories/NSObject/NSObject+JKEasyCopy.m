@@ -3,7 +3,7 @@
 //  NSObject-JKEasyCopy
 //
 //  Created by York on 15/12/1.
-//  Copyright © 2015年 YK-Unit. All rights reserved.
+//  Copyright (c) 2015年 YK-Unit. All rights reserved.
 //
 
 #import "NSObject+JKEasyCopy.h"

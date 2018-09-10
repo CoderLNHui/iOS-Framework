@@ -1,10 +1,10 @@
 /*
  * runtime.h
- * 白开水ln（https://github.com/CustomPBWaters）
+ * 白开水ln（https://github.com/CoderLN）
  *
  * (c) 1999-2007
- * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced.
+ * Created by 【Public-CoderLN】 on Elegant programming16.
+ * Copyright (c) Unauthorized shall（https://githubidea.github.io）not be reproduced.
  *
  * @APPLE_LICENSE_HEADER_START@
  *

@@ -1,13 +1,13 @@
 /*
  * NSString+String.h
  *
- * Framework: Foundation
+ * Foundation
  *
- * About ME - Public：Codeidea / https://www.jianshu.com/u/fd745d76c816
- * Copyright © All members (Star|Fork) have the right to read and write -> https://github.com/CoderLN
+ * 不知名刘先生
+ * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
  *
- * 作用：
- * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
+ * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
 #import <Foundation/Foundation.h>
@@ -25,7 +25,7 @@
  *  @param font   字体大小
  *  @param isBold 字体是否加粗
  *
- *  @return  返回CGRect | wPublic-Codeidea
+ *  @return  返回CGRect | wPublic-CoderLN
  */
 - (CGRect)ln_stringWidthRectWithSize:(CGSize)size fontOfSize:(CGFloat)font isBold:(BOOL)isBold;
 
@@ -36,7 +36,7 @@
  *  @param size 约束的尺寸
  *  @param font 文本字体
  *
- *  @return  文本的实际尺寸 | wPublic-Codeidea
+ *  @return  文本的实际尺寸 | wPublic-CoderLN
  */
 - (CGSize)ln_textSizeWithContentSize:(CGSize)size font:(UIFont *)font;
 
@@ -48,7 +48,7 @@
  *  @param maxWidth 最大宽度
  *  @param font     字体
  *
- *  @return  返回计算好高度的size | wPublic-Codeidea
+ *  @return  返回计算好高度的size | wPublic-CoderLN
  */
 - (CGSize)ln_stringHeightWithMaxWidth:(CGFloat)maxWidth andFont:(UIFont*)font ;
 
@@ -59,7 +59,7 @@
  *  @param maxHeight  最大高度
  *  @param font       字体
  *
- *  @return  返回计算宽度的size | wPublic-Codeidea
+ *  @return  返回计算宽度的size | wPublic-CoderLN
  */
 - (CGSize)ln_stringWidthWithMaxHeight:(CGFloat)maxHeight andFont:(UIFont*)font;
 
@@ -72,7 +72,7 @@
  *  @param font  字体
  *  @param size  字符串宽和MAXFLOAT
  *
- *  @return  返回计算size | wPublic-Codeidea
+ *  @return  返回计算size | wPublic-CoderLN
  */
 - (CGSize)ln_stringSizeWithFont:(UIFont *)font Size:(CGSize)size;
 
@@ -93,7 +93,7 @@
 /**
  *  根据文件名计算出文件大小,计算self这个文件夹\文件的大小
  *
- *  @return 文件大小 | wPublic-Codeidea
+ *  @return 文件大小 | wPublic-CoderLN
  */
 - (unsigned long long)ln_fileSize;
 
@@ -101,7 +101,7 @@
 /**
  *  生成缓存目录全路径
  *
- *  @return 缓存目录 | wPublic-Codeidea
+ *  @return 缓存目录 | wPublic-CoderLN
  */
 - (instancetype)ln_cacheDirectory;
 
@@ -110,7 +110,7 @@
 /**
  *  生成文档目录全路径
  *
- *  @return 文档目录 | wPublic-Codeidea
+ *  @return 文档目录 | wPublic-CoderLN
  */
 - (instancetype)ln_docDirectory;
 
@@ -119,7 +119,7 @@
 /**
  *  生成临时目录全路径
  *
- *  @return 临时目录 | wPublic-Codeidea
+ *  @return 临时目录 | wPublic-CoderLN
  */
 - (instancetype)ln_tmpDirectory;
 
@@ -152,7 +152,7 @@
 /**
  * 正则运用之判断一个字符串中是否只含有英文字母数字下划线[a-zA-Z0-9_]
  *
- * @return  | wPublic-Codeidea
+ * @return  | wPublic-CoderLN
  */
 - (BOOL)isValidVar;
 
@@ -160,7 +160,7 @@
 /**
  * 判断是否是合法的 email
  *
- * @return  | wPublic-Codeidea
+ * @return  | wPublic-CoderLN
  */
 - (BOOL)isValidEmail;
 

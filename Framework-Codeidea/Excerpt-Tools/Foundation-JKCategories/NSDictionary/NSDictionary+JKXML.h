@@ -3,7 +3,7 @@
 //  JKCategories (https://github.com/shaojiankui/JKCategories)
 //
 //  Created by Jakey on 15/8/7.
-//  Copyright © 2015年 www.skyfox.org. All rights reserved.
+//  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
 //  https://github.com/shaojiankui/NSDictionary-JKXML
 
 // 在线XML、JSON数据互转

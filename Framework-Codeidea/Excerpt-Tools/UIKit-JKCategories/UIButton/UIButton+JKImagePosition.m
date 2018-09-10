@@ -3,7 +3,7 @@
 //  Demo_ButtonImageTitleEdgeInsets
 //
 //  Created by luxiaoming on 16/1/15.
-//  Copyright © 2016年 luxiaoming. All rights reserved.
+//  Copyright (c) 2016年 luxiaoming. All rights reserved.
 //
 
 #import "UIButton+JKImagePosition.h"

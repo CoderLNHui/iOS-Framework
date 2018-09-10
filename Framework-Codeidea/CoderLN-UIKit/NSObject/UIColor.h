@@ -1,28 +1,34 @@
 /*
  * UIColor.h
  *
- * Framework: UIKit (c) 2005-2017
+ * UIKit (c) 2005-2017
  *
- * About ME『Public：Codeidea / https://githubidea.github.io』.
- * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
+ * 不知名刘先生
+ * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
  *
- * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
+ * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
-
+#pragma mark - 颜色认知
 /*
  颜色:3种颜色通道 R G B
  颜色表达方式:24位,32位
- 每一个颜色通道是8位,范围(0~256)
- R:213 G:213 B:213
+ 每一个颜色通道是8位bit,范围(0~256)
  
  #ffffff   -> f=15
  R:FF => 10进制 15 * 16^0 + 15 * 16^1 = 255
  G:FF 255
  B:FF 255
  
- #:美工16进制表示形式
- 0x:OC16进制表达式
+ #：美工16进制表示形式
+ 0x：OC16进制表达式
+ 二进制：[0b00000000，0b11111111]，ob代表2进制，取值：0-1
+ 十进制：[0,255]，(0-2^8-1)，取值：0-9
+ 十六进制：[0x00，0xff]，ox代表16进制，取值：0-9 A-F
+ 
+ HEX格式：#ffffffff 白色、#ff00ff00 绿色
+ ARGB格式：255,255,255,255 白色、255,0,255 绿色
  */
 
  

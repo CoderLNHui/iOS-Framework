@@ -1,12 +1,13 @@
 /*
- * NSPathUtilities.h【开发常用路径设置相关】
+ * NSPathUtilities.h 开发常用路径设置相关
  *
- * Framework: Foundation (c) 1994-2017
+ * Foundation (c) 1994-2017
  *
- * About ME『Public：Codeidea / https://githubidea.github.io』.
- * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
+ * 不知名刘先生
+ * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
  *
- * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
+ * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
  */
 
 
@@ -108,7 +109,7 @@ typedef NS_OPTIONS(NSUInteger, NSSearchPathDomainMask) {
 FOUNDATION_EXPORT NSArray<NSString *> *NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory directory, NSSearchPathDomainMask domainMask, BOOL expandTilde);
 
 NS_ASSUME_NONNULL_END
-# * Author: 白开水ln  -  WechatPublic：Codeidea  -  Repository：github.com/CoderLN/Framework-Codeidea
+# * Author: 白开水ln  -  WechatPublic：Codeidea  -  Repository：github.com/CoderLN/Framework-CoderLN
 
 
 
