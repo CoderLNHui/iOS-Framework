@@ -1,11 +1,10 @@
 /*
  * ExtractMethod.m  
  *
- * 不知名刘先生
- * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
+ * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Your sharing can be together.
  *
- * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
+ * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
  */
 
 
@@ -14,7 +13,8 @@
 
 #pragma mark - 文件路径相关
 #pragma mark -获得文件全路径
--(NSString *)fullPath {
+-(NSString *)fullPath
+{
     if (_fullPath == nil) {
         // 拼接文件后的本地名称 FileName @"123.mp4" 或者 [url lastPathComponent] 获取URL最后一个字节命名
         _fullPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"123.mp4"];
@@ -23,7 +23,8 @@
 }
 
 #pragma mark -获得指定文件路径对应文件的数据大小
--(NSInteger)getFileSize {
+-(NSInteger)getFileSize
+{
     NSDictionary *fileInfoDict = [[NSFileManager defaultManager] attributesOfItemAtPath:self.fullPath error:nil];
     NSLog(@"%@",fileInfoDict);
     NSInteger currentSize = [fileInfoDict[@"NSFileSize"] integerValue];
@@ -33,12 +34,10 @@
 
 
 
-
 #pragma mark - 截取服务器返回信息字符串(延迟执行,弹框提示用户登录请求结果)
-
-// 截取服务器返回Data:响应体信息字符串 (延迟执行,弹框提示用户登录请求结果,登录成功或登录失败)
-- (void)showWithResult:(NSString *)result {
-    
+//登录成功或登录失败
+- (void)showWithResult:(NSString *)result
+{
     NSUInteger loc = [result rangeOfString:@":\""].location + 2;
     NSUInteger len =  [result rangeOfString:@"\"}"].location - loc;
     NSString *msg = [result substringWithRange:NSMakeRange(loc, len)];
@@ -57,7 +56,8 @@
 
 #pragma mark - 时间处理
 //时间字符串转化为格式为@"yyyy-MM-dd HH:mm:ss"
-+ (NSString *)dateStringFormNumberString:(NSString *)str{
++ (NSString *)dateStringFormNumberString:(NSString *)str
+{
     double t = [str doubleValue];
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:t];
     NSDateFormatter *fm = [[NSDateFormatter alloc]init];
@@ -65,9 +65,8 @@
     return [fm stringFromDate:date];
 }
 
-
-
-+ (NSString*)calculateDateInterval:(NSString*)expireDateStr{
++ (NSString*)calculateDateInterval:(NSString*)expireDateStr
+{
     NSDateFormatter *fomatter=[[NSDateFormatter alloc]init];
     [fomatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.0"];
     //把传进来的日期转换为日期
@@ -84,7 +83,8 @@
 
 
 //获得当前时间
-+ (void)getCurrentTime{
++ (void)getCurrentTime
+{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSString *dateTime = [formatter stringFromDate:[NSDate date]];
@@ -94,7 +94,8 @@
 
 
 #pragma mark - 根据字符串内容 获取（设置）Label的高度(图文混排时用的到)
-+ (CGFloat)textHeightFromString:(NSString *)textStr width:(CGFloat)width fontSize:(CGFloat)size{
++ (CGFloat)textHeightFromString:(NSString *)textStr width:(CGFloat)width fontSize:(CGFloat)size
+{
     //根据字符串的内容 和固定的宽度来求高度
     NSDictionary *dict = @{NSFontAttributeName:[UIFont systemFontOfSize:size]                                                                                                                                                                                        };
     CGRect frame = [textStr boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine attributes:dict context:nil];
@@ -104,16 +105,20 @@
 
 
 #pragma mark - 快速加载View
-/**
- 快速加载View
- */
 + (instancetype)loadView
 {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
 }
 
 
-
+#pragma mark - 设置随机颜色
+- (UIColor *)randomColor
+{
+    CGFloat r = arc4random_uniform(256) / 255.0;
+    CGFloat g = arc4random_uniform(256) / 255.0;
+    CGFloat b = arc4random_uniform(256) / 255.0;
+    return [UIColor colorWithRed:r green:g blue:b alpha:1.0];
+}
 
 
 @end

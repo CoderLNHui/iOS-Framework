@@ -3,11 +3,10 @@
  *
  * UIKit (c) 2005-2017
  *
- * 不知名刘先生
- * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
+ * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Your sharing can be together.
  *
- * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
+ * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
  */
 
 
@@ -379,16 +378,22 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 @interface UIView(UIViewRendering)
 
 #pragma mark -绘制可见区域
+/**
+ 
+ */
 - (void)drawRect:(CGRect)rect;
 
 #pragma mark -标记需要重新绘制
+/**
+ 
+ */
 - (void)setNeedsDisplay;
 
 #pragma mark -标记在哪需要绘制
 - (void)setNeedsDisplayInRect:(CGRect)rect;
 
 
-#pragma mark - 超出范围裁剪
+#pragma mark -超出范围裁剪
 /**
  CALayer  masksToBounds
  UIView   clipsToBounds
@@ -436,7 +441,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
  When tintAdjustmentMode has a value of UIViewTintAdjustmentModeDimmed for a view, the color it returns from tintColor will be modified to give a dimmed appearance.
  When the tintAdjustmentMode of a view changes (either the view's value changing or by one of its superview's values changing), -tintColorDidChange will be called to allow the view to refresh its rendering.
  */
-#pragma mark - 着色调整模式
+#pragma mark -着色调整模式
 @property(nonatomic) UIViewTintAdjustmentMode tintAdjustmentMode NS_AVAILABLE_IOS(7_0);
 
 /*
@@ -508,7 +513,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 
 /* Performs `animations` using a timing curve described by the motion of a spring. When `dampingRatio` is 1, the animation will smoothly decelerate to its final model values without oscillating. Damping ratios less than 1 will oscillate more and more before coming to a complete stop. You can use the initial spring velocity to specify how fast the object at the end of the simulated spring was moving before it was attached. It's a unit coordinate system, where 1 is defined as travelling the total animation distance in a second. So if you're changing an object's position by 200pt in this animation, and you want the animation to behave as if the object was moving at 100pt/s before the animation started, you'd pass 0.5. You'll typically want to pass 0 for the velocity. */
 + (void)animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay usingSpringWithDamping:(CGFloat)dampingRatio initialSpringVelocity:(CGFloat)velocity options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(7_0);
-
+/**
 1、弹性动画
 [UIView animateWithDuration:<#(NSTimeInterval)#>：动画持续时间
                       delay:<#(NSTimeInterval)#>：动画延迟多长时间开始
@@ -517,7 +522,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
                     options:<#(UIViewAnimationOptions)#>：动画类型(速度曲线、翻转方式等)
                  animations:<#^(void)animations#>：执行动画过程
                  completion:<#^(BOOL finished)completion#>：动画完成的回调
-
+ */
  
 // 平移View做动画
 + (void)transitionWithView:(UIView *)view duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options animations:(void (^ __nullable)(void))animations completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(4_0);

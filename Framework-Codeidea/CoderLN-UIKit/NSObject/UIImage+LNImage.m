@@ -3,11 +3,10 @@
  *
  * UIKit
  *
- * 不知名刘先生
- * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
+ * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Your sharing can be together.
  *
- * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
+ * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
  */
 
 #import "UIImage+Image.h"
@@ -67,68 +66,40 @@
 }
 
 
-#pragma mark - 根据传入的图片,生成一张带有边框的圆形图片
-+ (UIImage *)ln_imageWithCircleImage:(NSString *)imageName Border:(CGFloat)borderW color:(UIColor *)borderColor {
-    
-    return [[self imageNamed:imageName] ln_circleImageWithBorder:borderW color:borderColor];
-}
-
-- (instancetype)ln_circleImageWithBorder:(CGFloat)borderW color:(UIColor *)borderColor {
-    
-    // borderWidth 表示边框的宽度
-    CGFloat imageW = self.size.width + 2 * borderW;
-    CGFloat imageH = imageW;
-    CGSize imageSize = CGSizeMake(imageW, imageH);
-    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    // borderColor表示边框的颜色
-    [borderColor set];
-    CGFloat bigRadius = imageW * 0.5;
-    CGFloat centerX = bigRadius;
-    CGFloat centerY = bigRadius;
-    CGContextAddArc(context, centerX, centerY, bigRadius, 0, M_PI * 2, 0);
-    CGContextFillPath(context);
-    CGFloat smallRadius = bigRadius - borderW;
-    CGContextAddArc(context, centerX, centerY, smallRadius, 0, M_PI * 2, 0);
-    CGContextClip(context);
-    [self drawInRect:CGRectMake(borderW, borderW, self.size.width, self.size.height)];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return newImage;
-}
-
-
-
-
-#pragma mark - 绘制返回一张绘制字符串的图片
-+ (UIImage *)ln_imageWithNSString:(NSString *)string font:(CGFloat)textFont color:(UIColor *)textColor clip:(BOOL)clip drawAtImage:(UIImage *)image drawAtPoint:(CGPoint)atPoint {
+#pragma mark - 绘制图片(是否为圆形且有边框)
++ (UIImage *)ln_imageWithClipAndBorder:(BOOL)clip Border:(CGFloat)borderW color:(nullable UIColor *)borderColor image:(UIImage *)image
+{
+    CGSize size = CGSizeMake(image.size.width + 2*borderW, image.size.height + 2*borderW);
     
     // 1.开启同等大小的图片上下文
-    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     
-    // 2.设置圆形裁剪区域
+    // 2.绘制路径
     if (clip) {
-        UIBezierPath *clipPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
-        [clipPath addClip];
+        // 绘制个大圆，作为覆盖后的边框
+        UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, size.width, size.height)];
+        // 边框颜色
+        borderColor ? [borderColor set]:[UIColor blackColor];
+        [path fill];
+        
+        // 绘制个小圆，设置圆形裁剪区域
+        UIBezierPath *clipPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(borderW, borderW, image.size.width, image.size.height)];
+        [clipPath addClip]; //UIRectClip(CGRectMake(0, 0, 20, 20)); // 裁剪区域
     }
-    // 3.绘制图片（把图片绘制到上下文当中）
-    [image drawAtPoint:CGPointMake(0, 0)];
     
-    // 绘制文字
-    NSString *str = string;
-    NSDictionary *dict = @{NSFontAttributeName:[UIFont systemFontOfSize:textFont],NSForegroundColorAttributeName:textColor};
-    [str drawAtPoint:atPoint withAttributes:dict];
+    // 3.把图片、文字 绘制到上下文中
+    [image drawAtPoint:CGPointMake(borderW, borderW)];
+    //[@"我是绘制上\n的文字" drawAtPoint:CGPointMake(20, _imageView.frame.size.height/2) withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:30],NSForegroundColorAttributeName:[UIColor blackColor]}];
     
-    // 4.从当前上下文中获取一张图片
+    // 4.从上下文当中获取一张图片（把上下文当中绘制的所有内容截屏生成一张图片）
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    // 5.关闭图片上下文
+    // 4.关闭上下文
     UIGraphicsEndImageContext();
+    // 5.赋值
     image = newImage;
     
     return image;
 }
-
 
 
 #pragma mark - 返回圆形图片
@@ -375,6 +346,44 @@
 }
 
 
+#pragma mark - 裁剪图像
+- (UIImage *)cutImage:(UIImage *)image
+{
+    //1.开启一个基于位图的图形上下文
+    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0.0);
+    //2.创建裁剪路径
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, image.size.width, image.size.height) cornerRadius:10];
+    //3.裁剪
+    [path addClip];
+    //4.画图
+    [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+    //5.取图
+    UIImage *endImage = UIGraphicsGetImageFromCurrentImageContext();
+    //6.结束上下文
+    UIGraphicsEndImageContext();
+    
+    return endImage;
+}
+
+
+#pragma mark - 截屏
+- (UIImage *)screenshots:(UIView *)view
+{
+    if (view == nil) return nil;
+    
+    // 1.开启同等大小的位图上下文
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0);
+    // 2.获取当前上下文
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    // 3.渲染上下文的内容到view上
+    [view.layer renderInContext:ctx];
+    // 4.从当前上下文中获取一张图片
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    // 5.结束上下文
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
 
 @end
 

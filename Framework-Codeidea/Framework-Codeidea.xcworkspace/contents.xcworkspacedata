@@ -1328,6 +1328,16 @@
             location = "group:XCTestAssertions.h">
          </FileRef>
       </Group>
+      <Group
+         location = "group:CoreGraphics"
+         name = "CoreGraphics">
+         <FileRef
+            location = "group:CGContext.h">
+         </FileRef>
+         <FileRef
+            location = "group:UIGraphics.h">
+         </FileRef>
+      </Group>
    </Group>
    <Group
       location = "group:CoderLN-FrameworkDiagram"

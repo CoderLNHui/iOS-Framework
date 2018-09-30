@@ -3,11 +3,10 @@
  *
  * UIKit
  *
- * 不知名刘先生
- * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
+ * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Your sharing can be together.
  *
- * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
+ * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
  */
 
 #import <UIKit/UIKit.h>
@@ -27,10 +26,8 @@
 + (UIImage *)ln_imageWithColor:(UIColor *)color;
 
 
-#pragma mark - 根据传入的图片,生成一张带有边框的圆形图片
-+ (UIImage *)ln_imageWithCircleImage:(NSString *)imageName Border:(CGFloat)borderW color:(UIColor *)borderColor;
-- (instancetype)ln_circleImageWithBorder:(CGFloat)borderW color:(UIColor *)borderColor;
-
+#pragma mark - 绘制图片(是否为圆形且有边框)
++ (UIImage *)ln_imageWithClipAndBorder:(BOOL)clip Border:(CGFloat)borderW color:(nullable UIColor *)borderColor image:(UIImage *)image;
 
 #pragma mark - 绘制返回一张绘制字符串的图片
 + (UIImage *)ln_imageWithNSString:(NSString *)string font:(CGFloat)textFont color:(UIColor *)textColor clip:(BOOL)clip drawAtImage:(UIImage *)image drawAtPoint:(CGPoint)atPoint;
@@ -85,12 +82,15 @@ typedef void (^GIFimageBlock)(UIImage *GIFImage);
  */
 
 
-
-
 #pragma mark - 将imagae按指定角度旋转后绘制图片
 - (UIImage *)imageRotatedByDegrees:(CGFloat)degrees;
 
 
+#pragma mark - 裁剪图像
+- (UIImage *)cutImage:(UIImage *)image;
+
+#pragma mark - 截屏
+- (UIImage *)screenshots:(UIView *)view;
 @end
 
 

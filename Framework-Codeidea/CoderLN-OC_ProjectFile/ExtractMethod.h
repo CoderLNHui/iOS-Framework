@@ -1,11 +1,10 @@
 /*
  * ExtractMethod.h 常用方法抽取封装
  *
- * 不知名刘先生
- * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
+ * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Your sharing can be together.
  *
- * 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
+ * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
  */
 
 #import <Foundation/Foundation.h>
@@ -42,7 +41,8 @@
 + (instancetype)loadView;
 
 
-
+#pragma mark - 设置随机颜色
+- (UIColor *)randomColor;
 
 
 

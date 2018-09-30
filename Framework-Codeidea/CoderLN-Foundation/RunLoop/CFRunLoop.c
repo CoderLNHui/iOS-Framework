@@ -5,9 +5,8 @@
  *
  * Foundation (c) 1998-2014
  *
- * 不知名刘先生
- * Public - CoderLN / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
+ * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
+ * Welcome your star|fork, Your sharing can be together.
  *
  * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
  * This file contains Original Code and/or Modifications of Original Code

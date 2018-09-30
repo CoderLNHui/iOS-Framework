@@ -1,6 +1,6 @@
 /*
  * runtime.h
- * 白开水ln（https://github.com/CoderLN）
+ * 不知名开发者（https://github.com/CoderLN）
  *
  * (c) 1999-2007
  * Created by 【Public - CoderLN  】 on Elegant programming16.
@@ -67,21 +67,21 @@ typedef struct objc_category *Category;
 #pragma mark -声明的属性
 typedef struct objc_property *objc_property_t;
 
-#pragma mark - 每个Class都有一个isa指针
+#pragma mark - objc_class结构体类型的指针
 /**
  可以看到运行时一个类还关联了它的超类指针，类名，成员变量，方法，缓存，还有附属的协议。
- 在objc_class结构体中：ivars是objc_ivar_list指针；methodLists是指向objc_method_list指针的指针。也就是说可以动态修改 *methodLists 的值来添加成员方法，这也是Category实现的原理。
+ 在objc_class结构体类型的指针中：ivars是objc_ivar_list指针；methodLists是指向objc_method_list指针的指针。也就是说可以动态修改 *methodLists 的值来添加成员方法，这也是Category实现的原理。
  */
 struct objc_class {
-    Class isa  OBJC_ISA_AVAILABILITY;//
+    Class isa  OBJC_ISA_AVAILABILITY;// isa：是一个Class 类型的指针
     
 #if !__OBJC2__
-    Class super_class                                        OBJC2_UNAVAILABLE;//父类
+    Class super_class                                        OBJC2_UNAVAILABLE;//父类，如果该类已经是最顶层的根类,那么它为NULL。
     const char *name                                         OBJC2_UNAVAILABLE;//类名
-    long version                                             OBJC2_UNAVAILABLE;//类版本
-    long info                                                OBJC2_UNAVAILABLE;//!*!供运行期使用的一些位标识。如：CLS_CLASS (0x1L)表示该类为普通class; CLS_META(0x2L)表示该类为metaclass等(runtime.h中有详细列出)
-    long instance_size                                       OBJC2_UNAVAILABLE;//实例大小
-    struct objc_ivar_list *ivars                             OBJC2_UNAVAILABLE;//存储每个实例变量的内存地址
+    long version                                             OBJC2_UNAVAILABLE;//类的版本信息,默认为0
+    long info                                                OBJC2_UNAVAILABLE;//供运行期使用的一些位标识。如：CLS_CLASS (0x1L)表示该类为普通class; CLS_META(0x2L)表示该类为metaclass等(runtime.h中有详细列出)
+    long instance_size                                       OBJC2_UNAVAILABLE;//该类的实例变量大小
+    struct objc_ivar_list *ivars                             OBJC2_UNAVAILABLE;//存储每个实例变量的内存地址数组
     struct objc_method_list **methodLists                    OBJC2_UNAVAILABLE;//!*!根据info的信息确定是类还是实例，运行什么函数方法等
     struct objc_cache *cache                                 OBJC2_UNAVAILABLE;//缓存
     struct objc_protocol_list *protocols                     OBJC2_UNAVAILABLE;//协议
@@ -89,6 +89,14 @@ struct objc_class {
     
 } OBJC2_UNAVAILABLE;
 /* Use `Class` instead of `struct objc_class *` */
+/**
+ ![objc_class各个类实例变量、类、元类的关系图](https://upload-images.jianshu.io/upload_images/2230763-d933a45dfd33cf33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+ 总结：
+ 每一个对象本质上都是一个类的实例。其中类定义了成员变量和成员方法的列表。对象通过对象的isa指针指向所属类。
+ 每一个类本质上都是一个对象，类其实是元类（meteClass）的实例。元类定义了类方法的列表。类通过类的isa指针指向元类。
+ 元类保存了类方法的列表。当类方法被调用时，先会从本身查找类方法的实现，如果没有，元类会向他父类查找该方法。同时注意的是：元类（meteClass）也是类，它也是对象。元类通过isa指针最终指向的是一个根元类(root meteClass)。
+ 根元类的isa指针指向本身，这样形成了一个封闭的内循环。
+ */
 
 #endif
 
