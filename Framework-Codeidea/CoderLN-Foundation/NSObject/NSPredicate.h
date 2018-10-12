@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
 
 /*    NSPredicate.h
@@ -86,5 +86,4 @@ NS_CLASS_AVAILABLE(10_4, 3_0)
 - (void)filterUsingPredicate:(NSPredicate *)p API_AVAILABLE(macos(10.7), ios(5.0), watchos(2.0), tvos(9.0));  // evaluate a predicate against an ordered set of objects and filter the mutable ordered set directly
 
 @end
-
 NS_ASSUME_NONNULL_END

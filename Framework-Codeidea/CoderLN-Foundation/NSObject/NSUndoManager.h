@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 //
@@ -176,6 +176,5 @@ FOUNDATION_EXPORT NSNotificationName const NSUndoManagerWillCloseUndoGroupNotifi
 
 // This notification is sent after an undo group closes. It should be safe to undo at this time.
 FOUNDATION_EXPORT NSNotificationName const NSUndoManagerDidCloseUndoGroupNotification API_AVAILABLE(macos(10.7), ios(5.0), watchos(2.0), tvos(9.0));
-
 NS_ASSUME_NONNULL_END
 

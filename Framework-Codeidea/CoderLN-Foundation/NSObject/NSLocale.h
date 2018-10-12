@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 
@@ -173,5 +173,4 @@ FOUNDATION_EXPORT NSString * const NSRepublicOfChinaCalendar NS_CALENDAR_DEPRECA
 FOUNDATION_EXPORT NSString * const NSPersianCalendar NS_CALENDAR_DEPRECATED(10_6, 10_10, 4_0, 8_0, "Use NSCalendarIdentifierPersian instead");
 FOUNDATION_EXPORT NSString * const NSIndianCalendar NS_CALENDAR_DEPRECATED(10_6, 10_10, 4_0, 8_0, "Use NSCalendarIdentifierIndian instead");
 FOUNDATION_EXPORT NSString * const NSISO8601Calendar NS_CALENDAR_DEPRECATED(10_6, 10_10, 4_0, 8_0, "Use NSCalendarIdentifierISO8601 instead");
-
 NS_ASSUME_NONNULL_END

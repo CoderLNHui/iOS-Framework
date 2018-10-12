@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 
@@ -80,7 +80,6 @@ NS_CLASS_AVAILABLE(10_5, 6_0)
 @property (readonly, copy) NSSet<ObjectType> *setRepresentation;  // create a set of the contents
 
 @end
-
 NS_ASSUME_NONNULL_END
 
 
@@ -131,7 +130,6 @@ FOUNDATION_EXPORT const NSHashTableCallBacks NSOwnedObjectIdentityHashCallBacks;
 FOUNDATION_EXPORT const NSHashTableCallBacks NSOwnedPointerHashCallBacks;
 FOUNDATION_EXPORT const NSHashTableCallBacks NSPointerToStructHashCallBacks;
 FOUNDATION_EXPORT const NSHashTableCallBacks NSIntHashCallBacks API_DEPRECATED("Not supported", macos(10.0,10.5)) API_UNAVAILABLE(ios, watchos, tvos);
-
 NS_ASSUME_NONNULL_END
 
 #else

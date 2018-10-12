@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
 
 
@@ -543,22 +543,17 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIView : UIResponder <NSCoding, UIAppeara
 
 + (void)animateKeyframesWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewKeyframeAnimationOptions)options animations:(void (^)(void))animations completion:(void (^ __nullable)(BOOL finished))completion NS_AVAILABLE_IOS(7_0);
 + (void)addKeyframeWithRelativeStartTime:(double)frameStartTime relativeDuration:(double)frameDuration animations:(void (^)(void))animations NS_AVAILABLE_IOS(7_0); // start time and duration are values between 0.0 and 1.0 specifying time and duration relative to the overall time of the keyframe animation
-
+/**
 2、关键帧动画
 [UIView animateKeyframesWithDuration:<#(NSTimeInterval)#><#(NSTimeInterval)#>：动画持续时间
                                 delay:<#(NSTimeInterval)#>：等待时间
                               options:<#(UIViewKeyframeAnimationOptions)#>：动画类型
                            animations:<#^(void)animations#>：执行动画过程
                            completion:<#^(BOOL finished)completion#>：动画完成的回调
+ 
+ */
 @end
-
-
  
- 
- 
- 
- 
-//----------------------- <#我是分割线#> ------------------------//
  
 #pragma mark - 手势识别GestureRecognizers
 @interface UIView (UIViewGestureRecognizers)

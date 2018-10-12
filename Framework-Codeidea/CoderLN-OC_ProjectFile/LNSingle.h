@@ -4,7 +4,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
 
 /**
@@ -15,8 +15,7 @@
  GCD一次性代码,本身就是线程安全的（dispatch_once）
  */
 
-
-
+#pragma mark - 快速创建单例
 // .h
 #define SingleH(name) +(instancetype)share##name;
 
@@ -84,12 +83,7 @@
 
 
 
-
-
-
-
-
-#pragma mark --- 单例设计模式示例
+#pragma mark - 单例设计模式示例
 
 // .h
 @interface LNManager : NSObject<NSCopying, NSMutableCopying>

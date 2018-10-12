@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 #import <Foundation/NSObject.h>
@@ -456,6 +456,5 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite;
               completionHandler:(void (^)(NSURLResponse* _Nullable response, NSData* _Nullable data, NSError* _Nullable connectionError)) handler API_DEPRECATED("Use [NSURLSession dataTaskWithRequest:completionHandler:] (see NSURLSession.h", macos(10.7,10.11), ios(5.0,9.0), tvos(9.0,9.0)) __WATCHOS_PROHIBITED;
 
 @end
-
 NS_ASSUME_NONNULL_END
 

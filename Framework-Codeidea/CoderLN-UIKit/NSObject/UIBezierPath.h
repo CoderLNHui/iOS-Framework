@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
 
 #import <Foundation/Foundation.h>
@@ -98,9 +98,8 @@ NS_CLASS_AVAILABLE_IOS(3_2) @interface UIBezierPath : NSObject<NSCopying, NSCodi
 
 // Path construction
 
-#pragma mark - 移动到指定的点
+#pragma mark - 设置起点
 /**
- * 设置起点
  * 将 UIBezierPath 对象的 currentPoint 移动到指定的点
  * 如果当前有正在绘制的子路径, 该方法则会隐式的结束当前路径, 并将 currentPoint 设置为指定点.
  * @param point: 当前坐标系统中的某一点
@@ -361,5 +360,4 @@ NS_CLASS_AVAILABLE_IOS(3_2) @interface UIBezierPath : NSObject<NSCopying, NSCodi
  */
 - (void)addClip;
 
-@end
-NS_ASSUME_NONNULL_END
+@endNS_ASSUME_NONNULL_END

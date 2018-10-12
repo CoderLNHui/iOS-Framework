@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 
@@ -80,7 +80,6 @@ API_DEPRECATED("Garbage collection no longer supported", macosx(10.5, 10.12), io
 @property BOOL usesWeakReadAndWriteBarriers       // pointers should (not) use GC weak read and write barriers
 API_DEPRECATED("Garbage collection no longer supported", macosx(10.5, 10.12), ios(2.0,10.0), watchos(2.0,3.0), tvos(9.0,10.0));
 @end
-
 NS_ASSUME_NONNULL_END
 
 #if (TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)) || TARGET_OS_WIN32

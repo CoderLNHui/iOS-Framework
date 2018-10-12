@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 
@@ -21,12 +21,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma mark -ItemStyle
 typedef NS_ENUM(NSInteger, UIBarButtonItemStyle) {
     UIBarButtonItemStylePlain,
     UIBarButtonItemStyleBordered NS_ENUM_DEPRECATED_IOS(2_0, 8_0, "Use UIBarButtonItemStylePlain when minimum deployment target is iOS7 or later"),
     UIBarButtonItemStyleDone,
 };
 
+#pragma mark -SystemItem
 typedef NS_ENUM(NSInteger, UIBarButtonSystemItem) {
     UIBarButtonSystemItemDone,
     UIBarButtonSystemItemCancel,
@@ -58,6 +60,7 @@ typedef NS_ENUM(NSInteger, UIBarButtonSystemItem) {
 
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UIBarButtonItem : UIBarItem <NSCoding>
 
+#pragma mark - 初始化方法
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithImage:(nullable UIImage *)image style:(UIBarButtonItemStyle)style target:(nullable id)target action:(nullable SEL)action;
@@ -66,6 +69,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIBarButtonItem : UIBarItem <NSCoding>
 - (instancetype)initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem target:(nullable id)target action:(nullable SEL)action;
 - (instancetype)initWithCustomView:(UIView *)customView;
 
+#pragma mark - 属性
 @property(nonatomic)         UIBarButtonItemStyle style;            // default is UIBarButtonItemStylePlain
 @property(nonatomic)         CGFloat              width;            // default is 0.0
 @property(nullable, nonatomic,copy)    NSSet<NSString *>   *possibleTitles;   // default is nil
@@ -94,6 +98,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIBarButtonItem : UIBarItem <NSCoding>
 - (void)setBackgroundImage:(nullable UIImage *)backgroundImage forState:(UIControlState)state style:(UIBarButtonItemStyle)style barMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(6_0) UI_APPEARANCE_SELECTOR;
 - (nullable UIImage *)backgroundImageForState:(UIControlState)state style:(UIBarButtonItemStyle)style barMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(6_0) UI_APPEARANCE_SELECTOR;
 
+#pragma mark -前景色
 @property(nullable, nonatomic,strong) UIColor *tintColor NS_AVAILABLE_IOS(5_0);
 
 /* For adjusting the vertical centering of bordered bar buttons within the bar
@@ -111,6 +116,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIBarButtonItem : UIBarItem <NSCoding>
 /*
  backgroundImage must be a resizable image for good results.
  */
+#pragma mark - 修改/获取 左侧返回背景图片、按钮文字的位置
 - (void)setBackButtonBackgroundImage:(nullable UIImage *)backgroundImage forState:(UIControlState)state barMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR __TVOS_PROHIBITED;
 - (nullable UIImage *)backButtonBackgroundImageForState:(UIControlState)state barMetrics:(UIBarMetrics)barMetrics NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR __TVOS_PROHIBITED;
 
@@ -128,6 +134,5 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIBarButtonItem : UIBarItem <NSCoding>
 @interface UIBarButtonItem (SpringLoading) <UISpringLoadedInteractionSupporting>
 @end
 #endif
-
 NS_ASSUME_NONNULL_END
 

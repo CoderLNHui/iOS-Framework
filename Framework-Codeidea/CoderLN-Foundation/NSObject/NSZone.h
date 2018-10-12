@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 
@@ -78,5 +78,6 @@ NS_ENUM(NSUInteger) {
     FOUNDATION_EXPORT void NSCopyMemoryPages(const void *source, void *dest, NSUInteger bytes);
     FOUNDATION_EXPORT NSUInteger NSRealMemoryAvailable(void) API_DEPRECATED("Use NSProcessInfo instead", macos(10.0,10.8), ios(2.0,6.0), watchos(2.0,2.0), tvos(9.0,9.0)); // see NSProcessInfo.h instead
     
-    NS_ASSUME_NONNULL_END
+    
+NS_ASSUME_NONNULL_END
 

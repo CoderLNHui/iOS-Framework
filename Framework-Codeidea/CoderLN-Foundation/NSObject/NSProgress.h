@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 
@@ -319,6 +319,5 @@ FOUNDATION_EXPORT NSProgressUserInfoKey const NSProgressFileAnimationImageOrigin
 /* A user info dictionary key. The value must be an NSImage containing an icon. This entry is optional but, if it is present, the Finder will use it to show the icon of a file while progress is being made on that file. For example, the App Store uses this to specify an icon for an application being downloaded before the icon can be gotten from the application bundle itself.
  */
 FOUNDATION_EXPORT NSProgressUserInfoKey const NSProgressFileIconKey API_AVAILABLE(macos(10.9)) API_UNAVAILABLE(ios, watchos, tvos);
-
 NS_ASSUME_NONNULL_END
 

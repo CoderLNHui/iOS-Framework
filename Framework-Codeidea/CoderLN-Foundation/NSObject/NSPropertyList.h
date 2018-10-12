@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 #import <Foundation/NSObject.h>
@@ -65,6 +65,5 @@ typedef NSUInteger NSPropertyListWriteOptions;
 + (nullable id)propertyListFromData:(NSData *)data mutabilityOption:(NSPropertyListMutabilityOptions)opt format:(nullable NSPropertyListFormat *)format errorDescription:(out __strong NSString * _Nullable * _Nullable)errorString API_DEPRECATED("Use propertyListWithData:options:format:error: instead.", macos(10.0,10.10), ios(2.0,8.0), watchos(2.0,2.0), tvos(9.0,9.0));
 
 @end
-
 NS_ASSUME_NONNULL_END
 

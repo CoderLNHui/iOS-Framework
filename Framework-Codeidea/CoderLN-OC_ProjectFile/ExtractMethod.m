@@ -4,7 +4,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
 
 
@@ -33,7 +33,6 @@
 }
 
 
-
 #pragma mark - 截取服务器返回信息字符串(延迟执行,弹框提示用户登录请求结果)
 //登录成功或登录失败
 - (void)showWithResult:(NSString *)result
@@ -53,7 +52,6 @@
 }
 
 
-
 #pragma mark - 时间处理
 //时间字符串转化为格式为@"yyyy-MM-dd HH:mm:ss"
 + (NSString *)dateStringFormNumberString:(NSString *)str
@@ -65,24 +63,24 @@
     return [fm stringFromDate:date];
 }
 
+#pragma mark -计算日期间隔
 + (NSString*)calculateDateInterval:(NSString*)expireDateStr
 {
     NSDateFormatter *fomatter=[[NSDateFormatter alloc]init];
     [fomatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.0"];
     //把传进来的日期转换为日期
-    NSDate *expireDate=[fomatter dateFromString:expireDateStr];
+    NSDate *expireDate = [fomatter dateFromString:expireDateStr];
     
-    NSTimeInterval interval=[expireDate timeIntervalSinceNow];
+    NSTimeInterval interval = [expireDate timeIntervalSinceNow];
     //获取秒数
-    NSInteger second=(NSInteger)interval%60;
-    NSInteger minute=(NSInteger)interval/60%60;
-    NSInteger hour=(NSInteger)interval/60/60;
-    NSString *str=[NSString stringWithFormat:@"剩余：%.2d:%.2d:%.2d",hour,minute,second];
+    NSInteger second = (NSInteger)interval%60;
+    NSInteger minute = (NSInteger)interval/60%60;
+    NSInteger hour = (NSInteger)interval/60/60;
+    NSString *str = [NSString stringWithFormat:@"剩余：%.2d:%.2d:%.2d",hour,minute,second];
     return str;
 }
 
-
-//获得当前时间
+#pragma mark -获得当前时间
 + (void)getCurrentTime
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -90,7 +88,6 @@
     NSString *dateTime = [formatter stringFromDate:[NSDate date]];
     _startTime = dateTime;
 }
-
 
 
 #pragma mark - 根据字符串内容 获取（设置）Label的高度(图文混排时用的到)
@@ -118,6 +115,29 @@
     CGFloat g = arc4random_uniform(256) / 255.0;
     CGFloat b = arc4random_uniform(256) / 255.0;
     return [UIColor colorWithRed:r green:g blue:b alpha:1.0];
+}
+
+
+#pragma mark - Touch触摸
+#pragma mark -Touch触摸获取当前手指点
+- (CGPoint)getCurrentPoint:(NSSet *)touches
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint curP = [touch locationInView:self];
+    return curP;
+}
+
+#pragma mark -判断点在不在按钮身上 (如果在按钮身上,返回当前所在的按钮, 如果不在,返回nil)
+- (UIButton *)btnRectContainsPoint:(CGPoint)point
+{    
+    for (UIButton *btn in self.subviews) {
+        if (CGRectContainsPoint(btn.frame, point)) {// 判断点在不在Rect范围内(BooL)
+            // 让当前按钮成为选中状态 (方法抽取封装不要在内部写死,方便后期复用方法,这里直接返回按钮本身)
+            //btn.selected = YES;
+            return btn;
+        }
+    }
+    return nil;
 }
 
 

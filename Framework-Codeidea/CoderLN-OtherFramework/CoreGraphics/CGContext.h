@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 #ifndef CGCONTEXT_H_
@@ -141,75 +141,82 @@ CG_AVAILABLE_STARTING(__MAC_10_2, __IPHONE_2_0);
 /* Push a copy of the current graphics state onto the graphics state stack.
  Note that the path is not considered part of the graphics state, and is
  not saved. */
-#pragma mark -  上下文的状态栈，保存当前上下文属性的状态
+#pragma mark - 上下文的状态栈
+#pragma mark -压栈操作，保存一份当前图形上下文
+/**
+ 函数的作用是将当前图形状态推入堆栈。之后，您对图形状态所做的修改会影响随后的描画操作，但不影响存储在堆栈中的拷贝。在修改完成后，您可以通过CGContextRestoreGState函数把堆栈顶部的状态弹出，返回到之前的图形状态。这种推入和弹出的方式是回到之前图形状态的快速方法，避免逐个撤消所有的状态修改；这也是将某些状态（比如裁剪路径）恢复到原有设置的唯一方式。
+ */
 CG_EXTERN void CGContextSaveGState(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Restore the current graphics state from the one on the top of the
  graphics state stack, popping the graphics state stack in the process. */
-
+#pragma mark -出栈操作，恢复一份当前图形上下文
 CG_EXTERN void CGContextRestoreGState(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /** Coordinate space transformations. **/
-
+#pragma mark - 图形上下文的坐标空间转换
 /* Scale the current graphics state's transformation matrix (the CTM) by
  `(sx, sy)'. */
-
+#pragma mark -坐标系X,Y缩放
 CG_EXTERN void CGContextScaleCTM(CGContextRef cg_nullable c,
                                  CGFloat sx, CGFloat sy)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Translate the current graphics state's transformation matrix (the CTM) by
  `(tx, ty)'. */
-
+#pragma mark -坐标系平移
 CG_EXTERN void CGContextTranslateCTM(CGContextRef cg_nullable c,
                                      CGFloat tx, CGFloat ty)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Rotate the current graphics state's transformation matrix (the CTM) by
  `angle' radians. */
-
+#pragma mark -坐标系旋转
 CG_EXTERN void CGContextRotateCTM(CGContextRef cg_nullable c, CGFloat angle)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Concatenate the current graphics state's transformation matrix (the CTM)
  with the affine transform `transform'. */
-
+#pragma mark -
 CG_EXTERN void CGContextConcatCTM(CGContextRef cg_nullable c,
                                   CGAffineTransform transform)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Return the current graphics state's transformation matrix. Returns
  CGAffineTransformIdentity in case of inavlid context. */
-
+#pragma mark -获得一份CTM
 CG_EXTERN CGAffineTransform CGContextGetCTM(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /** Drawing attribute functions. **/
-
+#pragma mark - 设置Line属性及连接样式
 /* Set the line width in the current graphics state to `width'. */
-#pragma mark - 设置线宽度
+#pragma mark -设置线宽度
 CG_EXTERN void CGContextSetLineWidth(CGContextRef cg_nullable c, CGFloat width)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Set the line cap in the current graphics state to `cap'. */
-#pragma mark - 设置顶角样式（kCGLineCapButt, Round, Square）
+#pragma mark -设置顶角样式（kCGLineCapButt, Round, Square）
 CG_EXTERN void CGContextSetLineCap(CGContextRef cg_nullable c, CGLineCap cap)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Set the line join in the current graphics state to `join'. */
-#pragma mark - 设置连接样式（kCGLineJoinMiter尖的、斜接, Round圆, Bevel斜面）
+#pragma mark -设置连接样式（kCGLineJoinMiter尖的、斜接, Round圆, Bevel斜面）
 CG_EXTERN void CGContextSetLineJoin(CGContextRef cg_nullable c, CGLineJoin join)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Set the miter limit in the current graphics state to `limit'. */
-
+#pragma mark -斜接限制
 CG_EXTERN void CGContextSetMiterLimit(CGContextRef cg_nullable c, CGFloat limit)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Set the line dash patttern in the current graphics state of `c'. */
-#pragma mark - 设置虚线样式（参数：phase虚线从那开始绘制；lengths C语言的数组,举个例子: 声明一个数组 CGFloat dash[] = @{3.0, 1.0}意思就是长度为3.0 间隙长度为1.0,以此类推；count lengths数组的个数）
+#pragma mark -设置虚线样式
+/**
+ 参数：phase虚线从那开始绘制；lengths C语言的数组,举个例子: 声明一个数组 CGFloat dash[] = @{3.0, 1.0}意思就是长度为3.0 间隙长度为1.0,以此类推；count lengths数组的个数
+ */
 CG_EXTERN void CGContextSetLineDash(CGContextRef cg_nullable c, CGFloat phase,
                                     const CGFloat * __nullable lengths, size_t count)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
@@ -221,7 +228,7 @@ CG_EXTERN void CGContextSetFlatness(CGContextRef cg_nullable c, CGFloat flatness
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Set the alpha value in the current graphics state of `c' to `alpha'. */
-
+#pragma mark -设置透明度
 CG_EXTERN void CGContextSetAlpha(CGContextRef cg_nullable c, CGFloat alpha)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
@@ -231,7 +238,7 @@ CG_EXTERN void CGContextSetBlendMode(CGContextRef cg_nullable c, CGBlendMode mod
 CG_AVAILABLE_STARTING(__MAC_10_4, __IPHONE_2_0);
 
 /** Path construction functions. **/
-
+#pragma mark - path路径构建功能
 /* Note that a context has a single path in use at any time: a path is not
  part of the graphics state. */
 
@@ -241,40 +248,40 @@ CG_EXTERN void CGContextBeginPath(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Start a new subpath at point `(x, y)' in the context's path. */
-#pragma mark - 设置起始点
+#pragma mark -设置起始点
 CG_EXTERN void CGContextMoveToPoint(CGContextRef cg_nullable c,
                                     CGFloat x, CGFloat y)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Append a straight line segment from the current point to `(x, y)'. */
-#pragma mark - 添加一根线到终点
+#pragma mark -添加一根线到终点
 CG_EXTERN void CGContextAddLineToPoint(CGContextRef cg_nullable c,
                                        CGFloat x, CGFloat y)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Append a cubic Bezier curve from the current point to `(x,y)', with
  control points `(cp1x, cp1y)' and `(cp2x, cp2y)'. */
-#pragma mark - 三次曲线函数 参数：控制点1 x y坐标，控制点2 x y坐标，终点 x坐标，终点 y坐标 Note:这里使用必须要设置起点MoveToPoin
+#pragma mark -三次曲线函数 参数：控制点1 x y坐标，控制点2 x y坐标，终点 x坐标，终点 y坐标 Note:这里使用必须要设置起点MoveToPoin
 CG_EXTERN void CGContextAddCurveToPoint(CGContextRef cg_nullable c, CGFloat cp1x,
                                         CGFloat cp1y, CGFloat cp2x, CGFloat cp2y, CGFloat x, CGFloat y)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Append a quadratic curve from the current point to `(x, y)', with control
  point `(cpx, cpy)'. */
-#pragma mark - 二次曲线函数 参数：控制点 x坐标，控制点 y坐标，终点 x坐标，终点 y坐标 Note:这里使用必须要设置起点MoveToPoin
+#pragma mark -二次曲线函数 参数：控制点 x坐标，控制点 y坐标，终点 x坐标，终点 y坐标 Note:这里使用必须要设置起点MoveToPoin
 CG_EXTERN void CGContextAddQuadCurveToPoint(CGContextRef cg_nullable c,
                                             CGFloat cpx, CGFloat cpy, CGFloat x, CGFloat y)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Close the current subpath of the context's path. */
-
+#pragma mark -闭合曲线
 CG_EXTERN void CGContextClosePath(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /** Path construction convenience functions. **/
 
 /* Add a single rect to the context's path. */
-#pragma mark - 画矩形，长宽相等就是正方形
+#pragma mark -画矩形，长宽相等就是正方形
 CG_EXTERN void CGContextAddRect(CGContextRef cg_nullable c, CGRect rect)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
@@ -285,7 +292,7 @@ CG_EXTERN void CGContextAddRects(CGContextRef cg_nullable c,
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Add a set of lines to the context's path. */
-#pragma mark - 添加线(点之间) 参数：points点数组，count数组个数
+#pragma mark -添加线(点之间) 参数：points点数组，count数组个数
 CG_EXTERN void CGContextAddLines(CGContextRef cg_nullable c,
                                  const CGPoint * __nullable points, size_t count)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
@@ -293,7 +300,7 @@ CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 /* Add an ellipse inside `rect' to the current path of `context'. See the
  function `CGPathAddEllipseInRect' for more information on how the path
  for the ellipse is constructed. */
-#pragma mark - 画椭圆，如果长宽相等就是圆
+#pragma mark -画椭圆，如果长宽相等就是圆
 CG_EXTERN void CGContextAddEllipseInRect(CGContextRef cg_nullable c, CGRect rect)
 CG_AVAILABLE_STARTING(__MAC_10_4, __IPHONE_2_0);
 
@@ -303,7 +310,8 @@ CG_AVAILABLE_STARTING(__MAC_10_4, __IPHONE_2_0);
  `endAngle' is the angle to the second endpoint of the arc; and
  `clockwise' is 1 if the arc is to be drawn clockwise, 0 otherwise.
  `startAngle' and `endAngle' are measured in radians. */
-#pragma mark - 画圆 参数：圆心的x坐标，圆心的y坐标，圆的半径，开始弧度，结束弧度，0表示顺时针 1表示逆时针
+#pragma mark -画圆
+// 参数：圆心的x坐标，圆心的y坐标，圆的半径，开始弧度，结束弧度，0表示顺时针 1表示逆时针
 CG_EXTERN void CGContextAddArc(CGContextRef cg_nullable c, CGFloat x, CGFloat y,
                                CGFloat radius, CGFloat startAngle, CGFloat endAngle, int clockwise)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
@@ -312,20 +320,20 @@ CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
  straight line segment. `radius' is the radius of the arc. The arc is
  tangent to the line from the current point to `(x1, y1)', and the line
  from `(x1, y1)' to `(x2, y2)'. */
-
+#pragma mark -弧度：控制点p1和p2是弧线的控制点
 CG_EXTERN void CGContextAddArcToPoint(CGContextRef cg_nullable c,
                                       CGFloat x1, CGFloat y1, CGFloat x2, CGFloat y2, CGFloat radius)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Add `path' to the path of context. The points in `path' are transformed
  by the CTM of context before they are added. */
-#pragma mark - 添加路径到上下文（UIBezierPath:UIKit框架 ,CGPathRef:CoreGraphics框架）
+#pragma mark -添加路径到上下文（UIBezierPath:UIKit框架 ,CGPathRef:CoreGraphics框架）
 CG_EXTERN void CGContextAddPath(CGContextRef cg_nullable c,
                                 CGPathRef cg_nullable path)
 CG_AVAILABLE_STARTING(__MAC_10_2, __IPHONE_2_0);
 
 /** Path stroking. **/
-
+#pragma mark - 获取路径信息
 /* Replace the path in `context' with the stroked version of the path, using
  the parameters of `context' to calculate the stroked path. The resulting
  path is created such that filling it with the appropriate color will
@@ -341,20 +349,20 @@ CG_AVAILABLE_STARTING(__MAC_10_4, __IPHONE_2_0);
 
 /* Return true if the path of `context' contains no elements, false
  otherwise. */
-
+#pragma mark -表示目前的图形上下文是否包含任何的子路径。
 CG_EXTERN bool CGContextIsPathEmpty(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Return the current point of the current subpath of the path of
  `context'. */
-
+#pragma mark -返回一个非空的路径中的当前点。
 CG_EXTERN CGPoint CGContextGetPathCurrentPoint(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Return the bounding box of the path of `context'. The bounding box is the
  smallest rectangle completely enclosing all points in the path, including
  control points for Bezier and quadratic curves. */
-
+#pragma mark -返回包含当前路径的最小矩形。
 CG_EXTERN CGRect CGContextGetPathBoundingBox(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
@@ -368,40 +376,48 @@ CG_AVAILABLE_STARTING(__MAC_10_2, __IPHONE_2_0);
  point is contained within a context's path if it is inside the painted
  region when the path is stroked or filled with opaque colors using the
  path drawing mode `mode'. `point' is specified is user space. */
-
+#pragma mark -检查当前路径中是否包含指定的点。
 CG_EXTERN bool CGContextPathContainsPoint(CGContextRef cg_nullable c,
                                           CGPoint point, CGPathDrawingMode mode)
 CG_AVAILABLE_STARTING(__MAC_10_4, __IPHONE_2_0);
 
 /** Path drawing functions. **/
+#pragma mark - 路径绘图功能
 
 /* Draw the context's path using drawing mode `mode'. */
-
+#pragma mark -指定模式下渲染路径
 CG_EXTERN void CGContextDrawPath(CGContextRef cg_nullable c,
                                  CGPathDrawingMode mode)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
+/*CGPathDrawingMode是填充方式,枚举类型
+ kCGPathFill:只有填充（非零缠绕数填充），不绘制边框
+ kCGPathEOFill:奇偶规则填充（多条路径交叉时，奇数交叉填充，偶交叉不填充）
+ kCGPathStroke:只有边框
+ kCGPathFillStroke：既有边框又有填充
+ kCGPathEOFillStroke：奇偶填充并绘制边框
+ */
 
 /** Path drawing convenience functions. **/
 
 /* Fill the context's path using the winding-number fill rule. Any open
  subpath of the path is implicitly closed. */
-#pragma mark - 渲染上下文（Fill填充,实心）
+#pragma mark -渲染上下文（Fill填充,实心）
 CG_EXTERN void CGContextFillPath(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Fill the context's path using the even-odd fill rule. Any open subpath of
  the path is implicitly closed. */
-
+#pragma mark -奇偶填充
 CG_EXTERN void CGContextEOFillPath(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Stroke the context's path. */
-#pragma mark - 渲染上下文（Stroke描边,空心）
+#pragma mark -渲染上下文（Stroke描边,空心）
 CG_EXTERN void CGContextStrokePath(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Fill `rect' with the current fill color. */
-
+#pragma mark -填充区域
 CG_EXTERN void CGContextFillRect(CGContextRef cg_nullable c, CGRect rect)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
@@ -425,7 +441,7 @@ CG_EXTERN void CGContextStrokeRectWithWidth(CGContextRef cg_nullable c,
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Clear `rect' (that is, set the region within the rect to transparent). */
-#pragma mark - 设置擦除上下文区域
+#pragma mark -设置擦除上下文区域
 CG_EXTERN void CGContextClearRect(CGContextRef cg_nullable c, CGRect rect)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
@@ -457,6 +473,7 @@ CG_EXTERN void CGContextStrokeLineSegments(CGContextRef cg_nullable c,
 CG_AVAILABLE_STARTING(__MAC_10_4, __IPHONE_2_0);
 
 /** Clipping functions. **/
+#pragma mark - 修改剪裁路径
 
 /* Intersect the context's path with the current clip path and use the
  resulting path as the clip path for subsequent rendering operations. Use
@@ -531,21 +548,29 @@ CG_EXTERN void CGContextClipToRects(CGContextRef cg_nullable c,
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /** Primitive color functions. **/
+#pragma mark - 设置颜色、色彩空间及阴影值
+/**
+ Quartz 中的颜色是用一组数值来表示。而颜色空间用于解析这些颜色信息，常用颜色空间有 RGB 、CMYK等。
+ 
+ Quartz 支持通用颜色空间、设备独立颜色空间、设备依赖颜色空间、索引颜色空间和模式（Pattern）颜色空间。
+ 
+ iOS不支持设备独立颜色空间和通用颜色空间。iOS应用程序必须使用设备颜色空间。
+ */
 
 /* Set the current fill color in the context `c' to `color'. */
-#pragma mark - 设置填充色
+#pragma mark -设置填充颜色
 CG_EXTERN void CGContextSetFillColorWithColor(CGContextRef cg_nullable c,
                                               CGColorRef cg_nullable color)
 CG_AVAILABLE_STARTING(__MAC_10_3, __IPHONE_2_0);
 
 /* Set the current stroke color in the context `c' to `color'. */
-#pragma mark - 设置线颜色
+#pragma mark -设置描边颜色
 CG_EXTERN void CGContextSetStrokeColorWithColor(CGContextRef cg_nullable c,
                                                 CGColorRef cg_nullable color)
 CG_AVAILABLE_STARTING(__MAC_10_3, __IPHONE_2_0);
 
 /** Color space functions. **/
-
+#pragma mark - 创建设备依赖颜色空间
 /* Set the current fill color space in `context' to `space'. As a
  side-effect, set the fill color to a default value appropriate for the
  color space. */
@@ -665,16 +690,39 @@ CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Set the rendering intent in the current graphics state of `context' to
  `intent'. */
-
+#pragma mark -设置再现意图
+/**
+ 每个设备都有固定的可复制的颜色范围（gamut），这是设备的物理性质决定的。当图像从一个颜色空间向另一个颜色空间转换时，有些源设备颜色空间中呈现的颜色，不能在目标设备颜色空间中复制出来，这些不能复制的颜色叫色域外（out-of-gamut）颜色。比如 RGB 颜色空间比 CMYK 的颜色空间要大，有些在显示器上能显示的颜色不能在打印机上同样打印出来。因为我们不能在目标设备颜色空间中复制出色域外颜色，我们必须用一些其他颜色来替代他们。颜色空间转换时颜色替换调整的规则就是再现意图。
+ 
+ 再现意图用于指定如何将源颜色空间的颜色映射到图形上下文的目标颜色空间的颜色范围内。
+ 如果不显式的指定再现意图，Quartz 使用“相对色度再现意图”应用于所有绘制（不包含位图图像）。
+ 对于位图图像，Quartz默认使用“感知再现意图”。
+ 调用 CGContextSetRenderingIntent(context, kCGRenderingIntentDefault) 来设置再现意图。
+ */
 CG_EXTERN void CGContextSetRenderingIntent(CGContextRef cg_nullable c,
                                            CGColorRenderingIntent intent)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
+/**
+ typedef CF_ENUM (int32_t, CGColorRenderingIntent) {
+    kCGRenderingIntentDefault,
+    kCGRenderingIntentAbsoluteColorimetric,
+    kCGRenderingIntentRelativeColorimetric,
+    kCGRenderingIntentPerceptual,
+    kCGRenderingIntentSaturation
+ };
+ 
+ 1. kCGRenderingIntentDefault：默认再现意图。
+ 2. kCGRenderingIntentAbsoluteColorimetric：绝对色度再现意图。将输出设备颜色域外的颜色映射为输出设备域内与之最接近的颜色。这可以产生一个裁减效果，因为色域外的两个不同的颜色值可能被映射为色域内的同一个颜色值。当图形使用的颜色值同时包含在源色域及目标色域内时，这种方法是最好的。常用于logo或者使用专色(spot color)时。
+ 3. kCGRenderingIntentRelativeColorimetric：相对色度再现意图。转换所有的颜色(包括色域内的)，以补偿图形上下文的白点与输出设备白点之间的色差。
+ 4. kCGRenderingIntentPerceptual：感知再现意图。通过压缩图形上下文的色域来适应输出设备的色域，并保持源颜色空间的颜色之间的相对性。感知渲染意图适用于相片及其它复杂的高细度图片。
+ 5. kCGRenderingIntentSaturation：饱和度再现意图。把颜色转换到输出设备色域内时，保持颜色的相对饱和度。结果是包含亮度、饱和度颜色的图片。饱和度意图适用于生成低细度的图片，如描述性图表。
+ */
 
 /** Image functions. **/
-
+#pragma mark - 绘制图片
 /* Draw `image' in the rectangular area specified by `rect' in the context
  `c'. The image is scaled, if necessary, to fit into `rect'. */
-
+#pragma mark -在指定区域画图片
 CG_EXTERN void CGContextDrawImage(CGContextRef cg_nullable c, CGRect rect,
                                   CGImageRef cg_nullable image)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
@@ -697,16 +745,21 @@ CG_AVAILABLE_STARTING(__MAC_10_5, __IPHONE_2_0);
  contexts support all interpolation quality levels. */
 
 CG_EXTERN CGInterpolationQuality
+/**
+ 返回当前的图形上下文的插值（插值(Interpolation)是在不天生像素的环境下增长图像像素大小的一种方法,在周围像素色彩
+ 的根蒂根基上用算术公式计算亡失像素的色彩。）质量水平
+ */
 CGContextGetInterpolationQuality(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /* Set the interpolation quality of `context' to `quality'. */
-
+#pragma mark -设置图形上下文的插值质量水平。
 CG_EXTERN void CGContextSetInterpolationQuality(CGContextRef cg_nullable c,
                                                 CGInterpolationQuality quality)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /** Shadow support. **/
+#pragma mark - 设置阴影
 
 /* Set the shadow parameters in `context'. `offset' specifies a translation
  in base-space; `blur' is a non-negative number specifying the amount of
@@ -715,7 +768,13 @@ CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
  a fully transparent color. The shadow is a gstate parameter. After a
  shadow is specified, all objects drawn subsequently will be shadowed. To
  turn off shadowing, set the shadow color to a fully transparent color (or
- pass NULL as the color), or use the standard gsave/grestore mechanism. */
+ pass NULL as the color), or use the standard gsave/grestore mechanism.
+ 
+ 阴影是如何工作的
+ Quartz中的阴影是图形状态的一部分。我们可以调用函数CGContextSetShadow来创建，并传入一个图形上下文、偏移值及模糊值。阴影被设置后，任何绘制的对象都有一个阴影，且该阴影在设备RGB颜色空间中呈现出黑色的且alpha值为1/3。换句话说，阴影是用RGBA值{0, 0, 0, 1.0/3.0}设置的。
+ 我们可以调用函数CGContextSetShadowWithColor来设置彩色阴影，并传递一个图形上下文、 偏移值、模糊值有CGColor颜色对象。颜色值依赖于颜色空间。
+ 如何在调用CGContextSetShadow或CGContextSetShadowWithColor之前保存了图形状态，我们可以通过恢复图形状态来关闭阴影。我们也可以通过设置阴影颜色为NULL来关闭阴影
+ */
 
 CG_EXTERN void CGContextSetShadowWithColor(CGContextRef cg_nullable c,
                                            CGSize offset, CGFloat blur, CGColorRef __nullable color)
@@ -724,14 +783,20 @@ CG_AVAILABLE_STARTING(__MAC_10_3, __IPHONE_2_0);
 /* Equivalent to calling
  CGContextSetShadowWithColor(context, offset, blur, color)
  where color is black with 1/3 alpha (i.e., RGBA = {0, 0, 0, 1.0/3.0}) in
- the DeviceRGB color space. */
-
+ the DeviceRGB color space.
+ 
+ 阴影有三个属性：
+ x偏移值，用于指定阴影相对于图片在水平方向上的偏移值。
+ y偏移值，用于指定阴影相对于图片在竖直方向上的偏移值。
+ 模糊(blur)值，用于指定图像是有一个硬边
+ CGContextSetShadow(context, CGSizeMake(10, -20), 10);
+ */
 CG_EXTERN void CGContextSetShadow(CGContextRef cg_nullable c, CGSize offset,
                                   CGFloat blur)
 CG_AVAILABLE_STARTING(__MAC_10_3, __IPHONE_2_0);
 
 /** Gradient and shading functions. **/
-
+#pragma mark - 渐变和着色功能
 /* Fill the current clipping region of `context' with a linear gradient from
  `startPoint' to `endPoint'. The location 0 of `gradient' corresponds to
  `startPoint'; the location 1 of `gradient' corresponds to `endPoint';
@@ -765,7 +830,7 @@ CG_EXTERN void CGContextDrawShading(CGContextRef cg_nullable c,
 CG_AVAILABLE_STARTING(__MAC_10_2, __IPHONE_2_0);
 
 /** Text functions. **/
-
+#pragma mark - 绘制文本
 /* Set the current character spacing in `context' to `spacing'. The
  character spacing is added to the displacement between the origin of one
  character and the origin of the next. */
@@ -828,7 +893,7 @@ CG_EXTERN void CGContextShowGlyphsAtPositions(CGContextRef cg_nullable c,
 CG_AVAILABLE_STARTING(__MAC_10_5, __IPHONE_2_0);
 
 /** PDF functions. **/
-
+#pragma mark - 绘制PDF
 /* Draw `page' in the current user space of the context `c'. */
 
 CG_EXTERN void CGContextDrawPDFPage(CGContextRef cg_nullable c,
@@ -838,6 +903,7 @@ CG_AVAILABLE_STARTING(__MAC_10_3, __IPHONE_2_0);
 /** Output page functions. **/
 
 /* Begin a new page. */
+#pragma mark - 建立一个基于页面的图形上下文
 
 CG_EXTERN void CGContextBeginPage(CGContextRef cg_nullable c,
                                   const CGRect * __nullable mediaBox)
@@ -851,7 +917,7 @@ CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 /** Context functions. **/
 
 /* Equivalent to `CFRetain(c)'. */
-
+#pragma mark - 管理图形上下文
 CG_EXTERN CGContextRef cg_nullable CGContextRetain(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
@@ -871,10 +937,10 @@ CG_EXTERN void CGContextSynchronize(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
 
 /** Antialiasing functions. **/
-
+#pragma mark - 锯齿功能
 /* Turn on antialiasing if `shouldAntialias' is true; turn it off otherwise.
  This parameter is part of the graphics state. */
-
+#pragma mark -设置图形上下文的抗锯齿开启或关闭
 CG_EXTERN void CGContextSetShouldAntialias(CGContextRef cg_nullable c,
                                            bool shouldAntialias)
 CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
@@ -889,6 +955,7 @@ CG_EXTERN void CGContextSetAllowsAntialiasing(CGContextRef cg_nullable c,
 CG_AVAILABLE_STARTING(__MAC_10_4, __IPHONE_2_0);
 
 /** Font display functions. **/
+#pragma mark - 字体展示功能
 
 /* Turn on font smoothing if `shouldSmoothFonts' is true; turn it off
  otherwise. This parameter is part of the graphics state. Note that this
@@ -950,6 +1017,7 @@ CG_EXTERN void CGContextSetAllowsFontSubpixelQuantization(
 CG_AVAILABLE_STARTING(__MAC_10_5, __IPHONE_2_0);
 
 /** Transparency layer support. **/
+#pragma mark - 使用透明图层
 
 /* Begin a transparency layer in `context'. All subsequent drawing
  operations until a corresponding `CGContextEndTransparencyLayer' are
@@ -966,10 +1034,35 @@ CG_AVAILABLE_STARTING(__MAC_10_5, __IPHONE_2_0);
  Ending the transparency layer restores these parameters to the values
  they had before `CGContextBeginTransparencyLayer' was called.
  Transparency layers may be nested. */
+/**
+ Quartz的透明层类似于许多流行的图形应用中的层。层是独立的实体。Quartz维护为每个上下文维护一个透明层栈，并且透明层是可以嵌套的。但由于层通常是栈的一部分，所以我们不能单独操作它们。
+ 
+ 我们通过调用函数CGContextBeginTransparencyLayer来开始一个透明层，该函数需要两个参数：图形上下文与CFDictionary对象。字典中包含我们所提供的指定层额外信息的选项，但由于Quartz 2D API中没有使用字典，所以我们传递一个NULL。在调用这个函数后，图形状态参数保持不变，除了alpha值[默认设置为1]、阴影[默认关闭]、混合模式[默认设置为normal]、及其它影响最终组合的参数。
+ 在开始透明层操作后，我们可以绘制任何想显示在层上的对象。指定上下文中的绘制操作将被当成一个组合对象绘制到一个透明背景上。这个背景被当作一个独立于图形上下文的目标缓存。
+ 当绘制完成后，我们调用函数CGContextEndTransparencyLayer。Quartz将结合对象放入上下文，并使用上下文的全局alpha值、阴影状态及裁减区域作用于组合对象。
+ 
+ 在透明层中绘制需要三步：
+    1.调用函数CGContextBeginTransparencyLayer
+    2.在透明层中绘制需要组合的对象
+    3.调用函数CGContextEndTransparencyLayer
+ */
 
+//直到相应的调用CGContextEndTransparencyLayer，在指定范围内的所有后续绘制操作组合到一个完全透明的背景（它被视为一个单独的目标缓冲区从上下文）
 CG_EXTERN void CGContextBeginTransparencyLayer(CGContextRef cg_nullable c,
                                                CFDictionaryRef __nullable auxiliaryInfo)
 CG_AVAILABLE_STARTING(__MAC_10_3, __IPHONE_2_0);
+/**
+ //代码示例：
+ CGContextBeginTransparencyLayer(context, NULL);
+ 
+ CGFloat wd = 300;
+ CGFloat ht = 300;
+ CGContextSetFillColorWithColor(context, [UIColor greenColor].CGColor);
+ CGContextFillRect(context, CGRectMake (wd/3 + 50, ht/2, wd/4, ht/4));
+ 
+ CGContextEndTransparencyLayer(context);
+ */
+
 
 /* Begin a transparency layer in `context'. This function is identical to
  `CGContextBeginTransparencyLayer' except that the content of the
@@ -985,7 +1078,7 @@ CG_EXTERN void CGContextEndTransparencyLayer(CGContextRef cg_nullable c)
 CG_AVAILABLE_STARTING(__MAC_10_3, __IPHONE_2_0);
 
 /** User space to device space tranformations. **/
-
+#pragma mark - 用户空间与设备空间互换
 /* Return the affine transform mapping the user space (abstract coordinates)
  of `context' to device space (pixels). */
 

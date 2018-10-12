@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 #import <Foundation/NSObject.h>
@@ -48,6 +48,5 @@ NS_CLASS_AVAILABLE(10_6, 4_0)
 + (instancetype)orthographyWithDominantScript:(NSString *)script languageMap:(NSDictionary<NSString *, NSArray<NSString *> *> *)map API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
 
 @end
-
 NS_ASSUME_NONNULL_END
 

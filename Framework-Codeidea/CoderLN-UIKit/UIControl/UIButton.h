@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
 
 
@@ -106,6 +106,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIButton : UIControl <NSCoding>
 // on the title and image size and padding and then adjusted based on the control content alignment. there are no draw methods since the contents
 // are rendered in separate subviews (UIImageView, UILabel)
 
+#pragma mark - 更改按钮内部子控件的位置
 /**
  backgroundRectForBounds: 自定义按钮时，可以更改【背景图片】在按钮当中的位置
  contentRectForBounds:    自定义按钮时，可以更改【整个内容】在按钮当中的位置
@@ -125,7 +126,4 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIButton : UIControl <NSCoding>
 @property(nonatomic)        NSLineBreakMode lineBreakMode     NS_DEPRECATED_IOS(2_0, 3_0) __TVOS_PROHIBITED;
 @property(nonatomic)        CGSize          titleShadowOffset NS_DEPRECATED_IOS(2_0, 3_0) __TVOS_PROHIBITED;
 
-@end
-
-START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
-NS_ASSUME_NONNULL_END
+@endNS_ASSUME_NONNULL_END

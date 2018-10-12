@@ -5,7 +5,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
 
 //#ifndef PchHeader_h
@@ -13,7 +13,6 @@
 //
 //#endif /* PchHeader_h */
 
-🏃🏻‍♂️
 #pragma mark - 【颜色宏相关】
 /*
  概念：
@@ -59,7 +58,6 @@
 #define kClearColor                 [UIColor clearColor]
 
 
-
 #pragma mark -控制台颜色
 //彩色打印
 #define LogBlue(frmt, ...)          NSLog((XCODE_COLORS_ESCAPE @"fg0,0,255;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
@@ -78,7 +76,6 @@
 
 
 
-🏃🏻‍♂️
 #pragma mark - 【系统宏相关】
 
 #pragma mark -屏幕尺寸
@@ -138,15 +135,12 @@
 
 
 
-🏃🏻‍♂️
 #pragma mark - 【带参数的宏】
 
 // 加载图片
 #define kImageName(imageName)           [UIImage imageNamed:imageName]
-
 // 设置字体
 #define kFontSize(fontSize)             [UIFont systemFontOfSize:fontSize]
-
 // 格式化字符串
 #define kFormat(string, parameters...)  [NSString stringWithFormat:string, parameters]
 
@@ -155,21 +149,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-🏃🏻‍♂️
 #pragma mark - 【自定义Log打印日志】
-
-
 #pragma mark -测试和发布打印
 #ifdef  DEBUG // 测试
 #define Log(...) NSLog(__VA_ARGS__)
@@ -212,16 +192,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-🏃🏻‍♂️
 #pragma mark - 【获取文件全路径宏】
 /**
  NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory directory：获取那个文件路径, NSSearchPathDomainMask domainMask：从那个路径开始, BOOL expandTilde：是否展开);
@@ -265,7 +235,6 @@
 
 
 
-🏃🏻‍♂️
 #pragma mark - 日期、时间
 
 // 获取一段时间间隔
@@ -288,7 +257,6 @@
 
 
 
-🏃🏻‍♂️
 #pragma mark - 【Xcode 自定义字体】
 
 static NSString* const          FONT_TITLE = @"PingFangSC-Regular";//常规
@@ -308,7 +276,6 @@ static NSString * const         Arial_MT = @"ArialMT";//Arial粗体
 
 
 
-🏃🏻‍♂️
 #pragma mark - 【转换 & 判断】
 
 // 角度 转成 弧度
@@ -358,7 +325,6 @@ static NSString * const         Arial_MT = @"ArialMT";//Arial粗体
 
 
 
-🏃🏻‍♂️
 #pragma mark - 【用户提示】
 
 
@@ -394,7 +360,6 @@ static NSString * const         Arial_MT = @"ArialMT";//Arial粗体
 
 
 
-🏃🏻‍♂️
 #pragma mark - 【快速创建单例】
 
 // .h 声明
@@ -429,7 +394,6 @@ static class *_instance; \
 
 
 
-🏃🏻‍♂️
 #pragma mark - 【Random 随机数据】
 
 //随机数据

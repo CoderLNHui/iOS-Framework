@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 #import <UIKit/UIInteraction.h>
@@ -198,6 +198,5 @@ API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(watchos, tvos) @protocol UIDropInteract
 - (void)dropInteraction:(UIDropInteraction *)interaction item:(UIDragItem *)item willAnimateDropWithAnimator:(id<UIDragAnimating>)animator;
 
 @end
-
 NS_ASSUME_NONNULL_END
 

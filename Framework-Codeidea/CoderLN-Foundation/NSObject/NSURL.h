@@ -6,7 +6,7 @@
  * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
- * 尊重熬夜写作的作者，该模块将系统化学习，替换、补充内容。
+ * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
  */
  
 #import <Foundation/NSObject.h>
@@ -666,5 +666,4 @@ NS_CLASS_AVAILABLE(10_7, 5_0)
 - (nullable NSURLHandle *)URLHandleUsingCache:(BOOL)shouldUseCache API_DEPRECATED("Use NSURLConnection instead", macos(10.0,10.4), ios(2.0,2.0), watchos(2.0,2.0), tvos(9.0,9.0)); // Sophisticated clients will want to ask for this, then message the handle directly.  If shouldUseCache is NO, a newly instantiated handle is returned, even if an equivalent URL has been loaded
 @end
 #endif
-
 NS_ASSUME_NONNULL_END
