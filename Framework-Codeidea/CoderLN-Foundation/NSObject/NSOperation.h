@@ -36,10 +36,13 @@ NS_CLASS_AVAILABLE(10_5, 2_0)
 #endif
 }
 
+#pragma mark -启动操作任务
 - (void)start;
+#pragma mark -自定NSOperation，需要重写main方法
 - (void)main;
 
 @property (readonly, getter=isCancelled) BOOL cancelled;
+#pragma mark -取消操作任务
 - (void)cancel;
 
 @property (readonly, getter=isExecuting) BOOL executing;
@@ -48,7 +51,9 @@ NS_CLASS_AVAILABLE(10_5, 2_0)
 @property (readonly, getter=isAsynchronous) BOOL asynchronous API_AVAILABLE(macos(10.8), ios(7.0), watchos(2.0), tvos(9.0));
 @property (readonly, getter=isReady) BOOL ready;
 
+#pragma mark -添加操作依赖,也可以跨队列添加依赖（但是不能相互依赖）
 - (void)addDependency:(NSOperation *)op;
+#pragma mark -移除依赖
 - (void)removeDependency:(NSOperation *)op;
 
 @property (readonly, copy) NSArray<NSOperation *> *dependencies;
@@ -61,8 +66,10 @@ typedef NS_ENUM(NSInteger, NSOperationQueuePriority) {
     NSOperationQueuePriorityVeryHigh = 8
 };
 
+#pragma mark -队列优先级
 @property NSOperationQueuePriority queuePriority;
 
+#pragma mark -添加操作监听（监听到的操作完成后，就会调用到这个Block）
 @property (nullable, copy) void (^completionBlock)(void) API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
 
 - (void)waitUntilFinished API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
@@ -76,7 +83,7 @@ typedef NS_ENUM(NSInteger, NSOperationQueuePriority) {
 @end
 
 
-
+#pragma mark - NSBlockOperation
 NS_CLASS_AVAILABLE(10_6, 4_0)
 @interface NSBlockOperation : NSOperation {
 @private
@@ -86,12 +93,14 @@ NS_CLASS_AVAILABLE(10_6, 4_0)
 
 + (instancetype)blockOperationWithBlock:(void (^)(void))block;
 
+#pragma mark -追加任务
 - (void)addExecutionBlock:(void (^)(void))block;
 @property (readonly, copy) NSArray<void (^)(void)> *executionBlocks;
 
 @end
 
 
+#pragma mark - NSInvocationOperation
 NS_CLASS_AVAILABLE(10_5, 2_0)
 NS_SWIFT_UNAVAILABLE("NSInvocation and related APIs not available")
 @interface NSInvocationOperation : NSOperation {
@@ -115,6 +124,7 @@ FOUNDATION_EXPORT NSExceptionName const NSInvocationOperationCancelledException 
 
 static const NSInteger NSOperationQueueDefaultMaxConcurrentOperationCount = -1;
 
+#pragma mark - NSOperationQueue 操作队列
 NS_CLASS_AVAILABLE(10_5, 2_0)
 @interface NSOperationQueue : NSObject {
 @private
@@ -122,16 +132,19 @@ NS_CLASS_AVAILABLE(10_5, 2_0)
     void *_reserved;
 }
 
+#pragma mark -添加操作到队列
 - (void)addOperation:(NSOperation *)op;
 - (void)addOperations:(NSArray<NSOperation *> *)ops waitUntilFinished:(BOOL)wait API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
 
+#pragma mark -添加操作到队列
 - (void)addOperationWithBlock:(void (^)(void))block API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
 
 @property (readonly, copy) NSArray<__kindof NSOperation *> *operations;
 @property (readonly) NSUInteger operationCount API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
 
+#pragma mark -设置队列最大并发数(同一时间最多几个任务可以执行)
 @property NSInteger maxConcurrentOperationCount;
-
+#pragma mark -暂停
 @property (getter=isSuspended) BOOL suspended;
 
 @property (nullable, copy) NSString *name API_AVAILABLE(macos(10.6), ios(4.0), watchos(2.0), tvos(9.0));
@@ -140,6 +153,7 @@ NS_CLASS_AVAILABLE(10_5, 2_0)
 
 @property (nullable, assign /* actually retain */) dispatch_queue_t underlyingQueue API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0));
 
+#pragma mark -取消所有的操作
 - (void)cancelAllOperations;
 
 - (void)waitUntilAllOperationsAreFinished;

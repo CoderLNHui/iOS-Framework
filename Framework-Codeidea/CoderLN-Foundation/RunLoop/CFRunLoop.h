@@ -23,30 +23,27 @@
 CF_IMPLICIT_BRIDGING_ENABLED
 CF_EXTERN_C_BEGIN
 
+
 typedef CFStringRef CFRunLoopMode CF_EXTENSIBLE_STRING_ENUM;
-
+//可以看到 CFRunloopRef 其实就是 __CFRunloop 这个结构体指针
 typedef struct CF_BRIDGED_MUTABLE_TYPE(id) __CFRunLoop * CFRunLoopRef;//【RunLoop】
-
 typedef struct CF_BRIDGED_MUTABLE_TYPE(id) __CFRunLoopSource * CFRunLoopSourceRef;//【Runloop要处理的事件源】
-
 typedef struct CF_BRIDGED_MUTABLE_TYPE(id) __CFRunLoopObserver * CFRunLoopObserverRef;//【Runloop的观察者（监听者）】
-
 typedef struct CF_BRIDGED_MUTABLE_TYPE(NSTimer) __CFRunLoopTimer * CFRunLoopTimerRef;//【Timer事件】
 
 /* Reasons for CFRunLoopRunInMode() to Return */
-// runLoop运行过程中的循环逻辑，而最终返回的状态四种枚举类型
+// RunLoop运行过程中的循环逻辑，而最终返回的状态四种枚举类型
 typedef CF_ENUM(SInt32, CFRunLoopRunResult) {
-    kCFRunLoopRunFinished = 1, //【mode中没有事件处理，直接返回】
-    kCFRunLoopRunStopped = 2,
-    kCFRunLoopRunTimedOut = 3,
-    kCFRunLoopRunHandledSource = 4
+    kCFRunLoopRunFinished = 1, //runloop指定mode中没有事件处理，直接返回
+    kCFRunLoopRunStopped = 2, //被外部调用者强制停止了
+    kCFRunLoopRunTimedOut = 3, //超出设定Runloop退出的时间（默认超时10的9次方）
+    kCFRunLoopRunHandledSource = 4 //进入loop时参数处理完事件就返回
 };
 
-
-# START_COPYRIGHT_JIANSHU_BAIKAISHUILN_END
 /* Run Loop Observer Activities */
+// 观察者监听的Runloop活动状态
 typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
-    kCFRunLoopEntry = (1UL << 0),   //即将进入Runloop
+    kCFRunLoopEntry = (1UL << 0),           //即将进入Runloop
     kCFRunLoopBeforeTimers = (1UL << 1),    //即将处理NSTimer
     kCFRunLoopBeforeSources = (1UL << 2),   //即将处理Sources
     kCFRunLoopBeforeWaiting = (1UL << 5),   //即将进入休眠
@@ -191,5 +188,5 @@ CF_EXPORT void CFRunLoopTimerSetTolerance(CFRunLoopTimerRef timer, CFTimeInterva
 CF_EXTERN_C_END
 CF_IMPLICIT_BRIDGING_DISABLED
 
-#endif _START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END */
+#endif
 

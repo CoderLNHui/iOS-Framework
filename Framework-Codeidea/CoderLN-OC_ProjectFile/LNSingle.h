@@ -10,8 +10,8 @@
 /**
  ARC & MRC
  \ 代表下一行也属于宏
+ 资源安全问题：
  加互斥锁解决多线程访问安全问题（@synchronized）
- 或
  GCD一次性代码,本身就是线程安全的（dispatch_once）
  */
 
@@ -20,8 +20,7 @@
 #define SingleH(name) +(instancetype)share##name;
 
 #if __has_feature(objc_arc)
-
-//条件满足 ARC
+// ARC环境
 // .m
 #define SingleM(name) static id _instance;\
 +(instancetype)allocWithZone:(struct _NSZone *)zone\
@@ -46,7 +45,7 @@
 }
 
 #else
-//MRC
+//MRC环境
 #define SingleM(name) static id _instance;\
 +(instancetype)allocWithZone:(struct _NSZone *)zone\
 {\
@@ -87,28 +86,28 @@
 
 // .h
 @interface LNManager : NSObject<NSCopying, NSMutableCopying>
+// 提供类方法（一般格式：shared+类名，sharedManager | defaultManager | shared | default）
 + (instancetype)sharedInstance;
 
 //.m
 // 1.定义全局变量
 static LNManager *_instance;
 
-// 2.重写alloc-->allocWithZone:
+// 2.重写allocWithZone:（alloc内部也是调用allocWithZone:方法）
 + (instancetype)allocWithZone:(struct _NSZone *)zone
 {
-    // 加互斥锁解决多线程访问安全问题
-//    @synchronized(self) {
-//        if (_instance == nil) {
-//            _instance = [super allocWithZone:zone];
-//        }
-//    }
+    // 方式一：加互斥锁解决多线程访问安全问题
+    @synchronized(self) {
+        if (_instance == nil) {
+            _instance = [super allocWithZone:zone];
+        }
+    }
     
-    // 本身就是线程安全的
+    // 方式二：使用GCD一次性代码，不用担心资源争夺问题，因为本身就是线程安全的
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instance = [super allocWithZone:zone];
     });
-    
     return _instance;
 }
 

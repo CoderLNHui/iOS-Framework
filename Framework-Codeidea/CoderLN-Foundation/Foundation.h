@@ -14,183 +14,183 @@
  */
 
 
-#include <CoreFoundation/CoreFoundation.h>
+#include <CoreFoundation/CoreFoundation.h>    <#注解完成#>
 
-#import <Foundation/NSObjCRuntime.h>
+#import <Foundation/NSObjCRuntime.h>    <#注解完成#>
 
-#import <Foundation/NSArray.h>
-#import <Foundation/NSAutoreleasePool.h>
-#import <Foundation/NSBundle.h>
-#import <Foundation/NSByteOrder.h>
-#import <Foundation/NSCalendar.h>
-#import <Foundation/NSCharacterSet.h>
-#import <Foundation/NSCoder.h>
-#import <Foundation/NSData.h>
-#import <Foundation/NSDate.h>
-#import <Foundation/NSDateInterval.h>
-#import <Foundation/NSDateFormatter.h>
-#import <Foundation/NSDateIntervalFormatter.h>
-#import <Foundation/NSISO8601DateFormatter.h>
-#import <Foundation/NSMassFormatter.h>
-#import <Foundation/NSLengthFormatter.h>
-#import <Foundation/NSEnergyFormatter.h>
-#import <Foundation/NSMeasurement.h>
-#import <Foundation/NSMeasurementFormatter.h>
-#import <Foundation/NSPersonNameComponents.h>
-#import <Foundation/NSPersonNameComponentsFormatter.h>
-#import <Foundation/NSDecimal.h>
-#import <Foundation/NSDecimalNumber.h>
-#import <Foundation/NSDictionary.h>
-#import <Foundation/NSEnumerator.h>
-#import <Foundation/NSError.h>
-#import <Foundation/NSException.h>
-#import <Foundation/NSFileHandle.h>
-#import <Foundation/NSFileManager.h>
-#import <Foundation/NSFormatter.h>
-#import <Foundation/NSHashTable.h>
-#import <Foundation/NSHTTPCookie.h>
-#import <Foundation/NSHTTPCookieStorage.h>
-#import <Foundation/NSIndexPath.h>
-#import <Foundation/NSIndexSet.h>
-#import <Foundation/NSInvocation.h>
-#import <Foundation/NSJSONSerialization.h>
-#import <Foundation/NSKeyValueCoding.h>
-#import <Foundation/NSKeyValueObserving.h>
-#import <Foundation/NSKeyedArchiver.h>
-#import <Foundation/NSLocale.h>
-#import <Foundation/NSLock.h>
-#import <Foundation/NSMapTable.h>
-#import <Foundation/NSMethodSignature.h>
-#import <Foundation/NSNotification.h>
-#import <Foundation/NSNotificationQueue.h>
-#import <Foundation/NSNull.h>
-#import <Foundation/NSNumberFormatter.h>
-#import <Foundation/NSObject.h>
-#import <Foundation/NSOperation.h>
-#import <Foundation/NSOrderedSet.h>
-#import <Foundation/NSOrthography.h>
-#import <Foundation/NSPathUtilities.h>
-#import <Foundation/NSPointerArray.h>
-#import <Foundation/NSPointerFunctions.h>
-#import <Foundation/NSPort.h>
-#import <Foundation/NSProcessInfo.h>
-#import <Foundation/NSPropertyList.h>
-#import <Foundation/NSProxy.h>
-#import <Foundation/NSRange.h>
-#import <Foundation/NSRegularExpression.h>
-#import <Foundation/NSRunLoop.h>
-#import <Foundation/NSScanner.h>
-#import <Foundation/NSSet.h>
-#import <Foundation/NSSortDescriptor.h>
-#import <Foundation/NSStream.h>
-#import <Foundation/NSString.h>
-#import <Foundation/NSTextCheckingResult.h>
-#import <Foundation/NSThread.h>
-#import <Foundation/NSTimeZone.h>
-#import <Foundation/NSTimer.h>
-#import <Foundation/NSUnit.h>
-#import <Foundation/NSURL.h>
-#import <Foundation/NSURLAuthenticationChallenge.h>
-#import <Foundation/NSURLCache.h>
-#import <Foundation/NSURLConnection.h>
-#import <Foundation/NSURLCredential.h>
-#import <Foundation/NSURLCredentialStorage.h>
-#import <Foundation/NSURLError.h>
-#import <Foundation/NSURLProtectionSpace.h>
-#import <Foundation/NSURLProtocol.h>
-#import <Foundation/NSURLRequest.h>
-#import <Foundation/NSURLResponse.h>
-#import <Foundation/NSUserDefaults.h>
-#import <Foundation/NSValue.h>
-#import <Foundation/NSValueTransformer.h>
-#import <Foundation/NSXMLParser.h>
-#import <Foundation/NSXPCConnection.h>
-#import <Foundation/NSZone.h>
+#import <Foundation/NSArray.h>    <#注解完成#>
+#import <Foundation/NSAutoreleasePool.h>    <#注解完成#>
+#import <Foundation/NSBundle.h>    <#注解完成#>
+#import <Foundation/NSByteOrder.h>    <#注解完成#>
+#import <Foundation/NSCalendar.h>    <#注解完成#>
+#import <Foundation/NSCharacterSet.h>    <#注解完成#>
+#import <Foundation/NSCoder.h>    <#注解完成#>
+#import <Foundation/NSData.h>    <#注解完成#>
+#import <Foundation/NSDate.h>    <#注解完成#>
+#import <Foundation/NSDateInterval.h>    <#注解完成#>
+#import <Foundation/NSDateFormatter.h>    <#注解完成#>
+#import <Foundation/NSDateIntervalFormatter.h>    <#注解完成#>
+#import <Foundation/NSISO8601DateFormatter.h>    <#注解完成#>
+#import <Foundation/NSMassFormatter.h>    <#注解完成#>
+#import <Foundation/NSLengthFormatter.h>    <#注解完成#>
+#import <Foundation/NSEnergyFormatter.h>    <#注解完成#>
+#import <Foundation/NSMeasurement.h>    <#注解完成#>
+#import <Foundation/NSMeasurementFormatter.h>    <#注解完成#>
+#import <Foundation/NSPersonNameComponents.h>    <#注解完成#>
+#import <Foundation/NSPersonNameComponentsFormatter.h>    <#注解完成#>
+#import <Foundation/NSDecimal.h>    <#注解完成#>
+#import <Foundation/NSDecimalNumber.h>    <#注解完成#>
+#import <Foundation/NSDictionary.h>    <#注解完成#>
+#import <Foundation/NSEnumerator.h>    <#注解完成#>
+#import <Foundation/NSError.h>    <#注解完成#>
+#import <Foundation/NSException.h>    <#注解完成#>
+#import <Foundation/NSFileHandle.h>    <#注解完成#>
+#import <Foundation/NSFileManager.h>    <#注解完成#>
+#import <Foundation/NSFormatter.h>    <#注解完成#>
+#import <Foundation/NSHashTable.h>    <#注解完成#>
+#import <Foundation/NSHTTPCookie.h>    <#注解完成#>
+#import <Foundation/NSHTTPCookieStorage.h>    <#注解完成#>
+#import <Foundation/NSIndexPath.h>    <#注解完成#>
+#import <Foundation/NSIndexSet.h>    <#注解完成#>
+#import <Foundation/NSInvocation.h>    <#注解完成#>
+#import <Foundation/NSJSONSerialization.h>    <#注解完成#>
+#import <Foundation/NSKeyValueCoding.h>    <#注解完成#>
+#import <Foundation/NSKeyValueObserving.h>    <#注解完成#>
+#import <Foundation/NSKeyedArchiver.h>    <#注解完成#>
+#import <Foundation/NSLocale.h>    <#注解完成#>
+#import <Foundation/NSLock.h>    <#注解完成#>
+#import <Foundation/NSMapTable.h>    <#注解完成#>
+#import <Foundation/NSMethodSignature.h>    <#注解完成#>
+#import <Foundation/NSNotification.h>    <#注解完成#>
+#import <Foundation/NSNotificationQueue.h>    <#注解完成#>
+#import <Foundation/NSNull.h>    <#注解完成#>
+#import <Foundation/NSNumberFormatter.h>    <#注解完成#>
+#import <Foundation/NSObject.h>    <#注解完成#>
+#import <Foundation/NSOperation.h>    <#注解完成#>
+#import <Foundation/NSOrderedSet.h>    <#注解完成#>
+#import <Foundation/NSOrthography.h>    <#注解完成#>
+#import <Foundation/NSPathUtilities.h>    <#注解完成#>
+#import <Foundation/NSPointerArray.h>    <#注解完成#>
+#import <Foundation/NSPointerFunctions.h>    <#注解完成#>
+#import <Foundation/NSPort.h>    <#注解完成#>
+#import <Foundation/NSProcessInfo.h>    <#注解完成#>
+#import <Foundation/NSPropertyList.h>    <#注解完成#>
+#import <Foundation/NSProxy.h>    <#注解完成#>
+#import <Foundation/NSRange.h>    <#注解完成#>
+#import <Foundation/NSRegularExpression.h>    <#注解完成#>
+#import <Foundation/NSRunLoop.h>    <#注解完成#>
+#import <Foundation/NSScanner.h>    <#注解完成#>
+#import <Foundation/NSSet.h>    <#注解完成#>
+#import <Foundation/NSSortDescriptor.h>    <#注解完成#>
+#import <Foundation/NSStream.h>    <#注解完成#>
+#import <Foundation/NSString.h>    <#注解完成#>
+#import <Foundation/NSTextCheckingResult.h>    <#注解完成#>
+#import <Foundation/NSThread.h>    <#注解完成#>
+#import <Foundation/NSTimeZone.h>    <#注解完成#>
+#import <Foundation/NSTimer.h>    <#注解完成#>
+#import <Foundation/NSUnit.h>    <#注解完成#>
+#import <Foundation/NSURL.h>    <#注解完成#>
+#import <Foundation/NSURLAuthenticationChallenge.h>    <#注解完成#>
+#import <Foundation/NSURLCache.h>    <#注解完成#>
+#import <Foundation/NSURLConnection.h>    <#注解完成#>
+#import <Foundation/NSURLCredential.h>    <#注解完成#>
+#import <Foundation/NSURLCredentialStorage.h>    <#注解完成#>
+#import <Foundation/NSURLError.h>    <#注解完成#>
+#import <Foundation/NSURLProtectionSpace.h>    <#注解完成#>
+#import <Foundation/NSURLProtocol.h>    <#注解完成#>
+#import <Foundation/NSURLRequest.h>    <#注解完成#>
+#import <Foundation/NSURLResponse.h>    <#注解完成#>
+#import <Foundation/NSUserDefaults.h>    <#注解完成#>
+#import <Foundation/NSValue.h>    <#注解完成#>
+#import <Foundation/NSValueTransformer.h>    <#注解完成#>
+#import <Foundation/NSXMLParser.h>    <#注解完成#>
+#import <Foundation/NSXPCConnection.h>    <#注解完成#>
+#import <Foundation/NSZone.h>    <#注解完成#>
 
-#import <Foundation/FoundationErrors.h>
+#import <Foundation/FoundationErrors.h>    <#注解完成#>
 
 #if (TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)) || (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
 
-#import <Foundation/NSAttributedString.h>
-#import <Foundation/NSByteCountFormatter.h>
-#import <Foundation/NSCache.h>
-#import <Foundation/NSComparisonPredicate.h>
-#import <Foundation/NSCompoundPredicate.h>
-#import <Foundation/NSDateComponentsFormatter.h>
-#import <Foundation/NSExpression.h>
-#import <Foundation/NSExtensionContext.h>
-#import <Foundation/NSExtensionItem.h>
-#import <Foundation/NSExtensionRequestHandling.h>
-#import <Foundation/NSFileCoordinator.h>
-#import <Foundation/NSFilePresenter.h>
-#import <Foundation/NSFileVersion.h>
-#import <Foundation/NSFileWrapper.h>
-#import <Foundation/NSItemProvider.h>
-#import <Foundation/NSLinguisticTagger.h>
-#import <Foundation/NSMetadata.h>
-#import <Foundation/NSMetadataAttributes.h>
-#import <Foundation/NSNetServices.h>
-#import <Foundation/NSPredicate.h>
-#import <Foundation/NSProgress.h>
-#import <Foundation/NSUbiquitousKeyValueStore.h>
-#import <Foundation/NSUndoManager.h>
-#import <Foundation/NSURLSession.h>
-#import <Foundation/NSUserActivity.h>
-#import <Foundation/NSUUID.h>
+#import <Foundation/NSAttributedString.h>    <#注解完成#>
+#import <Foundation/NSByteCountFormatter.h>    <#注解完成#>
+#import <Foundation/NSCache.h>    <#注解完成#>
+#import <Foundation/NSComparisonPredicate.h>    <#注解完成#>
+#import <Foundation/NSCompoundPredicate.h>    <#注解完成#>
+#import <Foundation/NSDateComponentsFormatter.h>    <#注解完成#>
+#import <Foundation/NSExpression.h>    <#注解完成#>
+#import <Foundation/NSExtensionContext.h>    <#注解完成#>
+#import <Foundation/NSExtensionItem.h>    <#注解完成#>
+#import <Foundation/NSExtensionRequestHandling.h>    <#注解完成#>
+#import <Foundation/NSFileCoordinator.h>    <#注解完成#>
+#import <Foundation/NSFilePresenter.h>    <#注解完成#>
+#import <Foundation/NSFileVersion.h>    <#注解完成#>
+#import <Foundation/NSFileWrapper.h>    <#注解完成#>
+#import <Foundation/NSItemProvider.h>    <#注解完成#>
+#import <Foundation/NSLinguisticTagger.h>    <#注解完成#>
+#import <Foundation/NSMetadata.h>    <#注解完成#>
+#import <Foundation/NSMetadataAttributes.h>    <#注解完成#>
+#import <Foundation/NSNetServices.h>    <#注解完成#>
+#import <Foundation/NSPredicate.h>    <#注解完成#>
+#import <Foundation/NSProgress.h>    <#注解完成#>
+#import <Foundation/NSUbiquitousKeyValueStore.h>    <#注解完成#>
+#import <Foundation/NSUndoManager.h>    <#注解完成#>
+#import <Foundation/NSURLSession.h>    <#注解完成#>
+#import <Foundation/NSUserActivity.h>    <#注解完成#>
+#import <Foundation/NSUUID.h>    <#注解完成#>
 #endif
 
 #if (TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)) || TARGET_OS_WIN32
 
-#import <Foundation/NSArchiver.h>
-#import <Foundation/NSBackgroundActivityScheduler.h>
-#import <Foundation/NSCalendarDate.h>
-#import <Foundation/NSConnection.h>
-#import <Foundation/NSDistantObject.h>
-#import <Foundation/NSDistributedNotificationCenter.h>
-#import <Foundation/NSGeometry.h>
-#import <Foundation/NSPortCoder.h>
-#import <Foundation/NSPortMessage.h>
-#import <Foundation/NSPortNameServer.h>
-#import <Foundation/NSProtocolChecker.h>
-#import <Foundation/NSTask.h>
-#import <Foundation/NSXMLDTD.h>
-#import <Foundation/NSXMLDTDNode.h>
-#import <Foundation/NSXMLDocument.h>
-#import <Foundation/NSXMLElement.h>
-#import <Foundation/NSXMLNode.h>
-#import <Foundation/NSXMLNodeOptions.h>
-#import <Foundation/NSURLDownload.h>
-#import <Foundation/NSURLHandle.h>
+#import <Foundation/NSArchiver.h>    <#注解完成#>
+#import <Foundation/NSBackgroundActivityScheduler.h>    <#注解完成#>
+#import <Foundation/NSCalendarDate.h>    <#注解完成#>
+#import <Foundation/NSConnection.h>    <#注解完成#>
+#import <Foundation/NSDistantObject.h>    <#注解完成#>
+#import <Foundation/NSDistributedNotificationCenter.h>    <#注解完成#>
+#import <Foundation/NSGeometry.h>    <#注解完成#>
+#import <Foundation/NSPortCoder.h>    <#注解完成#>
+#import <Foundation/NSPortMessage.h>    <#注解完成#>
+#import <Foundation/NSPortNameServer.h>    <#注解完成#>
+#import <Foundation/NSProtocolChecker.h>    <#注解完成#>
+#import <Foundation/NSTask.h>    <#注解完成#>
+#import <Foundation/NSXMLDTD.h>    <#注解完成#>
+#import <Foundation/NSXMLDTDNode.h>    <#注解完成#>
+#import <Foundation/NSXMLDocument.h>    <#注解完成#>
+#import <Foundation/NSXMLElement.h>    <#注解完成#>
+#import <Foundation/NSXMLNode.h>    <#注解完成#>
+#import <Foundation/NSXMLNodeOptions.h>    <#注解完成#>
+#import <Foundation/NSURLDownload.h>    <#注解完成#>
+#import <Foundation/NSURLHandle.h>    <#注解完成#>
 
 #endif
 
 #if (TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE))
 
-#import <Foundation/NSAffineTransform.h>
-#import <Foundation/NSAppleEventDescriptor.h>
-#import <Foundation/NSAppleEventManager.h>
-#import <Foundation/NSAppleScript.h>
-#import <Foundation/NSClassDescription.h>
-#import <Foundation/NSDistributedLock.h>
-#import <Foundation/NSGarbageCollector.h>
-#import <Foundation/NSHFSFileTypes.h>
-#import <Foundation/NSHost.h>
-#import <Foundation/NSObjectScripting.h>
-#import <Foundation/NSScriptClassDescription.h>
-#import <Foundation/NSScriptCoercionHandler.h>
-#import <Foundation/NSScriptCommand.h>
-#import <Foundation/NSScriptCommandDescription.h>
-#import <Foundation/NSScriptExecutionContext.h>
-#import <Foundation/NSScriptKeyValueCoding.h>
-#import <Foundation/NSScriptObjectSpecifiers.h>
-#import <Foundation/NSScriptStandardSuiteCommands.h>
-#import <Foundation/NSScriptSuiteRegistry.h>
-#import <Foundation/NSScriptWhoseTests.h>
-#import <Foundation/NSSpellServer.h>
-#import <Foundation/NSUserNotification.h>
-#import <Foundation/NSUserScriptTask.h>
+#import <Foundation/NSAffineTransform.h>    <#注解完成#>
+#import <Foundation/NSAppleEventDescriptor.h>    <#注解完成#>
+#import <Foundation/NSAppleEventManager.h>    <#注解完成#>
+#import <Foundation/NSAppleScript.h>    <#注解完成#>
+#import <Foundation/NSClassDescription.h>    <#注解完成#>
+#import <Foundation/NSDistributedLock.h>    <#注解完成#>
+#import <Foundation/NSGarbageCollector.h>    <#注解完成#>
+#import <Foundation/NSHFSFileTypes.h>    <#注解完成#>
+#import <Foundation/NSHost.h>    <#注解完成#>
+#import <Foundation/NSObjectScripting.h>    <#注解完成#>
+#import <Foundation/NSScriptClassDescription.h>    <#注解完成#>
+#import <Foundation/NSScriptCoercionHandler.h>    <#注解完成#>
+#import <Foundation/NSScriptCommand.h>    <#注解完成#>
+#import <Foundation/NSScriptCommandDescription.h>    <#注解完成#>
+#import <Foundation/NSScriptExecutionContext.h>    <#注解完成#>
+#import <Foundation/NSScriptKeyValueCoding.h>    <#注解完成#>
+#import <Foundation/NSScriptObjectSpecifiers.h>    <#注解完成#>
+#import <Foundation/NSScriptStandardSuiteCommands.h>    <#注解完成#>
+#import <Foundation/NSScriptSuiteRegistry.h>    <#注解完成#>
+#import <Foundation/NSScriptWhoseTests.h>    <#注解完成#>
+#import <Foundation/NSSpellServer.h>    <#注解完成#>
+#import <Foundation/NSUserNotification.h>    <#注解完成#>
+#import <Foundation/NSUserScriptTask.h>    <#注解完成#>
 
 #endif
 
-#import <Foundation/FoundationLegacySwiftCompatibility.h>
+#import <Foundation/FoundationLegacySwiftCompatibility.h>    <#注解完成#>
 

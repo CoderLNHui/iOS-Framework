@@ -15,266 +15,266 @@
  */
 
 
-#import <UIKit/UIKitDefines.h>
+#import <UIKit/UIKitDefines.h>    <#注解完成#>
 
-#if __has_include(<UIKit/UIAccelerometer.h>)
-#import <UIKit/UIAccelerometer.h>
-#import <UIKit/UIAccessibility.h>
+#if __has_include(<UIKit/UIAccelerometer.h>    <#注解完成#>)
+#import <UIKit/UIAccelerometer.h>    <#注解完成#>
+#import <UIKit/UIAccessibility.h>    <#注解完成#>
 #endif
 
-#import <UIKit/UIAccessibilityConstants.h>
+#import <UIKit/UIAccessibilityConstants.h>    <#注解完成#>
 
-#if __has_include(<UIKit/UIAccessibilityContentSizeCategoryImageAdjusting.h>)
-#import <UIKit/UIAccessibilityContentSizeCategoryImageAdjusting.h>
+#if __has_include(<UIKit/UIAccessibilityContentSizeCategoryImageAdjusting.h>    <#注解完成#>)
+#import <UIKit/UIAccessibilityContentSizeCategoryImageAdjusting.h>    <#注解完成#>
 #endif
 
-#if __has_include(<UIKit/UIActivityIndicatorView.h>)
-#import <UIKit/UIActivityIndicatorView.h>
-#import <UIKit/UIActivity.h>
-#import <UIKit/UIActivityItemProvider.h>
-#import <UIKit/UIActivityViewController.h>
-#import <UIKit/UIActionSheet.h>
-#import <UIKit/UIAlertController.h>
-#import <UIKit/UIAlertView.h>
-#import <UIKit/UIAppearance.h>
-#import <UIKit/UIApplication.h>
-#import <UIKit/UIBarButtonItem.h>
-#import <UIKit/UIBarButtonItemGroup.h>
-#import <UIKit/UIBarItem.h>
+#if __has_include(<UIKit/UIActivityIndicatorView.h>    <#注解完成#>)
+#import <UIKit/UIActivityIndicatorView.h>    <#注解完成#>
+#import <UIKit/UIActivity.h>    <#注解完成#>
+#import <UIKit/UIActivityItemProvider.h>    <#注解完成#>
+#import <UIKit/UIActivityViewController.h>    <#注解完成#>
+#import <UIKit/UIActionSheet.h>    <#注解完成#>
+#import <UIKit/UIAlertController.h>    <#注解完成#>
+#import <UIKit/UIAlertView.h>    <#注解完成#>
+#import <UIKit/UIAppearance.h>    <#注解完成#>
+#import <UIKit/UIApplication.h>    <#注解完成#>
+#import <UIKit/UIBarButtonItem.h>    <#注解完成#>
+#import <UIKit/UIBarButtonItemGroup.h>    <#注解完成#>
+#import <UIKit/UIBarItem.h>    <#注解完成#>
 #endif
 
 
-#import <UIKit/UIBezierPath.h>
+#import <UIKit/UIBezierPath.h>    <#注解完成#>
 
-#if __has_include(<UIKit/UIButton.h>)
-#import <UIKit/UIButton.h>
-#import <UIKit/UICollectionView.h>
-#import <UIKit/UICollectionViewCell.h>
-#import <UIKit/UICollectionViewController.h>
-#import <UIKit/UICollectionViewFlowLayout.h>
-#import <UIKit/UICollectionViewLayout.h>
-#import <UIKit/UICollectionViewTransitionLayout.h>
+#if __has_include(<UIKit/UIButton.h>    <#注解完成#>)
+#import <UIKit/UIButton.h>    <#注解完成#>
+#import <UIKit/UICollectionView.h>    <#注解完成#>
+#import <UIKit/UICollectionViewCell.h>    <#注解完成#>
+#import <UIKit/UICollectionViewController.h>    <#注解完成#>
+#import <UIKit/UICollectionViewFlowLayout.h>    <#注解完成#>
+#import <UIKit/UICollectionViewLayout.h>    <#注解完成#>
+#import <UIKit/UICollectionViewTransitionLayout.h>    <#注解完成#>
 #endif
 
-#import <UIKit/UIColor.h>
+#import <UIKit/UIColor.h>    <#注解完成#>
 
-#if __has_include(<UIKit/UIContentSizeCategoryAdjusting.h>)
-#import <UIKit/UIContentSizeCategoryAdjusting.h>
-#import <UIKit/UIContentSizeCategory.h>
-#import <UIKit/UIControl.h>
-#import <UIKit/UIDataDetectors.h>
-#import <UIKit/UIDatePicker.h>
-#import <UIKit/UIDevice.h>
-#import <UIKit/UIDocument.h>
-#import <UIKit/UIDocumentInteractionController.h>
-#import <UIKit/UIDocumentPickerViewController.h>
-#import <UIKit/UIDocumentMenuViewController.h>
-#import <UIKit/UIDocumentPickerExtensionViewController.h>
-#import <UIKit/UICloudSharingController.h>
-#import <UIKit/NSFileProviderExtension.h>
-#import <UIKit/UIVisualEffect.h>
-#import <UIKit/UIBlurEffect.h>
-#import <UIKit/UIVibrancyEffect.h>
-#import <UIKit/UIVisualEffectView.h>
-#import <UIKit/UIEvent.h>
+#if __has_include(<UIKit/UIContentSizeCategoryAdjusting.h>    <#注解完成#>)
+#import <UIKit/UIContentSizeCategoryAdjusting.h>    <#注解完成#>
+#import <UIKit/UIContentSizeCategory.h>    <#注解完成#>
+#import <UIKit/UIControl.h>    <#注解完成#>
+#import <UIKit/UIDataDetectors.h>    <#注解完成#>
+#import <UIKit/UIDatePicker.h>    <#注解完成#>
+#import <UIKit/UIDevice.h>    <#注解完成#>
+#import <UIKit/UIDocument.h>    <#注解完成#>
+#import <UIKit/UIDocumentInteractionController.h>    <#注解完成#>
+#import <UIKit/UIDocumentPickerViewController.h>    <#注解完成#>
+#import <UIKit/UIDocumentMenuViewController.h>    <#注解完成#>
+#import <UIKit/UIDocumentPickerExtensionViewController.h>    <#注解完成#>
+#import <UIKit/UICloudSharingController.h>    <#注解完成#>
+#import <UIKit/NSFileProviderExtension.h>    <#注解完成#>
+#import <UIKit/UIVisualEffect.h>    <#注解完成#>
+#import <UIKit/UIBlurEffect.h>    <#注解完成#>
+#import <UIKit/UIVibrancyEffect.h>    <#注解完成#>
+#import <UIKit/UIVisualEffectView.h>    <#注解完成#>
+#import <UIKit/UIEvent.h>    <#注解完成#>
 #endif
 
-#import <UIKit/UIFont.h>
-#import <UIKit/UIFontDescriptor.h>
-#import <UIKit/UIFontMetrics.h>
-#import <UIKit/UIGeometry.h>
+#import <UIKit/UIFont.h>    <#注解完成#>
+#import <UIKit/UIFontDescriptor.h>    <#注解完成#>
+#import <UIKit/UIFontMetrics.h>    <#注解完成#>
+#import <UIKit/UIGeometry.h>    <#注解完成#>
 
-#if __has_include(<UIKit/UIGestureRecognizer.h>)
-#import <UIKit/UIGestureRecognizer.h>
+#if __has_include(<UIKit/UIGestureRecognizer.h>    <#注解完成#>)
+#import <UIKit/UIGestureRecognizer.h>    <#注解完成#>
 #endif
 
-#import <UIKit/UIGraphics.h>
-#import <UIKit/UIImage.h>
+#import <UIKit/UIGraphics.h>    <#注解完成#>
+#import <UIKit/UIImage.h>    <#注解完成#>
 
-#if __has_include(<UIKit/UIGraphicsRenderer.h>)
-#import <UIKit/UIGraphicsRenderer.h>
-#import <UIKit/UIGraphicsImageRenderer.h>
-#import <UIKit/UIGraphicsPDFRenderer.h>
+#if __has_include(<UIKit/UIGraphicsRenderer.h>    <#注解完成#>)
+#import <UIKit/UIGraphicsRenderer.h>    <#注解完成#>
+#import <UIKit/UIGraphicsImageRenderer.h>    <#注解完成#>
+#import <UIKit/UIGraphicsPDFRenderer.h>    <#注解完成#>
 #endif
 
-#if __has_include(<UIKit/UIImageAsset.h>)
-#import <UIKit/UIImageAsset.h>
-#import <UIKit/NSDataAsset.h>
-#import <UIKit/UIImagePickerController.h>
-#import <UIKit/UIImageView.h>
-#import <UIKit/UIInputView.h>
-#import <UIKit/UIInputViewController.h>
-#import <UIKit/UIInterface.h>
-#import <UIKit/UILabel.h>
-#import <UIKit/UILexicon.h>
+#if __has_include(<UIKit/UIImageAsset.h>    <#注解完成#>)
+#import <UIKit/UIImageAsset.h>    <#注解完成#>
+#import <UIKit/NSDataAsset.h>    <#注解完成#>
+#import <UIKit/UIImagePickerController.h>    <#注解完成#>
+#import <UIKit/UIImageView.h>    <#注解完成#>
+#import <UIKit/UIInputView.h>    <#注解完成#>
+#import <UIKit/UIInputViewController.h>    <#注解完成#>
+#import <UIKit/UIInterface.h>    <#注解完成#>
+#import <UIKit/UILabel.h>    <#注解完成#>
+#import <UIKit/UILexicon.h>    <#注解完成#>
 #endif
 
-#import <UIKit/UILocalNotification.h>
+#import <UIKit/UILocalNotification.h>    <#注解完成#>
 
-#if __has_include(<UIKit/UIUserNotificationSettings.h>)
+#if __has_include(<UIKit/UIUserNotificationSettings.h>    <#注解完成#>)
 
-#import <UIKit/UIApplicationShortcutItem.h>
-#import <UIKit/UIUserNotificationSettings.h>
-#import <UIKit/UIFocus.h>
-#import <UIKit/UIFocusSystem.h>
-#import <UIKit/UIFocusGuide.h>
-#import <UIKit/UIFocusAnimationCoordinator.h>
-#import <UIKit/UIFocusDebugger.h>
-#import <UIKit/UILocalizedIndexedCollation.h>
-#import <UIKit/UILongPressGestureRecognizer.h>
-#import <UIKit/UIManagedDocument.h>
-#import <UIKit/UIMenuController.h>
-#import <UIKit/UIMotionEffect.h>
-#import <UIKit/UINavigationBar.h>
-#import <UIKit/UINavigationController.h>
-#import <UIKit/UINib.h>
-#import <UIKit/UINibDeclarations.h>
-#import <UIKit/UINibLoading.h>
-#import <UIKit/UIPageControl.h>
-#import <UIKit/UIPageViewController.h>
-#import <UIKit/UIPanGestureRecognizer.h>
-#import <UIKit/UIPasteboard.h>
-#import <UIKit/UIPasteConfiguration.h>
-#import <UIKit/UIPasteConfigurationSupporting.h>
-#import <UIKit/UIPickerView.h>
-#import <UIKit/UIPinchGestureRecognizer.h>
-#import <UIKit/UIPopoverController.h>
-#import <UIKit/UIPopoverBackgroundView.h>
-#import <UIKit/UIPress.h>
-#import <UIKit/UIPressesEvent.h>
-#import <UIKit/UIPrinter.h>
-#import <UIKit/UIPrinterPickerController.h>
-#import <UIKit/UIPrintError.h>
-#import <UIKit/UIPrintFormatter.h>
-#import <UIKit/UIPrintInfo.h>
-#import <UIKit/UIPrintInteractionController.h>
-#import <UIKit/UIPrintPageRenderer.h>
-#import <UIKit/UIPrintPaper.h>
-#import <UIKit/UIProgressView.h>
-#import <UIKit/UIReferenceLibraryViewController.h>
-#import <UIKit/UIRefreshControl.h>
-#import <UIKit/UIResponder.h>
-#import <UIKit/UIRotationGestureRecognizer.h>
-#import <UIKit/UIScreen.h>
-#import <UIKit/UIScreenEdgePanGestureRecognizer.h>
-#import <UIKit/UIScreenMode.h>
-#import <UIKit/UIScrollView.h>
-#import <UIKit/UISearchBar.h>
-#import <UIKit/UISearchContainerViewController.h>
-#import <UIKit/UISearchController.h>
-#import <UIKit/UISearchDisplayController.h>
-#import <UIKit/UISegmentedControl.h>
-#import <UIKit/UISlider.h>
-#import <UIKit/UISplitViewController.h>
-#import <UIKit/UIStepper.h>
-#import <UIKit/UIStoryboard.h>
-#import <UIKit/UIStoryboardPopoverSegue.h>
-#import <UIKit/UIStoryboardSegue.h>
-#import <UIKit/UIStringDrawing.h>
-#import <UIKit/UISwipeGestureRecognizer.h>
-#import <UIKit/UISwitch.h>
-#import <UIKit/UITabBar.h>
-#import <UIKit/UITabBarController.h>
-#import <UIKit/UITabBarItem.h>
-#import <UIKit/UITableView.h>
-#import <UIKit/UITableViewHeaderFooterView.h>
-#import <UIKit/UITableViewCell.h>
-#import <UIKit/UITableViewController.h>
-#import <UIKit/UITapGestureRecognizer.h>
-#import <UIKit/UITextChecker.h>
-#import <UIKit/UITextField.h>
-#import <UIKit/UITextInput.h>
-#import <UIKit/UITextInputTraits.h>
-#import <UIKit/UITextView.h>
-#import <UIKit/UIToolbar.h>
-#import <UIKit/UITouch.h>
-#import <UIKit/UITraitCollection.h>
-#import <UIKit/UIVideoEditorController.h>
-#import <UIKit/UIView.h>
-#import <UIKit/UIViewController.h>
-#import <UIKit/UIWebView.h>
-#import <UIKit/UIWindow.h>
+#import <UIKit/UIApplicationShortcutItem.h>    <#注解完成#>
+#import <UIKit/UIUserNotificationSettings.h>    <#注解完成#>
+#import <UIKit/UIFocus.h>    <#注解完成#>
+#import <UIKit/UIFocusSystem.h>    <#注解完成#>
+#import <UIKit/UIFocusGuide.h>    <#注解完成#>
+#import <UIKit/UIFocusAnimationCoordinator.h>    <#注解完成#>
+#import <UIKit/UIFocusDebugger.h>    <#注解完成#>
+#import <UIKit/UILocalizedIndexedCollation.h>    <#注解完成#>
+#import <UIKit/UILongPressGestureRecognizer.h>    <#注解完成#>
+#import <UIKit/UIManagedDocument.h>    <#注解完成#>
+#import <UIKit/UIMenuController.h>    <#注解完成#>
+#import <UIKit/UIMotionEffect.h>    <#注解完成#>
+#import <UIKit/UINavigationBar.h>    <#注解完成#>
+#import <UIKit/UINavigationController.h>    <#注解完成#>
+#import <UIKit/UINib.h>    <#注解完成#>
+#import <UIKit/UINibDeclarations.h>    <#注解完成#>
+#import <UIKit/UINibLoading.h>    <#注解完成#>
+#import <UIKit/UIPageControl.h>    <#注解完成#>
+#import <UIKit/UIPageViewController.h>    <#注解完成#>
+#import <UIKit/UIPanGestureRecognizer.h>    <#注解完成#>
+#import <UIKit/UIPasteboard.h>    <#注解完成#>
+#import <UIKit/UIPasteConfiguration.h>    <#注解完成#>
+#import <UIKit/UIPasteConfigurationSupporting.h>    <#注解完成#>
+#import <UIKit/UIPickerView.h>    <#注解完成#>
+#import <UIKit/UIPinchGestureRecognizer.h>    <#注解完成#>
+#import <UIKit/UIPopoverController.h>    <#注解完成#>
+#import <UIKit/UIPopoverBackgroundView.h>    <#注解完成#>
+#import <UIKit/UIPress.h>    <#注解完成#>
+#import <UIKit/UIPressesEvent.h>    <#注解完成#>
+#import <UIKit/UIPrinter.h>    <#注解完成#>
+#import <UIKit/UIPrinterPickerController.h>    <#注解完成#>
+#import <UIKit/UIPrintError.h>    <#注解完成#>
+#import <UIKit/UIPrintFormatter.h>    <#注解完成#>
+#import <UIKit/UIPrintInfo.h>    <#注解完成#>
+#import <UIKit/UIPrintInteractionController.h>    <#注解完成#>
+#import <UIKit/UIPrintPageRenderer.h>    <#注解完成#>
+#import <UIKit/UIPrintPaper.h>    <#注解完成#>
+#import <UIKit/UIProgressView.h>    <#注解完成#>
+#import <UIKit/UIReferenceLibraryViewController.h>    <#注解完成#>
+#import <UIKit/UIRefreshControl.h>    <#注解完成#>
+#import <UIKit/UIResponder.h>    <#注解完成#>
+#import <UIKit/UIRotationGestureRecognizer.h>    <#注解完成#>
+#import <UIKit/UIScreen.h>    <#注解完成#>
+#import <UIKit/UIScreenEdgePanGestureRecognizer.h>    <#注解完成#>
+#import <UIKit/UIScreenMode.h>    <#注解完成#>
+#import <UIKit/UIScrollView.h>    <#注解完成#>
+#import <UIKit/UISearchBar.h>    <#注解完成#>
+#import <UIKit/UISearchContainerViewController.h>    <#注解完成#>
+#import <UIKit/UISearchController.h>    <#注解完成#>
+#import <UIKit/UISearchDisplayController.h>    <#注解完成#>
+#import <UIKit/UISegmentedControl.h>    <#注解完成#>
+#import <UIKit/UISlider.h>    <#注解完成#>
+#import <UIKit/UISplitViewController.h>    <#注解完成#>
+#import <UIKit/UIStepper.h>    <#注解完成#>
+#import <UIKit/UIStoryboard.h>    <#注解完成#>
+#import <UIKit/UIStoryboardPopoverSegue.h>    <#注解完成#>
+#import <UIKit/UIStoryboardSegue.h>    <#注解完成#>
+#import <UIKit/UIStringDrawing.h>    <#注解完成#>
+#import <UIKit/UISwipeGestureRecognizer.h>    <#注解完成#>
+#import <UIKit/UISwitch.h>    <#注解完成#>
+#import <UIKit/UITabBar.h>    <#注解完成#>
+#import <UIKit/UITabBarController.h>    <#注解完成#>
+#import <UIKit/UITabBarItem.h>    <#注解完成#>
+#import <UIKit/UITableView.h>    <#注解完成#>
+#import <UIKit/UITableViewHeaderFooterView.h>    <#注解完成#>
+#import <UIKit/UITableViewCell.h>    <#注解完成#>
+#import <UIKit/UITableViewController.h>    <#注解完成#>
+#import <UIKit/UITapGestureRecognizer.h>    <#注解完成#>
+#import <UIKit/UITextChecker.h>    <#注解完成#>
+#import <UIKit/UITextField.h>    <#注解完成#>
+#import <UIKit/UITextInput.h>    <#注解完成#>
+#import <UIKit/UITextInputTraits.h>    <#注解完成#>
+#import <UIKit/UITextView.h>    <#注解完成#>
+#import <UIKit/UIToolbar.h>    <#注解完成#>
+#import <UIKit/UITouch.h>    <#注解完成#>
+#import <UIKit/UITraitCollection.h>    <#注解完成#>
+#import <UIKit/UIVideoEditorController.h>    <#注解完成#>
+#import <UIKit/UIView.h>    <#注解完成#>
+#import <UIKit/UIViewController.h>    <#注解完成#>
+#import <UIKit/UIWebView.h>    <#注解完成#>
+#import <UIKit/UIWindow.h>    <#注解完成#>
 
-#import <UIKit/UIDragInteraction.h>
-#import <UIKit/UIDragItem.h>
-#import <UIKit/UIDragPreview.h>
-#import <UIKit/UIDragPreviewParameters.h>
-#import <UIKit/UIDragSession.h>
-#import <UIKit/UIDropInteraction.h>
-#import <UIKit/UIInteraction.h>
-#import <UIKit/UITargetedDragPreview.h>
-#import <UIKit/UISpringLoadedInteraction.h>
-#import <UIKit/UISpringLoadedInteractionSupporting.h>
+#import <UIKit/UIDragInteraction.h>    <#注解完成#>
+#import <UIKit/UIDragItem.h>    <#注解完成#>
+#import <UIKit/UIDragPreview.h>    <#注解完成#>
+#import <UIKit/UIDragPreviewParameters.h>    <#注解完成#>
+#import <UIKit/UIDragSession.h>    <#注解完成#>
+#import <UIKit/UIDropInteraction.h>    <#注解完成#>
+#import <UIKit/UIInteraction.h>    <#注解完成#>
+#import <UIKit/UITargetedDragPreview.h>    <#注解完成#>
+#import <UIKit/UISpringLoadedInteraction.h>    <#注解完成#>
+#import <UIKit/UISpringLoadedInteractionSupporting.h>    <#注解完成#>
 
 #endif
 
-#import <UIKit/NSAttributedString.h>
+#import <UIKit/NSAttributedString.h>    <#注解完成#>
 
-#if __has_include(<UIKit/NSItemProvider+UIKitAdditions.h>)
-#import <UIKit/NSItemProvider+UIKitAdditions.h>
+#if __has_include(<UIKit/NSItemProvider+UIKitAdditions.h>    <#注解完成#>)
+#import <UIKit/NSItemProvider+UIKitAdditions.h>    <#注解完成#>
 #endif
 
-#if __has_include(<UIKit/NSLayoutConstraint.h>)
-#import <UIKit/NSLayoutConstraint.h>
-#import <UIKit/NSLayoutAnchor.h>
-#import <UIKit/UILayoutGuide.h>
-#import <UIKit/UIStackView.h>
-#import <UIKit/NSLayoutManager.h>
+#if __has_include(<UIKit/NSLayoutConstraint.h>    <#注解完成#>)
+#import <UIKit/NSLayoutConstraint.h>    <#注解完成#>
+#import <UIKit/NSLayoutAnchor.h>    <#注解完成#>
+#import <UIKit/UILayoutGuide.h>    <#注解完成#>
+#import <UIKit/UIStackView.h>    <#注解完成#>
+#import <UIKit/NSLayoutManager.h>    <#注解完成#>
 #endif
 
-#import <UIKit/NSParagraphStyle.h>
+#import <UIKit/NSParagraphStyle.h>    <#注解完成#>
 
 
-#if __has_include(<UIKit/NSShadow.h>)
-#import <UIKit/NSShadow.h>
+#if __has_include(<UIKit/NSShadow.h>    <#注解完成#>)
+#import <UIKit/NSShadow.h>    <#注解完成#>
 #endif
 
-#import <UIKit/NSStringDrawing.h>
-#import <UIKit/NSText.h>
+#import <UIKit/NSStringDrawing.h>    <#注解完成#>
+#import <UIKit/NSText.h>    <#注解完成#>
 
-#if __has_include(<UIKit/NSTextAttachment.h>)
-#import <UIKit/NSTextAttachment.h>
-#import <UIKit/NSTextContainer.h>
-#import <UIKit/NSTextStorage.h>
-#import <UIKit/UIStateRestoration.h>
-#import <UIKit/UIViewControllerTransitioning.h>
-#import <UIKit/UIViewControllerTransitionCoordinator.h>
-#import <UIKit/UIPresentationController.h>
-#import <UIKit/UIPreviewInteraction.h>
-#import <UIKit/UIPopoverPresentationController.h>
-#import <UIKit/UIDynamicAnimator.h>
-#import <UIKit/UIDynamicBehavior.h>
-#import <UIKit/UIPushBehavior.h>
-#import <UIKit/UISnapBehavior.h>
-#import <UIKit/UIDynamicItemBehavior.h>
-#import <UIKit/UIFieldBehavior.h>
-#import <UIKit/UIGravityBehavior.h>
-#import <UIKit/UIAttachmentBehavior.h>
-#import <UIKit/UICollisionBehavior.h>
-#import <UIKit/UIRegion.h>
+#if __has_include(<UIKit/NSTextAttachment.h>    <#注解完成#>)
+#import <UIKit/NSTextAttachment.h>    <#注解完成#>
+#import <UIKit/NSTextContainer.h>    <#注解完成#>
+#import <UIKit/NSTextStorage.h>    <#注解完成#>
+#import <UIKit/UIStateRestoration.h>    <#注解完成#>
+#import <UIKit/UIViewControllerTransitioning.h>    <#注解完成#>
+#import <UIKit/UIViewControllerTransitionCoordinator.h>    <#注解完成#>
+#import <UIKit/UIPresentationController.h>    <#注解完成#>
+#import <UIKit/UIPreviewInteraction.h>    <#注解完成#>
+#import <UIKit/UIPopoverPresentationController.h>    <#注解完成#>
+#import <UIKit/UIDynamicAnimator.h>    <#注解完成#>
+#import <UIKit/UIDynamicBehavior.h>    <#注解完成#>
+#import <UIKit/UIPushBehavior.h>    <#注解完成#>
+#import <UIKit/UISnapBehavior.h>    <#注解完成#>
+#import <UIKit/UIDynamicItemBehavior.h>    <#注解完成#>
+#import <UIKit/UIFieldBehavior.h>    <#注解完成#>
+#import <UIKit/UIGravityBehavior.h>    <#注解完成#>
+#import <UIKit/UIAttachmentBehavior.h>    <#注解完成#>
+#import <UIKit/UICollisionBehavior.h>    <#注解完成#>
+#import <UIKit/UIRegion.h>    <#注解完成#>
 #endif
 
-#if __has_include(<UIKit/UITextDragging.h>)
-#import <UIKit/UITextDragging.h>
-#import <UIKit/UITextDropping.h>
-#import <UIKit/UITextDropProposal.h>
-#import <UIKit/UITextDragPreviewRenderer.h>
-#import <UIKit/UITextDragURLPreviews.h>
+#if __has_include(<UIKit/UITextDragging.h>    <#注解完成#>)
+#import <UIKit/UITextDragging.h>    <#注解完成#>
+#import <UIKit/UITextDropping.h>    <#注解完成#>
+#import <UIKit/UITextDropProposal.h>    <#注解完成#>
+#import <UIKit/UITextDragPreviewRenderer.h>    <#注解完成#>
+#import <UIKit/UITextDragURLPreviews.h>    <#注解完成#>
 #endif
 
-#if __has_include(<UIKit/UIViewPropertyAnimator.h>)
-#import <UIKit/UIViewPropertyAnimator.h>
+#if __has_include(<UIKit/UIViewPropertyAnimator.h>    <#注解完成#>)
+#import <UIKit/UIViewPropertyAnimator.h>    <#注解完成#>
 #endif
 
-#if __has_include(<UIKit/UIFeedbackGenerator.h>)
-#import <UIKit/UIFeedbackGenerator.h>
-#import <UIKit/UISelectionFeedbackGenerator.h>
-#import <UIKit/UIImpactFeedbackGenerator.h>
-#import <UIKit/UINotificationFeedbackGenerator.h>
+#if __has_include(<UIKit/UIFeedbackGenerator.h>    <#注解完成#>)
+#import <UIKit/UIFeedbackGenerator.h>    <#注解完成#>
+#import <UIKit/UISelectionFeedbackGenerator.h>    <#注解完成#>
+#import <UIKit/UIImpactFeedbackGenerator.h>    <#注解完成#>
+#import <UIKit/UINotificationFeedbackGenerator.h>    <#注解完成#>
 #endif
 
-#if __has_include(<DocumentManager/DocumentManager.h>)
-#import <DocumentManager/DocumentManager.h>
+#if __has_include(<DocumentManager/DocumentManager.h>    <#注解完成#>)
+#import <DocumentManager/DocumentManager.h>    <#注解完成#>
 #endif
 
 

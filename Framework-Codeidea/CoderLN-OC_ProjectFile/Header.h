@@ -156,6 +156,13 @@
 #define Func  Log(@"%s",__func__)
 #define Funcline Log(@"%s, line = %d, %@",__FUNCTION__,__LINE__,[NSThread currentThread]);
 
+// 日志输出
+#ifdef DEBUG // 开发阶段-DEBUG阶段:使用Log
+#define XMGLog(...) NSLog(__VA_ARGS__)
+#else // 发布阶段-上线阶段:移除Log
+#define XMGLog(...)
+#endif
+
 #else   // 发布
 #define Log(...)
 #define Func

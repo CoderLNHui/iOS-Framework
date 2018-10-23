@@ -755,19 +755,6 @@
    <Group
       location = "group:CoderLN-Foundation"
       name = "CoderLN-Foundation">
-      <Group
-         location = "group:RunLoop"
-         name = "RunLoop">
-         <FileRef
-            location = "group:CFRunLoop.c">
-         </FileRef>
-         <FileRef
-            location = "group:NSRunLoop.h">
-         </FileRef>
-         <FileRef
-            location = "group:CFRunLoop.h">
-         </FileRef>
-      </Group>
       <FileRef
          location = "group:Foundation.h">
       </FileRef>
@@ -781,16 +768,13 @@
             location = "group:NSArray.m">
          </FileRef>
          <FileRef
-            location = "group:NSAttributedString_&#x5c5e;&#x6027;&#x5b57;&#x7b26;&#x4e32;.m">
-         </FileRef>
-         <FileRef
             location = "group:NSAttributedString.h">
          </FileRef>
          <FileRef
-            location = "group:/Users/sunhui/Documents/LNLearnPoint/LN_GitHub/iOS UIKit&#x6846;&#x67b6;/Framework-Codeidea/CoderLN-Foundation/NSObject/NSAttributedString+LNAttributedString.h">
+            location = "group:NSAttributedString+LNAttributedString.h">
          </FileRef>
          <FileRef
-            location = "group:/Users/sunhui/Documents/LNLearnPoint/LN_GitHub/iOS UIKit&#x6846;&#x67b6;/Framework-Codeidea/CoderLN-Foundation/NSObject/NSAttributedString+LNAttributedString.m">
+            location = "group:NSAttributedString+LNAttributedString.m">
          </FileRef>
          <FileRef
             location = "group:NSAutoreleasePool.h">
@@ -1057,9 +1041,6 @@
             location = "group:NSStream.h">
          </FileRef>
          <FileRef
-            location = "group:NSString_&#x5b57;&#x7b26;&#x4e32;.m">
-         </FileRef>
-         <FileRef
             location = "group:NSString.h">
          </FileRef>
          <FileRef
@@ -1157,6 +1138,22 @@
          </FileRef>
          <FileRef
             location = "group:NSZone.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:RunLoop"
+         name = "RunLoop">
+         <FileRef
+            location = "group:LOG -&gt; [NSRunLoop currentRunLoop].c">
+         </FileRef>
+         <FileRef
+            location = "group:CFRunLoop.c">
+         </FileRef>
+         <FileRef
+            location = "group:CFRunLoop.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSRunLoop.h">
          </FileRef>
       </Group>
    </Group>
