@@ -1,10 +1,8 @@
 /*
  * ExtractMethod.h 常用方法抽取封装
+ *「Public_不知名开发者 | https://github.com/CoderLN | https://www.jianshu.com/u/fd745d76c816」
  *
- * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Your sharing can be together.
- *
- * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
+ * 各位厂友, 由于「时间 & 知识」有限, 总结的文章难免有「未全、不足」, 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
 
 #import <Foundation/Foundation.h>
@@ -12,9 +10,11 @@
 
 #pragma mark - 文件路径相关
 #pragma mark -获得文件全路径
--(NSString *)fullPath;
+- (NSString *)fullPath;
 #pragma mark -获得指定文件路径对应文件的数据大小
--(NSInteger)getFileSize;
+- (NSInteger)getFileSize;
+#pragma mark -创建沙盒存储路径文件夹
+- (NSString *)createFolderPath;
 
 
 #pragma mark - 弹框提示用户登录请求结果
@@ -24,15 +24,15 @@
 
 #pragma mark - 时间处理
 #pragma mark -把一个数字时间串转化为date格式的字符串
-+(NSString *)dateStringFormNumberString:(NSString *)str;
++ (NSString *)dateStringFormNumberString:(NSString *)str;
 #pragma mark -获得当前时间
 + (void)getCurrentTime;
 #pragma mark -计算日期间隔
-+(NSString*)calculateDateInterval:(NSString*)expireDateStr;
++ (NSString*)calculateDateInterval:(NSString*)expireDateStr;
 
 
 #pragma mark - 根据字符串内容 获取Label的高度
-+(CGFloat)textHeightFromString:(NSString *)textStr width:(CGFloat)width fontSize:(CGFloat)size;
++ (CGFloat)textHeightFromString:(NSString *)textStr width:(CGFloat)width fontSize:(CGFloat)size;
 
 #pragma mark - 快速加载View
 + (instancetype)loadView;
@@ -48,9 +48,9 @@
 - (UIButton *)btnRectContainsPoint:(CGPoint)point;
 
 
-
-
-
+#pragma mark - 数据安全
+#pragma mark -将文件名md5加密
+- (NSString *)encryptFileNameWithMD5:(NSString *)str;
 
 
 

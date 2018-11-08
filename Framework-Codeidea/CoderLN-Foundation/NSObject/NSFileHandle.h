@@ -1,12 +1,10 @@
 /*
- * NSFileHandle.h
+ * NSFileHandle.h 文件句柄
  *
  * Foundation (c) 1995-2017
+ *「Public_不知名开发者 | https://github.com/CoderLN | https://www.jianshu.com/u/fd745d76c816」
  *
- * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Your sharing can be together.
- *
- * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
+ * 各位厂友, 由于「时间 & 知识」有限, 总结的文章难免有「未全、不足」, 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
  
 #import <Foundation/NSObject.h>
@@ -22,19 +20,31 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSFileHandle : NSObject <NSSecureCoding>
 
+#pragma mark -从设置或通道放回可用的数据
 @property (readonly, copy) NSData *availableData;
 
+#pragma mark -从当前的节点读取到文件的结尾
 - (NSData *)readDataToEndOfFile;
+#pragma mark -从当前的节点读取到指定的长度数据
 - (NSData *)readDataOfLength:(NSUInteger)length;
 
+#pragma mark -向文件写入数据,写入数据时会覆盖掉原来的内容
 - (void)writeData:(NSData *)data;
 
 @property (readonly) unsigned long long offsetInFile;
+#pragma mark -将文件内容指针定位到文件的末尾
 - (unsigned long long)seekToEndOfFile;
+
+#pragma mark -将文件内容指针定位到指定位置（偏移量,0 表示定位到文件的起始位置
 - (void)seekToFileOffset:(unsigned long long)offset;
 
+#pragma mark -文件的截取,截取指定长度的内容,0清空文件内容
 - (void)truncateFileAtOffset:(unsigned long long)offset;
+
+#pragma mark -将修改的内容立即同步到文件
 - (void)synchronizeFile;
+
+#pragma mark -关闭文件
 - (void)closeFile;
 
 - (instancetype)initWithFileDescriptor:(int)fd closeOnDealloc:(BOOL)closeopt NS_DESIGNATED_INITIALIZER;
@@ -49,6 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (class, readonly, strong) NSFileHandle *fileHandleWithStandardError;
 @property (class, readonly, strong) NSFileHandle *fileHandleWithNullDevice;
 
+#pragma mark -以读取、写入、更新 的方式打开文件
 + (nullable instancetype)fileHandleForReadingAtPath:(NSString *)path;
 + (nullable instancetype)fileHandleForWritingAtPath:(NSString *)path;
 + (nullable instancetype)fileHandleForUpdatingAtPath:(NSString *)path;

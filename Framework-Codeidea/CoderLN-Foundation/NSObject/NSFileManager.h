@@ -1,12 +1,10 @@
 /*
- * NSFileManager.h 文件管理
+ * NSFileManager.h 文件管理器
  *
  * Foundation (c) 1994-2017
+ *「Public_不知名开发者 | https://github.com/CoderLN | https://www.jianshu.com/u/fd745d76c816」
  *
- * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Your sharing can be together.
- *
- * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
+ * 各位厂友, 由于「时间 & 知识」有限, 总结的文章难免有「未全、不足」, 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
  
 
@@ -152,24 +150,42 @@ extern NSNotificationName const NSUbiquityIdentityDidChangeNotification API_AVAI
  */
 - (BOOL)setAttributes:(NSDictionary<NSFileAttributeKey, id> *)attributes ofItemAtPath:(NSString *)path error:(NSError **)error API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0));
 
+
+#pragma mark - 创建文件夹
 /* createDirectoryAtPath:withIntermediateDirectories:attributes:error: creates a directory at the specified path. If you pass 'NO' for createIntermediates, the directory must not exist at the time this call is made. Passing 'YES' for 'createIntermediates' will create any necessary intermediate directories. This method returns YES if all directories specified in 'path' were created and attributes were set. Directories are created with attributes specified by the dictionary passed to 'attributes'. If no dictionary is supplied, directories are created according to the umask of the process. This method returns NO if a failure occurs at any stage of the operation. If an error parameter was provided, a presentable NSError will be returned by reference.
  
  This method replaces createDirectoryAtPath:attributes:
+ 
+ 第一个参数：文件夹路径
+ 第二个参数：NO 如果文件夹存在,再次创建,会创建失败,如果路径中某一级目录不存在,创建失败;
+ YES 如果文件夹存在,再次创建,方法直接返回YES,如果路径中某一级目录不存在,会自动创建
+ 第三个参数：文件夹属性,nil,表示使用默认属性
+ 第四个参数：错误信息
  */
 - (BOOL)createDirectoryAtPath:(NSString *)path withIntermediateDirectories:(BOOL)createIntermediates attributes:(nullable NSDictionary<NSFileAttributeKey, id> *)attributes error:(NSError **)error API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0));
 
+
+#pragma mark - 查看文件夹下内容
 /* contentsOfDirectoryAtPath:error: returns an NSArray of NSStrings representing the filenames of the items in the directory. If this method returns 'nil', an NSError will be returned by reference in the 'error' parameter. If the directory contains no items, this method will return the empty array.
  
  This method replaces directoryContentsAtPath:
+ 
+ 返回NSStrings泛型的NSArray,表示目录中项目的文件名
+ 浅度遍历,只查看一级目录文件列表名
  */
 - (nullable NSArray<NSString *> *)contentsOfDirectoryAtPath:(NSString *)path error:(NSError **)error API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0));
 
 /* subpathsOfDirectoryAtPath:error: returns an NSArray of NSStrings representing the filenames of the items in the specified directory and all its subdirectories recursively. If this method returns 'nil', an NSError will be returned by reference in the 'error' parameter. If the directory contains no items, this method will return the empty array.
  
  This method replaces subpathsAtPath:
+ 
+ 递归地返回NSStrings泛型的NSArray,表示指定目录及其所有子目录中的项的文件名。
+ 深度遍历,递归遍历文件夹下的所有内容
  */
 - (nullable NSArray<NSString *> *)subpathsOfDirectoryAtPath:(NSString *)path error:(NSError **)error API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0));
 
+
+#pragma mark - 获取单个文件的属性字典
 /* attributesOfItemAtPath:error: returns an NSDictionary of key/value pairs containing the attributes of the item (file, directory, symlink, etc.) at the path in question. If this method returns 'nil', an NSError will be returned by reference in the 'error' parameter. This method does not traverse a terminal symlink.
  
  This method replaces fileAttributesAtPath:traverseLink:.
@@ -194,11 +210,19 @@ extern NSNotificationName const NSUbiquityIdentityDidChangeNotification API_AVAI
  */
 - (nullable NSString *)destinationOfSymbolicLinkAtPath:(NSString *)path error:(NSError **)error API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0));
 
+
+#pragma mark - 对文件操作：文件/文件夹的拷贝、移动、删除
 /* These methods replace their non-error returning counterparts below. See the NSFileManagerDelegate protocol below for methods that are dispatched to the NSFileManager instance's delegate.
+ 
+ 这些方法替换了下面的非错误返回副本。下面的NSFileManagerDelegate协议提供了发送到NSFileManager实例委托的方法
+ 
+ 第一个参数：文件的源路径
+ 第二个参数：目标路径,可以实现文件的重命名（重命名本质上就是移动文件到一个新的路径）,目标路径中需要包含文件或文件夹的名字
  */
 - (BOOL)copyItemAtPath:(NSString *)srcPath toPath:(NSString *)dstPath error:(NSError **)error API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0));
 - (BOOL)moveItemAtPath:(NSString *)srcPath toPath:(NSString *)dstPath error:(NSError **)error API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0));
 - (BOOL)linkItemAtPath:(NSString *)srcPath toPath:(NSString *)dstPath error:(NSError **)error API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0));
+//删除文件,直接删除,不会放到废纸篓里
 - (BOOL)removeItemAtPath:(NSString *)path error:(NSError **)error API_AVAILABLE(macos(10.5), ios(2.0), watchos(2.0), tvos(9.0));
 
 /* These methods are URL-taking equivalents of the four methods above. Their delegate methods are defined in the NSFileManagerDelegate protocol below.
@@ -236,10 +260,11 @@ extern NSNotificationName const NSUbiquityIdentityDidChangeNotification API_AVAI
 @property (readonly, copy) NSString *currentDirectoryPath;
 - (BOOL)changeCurrentDirectoryPath:(NSString *)path;
 
+#pragma mark - 判断文件/文件夹是否存在,文件是否可读、可写、可删除
 /* The following methods are of limited utility. Attempting to predicate behavior based on the current state of the filesystem or a particular file on the filesystem is encouraging odd behavior in the face of filesystem race conditions. It's far better to attempt an operation (like loading a file or creating a directory) and handle the error gracefully than it is to try to figure out ahead of time whether the operation will succeed.
  */
-- (BOOL)fileExistsAtPath:(NSString *)path;
-- (BOOL)fileExistsAtPath:(NSString *)path isDirectory:(nullable BOOL *)isDirectory;
+- (BOOL)fileExistsAtPath:(NSString *)path;//判断文件是否存在
+- (BOOL)fileExistsAtPath:(NSString *)path isDirectory:(nullable BOOL *)isDirectory;// 判断目录是否存在
 - (BOOL)isReadableFileAtPath:(NSString *)path;
 - (BOOL)isWritableFileAtPath:(NSString *)path;
 - (BOOL)isExecutableFileAtPath:(NSString *)path;
@@ -257,9 +282,12 @@ extern NSNotificationName const NSUbiquityIdentityDidChangeNotification API_AVAI
  */
 - (nullable NSArray<NSString *> *)componentsToDisplayForPath:(NSString *)path;
 
+
+#pragma mark - 利用文件遍历器获取一个文件夹中所有文件的属性
 /* enumeratorAtPath: returns an NSDirectoryEnumerator rooted at the provided path. If the enumerator cannot be created, this returns NULL. Because NSDirectoryEnumerator is a subclass of NSEnumerator, the returned object can be used in the for...in construct.
  */
 - (nullable NSDirectoryEnumerator<NSString *> *)enumeratorAtPath:(NSString *)path;
+
 
 /* enumeratorAtURL:includingPropertiesForKeys:options:errorHandler: returns an NSDirectoryEnumerator rooted at the provided directory URL. The NSDirectoryEnumerator returns NSURLs from the -nextObject method. The optional 'includingPropertiesForKeys' parameter indicates which resource properties should be pre-fetched and cached with each enumerated URL. The optional 'errorHandler' block argument is invoked when an error occurs. Parameters to the block are the URL on which an error occurred and the error. When the error handler returns YES, enumeration continues if possible. Enumeration stops immediately when the error handler returns NO.
  
@@ -274,6 +302,14 @@ extern NSNotificationName const NSUbiquityIdentityDidChangeNotification API_AVAI
 /* These methods are provided here for compatibility. The corresponding methods on NSData which return NSErrors should be regarded as the primary method of creating a file from an NSData or retrieving the contents of a file as an NSData.
  */
 - (nullable NSData *)contentsAtPath:(NSString *)path;
+
+
+#pragma mark - 创建文件
+/*
+ 第一个参数：文件的绝对路径
+ 第二个参数：文件的内容,如果没有,nil,表示空文件
+ 第三个参数：文件的属性,nil,表示采用默认属性
+ */
 - (BOOL)createFileAtPath:(NSString *)path contents:(nullable NSData *)data attributes:(nullable NSDictionary<NSFileAttributeKey, id> *)attr;
 
 /* fileSystemRepresentationWithPath: returns an array of characters suitable for passing to lower-level POSIX style APIs. The string is provided in the representation most appropriate for the filesystem in question.
@@ -504,7 +540,7 @@ FOUNDATION_EXPORT NSFileAttributeKey const NSFileSystemFreeNodes;
 - (nullable NSNumber *)fileGroupOwnerAccountID;
 @end
 NS_ASSUME_NONNULL_END
-# * Author: 白开水ln  -  WechatPublic：Codeidea  -  Repository：github.com/CoderLN/Framework-CoderLN
+
 
 
 
@@ -512,109 +548,52 @@ NS_ASSUME_NONNULL_END
 
 //----------------------- <#我是分割线#> ------------------------//
 //
+#pragma mark - NSFileManager 文件管理者
+```objc
+1、常用方法
+-(NSData *)contentsAtPath:path //从一个文件读取数据
+-(BOOL)createFileAtPath: path contents:(NSData *)data attributes:attr //向一个文件写入数据
+-(BOOL)removeItemAtPath:path error:err //删除一个文件
+-(BOOL)moveItemAtPath：from toPath:to error:err //重命名或者移动一个文件（to不能是已存在的）
+-(BOOL)copyItemAtPath:from toPath:to error:err //复制文件（to不能是已存在的）
+-(BOOL)contentsEqualAtPath:path andPath:path2 //比较两个文件的内容
+-(BOOL)fileExistAtPath:path //测试文件是否存在
+-(BOOL)isReadableFileAtPath:path //测试文件是否存在，并且是否能执行读操作
+-(BOOL)isWriteableFileAtPath:path //测试文件是否存在，并且是否能执行写操作
+-(NSDictionary *)attributesOfItemAtPath:path error:err //获取文件的属性
+-(BOOL)setAttributesOfItemAtPath:attr error:err //更改文件的属性
 
-
-1、常见的NSFileManager文件方法
-
--(NSData *)contentsAtPath:path　　//从一个文件读取数据
-
--(BOOL)createFileAtPath: path contents:(NSData *)data attributes:attr　　//向一个文件写入数据
-
--(BOOL)removeItemAtPath:path error:err　　//删除一个文件
-
--(BOOL)moveItemAtPath：from toPath:to error:err　　//重命名或者移动一个文件（to不能是已存在的）
-
--(BOOL)copyItemAtPath:from toPath:to error:err　　//复制文件（to不能是已存在的）
-
--(BOOL)contentsEqualAtPath:path andPath:path2　　//比较两个文件的内容
-
--(BOOL)fileExistAtPath:path　　//测试文件是否存在
-
--(BOOL)isReadableFileAtPath:path　　//测试文件是否存在，并且是否能执行读操作
-
--(BOOL)isWriteableFileAtPath:path　　//测试文件是否存在，并且是否能执行写操作
-
--(NSDictionary *)attributesOfItemAtPath:path error:err　　//获取文件的属性
-
--(BOOL)setAttributesOfItemAtPath:attr error:err　　//更改文件的属性
-
-
-
-
-2.使用目录
-
--(NSString *)currentDirectoryPath　　//获取当前目录
-
--(BOOL)changeCurrentDirectoryPath:path　　//更改当前目录
-
--(BOOL)copyItemAtPath:from toPath:to error:err　　//复制目录结构（to不能是已存在的）
-
--(BOOL)createDirectoryAtPath:path withIntermediateDirectories:(BOOL)flag attribute:attr　　//创建一个新目录
-
--(BOOL)fileExistAtPath:path isDirectory:(BOOL*)flag　　//测试文件是不是目录（flag中储存结果YES/NO）
-
--(NSArray *)contentsOfDirectoryAtPath:path error:err　　//列出目录内容
-
--(NSDirectoryEnumerator *)enumeratorAtPath:path　　//枚举目录的内容
-
--(BOOL)removeItemAtPath:path error:err　　//删除空目录
-
--(BOOL)moveItemAtPath:from toPath:to error:err 　　//重命名或移动一个目录（to不能是已存在的）
-
-
-
+2、使用目录
+-(NSString *)currentDirectoryPath //获取当前目录
+-(BOOL)changeCurrentDirectoryPath:path //更改当前目录
+-(BOOL)copyItemAtPath:from toPath:to error:err //复制目录结构（to不能是已存在的）
+-(BOOL)createDirectoryAtPath:path withIntermediateDirectories:(BOOL)flag attribute:attr //创建一个新目录
+-(BOOL)fileExistAtPath:path isDirectory:(BOOL*)flag //测试文件是不是目录（flag中储存结果YES/NO）
+-(NSArray *)contentsOfDirectoryAtPath:path error:err //列出目录内容
+-(NSDirectoryEnumerator *)enumeratorAtPath:path //枚举目录的内容
+-(BOOL)removeItemAtPath:path error:err //删除空目录
+-(BOOL)moveItemAtPath:from toPath:to error:err //重命名或移动一个目录（to不能是已存在的）
 
 3、常用路径工具方法
-
-+(NSString *)pathWithComponens:components　　//根据components中的元素构造有效路径
-
--(NSArray *)pathComponents　　//析构路径，获得组成此路径的各个部分
-
--(NSString *)lastPathComponent　　//提取路径的最后一个组成部分
-
--(NSString *)pathExtension　　//从路径的最后一个组成部分中提取其扩展名
-
--(NSString *)stringByAppendingPathComponent:path　　//将path添加到现有路径的末尾
-
--(NSString *)stringByAppendingPathExtension:ext　　//将指定的扩展名添加到路径的最后一个组成部分
-
--(NSString *)stringByDeletingLastPathComponent　　//删除路径的最后一个组成部分
-
--(NSString *)stringByDeletingPathExtension　　//从文件的最后一部分删除扩展名
-
--(NSString *)stringByExpandingTileInPath　　　//将路径中代字符扩展成用户主目录（~）或指定用户的主目录（~user）
-
--(NSString *)stringByresolvingSymlinksInPath　　//尝试解析路径中的符号链接
-
--(NSString *)stringByStandardizingPath　　//通过尝试解析~、..（父目录符号）、.（当前目录符号）和符号链接来标准化路径
-
-
++(NSString *)pathWithComponens:components //根据components中的元素构造有效路径
+-(NSArray *)pathComponents //析构路径，获得组成此路径的各个部分
+-(NSString *)lastPathComponent //提取路径的最后一个组成部分
+-(NSString *)pathExtension //从路径的最后一个组成部分中提取其扩展名
+-(NSString *)stringByAppendingPathComponent:path //将path添加到现有路径的末尾
+-(NSString *)stringByAppendingPathExtension:ext //将指定的扩展名添加到路径的最后一个组成部分
+-(NSString *)stringByDeletingLastPathComponent //删除路径的最后一个组成部分
+-(NSString *)stringByDeletingPathExtension //从文件的最后一部分删除扩展名
+-(NSString *)stringByExpandingTileInPath //将路径中代字符扩展成用户主目录（~）或指定用户的主目录（~user）
+-(NSString *)stringByresolvingSymlinksInPath //尝试解析路径中的符号链接
+-(NSString *)stringByStandardizingPath //通过尝试解析~、..（父目录符号）、.（当前目录符号）和符号链接来标准化路径
 
 4、常用的路径工具函数
-
-NSString* NSUserName(void)　　//返回当前用户的登录名
-
-NSString* NSFullUserName(void)　　//返回当前用户的完整用户名
-
-NSString* NSHomeDirectory(void)　　//返回当前用户主目录的路径
-
-NSString* NSHomeDirectoryForUser(NSString* user)　　//返回用户user的主目录
-
-NSString* NSTemporaryDirectory(void)　　//返回可用于创建临时文件的路径目录
-
-
-
-5、常用的IOS目录
-
-Documents（NSDocumentDirectory）　　//用于写入应用相关数据文件的目录，在ios中写入这里的文件能够与iTunes共享并访问，存储在这里的文件会自动备份到云端
-
-Library/Caches（NSCachesDirectory）　　//用于写入应用支持文件的目录，保存应用程序再次启动需要的信息。iTunes不会对这个目录的内容进行备份
-
-tmp（use NSTemporaryDirectory（））　　//这个目录用于存放临时文件，只程序终止时需要移除这些文件，当应用程序不再需要这些临时文件时，应该将其从这个目录中删除
-
-Library/Preferences　　//这个目录包含应用程序的偏好设置文件，使用 NSUserDefault类进行偏好设置文件的创建、读取和修改
-
-
+NSString* NSUserName(void) //返回当前用户的登录名
+NSString* NSFullUserName(void) //返回当前用户的完整用户名
+NSString* NSHomeDirectory(void) //返回当前用户主目录的路径
+NSString* NSHomeDirectoryForUser(NSString* user) //返回用户user的主目录
+NSString* NSTemporaryDirectory(void) //返回可用于创建临时文件的路径目录
+```
 
 
 

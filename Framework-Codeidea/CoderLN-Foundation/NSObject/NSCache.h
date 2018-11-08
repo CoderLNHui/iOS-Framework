@@ -2,11 +2,9 @@
  * NSCache.h 缓存
  *
  * Foundation (c) 2008-2017
+ *「Public_不知名开发者 | https://github.com/CoderLN | https://www.jianshu.com/u/fd745d76c816」
  *
- * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Your sharing can be together.
- *
- * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
+ * 各位厂友, 由于「时间 & 知识」有限, 总结的文章难免有「未全、不足」, 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
  
 #import <Foundation/NSObject.h>
@@ -35,9 +33,9 @@ NS_CLASS_AVAILABLE(10_6, 4_0)
 #pragma mark -保存在缓存中设置指定键名对应的值，并且指定该键值对的成本
 //用于计算记录在缓存中的所有对象的总成本，出现内存警告或者超出缓存总成本上限的时候，缓存会开启一个回收过程，删除部分元素
 - (void)setObject:(ObjectType)obj forKey:(KeyType)key cost:(NSUInteger)g;
+
 #pragma mark -移除缓存中指定键名的对象
 - (void)removeObjectForKey:(KeyType)key;
-
 #pragma mark -移除缓存中所有的对象
 - (void)removeAllObjects;
 

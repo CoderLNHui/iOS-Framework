@@ -1,10 +1,8 @@
 /*
  * ExtractMethod.m  
+ *「Public_不知名开发者 | https://github.com/CoderLN | https://www.jianshu.com/u/fd745d76c816」
  *
- * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Your sharing can be together.
- *
- * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
+ * 各位厂友, 由于「时间 & 知识」有限, 总结的文章难免有「未全、不足」, 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
 
 
@@ -13,17 +11,17 @@
 
 #pragma mark - 文件路径相关
 #pragma mark -获得文件全路径
--(NSString *)fullPath
+- (NSString *)fullPath
 {
     if (_fullPath == nil) {
-        // 拼接文件后的本地名称 FileName @"123.mp4" 或者 [url lastPathComponent] 获取URL最后一个字节命名
-        _fullPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"123.mp4"];
+        // 拼接文件后的本地名称,url.lastPathComponent 获取URL最后一个字节命名
+        _fullPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:response.suggestedFilename];
     }
     return _fullPath;
 }
 
 #pragma mark -获得指定文件路径对应文件的数据大小
--(NSInteger)getFileSize
+- (NSInteger)getFileSize
 {
     NSDictionary *fileInfoDict = [[NSFileManager defaultManager] attributesOfItemAtPath:self.fullPath error:nil];
     NSLog(@"%@",fileInfoDict);
@@ -31,6 +29,30 @@
     
     return currentSize;
 }
+
+#pragma mark -创建沙盒存储路径文件夹
+- (NSString *)createFolderPath
+{
+    NSString * path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:[NSBundle mainBundle].infoDictionary[@"CFBundleName"]];
+    
+    BOOL isExistDrectory;
+    [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isExistDrectory];//判断文件夹是否存在
+    if (!isExistDrectory) {
+        NSError * error;
+        BOOL isExist = [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error];
+        if (isExist) {
+            NSLog(@"创建沙盒存储路径文件夹成功");
+        }
+        _folderPath = path;
+    } else {
+        NSLog(@"该目录已存在");
+    }
+    return _folderPath;
+}
+
+
+
+
 
 
 #pragma mark - 截取服务器返回信息字符串(延迟执行,弹框提示用户登录请求结果)
@@ -139,6 +161,44 @@
     }
     return nil;
 }
+
+
+
+#pragma mark - 数据安全
+#pragma mark -将文件名md5加密
+- (NSString *)encryptFileNameWithMD5:(NSString *)str
+{
+    //要进行UTF8的转码
+    const char* input = [str UTF8String];
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(input, (CC_LONG)strlen(input), result);
+    
+    NSMutableString *digest = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    for (NSInteger i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
+        [digest appendFormat:@"%02x", result[i]];
+    }
+    return digest;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

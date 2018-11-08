@@ -2,11 +2,9 @@
  * NSOperation.h
  *
  * Foundation (c) 2006-2017
+ *「Public_不知名开发者 | https://github.com/CoderLN | https://www.jianshu.com/u/fd745d76c816」
  *
- * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Your sharing can be together.
- *
- * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
+ * 各位厂友, 由于「时间 & 知识」有限, 总结的文章难免有「未全、不足」, 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
  
 
@@ -45,9 +43,14 @@ NS_CLASS_AVAILABLE(10_5, 2_0)
 #pragma mark -取消操作任务
 - (void)cancel;
 
+#pragma mark -执行
 @property (readonly, getter=isExecuting) BOOL executing;
+#pragma mark -完成
 @property (readonly, getter=isFinished) BOOL finished;
+#pragma mark -并行(Concurrent) & 串行(Serial)
 @property (readonly, getter=isConcurrent) BOOL concurrent; // To be deprecated; use and override 'asynchronous' below
+#pragma mark -异步(Asynchronous) & 同步(Synchronous)
+//并发(Concurrency) & 并行(Parallelism)
 @property (readonly, getter=isAsynchronous) BOOL asynchronous API_AVAILABLE(macos(10.8), ios(7.0), watchos(2.0), tvos(9.0));
 @property (readonly, getter=isReady) BOOL ready;
 

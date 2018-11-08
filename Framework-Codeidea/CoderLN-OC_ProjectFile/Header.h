@@ -1,17 +1,15 @@
 /*
  * Header.h 效率开发常用宏
  * 创建 cmd+n -> HeaderFile
+ *「Public_不知名开发者 | https://github.com/CoderLN | https://www.jianshu.com/u/fd745d76c816」
  *
- * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Your sharing can be together.
- *
- * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
+ * 各位厂友, 由于「时间 & 知识」有限, 总结的文章难免有「未全、不足」, 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
 
-//#ifndef PchHeader_h
-//#define PchHeader_h
+// #ifndef PchHeader_h
+// #define PchHeader_h
 //
-//#endif /* PchHeader_h */
+// #endif /* PchHeader_h */
 
 #pragma mark - 【颜色宏相关】
 /*
@@ -36,35 +34,35 @@
 #pragma mark -RGB
 #define RGBA(r,g,b,a)   [UIColor colorWithRed:(r) / 256.0 green:(g) / 256.0 blue:(b) / 256.0 alpha:a]
 #define RGB(r,g,b)      RGBA(r,g,b,1.0)
-//随机颜色
-#define kRandomColor    RGBA(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
-//十六进制示例：UIColorFromRGB(0xff6a50);
+// 随机颜色
+#define kRandomColor    RGBA(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255),1.0)
+// 十六进制示例：UIColorFromRGB(0xff6a50);
 #define kColorFromRGB(RGBValue) [UIColor colorWithRed:((float)((RGBValue & 0xFF0000) >> 16))/255.0 green:((float)((RGBValue & 0xFF00) >> 8))/255.0 blue:((float)(RGBValue & 0xFF))/255.0 alpha:1.0]
 
 
 #pragma mark -常用统一颜色的宏
-//统一背景颜色
+// 统一背景颜色
 #define kUnifiedBgColor             RGB(206,206,206)
 #define kControllerViewBGColor      RGBA(237,237,237,1.0)
-//统一控制器的背景颜色
+// 统一控制器的背景颜色
 #define kUnifiedBackgroundColor         RGB(237, 236, 239)
-//分割线颜色
+// 分割线颜色
 #define kLineColor                  RGBA(29, 29, 38, 0.05)
-//标题黑色颜色
+// 标题黑色颜色
 #define kTitleBlackColor            RGBA(28,28,28,1.0)
-//标题灰色颜色
+// 标题灰色颜色
 #define kTitleGrayColor             RGBA(144,144,144,1.0)
-//清空颜色
+// 清空颜色
 #define kClearColor                 [UIColor clearColor]
 
 
 #pragma mark -控制台颜色
-//彩色打印
+// 彩色打印
 #define LogBlue(frmt, ...)          NSLog((XCODE_COLORS_ESCAPE @"fg0,0,255;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
 #define LogRed(frmt, ...)           NSLog((XCODE_COLORS_ESCAPE @"fg255,0,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
 #define LogGreen(frmt, ...)         NSLog((XCODE_COLORS_ESCAPE @"fg0,255,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
 
-//控制台颜色插件
+// 控制台颜色插件
 #define XCODE_COLORS_ESCAPE         @"\033["
 #define XCODE_COLORS_RESET_FG       XCODE_COLORS_ESCAPE @"fg;" // Clear any foreground color
 #define XCODE_COLORS_RESET_BG       XCODE_COLORS_ESCAPE @"bg;" // Clear any background color
@@ -101,11 +99,11 @@
 
 
 #pragma mark -版本号
-//系统版本号 e.g. @"4.0"
+// 系统版本号 e.g. @"4.0"
 #define kSystemVersion        [[[UIDevice currentDevice] systemVersion] doubleValue]
-//设配型号 e.g. @"iPhone", @"iPod touch"
+// 设配型号 e.g. @"iPhone", @"iPod touch"
 #define DeviceModel [UIDevice currentDevice].model
-//系统名称 e.g. @"iOS"
+// 系统名称 e.g. @"iOS"
 #define DeviceName [UIDevice currentDevice].systemName
 
 // APP版本号
@@ -116,8 +114,8 @@
 // 获取当前语言
 #define KCURRENT_LANGUAGE   ([[NSLocale preferredLanguages] objectAtIndex:0])
 
-// 获取App软件名称（项目Info.plist）
-#define KAPP_NAME  [NSBundle mainBundle].infoDictionary[@"CFBundleName"];
+// 获取软件名称（项目Info.plist）
+#define KAPP_NAME   [NSBundle mainBundle].infoDictionary[@"CFBundleName"];
 #define KAPP_NAME1  [NSBundle mainBundle].infoDictionary[(__bridge NSString *)kCFBundleNameKey];
 
 
@@ -171,10 +169,10 @@
 
 
 #pragma mark -打印日志示例
-// 打印日志示例：时间戳、函数、行数、功能
+// 打印日志示例：时间戳、函数、行数、线程、功能
 // 2016-04-28 14:17:07.106977+0800 NetRequest[28405:520744] -[AFNController netRequest]_block_invoke_2 : 55 成功回调 {success:登录成功}
 #ifdef DEBUG // 测试
-#define MyLog(...) NSLog(@"%s : %d %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#define MyLog(...) NSLog(@"%s : line_%d : %@ -> %@\n\n",__func__,__LINE__,[NSThread currentThread],[NSString stringWithFormat:__VA_ARGS__])
 #else // 发布
 #define MyLog(...)
 #endif
@@ -231,13 +229,9 @@
 #define TmpPath1        [NSHomeDirectory() stringByAppendingPathComponent:@"tmp"]
 
 
-//通常把数据请求下来的数据写成Plist便于观察
-//【#filename -> "filename"】、【@#filename -> @"filename"】
+// 通常把数据请求下来的数据写成Plist便于观察
+// 【#filename -> "filename"】、【@#filename -> @"filename"】
 #define WriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/sunhui/Desktop/%@.plist",@#filename] atomically:YES];
-
-
-
-
 
 
 
@@ -266,13 +260,13 @@
 
 #pragma mark - 【Xcode 自定义字体】
 
-static NSString* const          FONT_TITLE = @"PingFangSC-Regular";//常规
-static NSString* const          FONT_SUBTITLE = @"PingFangSC-Light";//细体
-static NSString* const          FONT_PING_FANG_SC_ULTRALIGHT = @"PingFangSC-Ultralight";//超细
-static NSString* const          FONT_PING_FANG_SC_MEDIUM = @"PingFangSC-Medium";//中黑
+static NSString* const          FONT_TITLE = @"PingFangSC-Regular";// 常规
+static NSString* const          FONT_SUBTITLE = @"PingFangSC-Light";// 细体
+static NSString* const          FONT_PING_FANG_SC_ULTRALIGHT = @"PingFangSC-Ultralight";// 超细
+static NSString* const          FONT_PING_FANG_SC_MEDIUM = @"PingFangSC-Medium";// 中黑
 
-static NSString * const         Arial_BoldMT = @"Arial-BoldMT";//Arial粗体
-static NSString * const         Arial_MT = @"ArialMT";//Arial粗体
+static NSString * const         Arial_BoldMT = @"Arial-BoldMT";// Arial粗体
+static NSString * const         Arial_MT = @"ArialMT";// Arial粗体
 
 
 
@@ -370,12 +364,10 @@ static NSString * const         Arial_MT = @"ArialMT";//Arial粗体
 #pragma mark - 【快速创建单例】
 
 // .h 声明
-#define single_interface(class)  + (class *)shared##class;
+#define singleH(class)  + (class *)shared##class;
 
-// .m 实现
-// \ 代表下一行也属于宏
-// ## 是分隔符
-#define single_implementation(class) \
+// .m 实现 (\ 代表转义符下一行也属于宏; ## 是分隔符)
+#define singleM(class) \
 static class *_instance; \
 \
 + (class *)shared##class \
@@ -393,9 +385,15 @@ static class *_instance; \
         _instance = [super allocWithZone:zone]; \
     }); \
     return _instance; \
+} \
+-(id)copyWithZone:(NSZone *)zone\
+{\
+    return _instance;\
+}\
+-(id)mutableCopyWithZone:(NSZone *)zone\
+{\
+    return _instance;\
 }
-
-
 
 
 
@@ -403,7 +401,7 @@ static class *_instance; \
 
 #pragma mark - 【Random 随机数据】
 
-//随机数据
+// 随机数据
 #define MJRandomData    [NSString stringWithFormat:@"随机数据---%d", arc4random_uniform(1000000)]
 #define titleFont(r)    kSystemVersion>=9.0?[UIFont fontWithName:FONT_TITLE size:r*1.0]:[UIFont systemFontOfSize:r*1.0]
 

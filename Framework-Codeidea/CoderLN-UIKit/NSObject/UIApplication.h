@@ -2,11 +2,9 @@
  * UIApplication.h
  *
  * UIKit (c) 2005-2017
+ *「Public_不知名开发者 | https://github.com/CoderLN | https://www.jianshu.com/u/fd745d76c816」
  *
- * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
- * Welcome your star|fork, Your sharing can be together.
- *
- * 尊重花时间写作的作者，该模块将系统化学习，后续替换、补充内容或新增文件。
+ * 各位厂友, 由于「时间 & 知识」有限, 总结的文章难免有「未全、不足」, 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
 
 
@@ -25,8 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - NS_ENUM
 #pragma mark -状态栏样式
 typedef NS_ENUM(NSInteger, UIStatusBarStyle) {
-    UIStatusBarStyleDefault                                     = 0, // Dark content, for use on light backgrounds
-    UIStatusBarStyleLightContent     NS_ENUM_AVAILABLE_IOS(7_0) = 1, // Light content, for use on dark backgrounds
+    UIStatusBarStyleDefault                                     = 0, //黑色 Dark content, for use on light backgrounds
+    UIStatusBarStyleLightContent     NS_ENUM_AVAILABLE_IOS(7_0) = 1, //白色 Light content, for use on dark backgrounds
     
     UIStatusBarStyleBlackTranslucent NS_ENUM_DEPRECATED_IOS(2_0, 7_0, "Use UIStatusBarStyleLightContent") = 1,
     UIStatusBarStyleBlackOpaque      NS_ENUM_DEPRECATED_IOS(2_0, 7_0, "Use UIStatusBarStyleLightContent") = 2,
@@ -34,9 +32,9 @@ typedef NS_ENUM(NSInteger, UIStatusBarStyle) {
 
 #pragma mark -状态栏动画
 typedef NS_ENUM(NSInteger, UIStatusBarAnimation) {
-    UIStatusBarAnimationNone,
-    UIStatusBarAnimationFade NS_ENUM_AVAILABLE_IOS(3_2),
-    UIStatusBarAnimationSlide NS_ENUM_AVAILABLE_IOS(3_2),
+    UIStatusBarAnimationNone,//无
+    UIStatusBarAnimationFade NS_ENUM_AVAILABLE_IOS(3_2),//逐渐消失
+    UIStatusBarAnimationSlide NS_ENUM_AVAILABLE_IOS(3_2),//滑行
 } __TVOS_PROHIBITED;
 
 #pragma mark -界面方向
@@ -78,11 +76,11 @@ static inline BOOL UIInterfaceOrientationIsLandscape(UIInterfaceOrientation orie
 
 #pragma mark -远程通知类型
 typedef NS_OPTIONS(NSUInteger, UIRemoteNotificationType) {
-    UIRemoteNotificationTypeNone    = 0,
-    UIRemoteNotificationTypeBadge   = 1 << 0,
-    UIRemoteNotificationTypeSound   = 1 << 1,
-    UIRemoteNotificationTypeAlert   = 1 << 2,
-    UIRemoteNotificationTypeNewsstandContentAvailability = 1 << 3,
+    UIRemoteNotificationTypeNone    = 0,//
+    UIRemoteNotificationTypeBadge   = 1 << 0,//徽章
+    UIRemoteNotificationTypeSound   = 1 << 1,//声音
+    UIRemoteNotificationTypeAlert   = 1 << 2,//弹框
+    UIRemoteNotificationTypeNewsstandContentAvailability = 1 << 3,//
 } NS_ENUM_DEPRECATED_IOS(3_0, 8_0, "Use UserNotifications Framework's UNAuthorizationOptions for user notifications and registerForRemoteNotifications for receiving remote notifications instead.") __TVOS_PROHIBITED;
 
 #pragma mark -获取背景结果
@@ -101,9 +99,9 @@ typedef NS_ENUM(NSInteger, UIBackgroundRefreshStatus) {
 
 #pragma mark -应用状态
 typedef NS_ENUM(NSInteger, UIApplicationState) {
-    UIApplicationStateActive,// 在前台
-    UIApplicationStateInactive,// 从后台进入前台
-    UIApplicationStateBackground// 在后台
+    UIApplicationStateActive,// 前台活动状态。处于前台，能接受事件处理。
+    UIApplicationStateInactive,// 前台非活动状态。处于前台，但是不能接受事件处理。
+    UIApplicationStateBackground// Background：后台状态。进入后台，如果有可执行代码，会执行代码，代码执行完毕，程序进行挂起。
 } NS_ENUM_AVAILABLE_IOS(4_0);
 
 
@@ -123,7 +121,7 @@ UIKIT_EXTERN const NSTimeInterval UIApplicationBackgroundFetchIntervalNever API_
 @class INIntentResponse;
 
 
-#pragma mark - 应用
+#pragma mark - 响应器
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 
 #if UIKIT_DEFINE_AS_PROPERTIES
@@ -243,14 +241,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 
 
 
-
-
-
-
-
-
-
-
 #pragma mark - 本地通知 LocalNotifications
 
 // In iOS 8.0 and later, your application must register for user notifications using -[UIApplication registerUserNotificationSettings:] before being able to schedule and present UILocalNotifications
@@ -265,16 +255,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 @property(nullable,nonatomic,copy) NSArray<UILocalNotification *> *scheduledLocalNotifications NS_DEPRECATED_IOS(4_0, 10_0, "Use UserNotifications Framework's -[UNUserNotificationCenter getPendingNotificationRequestsWithCompletionHandler:]") __TVOS_PROHIBITED;
 
 @end
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -297,11 +277,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 
 
 
-
-
-
-
-#pragma mark - UIRemoteControlEvents
+#pragma mark - UIRemoteControlEvents 远程通知事件
 
 @interface UIApplication (UIRemoteControlEvents)
 
@@ -360,16 +336,7 @@ typedef NSString * UIApplicationLaunchOptionsKey;
 
 
 
-
-
-
-
-
-
-
-
-
-#pragma mark - ApplicationDelegate
+#pragma mark - ApplicationDelegate 代理方法
 
 @protocol UIApplicationDelegate<NSObject>
 
@@ -382,27 +349,40 @@ typedef NSString * UIApplicationLaunchOptionsKey;
 #else
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions NS_AVAILABLE_IOS(6_0);
 
+#pragma mark -程序启动完成并进行初始化时调用
 /**
- 1.当应用程序正常启动时（不包括已在后台转到前台的情况），调用此回调。launchOptions是启动参数，
- 假如用户通过点击push通知启动的应用，(这是非正常启动的情况，包括本地通知和远程通知)，这个参数里会存储一些push通知的信息。
+ 本地通知：UIApplicationDidFinishLaunchingNotification
+ 适宜操作：这个阶段应该进行根视图的创建。
+ 使用说明：
+     不包括已在后台转到前台的情况，launchOptions是启动参数。
+     假如用户通过点击push通知启动的应用(这是非正常启动的情况，包括本地通知和远程通知)，这个参数里会存储一些push通知的信息。
  */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions NS_AVAILABLE_IOS(3_0);
 #endif
 
 
+#pragma mark -程序进入前台并处于活动状态时调用
 /**
- 4.将要成为活动状态时，当应用程序全新启动，或者在后台转到前台，都会调用这个方法。
- 如果应用程序是以前运行在后台，这时可以选择刷新用户界面。
+ 本地通知：UIApplicationDidBecomeActiveNotification
+ 适宜操作：这个阶段应该恢复UI状态（例如游戏状态）
+ 使用说明：
+     当应用程序全新启动，或者在后台转到前台，都会调用这个方法。
+     如果应用程序是以前运行在后台，这时可以选择刷新用户界面。
  */
 - (void)applicationDidBecomeActive:(UIApplication *)application;
 
-// 将要失去活动状态 时调用
+
+#pragma mark -将要从活动状态进入非活动状态时调用
 /**
- 2.当应用从活动状态主动变为非活动状态的时候,应用程序时会调用这个方法。这可导致产生某些类型的临时中断（如传入电话呼叫或SMS消息）。
- 或者当用户退出应用程序，它开始过渡到的背景状态。使用此方法可以暂停正在进行的任务，禁用定时器，降低OpenGL ES的帧速率。游戏应该使用这个方法来暂停游戏。
- 调用时机可能有以下几种：锁屏，单击HOME键，下拉状态栏，双击HOME键弹出底栏等情况。
+ 本地通知：UIApplicationWillResignActiveNotification
+ 适宜操作：这个阶段应该保存UI状态（例如游戏状态）。
+ 使用说明：
+     这可导致产生某些类型的临时中断（如传入电话呼叫或SMS消息）。或者当用户退出应用程序，它开始过渡到的背景状态。
+     使用此方法可以暂停正在进行的任务，禁用定时器，降低OpenGL ES的帧速率。游戏应该使用这个方法来暂停游戏。
+     调用时机可能有以下几种：锁屏，单击HOME键，下拉状态栏，双击HOME键弹出底栏等情况。
  */
 - (void)applicationWillResignActive:(UIApplication *)application;
+
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url NS_DEPRECATED_IOS(2_0, 9_0, "Please use application:openURL:options:") __TVOS_PROHIBITED;
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation NS_DEPRECATED_IOS(4_2, 9_0, "Please use application:openURL:options:") __TVOS_PROHIBITED;
 
@@ -413,24 +393,27 @@ typedef NSString * UIApplicationOpenURLOptionsKey NS_EXTENSIBLE_STRING_ENUM;
 typedef NSString * UIApplicationOpenURLOptionsKey;
 #endif
 
-
-/**
- 打开网址。
- */
+#pragma mark -打开网址
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options NS_AVAILABLE_IOS(9_0); // no equiv. notification. return NO if the application can't open for some reason
 
 
-// 收到内存警告 时调用
+#pragma mark -收到内存警告调用
 /**
- 7.当应用可用内存不足 内存警告时，会调用此方法，在这个方法中，应该尽量去清理可能释放的内存。如果实在不行，可能会被强行退出应用。
+ 7.当应用可用内存不足，内存警告时调用。在这个方法中，应该尽量去清理可能释放的内存。如果实在不行，可能会被强行退出应用。
  */
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application;      // try to clean up as much memory as possible. next step is to terminate app
 
-// 退出 时调用
+
+#pragma mark -程序被杀死退出时调用
 /**
- 6.当应用退出，并且进程即将结束时会调到这个方法，一般很少主动调到，更多是内存不足时是被迫调到的，我们应该在这个方法里做一些数据存储操作。
+ 本地通知：UIApplicationWillTerminateNotification
+ 适宜操作：这个阶段应该进行释放一些资源和保存用户数据。
+ 使用说明：
+     当应用退出，并且进程即将结束时会调到这个方法，一般很少主动调到，更多是内存不足时是被迫调到的，我们应该在这个方法里做一些数据存储操作。
  */
 - (void)applicationWillTerminate:(UIApplication *)application;
+
+
 - (void)applicationSignificantTimeChange:(UIApplication *)application;        // midnight, carrier time update, daylight savings time change
 
 - (void)application:(UIApplication *)application willChangeStatusBarOrientation:(UIInterfaceOrientation)newStatusBarOrientation duration:(NSTimeInterval)duration __TVOS_PROHIBITED;
@@ -444,8 +427,9 @@ typedef NSString * UIApplicationOpenURLOptionsKey;
 
 
 
+#pragma mark -Application 系统通知
+#pragma mark -当客户端注册远程通知时，会回调下面两个方法
 /**
- 当客户端注册远程通知时，会回调下面两个方法。
  如果成功，则回调第一个didRegister，客户端把deviceToken取出来发给服务端，push消息的时候要用。
  如果失败了，则回调第二个didFailToRegister，可以从error参数中看一下失败原因。
  */
@@ -465,19 +449,16 @@ typedef NSString * UIApplicationOpenURLOptionsKey;
 
 
 
-
-
+#pragma mark -当应用在前台运行中，收到远程通知时调用(不会弹出系统通知界面)
 /**
- 当应用在前台运行中，收到远程通知时(不会弹出系统通知界面)，会回调这个方法。
  当应用在后台状态时，点击push消息启动应用，也会回调这个方法。
  当应用完全没有启动时，点击push消息启动应用，就不会回调这个方法。
  */
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo NS_DEPRECATED_IOS(3_0, 10_0, "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate willPresentNotification:withCompletionHandler:] or -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:] for user visible notifications and -[UIApplicationDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:] for silent remote notifications");
 
 
-
+#pragma mark -当应用收到本地通知时调用
 /**
- 当应用收到本地通知时会调这个方法，同上面一个方法类似。
  如果在前台运行状态直接调用
  如果在后台状态，点击通知启动时，也会回调这个方法
  当应用完全没有启动时，点击push消息启动应用，就不会回调这个方法。
@@ -515,6 +496,11 @@ typedef NSString * UIApplicationOpenURLOptionsKey;
 // attention. Once a session has been created from a configuration object with that identifier, the session's delegate will begin receiving
 // callbacks. If such a session has already been created (if the app is being resumed, for instance), then the delegate will start receiving
 // callbacks without any action by the application. You should call the completionHandler as soon as you're finished handling the callbacks.
+#pragma mark -程序处于后台且后台任务下载完成调用
+/**
+ 使用带有后台配置的NSURLSession的应用程序可以在后台启动或重新启动，以处理该会话中的任务完成，或处理身份验证。
+ 一旦从具有该标识符的配置对象创建了会话，会话的委托将开始接收回调
+ */
 - (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)(void))completionHandler NS_AVAILABLE_IOS(7_0);
 
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(nullable NSDictionary *)userInfo reply:(void(^)(NSDictionary * __nullable replyInfo))reply NS_AVAILABLE_IOS(8_2);
@@ -524,17 +510,23 @@ typedef NSString * UIApplicationOpenURLOptionsKey;
 - (void)application:(UIApplication *)application handleIntent:(INIntent *)intent completionHandler:(void(^)(INIntentResponse *intentResponse))completionHandler NS_AVAILABLE_IOS(11_0);
 
 
-// 进入到后台 时调用
+#pragma mark -程序从前台进入后台时调用
 /**
- 3.当用户从前台状态转入后台时，调用此方法。使用此方法来释放资源共享，保存用户数据，无效计时器，并储存足够的应用程序状态信息,以便程序被终止后，将应用程序恢复到目前的状态。
- 如果您的应用程序支持后台运行，这个方法被调用，否则调用applicationWillTerminate：用户退出。
+ 本地通知：UIApplicationDidEnterBackgroundNotification
+ 适宜操作：这个阶段应该保存用户数据，释放一些资源（例如释放数据库资源）。
+ 使用说明：
+     使用此方法来释放资源共享，保存用户数据，销毁计时器，并储存足够的应用程序状态信息,以便程序被终止后，将应用程序恢复到目前的状态。
+     如果您的应用程序支持后台运行，这个方法被调用，否则调用applicationWillTerminate：用户退出。
  */
 - (void)applicationDidEnterBackground:(UIApplication *)application NS_AVAILABLE_IOS(4_0);
 
-// 进入到前台 时调用
+
+#pragma mark -程序当前在后台将要进入前台，但是还没有处于活动状态时调用。
 /**
- 5.当应用在后台状态，将要进入到前台运行时，会调用此方法。
- 如果应用不在后台状态，而是直接启动，则不会回调此方法。
+ 本地通知：UIApplicationWillEnterForegroundNotification
+ 适宜操作：这个阶段应该恢复用户数据。
+ 使用说明：
+     如果应用不在后台状态，而是直接启动，则不会回调此方法。
  */
 - (void)applicationWillEnterForeground:(UIApplication *)application NS_AVAILABLE_IOS(4_0);
 
@@ -614,26 +606,14 @@ typedef NSString * UIApplicationExtensionPointIdentifier;
 
 @end
 
+
+
+#pragma mark - 常量：这些通知在调用对应的代理方法之后发出
 // If nil is specified for principalClassName, the value for NSPrincipalClass from the Info.plist is used. If there is no
 // NSPrincipalClass key specified, the UIApplication class is used. The delegate class will be instantiated using init.
 UIKIT_EXTERN int UIApplicationMain(int argc, char * _Nonnull * _Null_unspecified argv, NSString * _Nullable principalClassName, NSString * _Nullable delegateClassName);
 
 UIKIT_EXTERN NSRunLoopMode const UITrackingRunLoopMode;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // These notifications are sent out after the equivalent delegate message is called
 UIKIT_EXTERN NSNotificationName const UIApplicationDidEnterBackgroundNotification       NS_AVAILABLE_IOS(4_0);

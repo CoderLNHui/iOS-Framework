@@ -129,6 +129,10 @@
  在应用程序刚刚启动时打印 `currentRunLoop`可以看到系统默认注册了很多个`Observer`，其中两个是关于AutoreleasePool的。
  NSLog(@"%@",[NSRunLoop currentRunLoop]);
  
+ runloopModes = (
+    系统默认注册5种运行模式，常用3种（Defaults默认、Tracking界面追踪、CommonModes占位模式,上两者结合）
+ )
+ 
  摘录一部分
  observers = (
      1."<CFRunLoopObserver 0x60400012c080 [0x1046f8c80]>{valid = Yes, activities = 0x1, repeats = Yes, order = -2147483647, callout = _wrapRunLoopWithAutoreleasePoolHandler【自动释放池-监听RunLoop的进入】 (0x105497d92), context = <CFArray 0x604000251400 [0x1046f8c80]>{type = mutable-small, count = 1, values = (\n\t0 : <0x7fdb35002048>\n)}}",
