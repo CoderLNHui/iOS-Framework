@@ -97,18 +97,19 @@ NS_ASSUME_NONNULL_BEGIN
  confirms its validity, otherwise the URL is loaded from the
  origin source.  Unimplemented.
  */
+#pragma mark -缓存策略（无论使用哪种缓存策略，都会在本地缓存数据）
 typedef NS_ENUM(NSUInteger, NSURLRequestCachePolicy)
 {
-    NSURLRequestUseProtocolCachePolicy = 0,
+    NSURLRequestUseProtocolCachePolicy = 0,//默认的缓存策略，使用协议的缓存策略
     
-    NSURLRequestReloadIgnoringLocalCacheData = 1,
+    NSURLRequestReloadIgnoringLocalCacheData = 1,//每次都从网络加载
     NSURLRequestReloadIgnoringLocalAndRemoteCacheData = 4, // Unimplemented
     NSURLRequestReloadIgnoringCacheData = NSURLRequestReloadIgnoringLocalCacheData,
     
-    NSURLRequestReturnCacheDataElseLoad = 2,
+    NSURLRequestReturnCacheDataElseLoad = 2,//返回缓存否则加载
     NSURLRequestReturnCacheDataDontLoad = 3,
     
-    NSURLRequestReloadRevalidatingCacheData = 5, // Unimplemented
+    NSURLRequestReloadRevalidatingCacheData = 5,//只返回缓存，没有也不加载 // Unimplemented
 };
 
 /*!
@@ -266,6 +267,7 @@ typedef NS_ENUM(NSUInteger, NSURLRequestNetworkServiceType)
  in seconds.
  @result The timeout interval of the receiver.
  */
+#pragma mark -超时时长，默认60s，这里设置为30s
 @property (readonly) NSTimeInterval timeoutInterval;
 
 /*!

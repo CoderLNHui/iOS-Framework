@@ -135,7 +135,7 @@ typedef NS_OPTIONS(NSUInteger, NSStringEnumerationOptions) {
 #pragma mark -长度
 @property (readonly) NSUInteger length;
 
-#pragma mark -字符串对应下标字符
+#pragma mark -下标字符对应字符串
 - (unichar)characterAtIndex:(NSUInteger)index;
 
 /* The initializers available to subclasses. See further below for additional init methods.
@@ -729,4 +729,4 @@ FOUNDATION_EXPORT NSExceptionName const NSParseErrorException; // raised by -pro
         extern void *_NSConstantStringClassReference;
 #endif
         
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+CoderLN_NOTE NS_ASSUME_NONNULL_END

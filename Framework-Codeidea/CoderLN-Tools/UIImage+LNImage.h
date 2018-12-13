@@ -35,19 +35,9 @@
 - (instancetype)ln_circleImage;
 
 
-
-
 #pragma mark - 返回一张抗锯齿图片
 // 本质：在图片生成一个透明为1的像素边框
 - (UIImage *)ln_imageAntialias;
-
-
-#pragma mark - 图片的压缩
-// 要被压缩的图片 、 要被压缩的尺寸(宽)
-+ (UIImage *)ln_IMGCompressed:(UIImage *)sourceImg targetWidth:(CGFloat)defineWidth;
-
-
-
 
 
 #pragma mark - 加载GIF图片资源
@@ -78,20 +68,29 @@ typedef void (^GIFimageBlock)(UIImage *GIFImage);
      _imgView3.image = GIFImage;
     }];
  */
+@end
 
 
 #pragma mark - 将imagae按指定角度旋转后绘制图片
 - (UIImage *)imageRotatedByDegrees:(CGFloat)degrees;
-
 
 #pragma mark - 裁剪图像
 - (UIImage *)cutImage:(UIImage *)image;
 
 #pragma mark - 截屏
 - (UIImage *)screenshots:(UIView *)view;
+
+
+
+
+
+#pragma mark - 图片压缩
+@interface UIImage (LNCompressIMG)
+
+// 要被压缩的图片 、 要被压缩的尺寸(宽)
++ (UIImage *)ln_IMGCompressed:(UIImage *)sourceImg targetWidth:(CGFloat)defineWidth;
+
 @end
-
-
 
 
 

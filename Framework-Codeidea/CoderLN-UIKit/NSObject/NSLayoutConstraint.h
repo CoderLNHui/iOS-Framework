@@ -166,5 +166,5 @@ UIKIT_EXTERN  NSDictionary *_NSDictionaryOfVariableBindings(NSString *commaSepar
 @property(readonly, strong) NSLayoutDimension *heightAnchor NS_AVAILABLE_IOS(9_0);
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+CoderLN_NOTE NS_ASSUME_NONNULL_END
 

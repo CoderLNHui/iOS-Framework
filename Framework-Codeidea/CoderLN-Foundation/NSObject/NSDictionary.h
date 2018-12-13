@@ -109,24 +109,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-
-
-
-
-/**************************************************************************
- *                                                                        *
- *                       WechatPublic - CoderLN                          *
- *                                                                        *
- *  WeChat-CoderLN    用文字记录自己的思想与经验,关于编程、职场、阅读以及摄影.     *
- *  WeChat-CoderLN    希望在这个浮躁的社会中通过自己的一丝经历与感知 ~            *
- *  WeChat-CoderLN    些许能带给你新思想或是习惯.                             *
- *  JaneBook-白开水ln   Reprinted Please indicate the source.Mustbe.       *
- *                 WELCOME YOU TO JOIN_GitHub & CoderLN                  *
- *                                                                        *
- **************************************************************************/
-
-
-
+ 
 
 
 
@@ -194,6 +177,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(K __unsafe_unretained _Nullable [_Nonnull])buffer count:(NSUInteger)len;
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+CoderLN_NOTE NS_ASSUME_NONNULL_END
 
 

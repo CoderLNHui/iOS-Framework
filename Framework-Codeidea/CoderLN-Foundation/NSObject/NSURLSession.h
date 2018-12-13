@@ -356,22 +356,26 @@ NS_CLASS_AVAILABLE(NSURLSESSION_AVAILABLE, 7_0)
  */
 
 /* number of body bytes already received */
+#pragma mark -已接收的正文字节数
 @property (readonly) int64_t countOfBytesReceived;
 
 /* number of body bytes already sent */
+#pragma mark -已发送的正文字节数
 @property (readonly) int64_t countOfBytesSent;
 
 /* number of body bytes we expect to send, derived from the Content-Length of the HTTP request */
+#pragma mark -期望发送的正文字节数，与HTTP请求中"Content-Length"内容长度相同
 @property (readonly) int64_t countOfBytesExpectedToSend;
 
 /* number of byte bytes we expect to receive, usually derived from the Content-Length header of an HTTP response. */
+#pragma mark -期望接收的正文字节数，与HTTP请求中"Content-Length"内容长度相同
 @property (readonly) int64_t countOfBytesExpectedToReceive;
 
 /*
  * The taskDescription property is available for the developer to
  * provide a descriptive label for the task.
  */
-// 任务描述
+#pragma mark -添加任务描述标签
 @property (nullable, copy) NSString *taskDescription;
 
 /* -cancel returns immediately, but marks a task as being canceled.
@@ -638,6 +642,13 @@ NS_CLASS_AVAILABLE(NSURLSESSION_AVAILABLE, 7_0)
 #pragma mark -请求服务的类型 如：语音、电话
 //作用：对标准的网络流量、网络电话、语音、视频，以及由一个后台进程使用的流量进行了区分。大多数应用程序都不需要设置这个。
 @property NSURLRequestNetworkServiceType networkServiceType;//
+/**
+ NSURLNetworkServiceTypeDefault 默认
+ NSURLNetworkServiceTypeVoIP VoIP
+ NSURLNetworkServiceTypeVideo 视频
+ NSURLNetworkServiceTypeBackground 后台
+ NSURLNetworkServiceTypeVoice 语音
+ */
 
 /* allow request to route over cellular. */
 #pragma mark -是否允许蜂窝网络下的数据请求
@@ -718,17 +729,17 @@ NS_CLASS_AVAILABLE(NSURLSESSION_AVAILABLE, 7_0)
 /**
  作用：这对于跨 session 共享信息，如内容类型、语言、用户代理和身份认证，是很有用的。
  使用：
-    // 设置请求的header
+    //设置出栈请求的数据头
     NSString *userPasswordString = [NSString stringWithFormat:@"%@:%@", user, password];
     NSData * userPasswordData = [userPasswordString dataUsingEncoding:NSUTF8StringEncoding];
     NSString *base64EncodedCredential = [userPasswordData base64EncodedStringWithOptions:0];
     NSString *authString = [NSString stringWithFormat:@"Basic %@", base64EncodedCredential];
     NSString *userAgentString = @"AppName/com.example.app (iPhone 5s; iOS 7.0.2; Scale/2.0)";
 
-    configuration.HTTPAdditionalHeaders = @{@"Accept": @"application/json",
-                                            @"Accept-Language": @"en",
-                                            @"Authorization": authString,
-                                            @"User-Agent": userAgentString};
+    configuration.HTTPAdditionalHeaders = @{@"Accept": @"application/json",//接受类型
+                                            @"Accept-Language": @"en",//接受语言
+                                            @"Authorization": authString,//授权
+                                            @"User-Agent": userAgentString};//用户代理
  */
 @property (nullable, copy) NSDictionary *HTTPAdditionalHeaders;
 

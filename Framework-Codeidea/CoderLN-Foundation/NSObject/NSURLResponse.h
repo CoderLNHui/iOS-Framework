@@ -54,6 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
  @abstract Returns the URL of the receiver.
  @result The URL of the receiver.
  */
+#pragma mark -响应的 URL，有的时候，访问一个 URL 地址，服务器可能会出现重定向，会定位到新的地址
 @property (nullable, readonly, copy) NSURL *URL;
 
 /*!
@@ -66,6 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
  be made if the origin source did not report any such information.
  @result The MIME type of the receiver.
  */
+#pragma mark -服务器告诉客户端，可以用什么软件打开二进制数据。网络之所以丰富多采，是因为有丰富的客户端软件
 @property (nullable, readonly, copy) NSString *MIMEType;
 
 /*!
@@ -80,6 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
  there is no expectation that can be arrived at regarding expected
  content length.
  */
+#pragma mark -预期的内容长度，要下载的文件长度
 @property (readonly) long long expectedContentLength;
 
 /*!
@@ -92,6 +95,7 @@ NS_ASSUME_NONNULL_BEGIN
  @result The name of the text encoding of the receiver, or nil if no
  text encoding was specified.
  */
+#pragma mark -文本的编码名称 @”UTF8”，大多数都是 UTF8
 @property (nullable, readonly, copy) NSString *textEncodingName;
 
 /*!
@@ -105,6 +109,7 @@ NS_ASSUME_NONNULL_BEGIN
  This method always returns a valid filename.
  @result A suggested filename to use if saving the resource to disk.
  */
+#pragma mark -服务器建议存储文件名称,其实就是url的最后一个字节,和URL.lastPathComponent一样
 @property (nullable, readonly, copy) NSString *suggestedFilename;
 
 @end
@@ -143,6 +148,7 @@ NS_ASSUME_NONNULL_BEGIN
  @abstract Returns the HTTP status code of the receiver.
  @result The HTTP status code of the receiver.
  */
+#pragma mark -状态码
 @property (readonly) NSInteger statusCode;
 
 /*!
@@ -155,6 +161,7 @@ NS_ASSUME_NONNULL_BEGIN
  @result A dictionary containing all the HTTP header fields of the
  receiver.
  */
+#pragma mark -服务器放回所有的响应头信息
 @property (readonly, copy) NSDictionary *allHeaderFields;
 
 /*!

@@ -20,4 +20,4 @@ NS_CLASS_DEPRECATED_IOS(5_0, 9_0, "Access destinationViewController.popoverPrese
 
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+CoderLN_NOTE NS_ASSUME_NONNULL_END

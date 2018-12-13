@@ -71,4 +71,4 @@ typedef NS_OPTIONS(NSInteger, NSStringDrawingOptions) {
 @property(nonatomic, readonly) CGFloat actualTrackingAdjustment NS_DEPRECATED_IOS(6_0,7_0) __TVOS_PROHIBITED;
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+CoderLN_NOTE NS_ASSUME_NONNULL_END

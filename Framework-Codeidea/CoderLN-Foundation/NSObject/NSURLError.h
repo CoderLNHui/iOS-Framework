@@ -90,7 +90,7 @@ NS_ENUM(NSInteger)
         NSURLErrorUnsupportedURL =             -1002,//【不支持的URL】
         NSURLErrorCannotFindHost =             -1003,//【未能找到使用指定主机名的服务器】
         NSURLErrorCannotConnectToHost =         -1004,//【无法连接主机】
-        NSURLErrorNetworkConnectionLost =         -1005,//【网络连接丢失】
+        NSURLErrorNetworkConnectionLost =         -1005,//【网络连接已中断】
         NSURLErrorDNSLookupFailed =         -1006,//【DNS查找失败】
         NSURLErrorHTTPTooManyRedirects =         -1007,//【HTTP太多重定向】
         NSURLErrorResourceUnavailable =         -1008,//【资源不可用】
@@ -140,10 +140,7 @@ NS_ENUM(NSInteger)
         NSURLErrorBackgroundSessionWasDisconnected API_AVAILABLE(macos(10.10), ios(8.0), watchos(2.0), tvos(9.0))= -997,//【-】
     };
     
-    - - -
-    Status Code：常见状态代码、状态描述、说明：
-    - - -
-    
+## Status Code：常见状态代码、状态描述、说明：
     200 OK      //客户端请求成功
     400 Bad Request  //客户端请求有语法错误，不能被服务器所理解
     401 Unauthorized //请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用
@@ -152,9 +149,7 @@ NS_ENUM(NSInteger)
     500 Internal Server Error //服务器发生不可预期的错误
     503 Server Unavailable  //服务器当前不能处理客户端的请求，一段时间后可能恢复正常
     eg：HTTP/1.1 200 OK （CRLF）
-    
-    
-    
+ 
     
 NS_ASSUME_NONNULL_END
     

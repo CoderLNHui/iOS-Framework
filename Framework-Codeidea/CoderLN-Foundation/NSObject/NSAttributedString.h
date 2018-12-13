@@ -131,17 +131,7 @@ UIKIT_EXTERN NSString *const NSTextEffectLetterpressStyle NS_AVAILABLE(10_10, 7_
 
 
 
-/**************************************************************************
- *                                                                        *
- *                       WechatPublic - CoderLN                          *
- *                                                                        *
- *  WeChat-CoderLN    用文字记录自己的思想与经验,关于编程、职场、阅读以及摄影.     *
- *  WeChat-CoderLN    希望在这个浮躁的社会中通过自己的一丝经历与感知 ~            *
- *  WeChat-CoderLN    些许能带给你新思想或是习惯.                             *
- *  JaneBook-白开水ln   Reprinted Please indicate the source.Mustbe.       *
- *                 WELCOME YOU TO JOIN_GitHub & CoderLN                  *
- *                                                                        *
- **************************************************************************/
+
 
 
 

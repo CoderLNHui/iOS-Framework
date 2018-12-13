@@ -109,4 +109,4 @@ UIKIT_EXTERN NSNotificationName const NSTextStorageDidProcessEditingNotification
 
 
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+CoderLN_NOTE NS_ASSUME_NONNULL_END

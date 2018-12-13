@@ -74,9 +74,9 @@ static inline BOOL UIInterfaceOrientationIsLandscape(UIInterfaceOrientation orie
     return ((orientation) == UIInterfaceOrientationLandscapeLeft || (orientation) == UIInterfaceOrientationLandscapeRight);
 }
 
-#pragma mark -远程通知类型
+#pragma mark -远程通知类型(徽章/声音/弹框)
 typedef NS_OPTIONS(NSUInteger, UIRemoteNotificationType) {
-    UIRemoteNotificationTypeNone    = 0,//
+    UIRemoteNotificationTypeNone    = 0,//无
     UIRemoteNotificationTypeBadge   = 1 << 0,//徽章
     UIRemoteNotificationTypeSound   = 1 << 1,//声音
     UIRemoteNotificationTypeAlert   = 1 << 2,//弹框
@@ -99,8 +99,8 @@ typedef NS_ENUM(NSInteger, UIBackgroundRefreshStatus) {
 
 #pragma mark -应用状态
 typedef NS_ENUM(NSInteger, UIApplicationState) {
-    UIApplicationStateActive,// 前台活动状态。处于前台，能接受事件处理。
-    UIApplicationStateInactive,// 前台非活动状态。处于前台，但是不能接受事件处理。
+    UIApplicationStateActive,// 前台活跃状态。处于前台，能接受事件处理。
+    UIApplicationStateInactive,// 前台非活跃状态。处于前台，但是不能接受事件处理。
     UIApplicationStateBackground// Background：后台状态。进入后台，如果有可执行代码，会执行代码，代码执行完毕，程序进行挂起。
 } NS_ENUM_AVAILABLE_IOS(4_0);
 
@@ -140,6 +140,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 - (BOOL)isIgnoringInteractionEvents;                  // returns YES if we are at least one deep in ignoring events
 #endif
 
+#pragma mark -空闲计时器禁用（阻止手机屏幕变暗）
 @property(nonatomic,getter=isIdleTimerDisabled)       BOOL idleTimerDisabled;      // default is NO
 
 - (BOOL)openURL:(NSURL*)url NS_DEPRECATED_IOS(2_0, 10_0, "Please use openURL:options:completionHandler: instead") NS_EXTENSION_UNAVAILABLE_IOS("");
@@ -178,7 +179,8 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 
 @property(nonatomic,readonly) NSTimeInterval statusBarOrientationAnimationDuration __TVOS_PROHIBITED; // Returns the animation duration for the status bar during a 90 degree orientation change.  It should be doubled for a 180 degree orientation change.
 @property(nonatomic,readonly) CGRect statusBarFrame __TVOS_PROHIBITED; // returns CGRectZero if the status bar is hidden
-
+``
+#pragma mark -设置应用程序图标右上角的红色提醒数字
 @property(nonatomic) NSInteger applicationIconBadgeNumber;  // set to 0 to hide. default is 0. In iOS 8.0 and later, your application must register for user notifications using -[UIApplication registerUserNotificationSettings:] before being able to set the icon badge.
 
 @property(nonatomic) BOOL applicationSupportsShakeToEdit NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED;
@@ -216,58 +218,78 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIApplication : UIResponder
 
 
 
-#pragma mark - 远程通知
+#pragma mark - UIRemoteNotifications 远程通知 👣
 @interface UIApplication (UIRemoteNotifications)
 
 // Calling this will result in either application:didRegisterForRemoteNotificationsWithDeviceToken: or application:didFailToRegisterForRemoteNotificationsWithError: to be called on the application delegate. Note: these callbacks will be made only if the application has successfully registered for user notifications with registerUserNotificationSettings:, or if it is enabled for Background App Refresh.
+#pragma mark -注册远程通知
 - (void)registerForRemoteNotifications NS_AVAILABLE_IOS(8_0);
-
+#pragma mark -注销远程通知
 - (void)unregisterForRemoteNotifications NS_AVAILABLE_IOS(3_0);
 
 // Returns YES if the application is currently registered for remote notifications, taking into account any systemwide settings; doesn't relate to connectivity.
+#pragma mark -是否注册了远程通知
 #if UIKIT_DEFINE_AS_PROPERTIES
 @property(nonatomic, readonly, getter=isRegisteredForRemoteNotifications) BOOL registeredForRemoteNotifications NS_AVAILABLE_IOS(8_0);
 #else
 - (BOOL)isRegisteredForRemoteNotifications NS_AVAILABLE_IOS(8_0);
 #endif
 
+#pragma mark -注册远程通知
 - (void)registerForRemoteNotificationTypes:(UIRemoteNotificationType)types NS_DEPRECATED_IOS(3_0, 8_0, "Use -[UIApplication registerForRemoteNotifications] and UserNotifications Framework's -[UNUserNotificationCenter requestAuthorizationWithOptions:completionHandler:]") __TVOS_PROHIBITED;
+/**
+ 注解：注册远程通知使用如下方法：
+ 7.0及其以下版本的系统
+ UIRemoteNotificationType type = UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound;
+ [application registerForRemoteNotificationTypes:type];
+ 
+ 8.0及其以上版本的系统
+ UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes: (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert) categories:nil];
+ [application registerUserNotificationSettings:setting];
+ */
 
 // Returns the enabled types, also taking into account any systemwide settings; doesn't relate to connectivity.
+#pragma mark -获取远程通知已启用的类型
 - (UIRemoteNotificationType)enabledRemoteNotificationTypes NS_DEPRECATED_IOS(3_0, 8_0, "Use -[UIApplication isRegisteredForRemoteNotifications] and UserNotifications Framework's -[UNUserNotificationCenter getNotificationSettingsWithCompletionHandler:] to retrieve user-enabled remote notification and user notification settings") __TVOS_PROHIBITED;
 
 @end
 
 
-
-
-#pragma mark - 本地通知 LocalNotifications
+#pragma mark - UILocalNotifications 本地通知 👣
 
 // In iOS 8.0 and later, your application must register for user notifications using -[UIApplication registerUserNotificationSettings:] before being able to schedule and present UILocalNotifications
 @interface UIApplication (UILocalNotifications)
 
+#pragma mark -呈现本地通知
 - (void)presentLocalNotificationNow:(UILocalNotification *)notification NS_DEPRECATED_IOS(4_0, 10_0, "Use UserNotifications Framework's -[UNUserNotificationCenter addNotificationRequest:withCompletionHandler:]") __TVOS_PROHIBITED;
 
+#pragma mark -调度通知
 - (void)scheduleLocalNotification:(UILocalNotification *)notification NS_DEPRECATED_IOS(4_0, 10_0, "Use UserNotifications Framework's -[UNUserNotificationCenter addNotificationRequest:withCompletionHandler:]") __TVOS_PROHIBITED;  // copies notification
+#pragma mark -取消通知
 - (void)cancelLocalNotification:(UILocalNotification *)notification NS_DEPRECATED_IOS(4_0, 10_0, "Use UserNotifications Framework's -[UNUserNotificationCenter removePendingNotificationRequestsWithIdentifiers:]") __TVOS_PROHIBITED;
+
+#pragma mark -取消所有通知
 - (void)cancelAllLocalNotifications NS_DEPRECATED_IOS(4_0, 10_0, "Use UserNotifications Framework's -[UNUserNotificationCenter removeAllPendingNotificationRequests]") __TVOS_PROHIBITED;
 
+#pragma mark -获取所有的本地通知
 @property(nullable,nonatomic,copy) NSArray<UILocalNotification *> *scheduledLocalNotifications NS_DEPRECATED_IOS(4_0, 10_0, "Use UserNotifications Framework's -[UNUserNotificationCenter getPendingNotificationRequestsWithCompletionHandler:]") __TVOS_PROHIBITED;
 
 @end
 
 
 
-#pragma mark - 用户设置通知 UIUserNotificationSettings
+#pragma mark - UIUserNotificationSettings 通知设置 👣
 
 @class UIUserNotificationSettings;
 @interface UIApplication (UIUserNotificationSettings)
 
 // Registering UIUserNotificationSettings more than once results in previous settings being overwritten.
+#pragma mark -1.注册地通知（ios8.0之后）
 - (void)registerUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings NS_DEPRECATED_IOS(8_0, 10_0, "Use UserNotifications Framework's -[UNUserNotificationCenter requestAuthorizationWithOptions:completionHandler:] and -[UNUserNotificationCenter setNotificationCategories:]") __TVOS_PROHIBITED;
 
 // Returns the enabled user notification settings, also taking into account any systemwide settings.
 #if UIKIT_DEFINE_AS_PROPERTIES
+#pragma mark -当前通知设置
 @property(nonatomic, readonly, nullable) UIUserNotificationSettings *currentUserNotificationSettings NS_DEPRECATED_IOS(8_0, 10_0, "Use UserNotifications Framework's -[UNUserNotificationCenter getNotificationSettingsWithCompletionHandler:] and -[UNUserNotificationCenter getNotificationCategoriesWithCompletionHandler:]") __TVOS_PROHIBITED;
 #else
 - (nullable UIUserNotificationSettings *)currentUserNotificationSettings NS_DEPRECATED_IOS(8_0, 10_0, "Use UserNotifications Framework's -[UNUserNotificationCenter getNotificationSettingsWithCompletionHandler:] and -[UNUserNotificationCenter getNotificationCategoriesWithCompletionHandler:]") __TVOS_PROHIBITED;
@@ -336,7 +358,7 @@ typedef NSString * UIApplicationLaunchOptionsKey;
 
 
 
-#pragma mark - ApplicationDelegate 代理方法
+#pragma mark - ApplicationDelegate 代理方法 👣
 
 @protocol UIApplicationDelegate<NSObject>
 
@@ -349,7 +371,7 @@ typedef NSString * UIApplicationLaunchOptionsKey;
 #else
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions NS_AVAILABLE_IOS(6_0);
 
-#pragma mark -程序启动完成并进行初始化时调用
+#pragma mark -app1.应用启动加载完成并进行初始化时调用
 /**
  本地通知：UIApplicationDidFinishLaunchingNotification
  适宜操作：这个阶段应该进行根视图的创建。
@@ -361,7 +383,7 @@ typedef NSString * UIApplicationLaunchOptionsKey;
 #endif
 
 
-#pragma mark -程序进入前台并处于活动状态时调用
+#pragma mark -app2.应用进入前台并成为活跃状态时调用
 /**
  本地通知：UIApplicationDidBecomeActiveNotification
  适宜操作：这个阶段应该恢复UI状态（例如游戏状态）
@@ -372,7 +394,7 @@ typedef NSString * UIApplicationLaunchOptionsKey;
 - (void)applicationDidBecomeActive:(UIApplication *)application;
 
 
-#pragma mark -将要从活动状态进入非活动状态时调用
+#pragma mark -app3.应用从活跃状态进入到非活跃状态时调用
 /**
  本地通知：UIApplicationWillResignActiveNotification
  适宜操作：这个阶段应该保存UI状态（例如游戏状态）。
@@ -382,6 +404,7 @@ typedef NSString * UIApplicationLaunchOptionsKey;
      调用时机可能有以下几种：锁屏，单击HOME键，下拉状态栏，双击HOME键弹出底栏等情况。
  */
 - (void)applicationWillResignActive:(UIApplication *)application;
+
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url NS_DEPRECATED_IOS(2_0, 9_0, "Please use application:openURL:options:") __TVOS_PROHIBITED;
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation NS_DEPRECATED_IOS(4_2, 9_0, "Please use application:openURL:options:") __TVOS_PROHIBITED;
@@ -397,14 +420,17 @@ typedef NSString * UIApplicationOpenURLOptionsKey;
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options NS_AVAILABLE_IOS(9_0); // no equiv. notification. return NO if the application can't open for some reason
 
 
-#pragma mark -收到内存警告调用
+#pragma mark -app7.应用收到内存警告时调用
 /**
- 7.当应用可用内存不足，内存警告时调用。在这个方法中，应该尽量去清理可能释放的内存。如果实在不行，可能会被强行退出应用。
+ 本地通知：UIApplicationDidReceiveMemoryWarningNotification
+ 适宜操作：应该尽量去清理可能释放的内存
+ 使用说明：
+     当应用可用内存不足，内存警告时调用。
  */
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application;      // try to clean up as much memory as possible. next step is to terminate app
 
 
-#pragma mark -程序被杀死退出时调用
+#pragma mark -app6.应用被终止退出时调用
 /**
  本地通知：UIApplicationWillTerminateNotification
  适宜操作：这个阶段应该进行释放一些资源和保存用户数据。
@@ -427,26 +453,14 @@ typedef NSString * UIApplicationOpenURLOptionsKey;
 
 
 
-#pragma mark -Application 系统通知
+#pragma mark - Application 系统通知 👣
 #pragma mark -当客户端注册远程通知时，会回调下面两个方法
 /**
  如果成功，则回调第一个didRegister，客户端把deviceToken取出来发给服务端，push消息的时候要用。
  如果失败了，则回调第二个didFailToRegister，可以从error参数中看一下失败原因。
  */
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken NS_AVAILABLE_IOS(3_0);
-
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error NS_AVAILABLE_IOS(3_0);
-/**
- 注解：注册远程通知使用如下方法：
- 7.0及其以下版本的系统
- UIRemoteNotificationType type = UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound;
- [application registerForRemoteNotificationTypes:type];
- 
- 8.0及其以上版本的系统
- UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes: (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert) categories:nil];
- [application registerUserNotificationSettings:setting];
- */
-
 
 
 #pragma mark -当应用在前台运行中，收到远程通知时调用(不会弹出系统通知界面)
@@ -464,6 +478,7 @@ typedef NSString * UIApplicationOpenURLOptionsKey;
  当应用完全没有启动时，点击push消息启动应用，就不会回调这个方法。
  */
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification NS_DEPRECATED_IOS(4_0, 10_0, "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate willPresentNotification:withCompletionHandler:] or -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]") __TVOS_PROHIBITED;
+
 
 // Called when your app has been activated by the user selecting an action from a local notification.
 // A nil action identifier indicates the default action.
@@ -510,7 +525,7 @@ typedef NSString * UIApplicationOpenURLOptionsKey;
 - (void)application:(UIApplication *)application handleIntent:(INIntent *)intent completionHandler:(void(^)(INIntentResponse *intentResponse))completionHandler NS_AVAILABLE_IOS(11_0);
 
 
-#pragma mark -程序从前台进入后台时调用
+#pragma mark -app4.应用从前台进入到后台时调用
 /**
  本地通知：UIApplicationDidEnterBackgroundNotification
  适宜操作：这个阶段应该保存用户数据，释放一些资源（例如释放数据库资源）。
@@ -521,7 +536,7 @@ typedef NSString * UIApplicationOpenURLOptionsKey;
 - (void)applicationDidEnterBackground:(UIApplication *)application NS_AVAILABLE_IOS(4_0);
 
 
-#pragma mark -程序当前在后台将要进入前台，但是还没有处于活动状态时调用。
+#pragma mark -app5.应用从后台进入到前台时调用
 /**
  本地通知：UIApplicationWillEnterForegroundNotification
  适宜操作：这个阶段应该恢复用户数据。
@@ -533,6 +548,7 @@ typedef NSString * UIApplicationOpenURLOptionsKey;
 - (void)applicationProtectedDataWillBecomeUnavailable:(UIApplication *)application NS_AVAILABLE_IOS(4_0);
 - (void)applicationProtectedDataDidBecomeAvailable:(UIApplication *)application    NS_AVAILABLE_IOS(4_0);
 
+#pragma mark -窗体
 @property (nullable, nonatomic, strong) UIWindow *window NS_AVAILABLE_IOS(5_0);
 
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window  NS_AVAILABLE_IOS(6_0) __TVOS_PROHIBITED;

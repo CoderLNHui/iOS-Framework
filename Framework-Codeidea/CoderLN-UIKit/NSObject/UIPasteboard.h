@@ -119,5 +119,5 @@ UIKIT_EXTERN NSArray<NSString *> *UIPasteboardTypeListColor __TVOS_PROHIBITED __
 // Supported types are: NSString, NSURL, UIImage, UIColor, NSAttributedString.
 UIKIT_EXTERN NSString * const UIPasteboardTypeAutomatic __TVOS_PROHIBITED __WATCHOS_PROHIBITED NS_AVAILABLE_IOS(10_0);
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+CoderLN_NOTE NS_ASSUME_NONNULL_END
 

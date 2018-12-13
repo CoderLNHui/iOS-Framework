@@ -44,7 +44,6 @@ typedef NS_ENUM(NSInteger, UITableViewRowAnimation) {
 };
 
 
-
 // Including this constant string in the array of strings returned by sectionIndexTitlesForTableView: will cause a magnifying glass icon to be displayed at that location in the index.
 // This should generally only be used as the first title in the index.
 // 这通常只应用作索引中的第一个标题
@@ -363,7 +362,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 /**
  使用：
      self.tableView.tableFooterView = [[UIView alloc] init]; // 隐藏多余分割线
- */
+ 
 @property (nonatomic, strong, nullable) UIView *tableHeaderView;                           // accessory view for above row content. default is nil. not to be confused with section header
 @property (nonatomic, strong, nullable) UIView *tableFooterView;                           // accessory view below content. default is nil. not to be confused with section footer
 

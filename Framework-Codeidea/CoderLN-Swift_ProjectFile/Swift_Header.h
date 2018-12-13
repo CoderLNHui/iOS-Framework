@@ -15,5 +15,5 @@ func LNPrint<T>(messsage : T, file : String = #file, funcName : String = #functi
         //print("\(fileName):(\(lineNum))-\(messsage)")
     #endif
 }
-打印：类 + 函数 + 行数 + 描述信息
-ViewController.swift:【setupUI()】(46)-Swift自定义Log
+// 打印：类 + 函数 + 行数 + 描述信息
+// ViewController.swift:【setupUI()】(46)-Swift自定义Log

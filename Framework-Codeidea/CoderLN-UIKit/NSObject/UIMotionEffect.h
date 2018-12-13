@@ -81,4 +81,4 @@ NS_CLASS_AVAILABLE_IOS(7_0) @interface UIMotionEffectGroup : UIMotionEffect
 @property (nullable, copy, nonatomic) NSArray<__kindof UIMotionEffect *> *motionEffects;
 @end
 
-NS_ASSUME_NONNULL_END_START_COPYRIGHT__JIANSHU_BAIKAISHUILN__WechatPublic_Codeidea__END
+CoderLN_NOTE NS_ASSUME_NONNULL_END
