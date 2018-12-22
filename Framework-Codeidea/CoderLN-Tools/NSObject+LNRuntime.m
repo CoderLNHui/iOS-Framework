@@ -10,10 +10,10 @@
 #import "NSObject+LNRuntime.h"
 #import <objc/message.h>
 
-#pragma mark - 获取一个类中的所有类方法和对象方法
+#pragma mark - 获取一个类中的所有对象方法和类方法
 @implementation NSObject (LNRuntime)
 
-#pragma mark -获取实例方法(-号开头的方法)
+#pragma mark -获取类中所有实例方法名(-号开头的方法)
 + (void)ln_getInstanceMethodList
 {
     NSMutableString *methodStr = [NSMutableString string];
@@ -33,14 +33,12 @@
         SEL sel = method_getName(method);
         
         [methodStr appendFormat:@"\n%@\n",NSStringFromSelector(sel)];
-        
     }
     
     NSLog(@"%@",methodStr);
-    
 }
 
-#pragma mark -获取类方法(+号开头开头的方法)
+#pragma mark -获取类中所有的方法(+号开头开头的方法)
 + (void)ln_getClassMethodList
 {
     NSMutableString *methodStr = [NSMutableString string];
@@ -70,11 +68,52 @@
         SEL sel = method_getName(method);
         
         [methodStr appendFormat:@"\n%@\n",NSStringFromSelector(sel)];
-        
     }
-    
     NSLog(@"%@",methodStr);
 }
+
+
+
+#pragma mark -获取类中所有实例方法名
++ (void)printMethodNamesOfClass
+{
+    unsigned int count;
+    // 获得方法数组
+    Method * methodList = class_copyMethodList(self, &count);
+    // 存储方法名
+    NSMutableString *methodNames = [NSMutableString string];
+    // 遍历所有的方法
+    for (int i = 0; i < count; i++) {
+        // 获得方法
+        Method method = methodList[I];
+        // 获得方法名
+        NSString *methodName = NSStringFromSelector(method_getName(method));
+        // 拼接方法名
+        [methodNames appendString:methodName];
+        [methodNames appendString:@", "];
+    }
+    // 释放
+    free(methodList);
+    // 打印方法名
+    NSLog(@"%@ %@", cls, methodNames);
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end
