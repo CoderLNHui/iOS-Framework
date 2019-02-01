@@ -2,9 +2,9 @@
  * UICollectionView.h 
  *
  * UIKit (c) 2011-2017
- *「Public_不知名开发者 | https://github.com/CoderLN | https://www.jianshu.com/u/fd745d76c816」
+ * 简/众_不知名开发者 | https://github.com/CoderLN
  *
- * 各位厂友, 由于「时间 & 知识」有限, 总结的文章难免有「未全、不足」, 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
+ * 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
 
 
@@ -232,7 +232,7 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UICollectionViewFocusUpdateContext : UIFo
 
 
 
-#pragma mark - 综合视图
+#pragma mark - 集合视图
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView <UIDataSourceTranslating>
 
 #pragma mark - 初始化
@@ -379,7 +379,7 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionView : UIScrollView <UIDataSo
 
 // Interacting with the collection view.
 /**
- 与综合视图交互
+ 滚动到哪一个item
  */
 - (void)scrollToItemAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UICollectionViewScrollPosition)scrollPosition animated:(BOOL)animated;
 

@@ -1,11 +1,10 @@
-/*
- * UICollectionViewCell.h 
- *
- * UIKit (c) 2011-2017
- *「Public_不知名开发者 | https://github.com/CoderLN | https://www.jianshu.com/u/fd745d76c816」
- *
- * 各位厂友, 由于「时间 & 知识」有限, 总结的文章难免有「未全、不足」, 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
- */
+//
+//  UICollectionViewCell.h
+//  UIKit
+//
+//  简/众_不知名开发者 | https://github.com/CoderLN
+//  Copyright (c) 2011-2017 Apple Inc. All rights reserved.
+//
 
 
 #import <UIKit/UIView.h>
@@ -36,7 +35,7 @@ typedef NS_ENUM(NSInteger, UICollectionViewCellDragState) {
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionReusableView : UIView
 
 #pragma mark -标识
-@property (nonatomic, readonly, copy, nullable) NSString *reuseIdentifier;//
+@property (nonatomic, readonly, copy, nullable) NSString *reuseIdentifier;
 
 // Override point.
 // Called by the collection view before the instance is returned from the reuse queue.
@@ -44,14 +43,14 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionReusableView : UIView
 #pragma mark -准备复用（当cell被复用会调用）
 /**
  注解:
-     重写cell的prepareForReuse官方头文件中有说明.当前已经被分配的cell如果被重用了(通常是滚动出屏幕外了),会调用cell的prepareForReuse通知cell.
-     注意这里重写方法的时候,注意一定要调用父类方法[super prepareForReuse] .
-     这个在使用cell作为网络访问的代理容器时尤其要注意,需要在这里通知取消掉前一次网络请求.不要再给这个cell发数据了.
+    重写cell的prepareForReuse官方头文件中有说明.当前已经被分配的cell如果被重用了(通常是滚动出屏幕外了),会调用cell的prepareForReuse通知cell.
+    注意这里重写方法的时候,注意一定要调用父类方法[super prepareForReuse] .
+    这个在使用cell作为网络访问的代理容器时尤其要注意,需要在这里通知取消掉前一次网络请求.不要再给这个cell发数据了.
  */
 - (void)prepareForReuse;
 
 
-
+#pragma mark - 自定义布局属性
 // Classes that want to support custom layout attributes specific to a given UICollectionViewLayout subclass can apply them here.
 // This allows the view to work in conjunction with a layout class that returns a custom subclass of UICollectionViewLayoutAttributes from -layoutAttributesForItem: or the corresponding layoutAttributesForHeader/Footer methods.
 // -applyLayoutAttributes: is then called after the view is added to the collection view and just before the view is returned from the reuse queue.
@@ -59,6 +58,7 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionReusableView : UIView
 - (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes;
 
 // Override these methods to provide custom UI for specific layouts.
+// 重写这些方法以提供特定布局的自定义UI
 - (void)willTransitionFromLayout:(UICollectionViewLayout *)oldLayout toLayout:(UICollectionViewLayout *)newLayout;
 - (void)didTransitionFromLayout:(UICollectionViewLayout *)oldLayout toLayout:(UICollectionViewLayout *)newLayout;
 
@@ -69,14 +69,14 @@ NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionReusableView : UIView
 
 
 
-#pragma mark - cell视图内容（继承复用视图ReusableView）
+#pragma mark - cell视图内容，继承复用视图ReusableView
 NS_CLASS_AVAILABLE_IOS(6_0) @interface UICollectionViewCell : UICollectionReusableView
 
 #pragma mark -内容视图
 /**
  注解:
-     Cell需要自定义 且 必须通过注册,原因: 系统cell没有任何子控件;
-     子控件imageView,label 添加到contentView上
+    Cell需要自定义 且 必须通过注册,原因: 系统cell没有任何子控件;
+    子控件imageView,label 添加到contentView上
  */
 @property (nonatomic, readonly) UIView *contentView; // add custom subviews to the cell's contentView
 

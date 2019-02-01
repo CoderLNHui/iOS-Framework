@@ -1,5 +1,5 @@
 /**
- Public_不知名开发者
+ Public|Jshu_不知名开发者
  
  在应用程序刚刚启动时打印 `currentRunLoop`可以看到系统默认注册了很多个`Observer`，NSLog(@"%@",[NSRunLoop currentRunLoop]);
  其中两个是关于AutoreleasePool的。

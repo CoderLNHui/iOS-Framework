@@ -2,9 +2,9 @@
  * UITableView.h 
  *
  * UIKit (c) 2005-2017
- *「Public_不知名开发者 | https://github.com/CoderLN | https://www.jianshu.com/u/fd745d76c816」
+ * 简/众_不知名开发者 | https://github.com/CoderLN
  *
- * 各位厂友, 由于「时间 & 知识」有限, 总结的文章难免有「未全、不足」, 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
+ * 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
 
 #import <Foundation/Foundation.h>
@@ -99,35 +99,23 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 
 
 
-//_______________________________________________________________________________________________________________
+//----------------------- <#<--- 不知名开发者 --->#> ------------------------//
+//
 // this represents the display and behaviour of the cells.
 
 #pragma mark - Delegate
 @protocol UITableViewDelegate<NSObject, UIScrollViewDelegate>
 
-#pragma mark - @optional（可选）
-
+@optional（可选）
 // Display customization -- 显示自定义
 
 #pragma mark - 将要显示 \ 显示完成回调方法
-/**
- 作用：【cell将要显示时调用的方法】
- */
+#pragma mark -cell、头视图、尾视图将要显示时调用
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
-
-/**
- 作用：【头视图将要显示时调用的方法】
- */
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
-
-/**
- 作用：【尾视图将要显示时调用的方法】
- */
 - (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
 
-/**
- 作用：【和上面的方法对应，这三个方法分别是cell，头视图，尾视图已经显示时调用的方法】
- */
+#pragma mark -cell，头视图，尾视图显示完成时调用
 - (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath NS_AVAILABLE_IOS(6_0);
 - (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
 - (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
@@ -168,30 +156,23 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 #pragma mark - 选择回调代理方法
 // -tableView:shouldHighlightRowAtIndexPath: is called when a touch comes down on a row.
 // Returning NO to that message halts the selection process and does not cause the currently selected row to lose its selected look while the touch is down.
-/**
- 作用：【设置cell是否可以高亮】
- */
+
+#pragma mark -设置cell是否可以高亮、cell 高亮调用、cell 取消高亮调用
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(6_0);
 
-/**
- 作用：【cell 高亮调用的方法】
- */
 - (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(6_0);
 
-/**
- 作用：【cell 取消高亮调用的方法】
- */
 - (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(6_0);
 
 
 // Called before the user changes the selection. Return a new indexPath, or nil, to change the proposed selection.
-#pragma mark -当即将选中某行和取消选中某行时调用，返回行所在分区
+#pragma mark -将要选中某行、将要取消选中某行 调用，返回选中下标
 - (nullable NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 - (nullable NSIndexPath *)tableView:(UITableView *)tableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(3_0);
 
 
 // Called after the user changes the selection.
-#pragma mark -选中和取消选中后调用
+#pragma mark -选中某行、取消选中某行 调用
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(3_0);
 
@@ -225,7 +206,7 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 - (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(8_0) __TVOS_PROHIBITED;
 
 
-// Swipe actions
+// Swipe actions 滑动操作
 // These methods supersede -editActionsForRowAtIndexPath: if implemented
 // return nil to get the default swipe actions
 - (nullable UISwipeActionsConfiguration *)tableView:(UITableView *)tableView leadingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos);
@@ -238,7 +219,7 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 
 
 // The willBegin/didEnd methods are called whenever the 'editing' property is automatically changed by the table (allowing insert/delete/move). This is done by a swipe activating a single row
-#pragma mark -将要编辑和结束编辑时调用的方法s
+#pragma mark -将要编辑、结束编辑 时调用
 - (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath __TVOS_PROHIBITED;
 - (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(nullable NSIndexPath *)indexPath __TVOS_PROHIBITED;
 
@@ -275,9 +256,7 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 
 
 
-
-#pragma mark - Focus -- 焦点
-
+#pragma mark - Focus 行是否可以交互
 - (BOOL)tableView:(UITableView *)tableView canFocusRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(9_0);
 - (BOOL)tableView:(UITableView *)tableView shouldUpdateFocusInContext:(UITableViewFocusUpdateContext *)context NS_AVAILABLE_IOS(9_0);
 - (void)tableView:(UITableView *)tableView didUpdateFocusInContext:(UITableViewFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator NS_AVAILABLE_IOS(9_0);
@@ -285,7 +264,7 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 
 
 // Spring Loading
-
+#pragma mark - 弹簧加载
 // Allows opting-out of spring loading for an particular row.
 // If you want the interaction effect on a different subview of the spring loaded cell, modify the context.targetView property. The default is the cell.
 // If this method is not implemented, the default is YES except when the row is part of a drag session.
@@ -296,7 +275,7 @@ NS_CLASS_AVAILABLE_IOS(9_0) @interface UITableViewFocusUpdateContext : UIFocusUp
 
 
 
-// cell选中改变完成通知常量
+#pragma mark -cell选中改变完成通知常量
 UIKIT_EXTERN NSNotificationName const UITableViewSelectionDidChangeNotification;
 
 typedef NS_ENUM(NSInteger, UITableViewSeparatorInsetReference) {
@@ -309,7 +288,8 @@ typedef NS_ENUM(NSInteger, UITableViewSeparatorInsetReference) {
 
 
 
-//_______________________________________________________________________________________________________________
+//----------------------- <#<--- 不知名开发者 --->#> ------------------------//
+//
 
 
 #pragma mark - UITableView
@@ -344,25 +324,24 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 @property (nonatomic) CGFloat estimatedSectionHeaderHeight NS_AVAILABLE_IOS(7_0); // default is 0, which means there is no estimate
 @property (nonatomic) CGFloat estimatedSectionFooterHeight NS_AVAILABLE_IOS(7_0); // default is 0, which means there is no estimate
 
-#pragma mark - 设置分割线的内边距dequeueReusableCellWithIdentifier
+#pragma mark -设置分割线的内边距dequeueReusableCellWithIdentifier
 @property (nonatomic) UIEdgeInsets separatorInset NS_AVAILABLE_IOS(7_0) UI_APPEARANCE_SELECTOR-separatorInset; // allows customization of the frame of cell separators
 
 @property (nonatomic, weak, nullable) id <UITableViewDragDelegate> dragDelegate API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos, watchos);
 @property (nonatomic, weak, nullable) id <UITableViewDropDelegate> dropDelegate API_AVAILABLE(ios(11.0)) API_UNAVAILABLE(tvos, watchos);
 
 
-#pragma mark - 背景视图(自动匹配tableView视图的大小)
+#pragma mark -背景视图(自动匹配tableView视图的大小)
 /**
  注解：
      设置后作为列表视图(tableView)的子视图，且在所有cell和headers/footers的后面。默认nil
  */
 @property (nonatomic, strong, nullable) UIView *backgroundView NS_AVAILABLE_IOS(3_2); // the background view will be automatically resized to track the size of the table view.  this will be placed as a subview of the table view behind all cells and headers/footers.  default may be non-nil for some devices.
 
-#pragma mark - 设置tableView 表头视图 和 表尾部视图
+#pragma mark -设置tableView 表头视图 和 表尾部视图
 /**
- 使用：
-     self.tableView.tableFooterView = [[UIView alloc] init]; // 隐藏多余分割线
- 
+ self.tableView.tableFooterView = [[UIView alloc] init]; // 隐藏多余分割线
+ */
 @property (nonatomic, strong, nullable) UIView *tableHeaderView;                           // accessory view for above row content. default is nil. not to be confused with section header
 @property (nonatomic, strong, nullable) UIView *tableFooterView;                           // accessory view below content. default is nil. not to be confused with section footer
 
@@ -370,21 +349,15 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 @property (nonatomic, readonly) BOOL hasUncommittedUpdates API_AVAILABLE(ios(11.0), tvos(11.0));
 
 
-#pragma mark - 数据刷新
 #pragma mark -全局刷新
 - (void)reloadData; // reloads everything from scratch. redisplays visible rows. because we only keep info about visible rows, this is cheap. will adjust offset if table shrinks
 
-#pragma mark -局部刷新
+#pragma mark -局部刷新索引条
 //section这个方法常用于新加或者删除了索引类别而无需刷新整个表视图的情况下
 - (void)reloadSectionIndexTitles NS_AVAILABLE_IOS(3_0);   // reloads the index bar.
 
 
-
-
-
-
-
-
+ 
 
 #pragma mark - 常用方法
 // Info -- 信息
@@ -396,11 +369,9 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 - (NSInteger)numberOfRowsInSection:(NSInteger)section;
 #pragma mark -某一组所占的矩形区域(包括header,footer和所有的行)
 - (CGRect)rectForSection:(NSInteger)section;                                    // includes header, footer and all rows
-#pragma mark -某一组的header所占的矩形区域
+#pragma mark -某一组的header、footer、row 所占的矩形区域
 - (CGRect)rectForHeaderInSection:(NSInteger)section;
-#pragma mark -某一组的footer所占的矩形区域
 - (CGRect)rectForFooterInSection:(NSInteger)section;
-#pragma mark -某一分区的row所占的矩形区域
 - (CGRect)rectForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 #pragma mark -某一点在tableview上所占的分区，如果该点不在tableView的任何row上返回nil
@@ -423,10 +394,10 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 #pragma mark -某一组的footer视图(常用于自定义footerView的时候用)
 - (nullable UITableViewHeaderFooterView *)footerViewForSection:(NSInteger)section NS_AVAILABLE_IOS(6_0);
 
-#pragma mark -使表格定位到某一行
+#pragma mark -使表格滚动到某一行
 - (void)scrollToRowAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated;
 
-#pragma mark -使表格定位到选中行
+#pragma mark -使表格滚动到选中行
 - (void)scrollToNearestSelectedRowAtScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated;
 
 // Reloading and Updating
@@ -437,28 +408,21 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 // Row insertion/deletion/reloading. -- 行的插入/删除/刷新
 
 #pragma mark - 操作：行的插入/删除/刷新
-
 #pragma mark -允许多个插入/行和段被同时删除动画。可排序
 - (void)beginUpdates;   // allow multiple insert/delete of rows and sections to be animated simultaneously. Nestable
 #pragma mark -只调用插入/删除/重载呼叫或改变一更新区块内的编辑状态。然而对于行数等属性可能是无效的
 - (void)endUpdates;     // only call insert/delete/reload calls or change the editing state inside an update block.  otherwise things like row count, etc. may be invalid.
 
-#pragma mark -插入某些组
+#pragma mark -插入某些组、删除某些组、刷新某些组、移动组section到组newSection的位置
 - (void)insertSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation;
-#pragma mark -删除某些组
 - (void)deleteSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation;
-#pragma mark -刷新某些组
 - (void)reloadSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation NS_AVAILABLE_IOS(3_0);
-#pragma mark -移动组section到组newSection的位置
 - (void)moveSection:(NSInteger)section toSection:(NSInteger)newSection NS_AVAILABLE_IOS(5_0);
 
-#pragma mark -插入某些行
+#pragma mark -插入某些行、删除某些行、刷新某些分区的行、移动分区indexPath的行到分区newIndexPath
 - (void)insertRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;
-#pragma mark -删除某些行
 - (void)deleteRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation;
-#pragma mark -刷新某些分区的行
 - (void)reloadRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation NS_AVAILABLE_IOS(3_0);
-#pragma mark -移动分区indexPath的行到分区newIndexPath
 - (void)moveRowAtIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)newIndexPath NS_AVAILABLE_IOS(5_0);
 
 
@@ -484,7 +448,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 
 
 // Selection -- 选中
-#pragma mark - 选中的行所在的所有分区(单选、多选)
+#pragma mark - 单选某一行、多选中多行
 @property (nonatomic, readonly, nullable) NSIndexPath *indexPathForSelectedRow; // returns nil or index path representing section and row of selection.
 @property (nonatomic, readonly, nullable) NSArray<NSIndexPath *> *indexPathsForSelectedRows NS_AVAILABLE_IOS(5_0); // returns nil or a set of index paths representing the sections and rows of the selection.
 
@@ -499,7 +463,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 
 // Appearance -- 外观
 #pragma mark - 设置右侧索引
-
 #pragma mark -设置索引栏最小显示行数。显示在右侧专门章节索引列表当行数达到此值。默认值为0
 @property (nonatomic) NSInteger sectionIndexMinimumDisplayRowCount;                                                      // show special section index list on right when row count reaches this value. default is 0
 #pragma mark -设置索引栏字体颜色
@@ -547,21 +510,22 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 // If all reuse identifiers are registered, use the newer -dequeueReusableCellWithIdentifier:forIndexPath: to guarantee that a cell instance is returned.
 // Instances returned from the new dequeue method will also be properly sized when they are returned.
 #pragma mark - Cell注册
-#pragma mark -cell注册（Xib）
+#pragma mark -cell注册 Xib、代码
 - (void)registerNib:(nullable UINib *)nib forCellReuseIdentifier:(NSString *)identifier NS_AVAILABLE_IOS(5_0);
-#pragma mark -cell注册（代码）
 - (void)registerClass:(nullable Class)cellClass forCellReuseIdentifier:(NSString *)identifier NS_AVAILABLE_IOS(6_0);
-#pragma mark -附加视图注册（Xib）
+
+#pragma mark -附加视图注册 Xib、代码
 - (void)registerNib:(nullable UINib *)nib forHeaderFooterViewReuseIdentifier:(NSString *)identifier NS_AVAILABLE_IOS(6_0);
-#pragma mark -附加视图注册（代码）
 - (void)registerClass:(nullable Class)aClass forHeaderFooterViewReuseIdentifier:(NSString *)identifier NS_AVAILABLE_IOS(6_0);
 
 
 // Focus -- 焦点
 @property (nonatomic) BOOL remembersLastFocusedIndexPath NS_AVAILABLE_IOS(9_0); // defaults to NO. If YES, when focusing on a table view the last focused index path is focused automatically. If the table view has never been focused, then the preferred focused index path is used.
+//默认为没有。如果是，当聚焦于表视图时，最后聚焦的索引路径将自动聚焦。如果表视图从未被聚焦，则使用首选的聚焦索引路径
 
 
 // Drag & Drop
+#pragma mark - 拖放 ios(11.0)
 
 // To enable intra-app drags on iPhone, set this to YES.
 // You can also force drags to be disabled for this table view by setting this to NO.
@@ -577,7 +541,8 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 
 @end
 
-//_______________________________________________________________________________________________________________
+//----------------------- <#<--- 不知名开发者 --->#> ------------------------//
+//
 // this protocol represents the data model object. as such, it supplies no information about appearance (including the cells)
 // -- 数据源协议方法，这个协议描绘了数据源模型，它不提供关于外观的任何信息(包括cell)
 
@@ -609,8 +574,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 // Individual rows can opt out of having the -editing property set for them. If not implemented, all rows are assumed to be editable.
 #pragma mark -每一行可以设置自己的编辑属性，默认YES，即是否可以删除移动选中等
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
-
-
 
 
 

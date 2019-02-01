@@ -5,7 +5,7 @@
  *
  * Foundation (c) 1998-2014
  *
- * Public_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
+ * Public|Jshu_不知名开发者 / https://githubidea.github.io / https://github.com/CoderLN
  * Welcome your star|fork, Your sharing can be together.
  *
  * 🏃🏻‍♂️ ◕该模块将系统化学习，后续替换、补充文章内容 ~
@@ -2726,7 +2726,15 @@ static int32_t __CFRunLoopRun(CFRunLoopRef rl, CFRunLoopModeRef rlm, CFTimeInter
 }
 
 
+
+
 #CoderLN_NOTE：CFRunLoopRunSpecific 具体处理runloop的运行准备
+/*
+ 在CFRunLoopRunSpecific方法内部。在通知观察者即将进入runloop，调用__CFRunLoopRun主函数前，会先做两个判断
+ 1.如果runloop被解除分配，就return直接返回，表示runloop循环完成。
+ 2.然后会根据我们设定的modeName找到对应的mode，判断如果当前model的内存指针等于空 或者 mode中没有一个source（源事件_sources0/_sources0）和timers（可以理解为定时器事件），那么就直接return直接返回，表示runloop循环完成。
+ 注解：这里的意思是 mode 里面至少要有一个source(源事件)或者是timer(定时器事件)。这里没有Observer。
+ */
 SInt32 CFRunLoopRunSpecific(CFRunLoopRef rl, CFStringRef modeName, CFTimeInterval seconds, Boolean returnAfterSourceHandled) {     /* DOES CALLOUT */
     CHECK_FOR_FORK();
     if (__CFRunLoopIsDeallocating(rl)) return kCFRunLoopRunFinished;
@@ -2766,7 +2774,7 @@ SInt32 CFRunLoopRunSpecific(CFRunLoopRef rl, CFStringRef modeName, CFTimeInterva
 /**
  #CoderLN_NOTE：CFRunLoopRun CFRunLoop的主函数
  其实内部就是do-while循环，在这个循环内部不断地处理各种任务（`比如Source、Timer、Observer`），
- 通过判断result的值实现循环，如果result返回值不等于（runloop没有停止且没有结束的条件）则继续循环，相反侧退出。所以 可以看成是一个死循环。
+ 通过判断result的值实现循环，如果result返回值不等于（runloop停止且结束的条件）则继续循环，相反侧退出。所以 可以看成是一个死循环。
  如果没有RunLoop，UIApplicationMain 函数执行完毕之后将直接返回，就是说程序一启动然后就结束；
  */
 void CFRunLoopRun(void) {	/* DOES CALLOUT */
