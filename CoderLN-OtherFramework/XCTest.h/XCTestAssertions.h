@@ -2,7 +2,6 @@
  * XCTestAssertions.h 断言
  *
  * XCTest  (c) 2013-2015
- * 不知名开发者 - 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
 
 // Copyright (c) 1997-2005, Sen:te (Sente SA).  All rights reserved.

@@ -2,7 +2,6 @@
  * UIScrollView.h 
  *
  * UIKit (c) 2007-2017
- * 不知名开发者 - 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
 
 
@@ -18,7 +17,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 枚举 & 常量
-
 typedef NS_ENUM(NSInteger, UIScrollViewIndicatorStyle) {
     UIScrollViewIndicatorStyleDefault, // 黑内容白边框,适用于任何背景    // black with white border. good against any background
     UIScrollViewIndicatorStyleBlack,  // 全黑     // black only. smaller. good against a white background
@@ -42,9 +40,6 @@ UIKIT_EXTERN const CGFloat UIScrollViewDecelerationRateFast NS_AVAILABLE_IOS(3_0
 
 
 
-
-
-#pragma mark - ↑
 #pragma mark - 常用属性
 
 NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
@@ -90,9 +85,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 
 
-
-
-#pragma mark - ↑
 #pragma mark - 滑动属性方法
 
 
@@ -158,9 +150,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 
 
-
-
-#pragma mark - ↑
 #pragma mark - 指示器属性方法
 
 /**
@@ -202,9 +191,8 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
  the methods below are called by the scroll view and give subclasses override points to add in custom behaviour.
  you can remove the delay in delivery of touchesBegan:withEvent: to subviews by setting delaysContentTouches to NO.
  */
-#pragma mark - ↑
-#pragma mark - 事件属性方法
 
+#pragma mark - 事件属性方法
 
 /**
  作用：返回是否用户已经触碰了内容视图准备进行滑动
@@ -261,19 +249,13 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 
 
-
-
-
 /*
  the following properties and methods are for zooming. as the user tracks with two fingers, we adjust the offset and the scale of the content. When the gesture ends, you should update the content
  as necessary. Note that the gesture can end and a finger could still be down. While the gesture is in progress, we do not send any tracking calls to the subview.
  the delegate must implement both viewForZoomingInScrollView: and scrollViewDidEndZooming:withView:atScale: in order for zooming to work and the max/min zoom scale must be different
  note that we are not scaling the actual scroll view but the 'content view' returned by the delegate. the delegate must return a subview, not the scroll view itself, from viewForZoomingInScrollview:
  */
-#pragma mark - ↑
 #pragma mark - 缩放属性方法
-
-
 /**
  作用：最小缩放比例,默认为1.0
  */
@@ -317,13 +299,9 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 
 
-
-
-
-
 // Use these accessors to configure the scroll view's built-in gesture recognizers.
 // Do not change the gestures' delegates or override the getters for these properties.
-#pragma mark - ↑
+
 #pragma mark - 内置手势识别器
 
 // Change `panGestureRecognizer.allowedTouchTypes` to limit scrolling to a particular set of touch types.
@@ -347,9 +325,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 
 
-
-
-#pragma mark - ↑
 #pragma mark - 键盘的消失模式
 /**
  作用：设置隐藏键盘模式,默认为UIScrollViewKeyboardDismissModeNone(不隐藏键盘),
@@ -364,13 +339,9 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 
 
-
-
-#pragma mark - ↑
 #pragma mark - 滑动代理方法
 
 @protocol UIScrollViewDelegate<NSObject>
-
 @optional (可选)
 
 /**
@@ -437,9 +408,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 
 
-
-
-#pragma mark - ↑
 #pragma mark - 缩放代理方法
 
 /**
@@ -469,11 +437,6 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UIScrollView : UIView <NSCoding>
 
 
 
-
-
-
-
-#pragma mark - ↑
 #pragma mark - ios(11.0)
 
 

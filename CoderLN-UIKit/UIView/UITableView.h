@@ -2,7 +2,6 @@
  * UITableView.h 
  *
  * UIKit (c) 2005-2017
- * 不知名开发者 - 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
 
 #import <Foundation/Foundation.h>
@@ -374,7 +373,7 @@ NS_CLASS_AVAILABLE_IOS(2_0) @interface UITableView : UIScrollView <NSCoding, UID
 
 #pragma mark -某一点在tableview上所占的分区，如果该点不在tableView的任何row上返回nil
 - (nullable NSIndexPath *)indexPathForRowAtPoint:(CGPoint)point;                         // returns nil if point is outside of any row in the table
-#pragma mark -某一行所在的分区，如果改行是不可见的返回nil
+#pragma mark -某一行所在的分区，如果该行是不可见的返回nil
 - (nullable NSIndexPath *)indexPathForCell:(UITableViewCell *)cell;                      // returns nil if cell is not visible
 #pragma mark -某一矩形区域内所有行所在的所有分区，返回元素为NSIndexPath类型的数组。当该矩形是一个无效值时，返回nil
 - (nullable NSArray<NSIndexPath *> *)indexPathsForRowsInRect:(CGRect)rect;                              // returns nil if rect not valid

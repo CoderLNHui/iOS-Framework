@@ -2,7 +2,6 @@
  * CFRunLoop.h 
  *
  * Foundation (c) 1998-2016
- * 不知名开发者 - 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
 
 #if !defined(__COREFOUNDATION_CFRUNLOOP__)
@@ -24,7 +23,7 @@ typedef CFStringRef CFRunLoopMode CF_EXTENSIBLE_STRING_ENUM;
 //可以看到 CFRunloopRef 其实就是 __CFRunloop 这个结构体指针
 typedef struct CF_BRIDGED_MUTABLE_TYPE(id) __CFRunLoop * CFRunLoopRef;//【RunLoop】
 typedef struct CF_BRIDGED_MUTABLE_TYPE(id) __CFRunLoopSource * CFRunLoopSourceRef;//【Runloop要处理的事件源】
-typedef struct CF_BRIDGED_MUTABLE_TYPE(id) __CFRunLoopObserver * CFRunLoopObserverRef;//【Runloop的观察者（监听者）】
+typedef struct CF_BRIDGED_MUTABLE_TYPE(id) __CFRunLoopObserver * CFRunLoopObserverRef;//【Runloop的观察者】
 typedef struct CF_BRIDGED_MUTABLE_TYPE(NSTimer) __CFRunLoopTimer * CFRunLoopTimerRef;//【Timer事件】
 
 /* Reasons for CFRunLoopRunInMode() to Return */

@@ -2,7 +2,6 @@
  * UILocalizedIndexedCollation.h
  *
  * UIKit (c) 2009-2017
- * 不知名开发者 - 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」
  */
 
 #import <Foundation/Foundation.h>

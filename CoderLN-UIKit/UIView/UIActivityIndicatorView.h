@@ -2,7 +2,7 @@
  * UIActivityIndicatorView.h
  *
  * UIKit (c) 2005-2017
- * © 不知名开发者 🤗  https://github.com/CoderLN 🤗  https://dwz.cn/rC1LGk2f
+ * 不知名开发者 🤗  https://github.com/CoderLN 🤗  https://dwz.cn/rC1LGk2f
  */
 
  
